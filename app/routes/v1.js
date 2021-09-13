@@ -72,6 +72,25 @@ router.post(`/v${verNum}/tslr/tslr-subject-branch`, function (req, res) {
 //CHECKBOX EXAMPLE
 
 
+
+router.post(`/v${verNum}/check-answers-part-one-branch`, function (req, res) {
+    const checkItt = req.session.data['eligible-year'];
+    const checkSup = req.session.data['supply-teacher'];
+
+    if (checkItt === 'None of the above'
+       ) {
+        res.redirect(`/v${verNum}/generic-ineligible`);
+    }
+      else if (checkSup === 'No'
+                &&
+                checkItt !== 'None of the above'
+       ) {
+        res.redirect(`/v${verNum}/check-answers-part-one`);
+    }
+   else res.redirect(`/v${verNum}/check-answers-part-one-alt`);
+});
+
+
 //EXAMPLE ROUTES END
 
 module.exports = router
