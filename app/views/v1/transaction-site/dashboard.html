@@ -8,36 +8,179 @@ Public appointments
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
-        Public appointments
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+        Apply for a public appointment
+      </h1>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukInsetText({
+            html: "You can be one of the many people who help make a difference to public services.<br><br>
+    
+            Public appointees play a vital role in public life. They help guide the strategy for some of the most important institutions in the United Kingdom."
+          }) }}
+           
+      
+      <h2 class="govuk-heading-l">
+        Search
+      </h2>
+      <p class="govuk-body">
+        Search and apply for a role on the board of a public body or advisory committee. You can also browse:
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.123
-      </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
+          roles closed for application
         </li>
         <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+          announcements for roles that have been filled
         </li>
       </ul>
+    </div>
+    </div>
+      <!--main body of role dashboard starts-->
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          side sort here
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <p class="govuk-body-l">
+                <b>2</b> roles
+              <p>    
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <label class="govuk-label right" for="sort">
+                    Sort by
+                  </label>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                  <div class="govuk-form-group">
+                  
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="comments">Application deadline [earliest]</option>
+                      <option value="published">Application deadline [latest]</option>
+                      <option value="updated" selected>Location [A-Z]</option>
+                      <option value="views">Location [Z-A]</option>
+                      
+                    </select>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <div class="greyBack">
+              <h3 class="govuk-heading-s">
+                Status
+              </h3>
+              </div>
+            </div>
+          </div>
+
+          <hr class="govuk-!-margin-bottom-6">
+
+          <!--main jobs listing starts-->
+
+          <ul class="govuk-list">
+            <li>
+              <a href="customer-service-advisor" class="govuk-link large">Customer Service Advisor</a>
+              <span class="govuk-caption-m">
+                National Nuclear Laboratory
+              </span>
+              <table class="govuk-table">
+               
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Sponsor Department</th>
+                    <td class="govuk-table__cell">Attorney General's Office</td>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Location</th>
+                    <td class="govuk-table__cell">East Midlands</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Sector</th>
+                    <td class="govuk-table__cell">Business, Finance & Skills</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Skills</th>
+                    <td class="govuk-table__cell">Accountancy</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Time commitment</th>
+                    <td class="govuk-table__cell">37.5 hours per week</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Remuneration</th>
+                    <td class="govuk-table__cell">From £50,000 to £80,000 per annum</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Application deadline</th>
+                    <td class="govuk-table__cell">17 December 2030</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+
+
+
+            <li>
+              <a href="customer-service-advisor" class="govuk-link large">Customer Service Advisor</a>
+              <span class="govuk-caption-m">
+                National Nuclear Laboratory
+              </span>
+              <table class="govuk-table">
+               
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Sponsor Department</th>
+                    <td class="govuk-table__cell">Attorney General's Office</td>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Location</th>
+                    <td class="govuk-table__cell">East Midlands</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Sector</th>
+                    <td class="govuk-table__cell">Business, Finance & Skills</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Skills</th>
+                    <td class="govuk-table__cell">Accountancy</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Time commitment</th>
+                    <td class="govuk-table__cell">37.5 hours per week</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Remuneration</th>
+                    <td class="govuk-table__cell">From £50,000 to £80,000 per annum</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Application deadline</th>
+                    <td class="govuk-table__cell">17 December 2030</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+
+
+          <!--main jobs listing ends-->
+
+        </div>
+      </div>
+
+      <!--main body of role dashboard ends-->
     </div>
   </div>
 

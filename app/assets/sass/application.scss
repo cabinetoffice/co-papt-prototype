@@ -16,3 +16,15 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.govuk-header__container{border-bottom:0px;padding-bottom:20px;}
+.topNav{display:block;display: block;
+}
+.govuk-header{border-bottom:0px;}
+.topNav li{list-style:none;display:inline;margin-left:20px;font-size:14pt;font-weight:600;}
+.headNav{background-color:#0b0c0c;padding:0px 0px 5px 0px;margin:0px;border-bottom: 10px solid #1d70b8; }
+.headNav a{color:#fff;text-decoration:none}
+.headNav{color:#0b0c0c}
+.large{font-size:18pt;}
+.blue{border-bottom: 10px solid #1d70b8; }
+.right{float:right;margin-top:10px;margin-right:-10px;}
+.greyBack{background-color:#f3f2f1;padding:15px 10px 1px;}
