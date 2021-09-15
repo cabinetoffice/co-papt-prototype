@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../role/main-application-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Application",
+        href: "../../role/main-application-dashboard"
+      },
+      {
+        text: "Curriculum vitae"
+      }
+    ]
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Curriculum vitae</h1>
+        <p class="govuk-body">
+          Please submit your CV including education, employment history and professional qualifications.
+        <p>
+          
+          <p class="govuk-body">
+            You should ensure your CV:
+          <p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                is not more than two pages
+              </li>
+              <li>
+                meets the requirements set out in the vacancy specification
+              </li>
+              <li>
+                is under 10 Mb in file size
+              </li>
+              <li>
+                is a supported filetype; DOC, DOCX, ODT, PDF, RTF, TXT, WPS.
+              </li>
+            </ul>
+
+            {{ govukFileUpload({
+              id: "file-upload-1",
+              name: "file-upload-1",
+              label: {
+                text: "Upload a file"
+              }
+            }) }}
+
+
+            {{ govukCheckboxes({
+              idPrefix: "",
+              name: "",
+              fieldset: {
+                
+              },
+             
+              items: [
+                {
+                  value: "Value",
+                  text: "Save this CV to my user profile"
+                }
+              ]
+            }) }}
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Save"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                 
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

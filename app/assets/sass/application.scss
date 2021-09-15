@@ -21,10 +21,12 @@ $govuk-assets-path: '/govuk/assets/';
 }
 .govuk-header{border-bottom:0px;}
 .topNav li{list-style:none;display:inline;margin-left:20px;font-size:14pt;font-weight:600;}
-.headNav{background-color:#0b0c0c;padding:0px 0px 5px 0px;margin:0px;border-bottom: 10px solid #1d70b8; }
+.headNav{background-color:#0b0c0c;padding:0px 0px 0px 0px;margin:0px;}
 .headNav a{color:#fff;text-decoration:none}
 .headNav{color:#0b0c0c}
 .large{font-size:18pt;}
 .blue{border-bottom: 10px solid #1d70b8; }
 .right{float:right;margin-top:10px;margin-right:-10px;}
 .greyBack{background-color:#f3f2f1;padding:15px 10px 1px;}
+.govuk-table__header.left {width:440px;}
+.govuk-main-wrapper--auto-spacing:first-child, .govuk-main-wrapper--l{padding-top:10px;}

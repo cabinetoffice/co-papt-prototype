@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="ethnicity-religion-sexual-orientation" method="post">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Diversity monitoring
+          <span class="govuk-caption-l">
+            Step 2 of 3
+          </span>
+        </h1>
+        {{ govukWarningText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer.",
+          iconFallbackText: "Warning"
+        }) }}
+      
+
+        <h2 class="govuk-heading-m">
+          Disability
+        </h2>
+
+        {% set yesHtml %}
+        
+        {{ govukRadios({
+          idPrefix: "where-do-you-live",
+          name: "where-do-you-live",
+          fieldset: {
+            legend: {
+              text: "Do any of your conditions or illnesses reduce your ability to carry out day to day activities?"
+            }
+          },
+          items: [
+            {
+              value: "yes a lot",
+              text: "Yes, a lot"
+            },
+            {
+              value: "yes a little",
+              text: "Yes, a little"
+            }
+          ]
+        }) }}
+
+        {% endset -%}
+        
+       
+        
+        {{ govukRadios({
+          idPrefix: "contact",
+          name: "contact",
+          fieldset: {
+            legend: {
+              text: "Do you have any physical or mental health conditions or illnesses lasting, or expecting to last, 12 months or more? "
+              
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              conditional: {
+                html: yesHtml
+              }
+            },
+            {
+              value: "no",
+              text: "No",
+              conditional: {
+                html: noHtml
+              }
+            },
+            {
+              value: "prefer-not-to-say",
+              text: "Prefer not to say",
+              conditional: {
+                html: prefer-not-to-sayHtml
+              }
+            }
+          ]
+        }) }}
+
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                  <p class="govuk-body">
+                    Read more about <a href="../your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
+                  <p>
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

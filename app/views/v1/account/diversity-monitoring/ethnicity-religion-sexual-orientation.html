@@ -1,0 +1,150 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../role/main-application-dashboard" method="post">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Diversity monitoring
+          <span class="govuk-caption-l">
+            Step 3 of 3
+          </span>
+        </h1>
+        {{ govukWarningText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer.",
+          iconFallbackText: "Warning"
+        }) }}
+      
+
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+          Ethnicity
+        </h2>
+
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+          label: {
+            text: "What is your ethnic group?"
+          },
+          items: [
+            {
+              value: "published",
+              text: "Recently published"
+            },
+            {
+              value: "updated",
+              text: "Prefer not to say",
+              selected: true
+            },
+            {
+              value: "views",
+              text: "Most views"
+            },
+            {
+              value: "comments",
+              text: "Most comments"
+            }
+          ]
+        }) }}
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-1 govuk-!-margin-top-6">
+          Religion
+        </h2>
+
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+          label: {
+            text: "What is your religion?"
+          },
+          items: [
+            {
+              value: "published",
+              text: "Recently published"
+            },
+            {
+              value: "updated",
+              text: "Prefer not to say",
+              selected: true
+            },
+            {
+              value: "views",
+              text: "Most views"
+            },
+            {
+              value: "comments",
+              text: "Most comments"
+            }
+          ]
+        }) }}
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-1  govuk-!-margin-top-6">
+          Sexual orientation
+        </h2>
+
+        {{ govukSelect({
+          id: "sort",
+          name: "sort",
+          label: {
+            text: "Which of the following options best describes your sexual orientation?"
+          },
+          items: [
+            {
+              value: "published",
+              text: "Recently published"
+            },
+            {
+              value: "updated",
+              text: "Prefer not to say",
+              selected: true
+            },
+            {
+              value: "views",
+              text: "Most views"
+            },
+            {
+              value: "comments",
+              text: "Most comments"
+            }
+          ]
+        }) }}
+
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                  <p class="govuk-body">
+                    Read more about <a href="../your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
+                  <p>
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}
