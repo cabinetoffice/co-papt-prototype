@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-
+<form method="post">
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -277,9 +277,22 @@ Public appointments
                         <a href="../role/application/cv" class="govuk-link">Curriculum vitae</a>
                       </td>
                       <td class="govuk-table__cell">
+
+                        {% if data['cv-test'] === 'test-pos' %}
+
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete
-                        </strong>
+                         </strong>
+
+                         {% else %}
+
+                        <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+
+                        {% endif %}
+
+                       
                       </td>
                     </tr>
                     <tr class="govuk-table__row ">
@@ -288,8 +301,8 @@ Public appointments
                       </td>
                       <td class="govuk-table__cell">
                         <strong class="govuk-tag govuk-tag--red">
-                         Not Complete
-                        </strong>
+                          Not Complete
+                         </strong>
                       </td>
                     </tr>
                     
@@ -298,9 +311,19 @@ Public appointments
                         <a href="../role/application/conflicts-of-interest" class="govuk-link">Conflicts of interest</a>
                       </td>
                       <td class="govuk-table__cell">
+                        {% if data['conflicts-of-interest'] === 'yes'  or data['conflicts-of-interest'] === 'no' %}
+
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete
-                        </strong>
+                         </strong>
+
+                         {% else %}
+
+                        <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                   </tbody>
@@ -368,6 +391,7 @@ Public appointments
   </main>
 </div>
   </div>
+</form>
  </div>
 
      

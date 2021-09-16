@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Public appointments",
+        href: "#"
+      },
+      {
+        text: "Login"
+      }
+    ]
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Log in to Public Appointments</h1>
+        
+    
+          
+
+          {{ govukInput({
+            id: "email",
+            name: "email",
+            label: {
+              text: "Email address"
+            },
+            hint: {
+              text: "Enter the email address you used to register with the Public Appointments"
+            },
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false
+          }) }}
+
+          {{ govukInput({
+            id: "password",
+            name: "password",
+            type: "password",
+            label: {
+              text: "Password",
+              classes: "govuk-label--l",
+            isPageHeading: false
+            }
+          }) }}
+          <div class="govuk-grid-row govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-two-thirds">
+              <a href="#" class="govuk-link">Forgotten password</a>
+            </div>
+          </div>
+         
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Log in"
+                  }) }}
+                
+                 
+                </div>
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-two-thirds">
+                    <a href="#" class="govuk-link">Create a applicant account</a>
+                  </div>
+                </div>                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

@@ -56,20 +56,36 @@ Public appointments
 
 
             {{ govukCheckboxes({
-              idPrefix: "",
-              name: "",
-              fieldset: {
-                
-              },
-             
+              idPrefix: "cv",
+              name: "cv",
               items: [
                 {
-                  value: "Value",
+                  value: "cv-saved",
                   text: "Save this CV to my user profile"
                 }
               ]
             }) }}
 
+            {{ govukRadios({
+              idPrefix: "cv-test",
+              name: "cv-test",
+              fieldset: {
+                legend: {
+                  text: "Legend text",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--xl"
+                }
+              },
+              hint: {
+                text: "Hint text"
+              },
+              items: [
+                {
+                  value: "test-pos",
+                  text: "Text"
+                }
+              ]
+            }) }}
 
                 <div class="govuk-button-group">
                   {{ govukButton({
