@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="check-account-answers" method="post">
+<form action="account-created-confirmation" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -73,7 +73,7 @@ Public appointments
               Date of birth
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['date-of-birth'] }}
+              {{ data['day'] }} {{ data['month'] }} {{ data['year'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -139,18 +139,41 @@ Public appointments
           items: [
             {
               value: "yes",
-              text: "Tick this box if you agree for us to use your data in accordance our privacy policy which explains how we treat your personal data and protect your privacy when you use this service."
+              html: "Tick this box if you agree for us to use your data in accordance our <a href=# class=govuk-link>privacy policy</a> which explains how we treat your personal data and protect your  privacy when you use this service."
             }
           ]
         }) }}
 
 
+        {{ govukCheckboxes({
+          idPrefix: "data-provacy-policy",
+          name: "data-provacy-policy",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false
+            }
+          },
+          hint: {
+            text: " "
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Tick this box if you would like to be added to our talent pool."
+            }
+          ]
+        }) }}
 
+        {{ govukDetails({
+          summaryText: "More about the talent pool",
+          text: "Text lives here"
+        }) }}
 
 
         <div class="govuk-button-group">
           {{ govukButton({
-            text: "Save and continue"
+            text: "Create account"
           }) }}
         
           {{ govukButton({
