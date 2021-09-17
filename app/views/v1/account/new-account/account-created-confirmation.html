@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="address-list" method="post">
+<form action="../login-to-account" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -29,8 +29,7 @@ Public appointments
         </p>
        
         {{ govukButton({
-          text: "Log in",
-          href: "../login"
+          text: "Log in"
         }) }}
   
         <p class="govuk-body">

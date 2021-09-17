@@ -8,7 +8,26 @@ Public appointments
 {% block content %}
 <div class="govuk-width-container">
 <form action="ethnicity-religion-sexual-orientation" method="post">
-  <a href="#" class="govuk-back-link">Back</a>
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Public appointments",
+        href: "#"
+      },
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "My account",
+        href: "#"
+      },
+      {
+        text: "Disability"
+        
+      }
+    ]
+  }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -18,10 +37,7 @@ Public appointments
             Step 2 of 3
           </span>
         </h1>
-        {{ govukWarningText({
-          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer.",
-          iconFallbackText: "Warning"
-        }) }}
+       
       
 
         <h2 class="govuk-heading-m">
