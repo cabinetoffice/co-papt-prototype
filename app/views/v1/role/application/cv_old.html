@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../role/main-application-dashboard" method="post" novalidate data-validate='error-state-validation'>
+<form action="../../role/main-application-dashboard" method="post">
   {{ govukBreadcrumbs({
     items: [
       {
@@ -15,7 +15,7 @@ Public appointments
         href: "../../role/main-application-dashboard"
       },
       {
-        text: "Conflicts of Interest"
+        text: "Curriculum vitae"
       }
     ]
   }) }}
@@ -54,30 +54,19 @@ Public appointments
                 text: "Upload a file"
               }
             }) }}
-       
-
-            {{ govukCheckboxes({
-              idPrefix: "cv-uploaded",
-              name: "cv-uploaded",
-              fieldset: {
-                legend: {
-                  text: "",
-                  isPageHeading: false
-                }
-              },
-              items: [
-                {
-                  value: "yes",
-                  text: "Save this CV to my user profile"
-                  
-                }
-              ]
-            }) }}
 
 
-         
+           
 
-            
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="cv" name="cv" type="checkbox" value="cvsaved">
+                <label class="govuk-label govuk-checkboxes__label  govuk-!-margin-bottom-3" for="cv">
+                  Save this CV to my user profile
+                </label>
+              </div>
+            </div>
+
                 <div class="govuk-button-group">
                   {{ govukButton({
                     text: "Save"
@@ -99,15 +88,7 @@ Public appointments
   </div>
 </form>
  </div>
- <script type="application/json" id="error-state-validation">
-  { 		  	
-    "cv-uploaded": {
-      "presence": {
-        "message": "^just for the prototype to work here"
-      }
-    }
-  }
-  </script>
+
      
 
 {% endblock %}
