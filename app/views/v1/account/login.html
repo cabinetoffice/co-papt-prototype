@@ -8,68 +8,66 @@ Public appointments
 {% block content %}
 <div class="govuk-width-container">
 <form action="../role/main-application-dashboard" method="post">
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Public appointments",
-        href: "#"
-      },
-      {
-        text: "Login"
-      }
-    ]
-  }) }}
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Log in to Public Appointments</h1>
+        <h1 class="govuk-heading-xl">Sign in</h1>
         
-    
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      Sign in or <a href="#" class="govuk-link">create an account</a> to manage your Public appointments account.
+    <p>
           
 
           {{ govukInput({
             id: "email",
             name: "email",
             label: {
-              text: "Email address"
-            },
-            hint: {
-              text: "This is the email address you used to register your account"
+              text: "Email address",
+              classes: "govuk-!-font-weight-bold",
+            isPageHeading: false
             },
             type: "email",
             autocomplete: "email",
-            spellcheck: false
+            spellcheck: false,
+              classes: " govuk-input--width-30",
+            isPageHeading: false
           }) }}
 
           {{ govukInput({
             id: "password",
             name: "password",
             type: "password",
+            classes: "govuk-input--width-30 ",
             label: {
               text: "Password",
-              classes: "govuk-label--l",
+              isPageHeading: false,
+              classes: " govuk-!-font-weight-bold ",
             isPageHeading: false
             }
           }) }}
-          <div class="govuk-grid-row govuk-!-margin-bottom-6">
-            <div class="govuk-grid-column-two-thirds">
-              <a href="#" class="govuk-link">Forgotten password</a>
-            </div>
-          </div>
+          
          
-                <div class="govuk-button-group">
+                <div class="govuk-button-group govuk-!-margin-bottom-6">
+                  
                   {{ govukButton({
-                    text: "Log in"
+                    text: "Sign in"
                   }) }}
                 
                  
                 </div>
-
-                <div class="govuk-grid-row">
+                <div class="govuk-grid-row ">
                   <div class="govuk-grid-column-two-thirds">
-                    <a href="#" class="govuk-link">Create an applicant account</a>
+                    <h3 class="govuk-heading-m">
+                      Problems signing in?
+                    </h3>
+                    <a href="#" class="govuk-link">Forgotten your password?</a>
                   </div>
-                </div>                  
+                </div>
+                              
 
               </div>
     </div>

@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../role/main-application-dashboard" method="post" novalidate data-validate='error-state-validation'>
+<form action="../../role/main-application-dashboard" method="post">
   {{ govukBreadcrumbs({
     items: [
       {
@@ -99,15 +99,7 @@ Public appointments
   </div>
 </form>
  </div>
- <script type="application/json" id="error-state-validation">
-  { 		  	
-    "cv-uploaded": {
-      "presence": {
-        "message": "^just for the prototype to work here"
-      }
-    }
-  }
-  </script>
+ 
      
 
 {% endblock %}

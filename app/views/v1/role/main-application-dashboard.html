@@ -274,13 +274,13 @@ Public appointments
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="../role/application/cv" class="govuk-link">Curriculum vitae</a>
+                        <a href="../role/application/cv-update" class="govuk-link">Curriculum vitae</a>
                       </td>
                       <td class="govuk-table__cell">
 
 
 
-                        {% if data['cv-uploaded'] === 'yes' %}
+                        {% if data['use-profile-cv'] === 'yes' or data['use-profile-cv'] === 'no' %}
 
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete
@@ -299,15 +299,25 @@ Public appointments
                     </tr>
                     <tr class="govuk-table__row ">
                       <td class="govuk-table__cell ">
-                        <a href="#" class="govuk-link">Supporting statement</a>
+                        <a href="../role/application/supporting-statement" class="govuk-link">Supporting statement</a>
                       </td>
                       <td class="govuk-table__cell">
+                        {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
                         <strong class="govuk-tag govuk-tag--red">
                           Not Complete
                          </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
-                    
+                   
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <a href="../role/application/conflicts-of-interest" class="govuk-link">Conflicts of interest</a>

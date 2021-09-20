@@ -93,5 +93,39 @@ router.post(`/v${verNum}/check-answers-part-one-branch`, function (req, res) {
 
 //EXAMPLE ROUTES END
 
+
+
+
+
+
+
+
+
+
+
+//UPLOAD A NEW CV start
+
+router.post(`/v${verNum}/role/application/change-cv`, function (req, res) {
+    const newCV = req.session.data['use-profile-cv'];
+
+    if (newCV === 'no') {
+        res.redirect(`/v${verNum}/role/application/cv-load`);
+    } else {
+        res.redirect(`/v${verNum}/role/main-application-dashboard`);
+    }
+});
+
+
+
+// UIPLOAD A NEW CV end
+
+
+
+
+
+
+
+
+
 module.exports = router
 

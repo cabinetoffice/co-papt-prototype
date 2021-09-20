@@ -74,7 +74,7 @@ Public appointments
 
           <!--accordion starts here-->
 
-
+         
 
           {{ govukAccordion({
             id: "role-detail",
@@ -117,21 +117,61 @@ Public appointments
             ]
           }) }}
  <!-- accordion ends here-->
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+  
+  <div class="govuk-grid-column-full">
+    
+  
 
           <h2 class="govuk-heading-m">
             Timeline for this appointment
           </h2>
 
-          <p class="govuk-body">
-            timeline wil live here
-          <p>
-
-            <p class="govuk-body">
-              Read more about our <a href="#" class="govuk-link">application process</a> .
-            <p>
-
+          <ul class="vacancyTimeline">
+            <li>
+              <div>Opening date</div>
+              <div></div>
+              <div>
+                <p class="govuk-body-s">
+                  17 December 2019
+                <p>
+               </div>
+            </li>
+            <li>
+              <div>Closing date</div>
+              <div></div>
+              <div><p class="govuk-body-s">
+                7 December 2030
+              <p></div>
+            </li>
+            <li>
+              <div>Sifting date</div>
+              <div></div>
+              <div><p class="govuk-body-s">
+                23 November 2020
+              <p></div>
+            </li>
+            <li>
+              <div>Interview date</div>
+              <div></div>
+              <div><p class="govuk-body-s">
+                23 November 2020
+              <p></div>
+            </li>
+            <li>
+              <div>Announcement</div>
+              <div></div>
+              <div><p class="govuk-body-s">
+                23 November 2020
+              <p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
 <!-- accordion starts here-->
-
+<h3 class="govuk-heading-m">
+  Further details
+</h3>
         {{ govukAccordion({
           id: "further-role-details",
           items: [
