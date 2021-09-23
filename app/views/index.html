@@ -20,9 +20,17 @@ Public appointments
                   <span class="govuk-caption-l">
                     Prototypes used for user research sessions
                   </span>Research links</h2>
-                      <p class="govuk-body">
-                        Links to be provided
-                      <p>
+                     <h2 class="govuk-heading-m">
+                       UR06 links
+                     </h2>
+                     {{ govukButton({
+                       text: "Account creation",
+                       href: "v1/ur06/new-account/personal-details"
+                     }) }}
+                     {{ govukButton({
+                       text: "Account login"
+                       href: "/v1/ur06/new-account/account-created-confirmation"
+                     }) }}
               {% endset -%}
       <!--Research section ends-->
 

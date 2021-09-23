@@ -140,9 +140,19 @@ Public appointments
                 <a href="diversity-monitoring/sex-and-gender" class="govuk-link">Sex and gender</a>
               </td>
               <td class="govuk-table__cell">
+                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
-                </strong>
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -150,9 +160,19 @@ Public appointments
                 <a href="diversity-monitoring/disability" class="govuk-link">Disability</a>
               </td>
               <td class="govuk-table__cell">
+                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
-                </strong>
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -160,9 +180,19 @@ Public appointments
                 <a href="diversity-monitoring/ethnicity-religion-sexual-orientation" class="govuk-link">Ethnicity, religion, sexual orientation</a>
               </td>
               <td class="govuk-table__cell">
+                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
-                </strong>
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
               </td>
             </tr>
             
@@ -186,9 +216,19 @@ Public appointments
                 <a href="more-about-you/professional-qualificiations" class="govuk-link">Professional qualifications</a>
               </td>
               <td class="govuk-table__cell">
+                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
-                </strong>
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -196,9 +236,19 @@ Public appointments
                 <a href="more-about-you/employment" class="govuk-link">Employment</a>
               </td>
               <td class="govuk-table__cell">
+                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
-                </strong>
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -206,9 +256,19 @@ Public appointments
                 <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
               </td>
               <td class="govuk-table__cell">
+                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
-                </strong>
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -216,9 +276,19 @@ Public appointments
                 <a href="more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
               </td>
               <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--blue">
-                  Complete
-                </strong>
+                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                        <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+
+                        {% endif %}
               </td>
             </tr>
           </tbody>
