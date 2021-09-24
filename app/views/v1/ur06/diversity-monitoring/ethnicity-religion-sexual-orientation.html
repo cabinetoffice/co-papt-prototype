@@ -7,133 +7,174 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../account-dashboard" method="post">
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Public appointments",
-        href: "#"
-      },
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "My account",
-        href: "#"
-      },
-      {
-        text: "Ethnicity, Religion, Sexual orientation"
-        
-      }
-    ]
-  }) }}
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Ethnicity, Religion, Sexual orientation
-          <span class="govuk-caption-l">
-            Step 3 of 3
-          </span>
-        </h1>
-       
+        <h1 class="govuk-heading-xl">Ethnicity, Religion, Sexual orientation</h1>
+        {{ govukWarningText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer.",
+          iconFallbackText: "Warning"
+        }) }}
       
 
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
-          Ethnicity
+
+
+
+          {{ govukRadios({
+            idPrefix: "ethnicity",
+            name: "ethnicity",
+            fieldset: {
+              legend: {
+                text: "What is your ethnic group?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+            
+            {
+              value: "white",
+              text: "White"
+            },
+            {
+              value: "multiple-ethnic-groups",
+              text: "Mixed or multiple ethnic groups"
+            },
+            {
+              value: "asian",
+              text: "Asian or Asian British"
+            },
+            {
+              value: "black",
+              text: "Black, African, Caribbean or Black British"
+            },
+            {
+              value: "other",
+              text: "Other ethnic group"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "prefer-not-to-say",
+              text: "Prefer not to say"
+            }
+            ]
+          }) }}
+
+
+
+
+
+
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-1 govuk-!-margin-top-6">
+          What is your religion
         </h2>
 
-        {{ govukSelect({
-          id: "sort",
-          name: "sort",
-          label: {
-            text: "What is your ethnic group?"
-          },
-          items: [
-            {
-              value: "published",
-              text: "Recently published"
-            },
-            {
-              value: "updated",
-              text: "Prefer not to say",
-              selected: true
-            },
-            {
-              value: "views",
-              text: "Most views"
-            },
-            {
-              value: "comments",
-              text: "Most comments"
+
+
+        {{ govukRadios({
+          idPrefix: "Religion",
+          name: "Religion",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
             }
+          },
+        
+          items: [
+          
+          {
+            value: "christian",
+            text: "Christian"
+          },
+          {
+            value: "buddhist",
+            text: "Buddhist"
+          },
+          {
+            value: "hindu",
+            text: "Hindu"
+          },
+          {
+            value: "jewish",
+            text: "Jewish"
+          },
+          {
+            value: "muslim",
+            text: "Muslim"
+          },
+          {
+            value: "sikh",
+            text: "Sikh"
+          },
+          {
+            value: "other",
+            text: "Other"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "prefer-not-to-say",
+            text: "Prefer not to say"
+          }
+          ]
+        }) }}
+
+       
+
+
+
+
+        {{ govukRadios({
+          idPrefix: "sexual-orientation",
+          name: "sexual-orientation",
+          fieldset: {
+            legend: {
+              text: "Which of the following options best describes your sexual orientation?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+         
+          items: [
+          {
+            value: "heterosexual",
+            text: "Heterosexual or straight"
+          },
+          {
+            value: "gay-lesbian",
+            text: "Gay or lesbian"
+          },
+          {
+            value: "bisexual",
+            text: "Bisexual"
+          },
+          {
+            value: "other",
+            text: "Other"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "prefer-not-to-say",
+            text: "Prefer not to say"
+          }
           ]
         }) }}
 
 
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-1 govuk-!-margin-top-6">
-          Religion
-        </h2>
 
-        {{ govukSelect({
-          id: "sort",
-          name: "sort",
-          label: {
-            text: "What is your religion?"
-          },
-          items: [
-            {
-              value: "published",
-              text: "Recently published"
-            },
-            {
-              value: "updated",
-              text: "Prefer not to say",
-              selected: true
-            },
-            {
-              value: "views",
-              text: "Most views"
-            },
-            {
-              value: "comments",
-              text: "Most comments"
-            }
-          ]
-        }) }}
-
-
-        <h2 class="govuk-heading-m govuk-!-margin-bottom-1  govuk-!-margin-top-6">
-          Sexual orientation
-        </h2>
-
-        {{ govukSelect({
-          id: "sort",
-          name: "sort",
-          label: {
-            text: "Which of the following options best describes your sexual orientation?"
-          },
-          items: [
-            {
-              value: "published",
-              text: "Recently published"
-            },
-            {
-              value: "updated",
-              text: "Prefer not to say",
-              selected: true
-            },
-            {
-              value: "views",
-              text: "Most views"
-            },
-            {
-              value: "comments",
-              text: "Most comments"
-            }
-          ]
-        }) }}
 
 
 
@@ -161,6 +202,25 @@ Public appointments
 </form>
  </div>
 
-     
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "ethnicity": {
+      "presence": {
+        "message": "^Select an ethnic group or 'Prefer not to say'"
+      }
+    },
+    "Religion": {
+      "presence": {
+        "message": "^Select a religion or 'Prefer not to say'"
+      }
+    },
+    "sexual-orientation": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
 
 {% endblock %}

@@ -140,7 +140,7 @@ Public appointments
                 <a href="diversity-monitoring/sex-and-gender" class="govuk-link">Sex and gender</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                {% if data['your-sex'] === 'male' or  data['your-sex']  === 'female' or  data['your-sex'] === 'prefer-not-to-say' %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -160,7 +160,7 @@ Public appointments
                 <a href="diversity-monitoring/disability" class="govuk-link">Disability</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                {% if data['disability'] === 'yes' or data['disability'] === 'no' or data['disability'] === 'prefer-not-to-say' %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -180,7 +180,7 @@ Public appointments
                 <a href="diversity-monitoring/ethnicity-religion-sexual-orientation" class="govuk-link">Ethnicity, religion, sexual orientation</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                {% if data['ethnicity'] === 'white' or data['ethnicity'] === 'multiple-ethnic-groups'  or data['ethnicity'] === 'asian' or data['ethnicity'] === 'black' or data['ethnicity'] === 'other' or  data['ethnicity'] === 'prefer-not-to-say'  %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -202,6 +202,7 @@ Public appointments
 
 
 
+
         <!--More about you task list starts-->
         <table class="govuk-table">
           <thead class="govuk-table__head">
@@ -216,7 +217,7 @@ Public appointments
                 <a href="more-about-you/professional-qualificiations" class="govuk-link">Professional qualifications</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                {% if data['professional-qualifications'] === 'yes' or data['professional-qualifications'] === 'no' or data['professional-qualifications'] === 'prefer-not-to-say' %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -236,7 +237,7 @@ Public appointments
                 <a href="more-about-you/employment" class="govuk-link">Employment</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                {% if data['employment-status'] === 'employee' or data['employment-status'] === 'self-employed-with-employees'  or data['employment-status'] === 'self-employed-freelance-without-employees'  or data['employment-status'] === 'student' or data['employment-status'] === 'unemployed' or data['employment-status'] === 'looking-after-family'  or data['employment-status'] === 'sick' or data['employment-status'] === 'retired'   or data['employment-status'] === 'prefer-not-to-say'   %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -251,12 +252,21 @@ Public appointments
                 {% endif %}
               </td>
             </tr>
+
+
+           
+
+           
+
+
+
+
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                {% if data['highest-qualification'] === 'one-to-four-gcses' or data['highest-qualification'] === 'five-or-more' or data['highest-qualification'] === 'tow-or-more-a-levels' or data['highest-qualification'] === 'sub-degree' or  data['highest-qualification'] === 'apprenticeship' or data['highest-qualification'] === 'no-qualifciations' or  data['highest-qualification'] === 'other' or data['highest-qualification'] === 'prefer-not-to-say' %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -276,7 +286,7 @@ Public appointments
                 <a href="more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                {% if data['public-appointments'] === 'yes' or data['public-appointments'] === 'no' or data['public-appointments'] === 'prefer-not-to-say' %}
 
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete

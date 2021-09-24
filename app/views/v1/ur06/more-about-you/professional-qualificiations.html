@@ -7,26 +7,10 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../account-dashboard" method="post">
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Public appointments",
-        href: "#"
-      },
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "My account",
-        href: "#"
-      },
-      {
-        text: "Professional qualifications"
-        
-      }
-    ]
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
   }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -41,198 +25,57 @@ Public appointments
         }) }}
       
 
-                 
-                  {{ govukSelect({
-                    id: "professional-qualification",
-                    name: "sort",
-                    label: {
-                      text: "If you hold a professional qualification, what field is it in?"
-                    },
-                    items: [
-                      {
-                        value: "Not applicable",
-                        text: "Not applicable"
-                      },
-                      {
-                        value: "Communications and marketing",
-                        text: "Communications and marketing",
-                        selected: true
-                      },
-                      {
-                        value: "Economics",
-                        text: "Economics"
-                      },
-                      {
-                        value: "Finance and accountancy
-                        ",
-                        text: "Finance and accountancy
-                        "
-                      },
-                      {
-                        value: "Geography",
-                        text: "Geography"
-                      },
-                      {
-                        value: "Human resources",
-                        text: "Human resources"
-                      },
-                      {
-                        value: "Information technology ",
-                        text: "Information technology "
-                      },
-                      {
-                        value: "Inspector of
-                        education and training ",
-                        text: "Inspector of
-                        education and training "
-                      },
-                      {
-                        value: "Intelligence analysis ",
-                        text: "Intelligence analysis "
-                      },
-                      {
-                        value: "Internal audit ",
-                        text: "Internal audit "
-                      },
-                      {
-                        value: "Knowledge and
-                        information management ",
-                        text: "Knowledge and
-                        information management "
-                      },
-                      {
-                        value: "Legal",
-                        text: "Legal"
-                      },
-                      {
-                        value: "Librarianship",
-                        text: "Librarianship"
-                      },
-                      {
-                        value: "Medicine and nursing",
-                        text: "Medicine and nursing"
-                      },
-                      {
-                        value: "Operational delivery ",
-                        text: "Operational delivery "
-                      },
-                      {
-                        value: "Operational research ",
-                        text: "Operational research "
-                      },
-                      {
-                        value: "Planning",
-                        text: "Planning"
-                      },
-                      {
-                        value: "Policy delivery",
-                        text: "Policy delivery"
-                      },
-                      {
-                        value: "Procurement and contract management",
-                        text: "Procurement and contract management"
-                      },
-                      {
-                        value: "Programme and project management",
-                        text: "Programme and project management"
-                      },
-                      {
-                        value: "Property asset management",
-                        text: "Property asset management"
-                      },
-                      {
-                        value: "Psychology",
-                        text: "Psychology"
-                      },
-                      {
-                        value: "Science and engineering",
-                        text: "Science and engineering"
-                      },
-                      {
-                        value: "Security",
-                        text: "Security"
-                      },
-                      {
-                        value: "Social and market research
-                        ",
-                        text: "Social and market research
-                        "
-                      },
-                      {
-                        value: "Statistics",
-                        text: "Statistics"
-                      },
-                      {
-                        value: "Strategy",
-                        text: "Strategy"
-                      },
-                      {
-                        value: "Tax inspection",
-                        text: "Tax inspection"
-                      },
-                      {
-                        value: "Teaching",
-                        text: "Teaching"
-                      },
-                      {
-                        value: "Veterinary science",
-                        text: "Veterinary science"
-                      }
-                    ]
-                  }) }}
+
+        {% set qualificationHtml %}
+        {{ govukCharacterCount({
+          name: "further-details",
+          id: "further-details",
+          maxlength: 200,
+          label: {
+            text: "Can you provide more detail?",
+            classes: "govuk-label--m",
+            isPageHeading: false
+          },
+          hint: {
+            text: "Include the field your qualification is in."
+          }
+        }) }}
+        {% endset -%}
 
 
-
-
-                      {% set emailHtml %}
-                      {{ govukInput({
-                        id: "contact-by-email",
-                        name: "contact-by-email",
-                        type: "email",
-                        autocomplete: "email",
-                        spellcheck: false,
-                       
-                        label: {
-                          text: "Enter field"
-                        }
-                      }) }}
-                      {% endset -%}
-
-                     
-
-                     
-
-                      {{ govukRadios({
-                        idPrefix: "contact",
-                        name: "contact",
-                        
-                       
-                        items: [
-                          {
-                            value: "other",
-                            text: "Other (please specify)",
-                            conditional: {
-                              html: emailHtml
-                            }
-                          },
-                          {
-                            value: "prefer-not-to-say",
-                            text: "Prefer not to say"
-                          }
-                        ]
-                      }) }}
-
-                      {{ govukTextarea({
-                        name: "more-detail",
-                        id: "more-detail",
-                        label: {
-                          text: "If applicable, what is your professional qualification?"
-                        },
-                        hint: {
-                          text: "Please give details"
-                        }
-                      }) }}
-
+          {{ govukRadios({
+            idPrefix: "professional-qualifications",
+            name: "professional-qualifications",
+            fieldset: {
+              legend: {
+                text: "Do you hold a professional qualification?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            
+            items: [
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: qualificationHtml
+                }
+              },
+              {
+                value: "no",
+                text: "No"
+              },
+              {
+                divider: "or"
+              },
+              
+              {
+                value: "prefer-not-to-say",
+                text: "Prefer not to say"
+              }
+            ]
+          }) }}
 
 
                 <div class="govuk-button-group">
@@ -257,6 +100,15 @@ Public appointments
 </form>
  </div>
 
-     
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "professional-qualifications": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say"
+      }
+    }
+    
+  }
+</script>
 
 {% endblock %}

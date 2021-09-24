@@ -8,26 +8,10 @@ Public appointments
 {% block content %}
 <div class="govuk-width-container">
 <form action="../account-dashboard" method="post">
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Public appointments",
-        href: "#"
-      },
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "My account",
-        href: "#"
-      },
-      {
-        text: "Other public appointments held"
-        
-      }
-    ]
-  }) }}
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -38,22 +22,26 @@ Public appointments
           iconFallbackText: "Warning"
         }) }}
       
-          <p class="govuk-body">
-            Please tell us about any other appointments that you hold, where you have been appointed by HM Government.; Welsh Government, Scottish Government, Northern Ireland Executive.
-          <p>
-            <p class="govuk-body">
-              This includes all non-departmental public bodies (NDPBs), NHS bodies, parole boards and research councils. It does not include sitting as a school governor, being a magistrate or any positions within charities.
-            <p>
+          
                   
+
+
+              {% set otherappointmentsHtml %}
+              
+
+
               {{ govukSelect({
-                id: "public-appointments",
-                name: "public-appointments",
-                
+                id: "public-appointments-held",
+                name: "public-appointments-held",
+                label: {
+                  text: "How many other public appointments do you currently hold?"
+                },
                 items: [
-                  {
-                    value: "0",
-                    text: "0"
-                  },
+                {
+                  value: "how-many-appointments",
+                  text: "Select how many"
+                },
+                  
                   {
                     value: "1",
                     text: "1"
@@ -93,8 +81,52 @@ Public appointments
                   {
                     value: "10 or more",
                     text: "10 or more"
+                  },
+                  {
+                    value: "prefer-not-to-say",
+                    text: "Prefer not to say"
                   }
                 ]
+              }) }}
+
+              {% endset -%}
+              
+              {{ govukRadios({
+                idPrefix: "public-appointments",
+                name: "public-appointments",
+                fieldset: {
+                  legend: {
+                    text: "Do you hold any other public appointments?",
+                    isPageHeading: true,
+                    classes: "govuk-fieldset__legend--l"
+                  }
+                },
+                
+                items: [
+                  {
+                    value: "yes",
+                    text: "Yes",
+                    conditional: {
+                      html: otherappointmentsHtml
+                    }
+                  },
+                  {
+                    value: "no",
+                    text: "No"
+                  },
+                  {
+                    divider: "or"
+                  },
+                  {
+                    value: "prefer-not-to-say",
+                    text: "Prefer not to say"
+                  }
+                ]
+              }) }}
+
+              {{ govukDetails({
+                summaryText: "Help with public appointments",
+                text: " This includes all non-departmental public bodies (NDPBs), NHS bodies, parole boards and research councils. It does not incude sitting as a school governor, being a magistrate or any positions within charities."
               }) }}
 
 

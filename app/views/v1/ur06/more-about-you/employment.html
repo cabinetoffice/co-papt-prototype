@@ -8,25 +8,9 @@ Public appointments
 {% block content %}
 <div class="govuk-width-container">
 <form action="../account-dashboard" method="post">
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Public appointments",
-        href: "#"
-      },
-      {
-        text: "Home",
-        href: "#"
-      },
-      {
-        text: "My account",
-        href: "#"
-      },
-      {
-        text: "Employment"
-        
-      }
-    ]
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
   }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -47,7 +31,9 @@ Public appointments
           name: "employment-status",
           fieldset: {
             legend: {
-              text: "How would you describe your employment status?"
+              text: "How would you describe your employment status?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
             }
           },
           items: [
@@ -84,6 +70,9 @@ Public appointments
               text: "Retired"
             },
             {
+              divider: "or"
+            },
+            {
               value: "prefer-not-to-say",
               text: "Prefer not to say"
             }
@@ -110,7 +99,9 @@ Public appointments
             name: "occupational-sector",
             fieldset: {
               legend: {
-                text: "Which occupational sector best describes your main employment, if any:"
+                text: "Which occupational sector best describes your main employment, if any:",
+                isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
               }
             },
             items: [
@@ -142,6 +133,9 @@ Public appointments
                 text: "Not working"
               },
               {
+                divider: "or"
+              },
+              {
                 value: "prefer-not-to-say",
                 text: "Prefer not to say"
               }
@@ -156,7 +150,9 @@ Public appointments
             id: "main-profession",
             name: "main-profession",
             label: {
-              text: "What is your main profession (if applicable)?"
+              text: "What is your main profession (if applicable)?",
+              isPageHeading: false,
+              classes: "govuk-label--l"
             },
             items: [
               {
