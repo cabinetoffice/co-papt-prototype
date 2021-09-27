@@ -72,12 +72,17 @@ Public appointments
                     id: "uni-list-autocomplete",
                     name: "uni-list-autocomplete",
                     label: {
-                      text: "Select the correct university"
+                      text: "Which university did you obtain your degree from?",
+                      classes: "govuk-label--m",
+                      isPageHeading: false
+                    },
+                    hint: {
+                      text: "Type in the town or location of the university."
                     },
                     items: [
                       {
                         value: "select a university",
-                        text: "Select a university"
+                        text: ""
                       },
                       {
                         value: "University of Aberdeen",
@@ -762,7 +767,9 @@ Public appointments
 
                       label: {
                         text: " 
-                          Which institution did you obtain your degree from?"
+                          Which institution did you obtain your degree from?",
+                          classes: "govuk-label--m",
+                          isPageHeading: false
                        
                       }
                     }) }}
