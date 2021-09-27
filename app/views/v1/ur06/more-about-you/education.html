@@ -30,8 +30,16 @@ Public appointments
                         text: "Enter qualification"
                       }
                     }) }}
+                    {% endset -%}
+                    {% set otherdiscHtml %}
                     
-
+                    {{ govukInput({
+                      id: "other-disc",
+                      name: "other-disc",
+                      label: {
+                        text: "Enter discipline"
+                      }
+                    }) }}
                     {% endset -%}
 
                     {% set otheruniHtml %}
@@ -864,17 +872,121 @@ Public appointments
 
 
                     
-                  {{ govukInput({
-                    id: "discipline",
-                    name: "discipline",
-                    
-                    label: {
-                      text: "What is the discipline of your highest level of qualification?",
-                      classes: "govuk-label--l",
-                    isPageHeading: false
-                    }
-                  }) }}
+                 
                   
+              <h3 class="govuk-heading-l">
+                What is the discipline of your highest level of qualification?
+              </h3>
+
+
+                  {{ govukSelect({
+                    id: "highest-disc-select",
+                    name: "highest-disc-select",
+                   
+                   
+                    items: [
+                    {
+                      value: "Select a discipline",
+                      text: "Select a discipline"
+                    },
+                    {
+                      value: "Agricultural Sciences",
+                      text: "Agricultural Sciences"
+                    },
+                    {
+                      value: "Architecture",
+                      text: "Architecture"
+                    },
+                    {
+                      value: "Arts",
+                      text: "Arts"
+                    },
+                    {
+                      value: "Biological Sciences",
+                      text: "Biological Sciences"
+                    },
+                    {
+                      value: "Business and Finance",
+                      text: "Business and Finance"
+                    },
+                    {
+                      value: "Education",
+                      text: "Education"
+                    },
+                    {
+                      value: "Engineering",
+                      text: "Engineering"
+                    },
+                   
+                    {
+                      value: "Humanities",
+                      text: "Humanities"
+                    },
+                    {
+                      value: "Law",
+                      text: "Law"
+                    },
+                    {
+                      value: "Languages",
+                      text: "Languages"
+                    },
+                    {
+                      value: "Linguistics, English and Classics Education",
+                      text: "Linguistics, English and Classics Education"
+                    },
+                    {
+                      value: "Maths or Computer Science",
+                      text: "Maths or Computer Science"
+                    },
+                    {
+                      value: "Medicine",
+                      text: "Medicine"
+                    },
+                    {
+                      value: "Media and Information Studies",
+                      text: "Media and Information Studies"
+                    },
+                    {
+                      value: "Medical related subjects",
+                      text: "Medical related subjects"
+                    },
+                    {
+                      value: "Physical/Environmental Subjects",
+                      text: "Physical/Environmental Subjects"
+                    },
+                    {
+                      value: "Social Sciences and Law",
+                      text: "Social Sciences and Law"
+                    },
+                    {
+                      value: "Technology",
+                      text: "Technology"
+                    }
+                    
+                    
+                  ]
+                  }) }}
+
+                  {{ govukRadios({
+                    idPrefix: "disc-rad-list",
+                    name: "disc-rad-list",
+                    
+                    
+                    items: [
+                    {
+                      value: "Other",
+                      text: "Other",
+                      conditional: {
+                        html: otherdiscHtml
+                      }
+                    },
+                    
+                    {
+                      value: "prefer-not-to-say",
+                      text: "Prefer not to say"
+                    }
+                    ]
+                  }) }}
 
 
                 <div class="govuk-button-group">
