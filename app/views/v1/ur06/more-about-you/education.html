@@ -63,19 +63,708 @@ Public appointments
 
                     {% set degreeHtml %}
                     
+                  {{ govukSelect({
+                    id: "uni-list",
+                    name: "uni-list",
+                    label: {
+                      text: "Select the correct university"
+                    },
+                    items: [
+                      {
+                        value: "select a university",
+                        text: "Select a university"
+                      },
+                      {
+                        value: "University of Aberdeen",
+                        text: "University of Aberdeen"
+                      },
+                      {
+                        value: "Abertay University",
+                        text: "Abertay University"
+                      },
+                      {
+                        value: "Aberystwyth University",
+                        text: "Aberystwyth University"
+                      },
+                      {
+                        value: "AECC University College",
+                        text: "AECC University College"
+                      },
+                      {
+                        value: "Anglia Ruskin University",
+                        text: "Anglia Ruskin University"
+                      },
+                      {
+                        value: "Arden University",
+                        text: "Arden University"
+                      },
+                      {
+                        value: "Ashridge Executive Education",
+                        text: "Ashridge Executive Education"
+                      },
+                      {
+                        value: "Aston University",
+                        text: "Aston University"
+                      },
+                      {
+                        value: "Bangor University",
+                        text: "Bangor University"
+                      },
+                      {
+                        value: "Bath Spa University",
+                        text: "Bath Spa University"
+                      },
+                      {
+                        value: "Birkbeck, University of London",
+                        text: "Birkbeck, University of London"
+                      },
+                      {
+                        value: "Birmingham City University",
+                        text: "Birmingham City University"
+                      },
+                      {
+                        value: "Bishop Grosseteste University",
+                        text: "Bishop Grosseteste University"
+                      },
+                      {
+                        value: "Bournemouth University",
+                        text: "Bournemouth University"
+                      },
+                      {
+                        value: "BPP University",
+                        text: "BPP University"
+                      },
+                      {
+                        value: "Brunel University",
+                        text: "Brunel University"
+                      },
+                      {
+                        value: "Buckinghamshire New University",
+                        text: "Buckinghamshire New University"
+                      },
+                      {
+                        value: "Canterbury Christ Church University",
+                        text: "Canterbury Christ Church University"
+                      },
+                      {
+                        value: "Cardiff Metropolitan University (formerly University of Wales Institute Cardiff)",
+                        text: "Cardiff Metropolitan University (formerly University of Wales Institute Cardiff)"
+                      },
+                      {
+                        value: "Cardiff University",
+                        text: "Cardiff University"
+                      },
+                      {
+                        value: "City, University of London",
+                        text: "City, University of London"
+                      },
+                      {
+                        value: "Courtauld Institute of Art",
+                        text: "Courtauld Institute of Art"
+                      },
+                      {
+                        value: "Coventry University",
+                        text: "Coventry University"
+                      },
+                      {
+                        value: "Cranfield University",
+                        text: "Cranfield University"
+                      },
+                      {
+                        value: "De Montfort University",
+                        text: "De Montfort University"
+                      },
+                      {
+                        value: "Durham University",
+                        text: "Durham University"
+                      },
+                      {
+                        value: "Dyson Institute of Engineering and Technology[10]",
+                        text: "Dyson Institute of Engineering and Technology[10]"
+                      },
+                      {
+                        value: "Edge Hill University",
+                        text: "Edge Hill University"
+                      },
+                      {
+                        value: "Edinburgh Napier University",
+                        text: "Edinburgh Napier University"
+                      },
+                      {
+                        value: "Falmouth University",
+                        text: "Falmouth University"
+                      },
+                      {
+                        value: "Glasgow Caledonian University",
+                        text: "Glasgow Caledonian University"
+                      },
+                      {
+                        value: "Goldsmiths, University of London",
+                        text: "Goldsmiths, University of London"
+                      },
+                      {
+                        value: "Guildhall School of Music and Drama",
+                        text: "Guildhall School of Music and Drama"
+                      },
+                      {
+                        value: "Harper Adams University",
+                        text: "Harper Adams University"
+                      },
+                      {
+                        value: "Hartpury University",
+                        text: "Hartpury University"
+                      },
+                      {
+                        value: "Heriot-Watt University",
+                        text: "Heriot-Watt University"
+                      },
+                      {
+                        value: "Imperial College London",
+                        text: "Imperial College London"
+                      },
+                      {
+                        value: "Institute of Cancer Research",
+                        text: "Institute of Cancer Research"
+                      },
+                      {
+                        value: "Keele University",
+                        text: "Keele University"
+                      },
+                      {
+                        value: "King's College London",
+                        text: "King's College London"
+                      },
+                      {
+                        value: "Kingston University",
+                        text: "Kingston University"
+                      },
+                      {
+                        value: "Lancaster University",
+                        text: "Lancaster University"
+                      },
+                      {
+                        value: "Leeds Arts University",
+                        text: "Leeds Arts University"
+                      },
+                      {
+                        value: "Leeds Beckett University",
+                        text: "Leeds Beckett University"
+                      },
+                      {
+                        value: "Leeds Trinity University",
+                        text: "Leeds Trinity University"
+                      },
+                      {
+                        value: "Liverpool Hope University",
+                        text: "Liverpool Hope University"
+                      },
+                      {
+                        value: "Liverpool John Moores University",
+                        text: "Liverpool John Moores University"
+                      },
+                      {
+                        value: "Liverpool School of Tropical Medicine",
+                        text: "Liverpool School of Tropical Medicine"
+                      },
+                      {
+                        value: "London Business School",
+                        text: "London Business School"
+                      },
+                      {
+                        value: "London Institute of Banking and Finance",
+                        text: "London Institute of Banking and Finance"
+                      },
+                      {
+                        value: "London Interdisciplinary School[11]",
+                        text: "London Interdisciplinary School[11]"
+                      },
+                      {
+                        value: "London Metropolitan University",
+                        text: "London Metropolitan University"
+                      },
+                      {
+                        value: "London School of Economics and Political Science (LSE)",
+                        text: "London School of Economics and Political Science (LSE)"
+                      },
+                      {
+                        value: "London School of Hygiene and Tropical Medicine",
+                        text: "London School of Hygiene and Tropical Medicine"
+                      },
+                      {
+                        value: "London South Bank University",
+                        text: "London South Bank University"
+                      },
+                      {
+                        value: "Loughborough University",
+                        text: "Loughborough University"
+                      },
+                      {
+                        value: "Manchester Metropolitan University",
+                        text: "Manchester Metropolitan University"
+                      },
+                      {
+                        value: "Middlesex University",
+                        text: "Middlesex University"
+                      },
+                      {
+                        value: "NCG",
+                        text: "NCG"
+                      },
+                      {
+                        value: "Newcastle University",
+                        text: "Newcastle University"
+                      },
+                      {
+                        value: "Newman University",
+                        text: "Newman University"
+                      },
+                      {
+                        value: "Northumbria University",
+                        text: "Northumbria University"
+                      },
+                      {
+                        value: "Norwich University of the Arts",
+                        text: "Norwich University of the Arts"
+                      },
+                      {
+                        value: "Nottingham Trent University",
+                        text: "Nottingham Trent University"
+                      },
+                      {
+                        value: "Oxford Brookes University",
+                        text: "Oxford Brookes University"
+                      },
+                      {
+                        value: "Plymouth Marjon University (formerly the University of St Mark & St John)",
+                        text: "Plymouth Marjon University (formerly the University of St Mark & St John)"
+                      },
+                      {
+                        value: "Queen Margaret University",
+                        text: "Queen Margaret University"
+                      },
+                      {
+                        value: "Queen Mary, University of London",
+                        text: "Queen Mary, University of London"
+                      },
+                      {
+                        value: "Queen's University Belfast",
+                        text: "Queen's University Belfast"
+                      },
+                      {
+                        value: "Ravensbourne University London",
+                        text: "Ravensbourne University London"
+                      },
+                      {
+                        value: "Regent's University London",
+                        text: "Regent's University London"
+                      },
+                      {
+                        value: "Roehampton University",
+                        text: "Roehampton University"
+                      },
+                      {
+                        value: "Rose Bruford College of Theatre and Performance",
+                        text: "Rose Bruford College of Theatre and Performance"
+                      },
+                      {
+                        value: "Royal Academy of Music",
+                        text: "Royal Academy of Music"
+                      },
+                      {
+                        value: "Royal Agricultural University",
+                        text: "Royal Agricultural University"
+                      },
+                      {
+                        value: "Royal Central School of Speech and Drama",
+                        text: "Royal Central School of Speech and Drama"
+                      },
+                      {
+                        value: "Royal College of Art",
+                        text: "Royal College of Art"
+                      },
+                      {
+                        value: "Royal College of Music",
+                        text: "Royal College of Music"
+                      },
+                      {
+                        value: "Royal Conservatoire of Scotland",
+                        text: "Royal Conservatoire of Scotland"
+                      },
+                      {
+                        value: "Royal Holloway, University of London, Egham",
+                        text: "Royal Holloway, University of London, Egham"
+                      },
+                      {
+                        value: "Royal Northern College of Music",
+                        text: "Royal Northern College of Music"
+                      },
+                      {
+                        value: "Royal Veterinary College",
+                        text: "Royal Veterinary College"
+                      },
+                      {
+                        value: "School of Oriental and African Studies (SOAS)",
+                        text: "School of Oriental and African Studies (SOAS)"
+                      },
+                      {
+                        value: "Sheffield Hallam University",
+                        text: "Sheffield Hallam University"
+                      },
+                      {
+                        value: "Solent University",
+                        text: "Solent University"
+                      },
+                      {
+                        value: "St George's, University of London",
+                        text: "St George's, University of London"
+                      },
+                      {
+                        value: "St Mary's University",
+                        text: "St Mary's University"
+                      },
+                      {
+                        value: "Staffordshire University",
+                        text: "Staffordshire University"
+                      },
+                      {
+                        value: "Swansea University",
+                        text: "Swansea University"
+                      },
+                      {
+                        value: "Teesside University",
+                        text: "Teesside University"
+                      },
+                      {
+                        value: "The Arts University Bournemouth",
+                        text: "The Arts University Bournemouth"
+                      },
+                      {
+                        value: "The Open University",
+                        text: "The Open University"
+                      },
+                      {
+                        value: "The Robert Gordon University",
+                        text: "The Robert Gordon University"
+                      },
+                      {
+                        value: "Trinity Laban Conservatoire of Music and Dance",
+                        text: "Trinity Laban Conservatoire of Music and Dance"
+                      },
+                      {
+                        value: "Ulster University",
+                        text: "Ulster University"
+                      },
+                      {
+                        value: "University College Birmingham",
+                        text: "University College Birmingham"
+                      },
+                      {
+                        value: "University College London (UCL)",
+                        text: "University College London (UCL)"
+                      },
+                      {
+                        value: "University College of Estate Management",
+                        text: "University College of Estate Management"
+                      },
+                      {
+                        value: "University College of Osteopathy",
+                        text: "University College of Osteopathy"
+                      },
+                      {
+                        value: "University for the Creative Arts",
+                        text: "University for the Creative Arts"
+                      },
+                      {
+                        value: "University of Aberdeen",
+                        text: "University of Aberdeen"
+                      },
+                      {
+                        value: "University of Bath",
+                        text: "University of Bath"
+                      },
+                      {
+                        value: "University of Bedfordshire",
+                        text: "University of Bedfordshire"
+                      },
+                      {
+                        value: "University of Birmingham",
+                        text: "University of Birmingham"
+                      },
+                      {
+                        value: "University of Bolton",
+                        text: "University of Bolton"
+                      },
+                      {
+                        value: "University of Bradford",
+                        text: "University of Bradford"
+                      },
+                      {
+                        value: "University of Brighton",
+                        text: "University of Brighton"
+                      },
+                      {
+                        value: "University of Bristol",
+                        text: "University of Bristol"
+                      },
+                      {
+                        value: "University of Buckingham",
+                        text: "University of Buckingham"
+                      },
+                      {
+                        value: "University of Cambridge",
+                        text: "University of Cambridge"
+                      },
+                      {
+                        value: "University of Central Lancashire",
+                        text: "University of Central Lancashire"
+                      },
+                      {
+                        value: "University of Chester",
+                        text: "University of Chester"
+                      },
+                      {
+                        value: "University of Chichester",
+                        text: "University of Chichester"
+                      },
+                      {
+                        value: "University of Cumbria",
+                        text: "University of Cumbria"
+                      },
+                      {
+                        value: "University of Derby",
+                        text: "University of Derby"
+                      },
+                      {
+                        value: "University of Dundee",
+                        text: "University of Dundee"
+                      },
+                      {
+                        value: "University of East Anglia",
+                        text: "University of East Anglia"
+                      },
+                      {
+                        value: "University of East London",
+                        text: "University of East London"
+                      },
+                      {
+                        value: "University of Edinburgh",
+                        text: "University of Edinburgh"
+                      },
+                      {
+                        value: "University of Essex",
+                        text: "University of Essex"
+                      },
+                      {
+                        value: "University of Exeter",
+                        text: "University of Exeter"
+                      },
+                      {
+                        value: "University of Glasgow",
+                        text: "University of Glasgow"
+                      },
+                      {
+                        value: "University of Gloucestershire",
+                        text: "University of Gloucestershire"
+                      },
+                      {
+                        value: "University of Greenwich",
+                        text: "University of Greenwich"
+                      },
+                      {
+                        value: "University of Hertfordshire",
+                        text: "University of Hertfordshire"
+                      },
+                      {
+                        value: "University of Huddersfield",
+                        text: "University of Huddersfield"
+                      },
+                      {
+                        value: "University of Hull",
+                        text: "University of Hull"
+                      },
+                      {
+                        value: "University of Kent",
+                        text: "University of Kent"
+                      },
+                      {
+                        value: "University of Law",
+                        text: "University of Law"
+                      },
+                      {
+                        value: "University of Leeds",
+                        text: "University of Leeds"
+                      },
+                      {
+                        value: "University of Leicester",
+                        text: "University of Leicester"
+                      },
+                      {
+                        value: "University of Lincoln",
+                        text: "University of Lincoln"
+                      },
+                      {
+                        value: "University of Liverpool",
+                        text: "University of Liverpool"
+                      },
+                      {
+                        value: "University of London",
+                        text: "University of London"
+                      },
+                      {
+                        value: "University of Manchester",
+                        text: "University of Manchester"
+                      },
+                      {
+                        value: "University of Northampton",
+                        text: "University of Northampton"
+                      },
+                      {
+                        value: "University of Nottingham",
+                        text: "University of Nottingham"
+                      },
+                      {
+                        value: "University of Oxford",
+                        text: "University of Oxford"
+                      },
+                      {
+                        value: "University of Plymouth",
+                        text: "University of Plymouth"
+                      },
+                      {
+                        value: "University of Portsmouth",
+                        text: "University of Portsmouth"
+                      },
+                      {
+                        value: "University of Reading",
+                        text: "University of Reading"
+                      },
+                      {
+                        value: "University of Salford",
+                        text: "University of Salford"
+                      },
+                      {
+                        value: "University of Sheffield",
+                        text: "University of Sheffield"
+                      },
+                      {
+                        value: "University of South Wales",
+                        text: "University of South Wales"
+                      },
+                      {
+                        value: "University of Southampton",
+                        text: "University of Southampton"
+                      },
+                      {
+                        value: "University of St Andrews",
+                        text: "University of St Andrews"
+                      },
+                      {
+                        value: "University of Stirling",
+                        text: "University of Stirling"
+                      },
+                      {
+                        value: "University of Strathclyde",
+                        text: "University of Strathclyde"
+                      },
+                      {
+                        value: "University of Suffolk",
+                        text: "University of Suffolk"
+                      },
+                      {
+                        value: "University of Sunderland",
+                        text: "University of Sunderland"
+                      },
+                      {
+                        value: "University of Surrey",
+                        text: "University of Surrey"
+                      },
+                      {
+                        value: "University of Sussex",
+                        text: "University of Sussex"
+                      },
+                      {
+                        value: "University of the Arts London",
+                        text: "University of the Arts London"
+                      },
+                      {
+                        value: "University of the Highlands & Islands",
+                        text: "University of the Highlands & Islands"
+                      },
+                      {
+                        value: "University of the West of England",
+                        text: "University of the West of England"
+                      },
+                      {
+                        value: "University of the West of Scotland",
+                        text: "University of the West of Scotland"
+                      },
+                      {
+                        value: "University of Wales",
+                        text: "University of Wales"
+                      },
+                      {
+                        value: "University of Warwick",
+                        text: "University of Warwick"
+                      },
+                      {
+                        value: "University of West London",
+                        text: "University of West London"
+                      },
+                      {
+                        value: "University of Westminster",
+                        text: "University of Westminster"
+                      },
+                      {
+                        value: "University of Winchester",
+                        text: "University of Winchester"
+                      },
+                      {
+                        value: "University of Wolverhampton",
+                        text: "University of Wolverhampton"
+                      },
+                      {
+                        value: "University of Worcester",
+                        text: "University of Worcester"
+                      },
+                      {
+                        value: "University of York",
+                        text: "University of York"
+                      },
+                      {
+                        value: "Wrexham Glyndŵr University",
+                        text: "Wrexham Glyndŵr University"
+                      },
+                      {
+                        value: "Writtle University College",
+                        text: "Writtle University College"
+                      },
+                      {
+                        value: "York St John University",
+                        text: "York St John University"
+                      }
+                    ]
+                  }) }}
+                    
+                    
+
+                    {% endset -%}
+
+                    {% set institutionHtml %}
+                    
                     {{ govukInput({
                       id: "uni-degree",
                       name: "uni-degree",
+
                       label: {
-                        text: "Which university or other institution did you obtain your degree from?"
+                        text: " 
+                          Which institution did you obtain your degree from?"
+                       
                       }
                     }) }}
                     
                     
 
                     {% endset -%}
-
-
 
 
                   {{ govukRadios({
@@ -146,10 +835,17 @@ Public appointments
                     
                     items: [
                       {
-                        value: "yes",
-                        text: "Yes",
+                        value: "yes-university",
+                        text: "Yes, from a university within the UK",
                         conditional: {
                           html: degreeHtml
+                        }
+                      },
+                      {
+                        value: "yes-institution",
+                        text: "Yes, from an insitution other than a university within the UK",
+                        conditional: {
+                          html: institutionHtml
                         }
                       },
                       {
