@@ -200,7 +200,7 @@ Public appointments
                 <a href="diversity-monitoring/religion" class="govuk-link">Religion</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['ethnicity'] === 'white' or data['ethnicity'] === 'multiple-ethnic-groups'  or data['ethnicity'] === 'asian' or data['ethnicity'] === 'black' or data['ethnicity'] === 'other' or  data['ethnicity'] === 'prefer-not-to-say'  %}
+                {% if data['Religion'] === 'christian' or data['Religion'] === 'buddhist'  or data['Religion'] === 'buddhist' or data['Religion'] === 'hindu' or data['Religion'] === 'jewish' or  data['Religion'] === 'muslim' or  data['Religion'] === 'muslim' or  data['Religion'] === 'sikh' or  data['Religion'] === 'prefer-not-to-say' or  data['Religion'] === 'other'  %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -220,7 +220,19 @@ Public appointments
                 <a href="diversity-monitoring/sexual-orientation" class="govuk-link">Sexual orientation</a>
               </td>
               <td class="govuk-table__cell">
-                {% if data['ethnicity'] === 'white' or data['ethnicity'] === 'multiple-ethnic-groups'  or data['ethnicity'] === 'asian' or data['ethnicity'] === 'black' or data['ethnicity'] === 'other' or  data['ethnicity'] === 'prefer-not-to-say'  %}
+                {% if data['sexual-orientation'] === 'heterosexual' or data['sexual-orientation'] === 'gay-lesbian'  or data['sexual-orientation'] === 'bisexual' or data['sexual-orientation'] === 'other'  or  data['sexual-orientation'] === 'prefer-not-to-say'  %}
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
