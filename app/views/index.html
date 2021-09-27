@@ -21,10 +21,10 @@ Public appointments
                     Prototypes used for user research sessions
                   </span>Research links</h2>
                      <h2 class="govuk-heading-m">
-                       UR06 links
+                       UR06 
                      </h2>
                      <h3 class="govuk-heading-s">
-                      Grouped question journey
+                      Grouped questions journey
                     </h3>
                      {{ govukButton({
                        text: "Account creation",
@@ -32,7 +32,15 @@ Public appointments
                      }) }}
                      {{ govukButton({
                        text: "Account login",
-                       href: "/v1/ur06/new-account/account-created-confirmation"
+                       href: "/v1/ur06/login-to-account"
+                     }) }}
+                     <h3 class="govuk-heading-s">
+                      Split questions journey
+                    </h3>
+                    
+                     {{ govukButton({
+                       text: "Account login",
+                       href: "/v1/ur06/split-version/login-to-account"
                      }) }}
               {% endset -%}
       <!--Research section ends-->

@@ -121,6 +121,22 @@ router.post(`/v${verNum}/role/application/change-cv`, function (req, res) {
 
 
 
+//disability starts
+
+router.post(`/v${verNum}/ur06/split-version/diversity-monitoring/disability`, function (req, res) {
+    const disability = req.session.data['disability'];
+
+    if (disability === 'yes') {
+        res.redirect(`/v${verNum}/ur06/split-version/diversity-monitoring/disability-reduced-ability`);
+    } else {
+        res.redirect(`/v${verNum}/ur06/split-version/account-dashboard`);
+    }
+});
+
+
+
+//disability ends
+
 
 
 

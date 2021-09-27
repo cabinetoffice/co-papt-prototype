@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../login-to-account" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        {{ govukPanel({
+          titleText: "Account created",
+          html: "You can now log into your account"
+        }) }}
+  
+        <p class="govuk-body">We have sent you a confirmation email.</p>
+  
+        <h2 class="govuk-heading-m">What happens next</h2>
+  
+        <p class="govuk-body">
+          You can now log into your account and apply for roles on the Public appointments service.
+        </p>
+       
+        {{ govukButton({
+          text: "Log in"
+        }) }}
+  
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}
