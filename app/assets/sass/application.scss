@@ -79,3 +79,6 @@ $govuk-assets-path: '/govuk/assets/';
     font-size:20px;
 }
 .border-full{border: 1pt solid #b1b4b6;margin:20px 1%;width:30%;padding:10px 20px;min-height:300px;}
+.autocomplete__wrapper * {
+    @include govuk-typography-common();
+  }
