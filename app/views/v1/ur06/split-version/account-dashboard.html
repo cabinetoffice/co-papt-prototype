@@ -285,7 +285,7 @@ Public appointments
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <a href="more-about-you/employment" class="govuk-link">Employment</a>
+                <a href="more-about-you/employment" class="govuk-link">Employment status</a>
               </td>
               <td class="govuk-table__cell">
                 {% if data['employment-status'] === 'employee' or data['employment-status'] === 'self-employed-with-employees'  or data['employment-status'] === 'self-employed-freelance-without-employees'  or data['employment-status'] === 'student' or data['employment-status'] === 'unemployed' or data['employment-status'] === 'looking-after-family'  or data['employment-status'] === 'sick' or data['employment-status'] === 'retired'   or data['employment-status'] === 'prefer-not-to-say'   %}
@@ -303,21 +303,113 @@ Public appointments
                 {% endif %}
               </td>
             </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/employment-occupational-sector" class="govuk-link">Occupational sector</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['occupational-sector'] === 'civil-service' or data['occupational-sector'] === 'wider-public-sector'  or data['occupational-sector'] === 'private-sector'  or data['occupational-sector'] === 'voluntary-sector'  or data['occupational-sector'] === 'other'   or data['occupational-sector'] === 'prefer-not-to-say'   %}
 
 
+               
+      
+
+
+
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/employment-main-profession" class="govuk-link">Main profession</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['main-profession'] === 'not-applicable' or data['main-profession'] === 'commercial' or data['main-profession'] === 'unknown' or data['main-profession'] === 'communications' or data['main-profession'] === 'corporate-finance' or data['main-profession'] === 'counter-fraud' or data['main-profession'] === 'digital-data-and-technology' or data['main-profession'] === 'economics' or data['main-profession'] === 'finance' or data['main-profession'] === 'human-resources' or data['main-profession'] === 'inspector-of-education-and-training' or data['main-profession'] === 'intelligence-analysis' or data['main-profession'] === 'internal-audit' or data['main-profession'] === 'knowlegde-and-information-management' or data['main-profession'] === 'legal' or data['main-profession'] === 'medicine' or data['main-profession'] === 'operational-delivery' or data['main-profession'] === 'operational-research' or data['main-profession'] === 'other' or data['main-profession'] === 'planning' or data['main-profession'] === 'planning-inspectors' or data['main-profession'] === 'policy' or data['main-profession'] === 'project-delivery' or data['main-profession'] === 'property' or data['main-profession'] === 'psychology' or data['main-profession'] === 'science-and-engineering' or data['main-profession'] === 'security' or data['main-profession'] === 'social-research' or data['main-profession'] === 'statistics' or data['main-profession'] === 'tax' or data['main-profession'] === 'veterinarian' or data['main-profession'] === 'international-trade' or data['main-profession'] === 'prefer-not-to-say'   %}
+
+
+          
+                 
+                    
+                 
+                    
            
 
-           
 
 
 
 
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
               </td>
               <td class="govuk-table__cell">
                 {% if data['highest-qualification'] === 'one-to-four-gcses' or data['highest-qualification'] === 'five-or-more' or data['highest-qualification'] === 'tow-or-more-a-levels' or data['highest-qualification'] === 'sub-degree' or  data['highest-qualification'] === 'apprenticeship' or data['highest-qualification'] === 'no-qualifciations' or  data['highest-qualification'] === 'other' or data['highest-qualification'] === 'prefer-not-to-say' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/education-degree" class="govuk-link">Degrees held</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['degree'] === 'yes-university' or data['degree'] === 'yes-institution' or data['degree'] === 'no' or data['degree'] === 'prefer-not-to-say'  %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/education-highest-qualification-discipline" class="govuk-link">Educational main discipline</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['discipline'] >= ''  %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete

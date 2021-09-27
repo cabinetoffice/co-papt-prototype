@@ -16,14 +16,12 @@ Public appointments
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-
         <h1 class="govuk-heading-l">
           <span class="govuk-caption-l">
             More about you
           </span>
-          Do you hold a professional qualification?
+          Which occupational sector best describes your main employment, if any:
         </h1>
-
 
         {{ govukInsetText({
           text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
@@ -31,52 +29,66 @@ Public appointments
       
 
 
-        {% set qualificationHtml %}
-        {{ govukCharacterCount({
-          name: "further-details",
-          id: "further-details",
-          maxlength: 200,
+
+        {% set otherHtml %}
+        
+        {{ govukInput({
           label: {
-            text: "Can you provide more detail?",
-            classes: "govuk-label--m",
-            isPageHeading: false
+            text: "Enter the sector"
           },
-          hint: {
-            text: "Include the field your qualification is in."
-          }
+          classes: "govuk-input--width-20",
+          id: "other-sector",
+          name: "other-sector"
         }) }}
+
         {% endset -%}
 
-
           {{ govukRadios({
-            idPrefix: "professional-qualifications",
-            name: "professional-qualifications",
-            fieldset: {
-             
-            },
-            
+            idPrefix: "occupational-sector",
+            name: "occupational-sector",
+           
             items: [
               {
-                value: "yes",
-                text: "Yes",
+                value: "civil-service",
+                text: "Civil Service"
+              },
+              {
+                value: "wider-public-sector",
+                text: "Wider public sector"
+              },
+              {
+                value: "private-sector",
+                text: "Private sector"
+              },
+              {
+                value: "voluntary-sector",
+                text: "Voluntary sector"
+              },
+              {
+                value: "other",
+                text: "Other (please specify)",
                 conditional: {
-                  html: qualificationHtml
+                  html: otherHtml
                 }
               },
               {
-                value: "no",
-                text: "No"
+                value: "not-working",
+                text: "Not working"
               },
               {
                 divider: "or"
               },
-              
               {
                 value: "prefer-not-to-say",
                 text: "Prefer not to say"
               }
             ]
           }) }}
+
+
+
+
+
 
 
                 <div class="govuk-button-group">
@@ -103,9 +115,9 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "professional-qualifications": {
+    "occupational-sector": {
       "presence": {
-        "message": "^Select an option or 'Prefer not to say"
+        "message": "^Select an option or 'Prefer not to say'"
       }
     }
     
