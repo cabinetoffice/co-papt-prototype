@@ -15,14 +15,12 @@ Public appointments
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Create account
+        <h1 class="govuk-heading-xl"> 
           <span class="govuk-caption-l">
-            Step 2 of 5
+            Create account - Step 2 of 5
           </span>
-        </h1>
-        <h2 class="govuk-heading-l">
           What is your home address?
-        </h2>
+        </h1>
         <h3 class="govuk-heading-m">
           Postcode
         </h3>
@@ -42,7 +40,7 @@ Public appointments
               text: "1 address found"
             },
             {
-              value: "address-selected",
+              value: "12 Leigh gardens, Southampton, countyville",
               text: "12 Leigh gardens, Southampton, countyville"
             }
           ]
@@ -50,12 +48,13 @@ Public appointments
         <a href="address-manual" class="govuk-link">I can't find my address in the list</a>
         <div class="govuk-button-group govuk-!-padding-top-6">
           {{ govukButton({
-            text: "Find address"
+            text: "Continue"
           }) }}
         
           {{ govukButton({
             text: "Cancel",
-            classes: "govuk-button--secondary"
+            classes: "govuk-button--secondary",
+            href: "#"
           }) }}
         </div>
 

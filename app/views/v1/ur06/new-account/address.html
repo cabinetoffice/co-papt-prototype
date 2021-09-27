@@ -15,14 +15,15 @@ Public appointments
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Create account
+
+        <h1 class="govuk-heading-xl"> 
           <span class="govuk-caption-l">
-            Step 2 of 5
+            Create account - Step 2 of 5
           </span>
-        </h1>
-        <h2 class="govuk-heading-l">
           What is your home address?
-        </h2>
+        </h1>
+       
+         
         {{ govukInput({
           id: "address-postcode",
           name: "address-postcode",
@@ -47,7 +48,8 @@ Public appointments
                             
                     {{ govukDetails({
                       summaryText: "I live outside the UK",
-                      text: "What text goes in here?"
+                      text: "What text goes in here?",
+                      href: "#"
                     }) }}
               </div>
     </div>

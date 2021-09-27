@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="email-address-auth-code" method="post">
+<form action="password" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -15,21 +15,33 @@ Public appointments
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Create account
+        <h1 class="govuk-heading-xl"> 
           <span class="govuk-caption-l">
-            Step 3 of 5
+            Create account - Step 3 of 5
           </span>
+          Contact details
         </h1>
-        <h2 class="govuk-heading-l">
-          Create a username
-        </h2>
-        <p class="govuk-body">
-          content here to explain which email address to use. Do we need detail about the TFA?
-        <p>
+       
         {{ govukInput({
           id: "email-address",
           name: "email-address",
-          type: "email"
+          type: "email",
+          label: {
+            text: "Email address",
+            classes: "govuk-!-font-weight-bold"
+          },
+          hint: {
+            text: "You will use this email address when signing into the service"
+          }
+        }) }}
+        
+        {{ govukInput({
+          id: "telephone-number",
+          name: "telephone-number",
+          label: {
+            text: "Telephone number",
+            classes: "govuk-!-font-weight-bold"
+          }
         }) }}
         
        
@@ -41,7 +53,8 @@ Public appointments
         
           {{ govukButton({
             text: "Cancel",
-            classes: "govuk-button--secondary"
+            classes: "govuk-button--secondary",
+            href: "#"
           }) }}
         </div>
 
