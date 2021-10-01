@@ -7,71 +7,49 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../check-answers/check-answer-sex-and-gender" method="post" novalidate data-validate='example-validation'>
- {{ govukBackLink({
-   text: "Back",
-   href: "#"
- }) }}
+<form action="../../check-answers/check-answer-disability" method="post" novalidate data-validate='example-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">
+       
+        <h1 class="govuk-heading-l">
           <span class="govuk-caption-l">
             Diversity monitoring
           </span>
-          Sex and Gender</h1>
-
+          Do any of your conditions or illnesses reduce your ability to carry out day to day activities?
+        </h1>
+        
         {{ govukInsetText({
           text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
         }) }}
+      
+
+       
+
         
-
         {{ govukRadios({
-          idPrefix: "your-sex",
-          name: "your-sex",
+          idPrefix: "reduced-ability",
+          name: "reduced-ability",
           fieldset: {
             legend: {
-              text: "What is your sex?",
+              text: "",
               isPageHeading: false,
-              classes: "govuk-fieldset__legend--l"
+              classes: "govuk-fieldset__legend--m"
             }
           },
           items: [
             {
-              value: "male",
-              text: "Male"
+              value: "yes a lot",
+              text: "Yes, a lot"
             },
             {
-              value: "female",
-              text: "Female"
-            },
-            {
-              divider: "or"
-            },
-            {
-              value: "prefer-not-to-say",
-              text: "Prefer not to say"
-            }
-          ]
-        }) }}
-
-
-
-        {{ govukRadios({
-          idPrefix: "gender-identity-same-as-sex",
-          name: "gender-identity-same-as-sex",
-          fieldset: {
-            legend: {
-              text: "Is the gender you identify with the same as your sex registered at birth?",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          items: [
-            {
-              value: "yes",
-              text: "Yes"
+              value: "yes a little",
+              text: "Yes, a little"
             },
             {
               value: "no",
@@ -87,6 +65,8 @@ Public appointments
           ]
         }) }}
 
+       
+
 
 
                 <div class="govuk-button-group">
@@ -96,10 +76,14 @@ Public appointments
                 
                   {{ govukButton({
                     text: "Cancel",
-                    classes: "govuk-button--secondary"
+                    classes: "govuk-button--secondary",
+                    href: "../account-dashboard"
                   }) }}
                 </div>
 
+                  <p class="govuk-body">
+                    Read more about <a href="../your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
+                  <p>
 
               </div>
     </div>
@@ -108,14 +92,10 @@ Public appointments
   </div>
 </form>
  </div>
+
  <script type="application/json" id="example-validation">
   { 		  	
-    "your-sex": {
-      "presence": {
-        "message": "^Select an option or 'Prefer not to say'"
-      }
-    },
-    "gender-identity-same-as-sex": {
+    "reduced-ability": {
       "presence": {
         "message": "^Select an option or 'Prefer not to say'"
       }
@@ -123,6 +103,5 @@ Public appointments
     
   }
 </script>
-     
 
 {% endblock %}

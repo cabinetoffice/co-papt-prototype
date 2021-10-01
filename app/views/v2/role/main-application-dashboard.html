@@ -27,7 +27,7 @@ Public appointments
               Title
             </dt>
             <dd class="govuk-summary-list__value">
-              Mr
+              Mrs
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -168,58 +168,114 @@ Public appointments
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Sex and gender</a>
+                        <a href="../check-answers/check-answer-sex-and-gender" class="govuk-link">Sex and gender</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--yellow">
+
+                        {% if data['sex-and-gender-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
                           Check and confirm
                         </strong>
+
+                        {% endif %}
+
+
+
+
+                      
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Disability</a>
+                        <a href="../check-answers/check-answer-disability" class="govuk-link">Disability</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--yellow">
+                        {% if data['disability-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
                           Check and confirm
                         </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Ethnicity </a>
+                        <a href="../check-answers/check-answer-ethnicity" class="govuk-link">Ethnicity </a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--yellow">
+                        {% if data['ethnicity-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
                           Check and confirm
                         </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Religion</a>
+                        <a href="../check-answers/check-answer-religion" class="govuk-link">Religion</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--yellow">
+                        {% if data['religion-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
                           Check and confirm
                         </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Sexual orientation</a>
+                        <a href="../check-answers/check-answer-sexual-orientation" class="govuk-link">Sexual orientation</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--yellow">
+                        {% if data['sexual-orientation-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
                           Check and confirm
                         </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <!--Diversity task list ends-->
-
+                
 
 
                 <!--More about you task list starts-->
@@ -231,44 +287,85 @@ Public appointments
                     </tr>
                   </thead>
                   <tbody class="govuk-table__body">
+                    
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Professional qualifications</a>
+                        <a href="more-about-you/employment" class="govuk-link">Employment</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--red">
+                        {% if data['employment-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
                           Not Complete
                          </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Employment</a>
+                        <a href="more-about-you/professional-qualificiations" class="govuk-link">Professional qualifications</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--red">
+                        {% if data['professional-qualifications-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
                           Not Complete
                          </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Educational qualifications</a>
+                        <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--red">
+                        {% if data['education-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
                           Not Complete
                          </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Other public appointments held</a>
+                        <a href="more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
                       </td>
                       <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--red">
+                        {% if data['other-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
                           Not Complete
                          </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                   </tbody>
@@ -293,7 +390,7 @@ Public appointments
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Curriculum vitae</a>
+                        <a href="application/cv-update" class="govuk-link">Curriculum vitae</a>
                       </td>
                       <td class="govuk-table__cell">
 
@@ -318,7 +415,7 @@ Public appointments
                     </tr>
                     <tr class="govuk-table__row ">
                       <td class="govuk-table__cell ">
-                        <a href="#" class="govuk-link">Supporting statement</a>
+                        <a href="application/supporting-statement" class="govuk-link">Supporting statement</a>
                       </td>
                       <td class="govuk-table__cell">
                         {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
@@ -339,7 +436,7 @@ Public appointments
                    
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="#" class="govuk-link">Conflicts of interest</a>
+                        <a href="application/conflicts-of-interest" class="govuk-link">Conflicts of interest</a>
                       </td>
                       <td class="govuk-table__cell">
                         {% if data['conflicts-of-interest'] === 'yes'  or data['conflicts-of-interest'] === 'no' %}

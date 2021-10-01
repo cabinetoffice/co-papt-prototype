@@ -33,14 +33,32 @@ Public appointments
             "
           }) }}
 
+
+
+          {% set yesHtml %}
+            {{ govukCharacterCount({
+              name: "conflicts-of-interest-details",
+              id: "conflicts-of-interest-details",
+              maxlength: 200,
+              label: {
+                text: "Supply details of the conflict of interest"
+              }
+            }) }}
+            {% endset -%}
+
+
+
             {{ govukRadios({
-              classes: "govuk-radios--inline",
+             
               idPrefix: "conflicts-of-interest",
               name: "conflicts-of-interest",
               items: [
                 {
                   value: "yes",
-                  text: "Yes" 
+                  text: "Yes" ,
+                  conditional: {
+                    html: yesHtml
+                  }
                 },
                 {
                   value: "no",
@@ -49,14 +67,7 @@ Public appointments
               ]
             }) }}
 
-            {{ govukTextarea({
-              id: "conflicts-of-interest-details",
-              name: "conflicts-of-interest-details",
-              label: {
-                text: "If yes, please give details
-                "
-              }
-            }) }}
+           
 
             
                 <div class="govuk-button-group">

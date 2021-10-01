@@ -7,62 +7,83 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="disability-mental-health" method="post" novalidate data-validate='example-validation'>
-  {{ govukBackLink({
-    text: "Back",
-    href: "#"
-  }) }}
+<form action="../../check-answers/check-answer-ethnicity" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-       
+        
         <h1 class="govuk-heading-l">
           <span class="govuk-caption-l">
             Diversity monitoring
           </span>
-          Do you have any physical or mental health conditions or illnesses lasting, or expecting to last, 12 months or more?
+          What is your ethnic group?
         </h1>
         
+
         {{ govukInsetText({
           text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
         }) }}
       
 
-       
 
-       
-        
-       
-        
-        {{ govukRadios({
-          idPrefix: "disability",
-          name: "disability",
-          
-          items: [
-            {
-              value: "yes",
-              text: "Yes",
-              conditional: {
-                html: yesHtml
+
+
+          {{ govukRadios({
+            idPrefix: "ethnicity",
+            name: "ethnicity",
+            fieldset: {
+              legend: {
+                text: "",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--l"
               }
             },
+            items: [
+            
             {
-              value: "no",
-              text: "No"
+              value: "white",
+              text: "White"
+            },
+            {
+              value: "multiple-ethnic-groups",
+              text: "Mixed or multiple ethnic groups"
+            },
+            {
+              value: "asian",
+              text: "Asian or Asian British"
+            },
+            {
+              value: "black",
+              text: "Black, African, Caribbean or Black British"
+            },
+            {
+              value: "other",
+              text: "Other ethnic group"
             },
             {
               divider: "or"
             },
             {
               value: "prefer-not-to-say",
-              text: "Prefer not to say",
-              conditional: {
-                html: prefer-not-to-sayHtml
-              }
+              text: "Prefer not to say"
             }
-          ]
-        }) }}
+            ]
+          }) }}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -92,9 +113,9 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "disability": {
+    "ethnicity": {
       "presence": {
-        "message": "^Select an option or 'Prefer not to say'"
+        "message": "^Select an ethnic group or 'Prefer not to say'"
       }
     }
     

@@ -138,6 +138,40 @@ router.post(`/v${verNum}/ur06/split-version/diversity-monitoring/disability`, fu
 //disability ends
 
 
+//professional-qualifications starts
+
+router.post(`/v${verNum}/role/more-about-you/professionalQualificiations`, function (req, res) {
+    const professionalqualificiations = req.session.data['professional-qualifications'];
+
+    if (professionalqualificiations === 'yes') {
+        res.redirect(`/v${verNum}/role/more-about-you/professional-qualificiations-detail`);
+    } else {
+        res.redirect(`/v${verNum}/check-answers/check-answer-professional-qualifications`);
+    }
+});
+
+
+
+//professional-qualifications ends
+
+
+
+
+//disability starts
+
+router.post(`/v${verNum}/role/diversity-monitoring/disability-mental-health`, function (req, res) {
+    const disability = req.session.data['disability'];
+
+    if (disability === 'yes') {
+        res.redirect(`/v${verNum}/role/diversity-monitoring/disability-reduced-ability`);
+    } else {
+        res.redirect(`/v${verNum}/check-answers/check-answer-disability`);
+    }
+});
+
+
+
+//disability ends
 
 
 

@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
+
+        <h2 class="govuk-heading-m">Ethnicity</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your ethnic group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              White
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity">
+                Change<span class="govuk-visually-hidden"> ethnic group</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your White background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              English, Welsh, Scottish, Northern Irish or British
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+        <h2 class="govuk-heading-m">Now save this section of your application</h2>
+
+        <p class="govuk-body">By including these details within your application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+        {{ govukCheckboxes({
+          idPrefix: "ethnicity-check",
+          name: "ethnicity-check",
+          
+         
+          items: [
+            {
+              value: "confirm",
+              text: "Confirm that you are happy with these details"
+            }
+          ]
+        }) }}
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and save
+          </button>
+
+       
+
+      </div>
+    </div>
+  </main>
+</div>
+</form>
+<script type="application/json" id="example-validation">
+  { 		  	
+    "ethnicity-check": {
+      "presence": {
+        "message": "^confirm that the details for this section are correct."
+      }
+    }
+  }
+</script>
+{% endblock %}
