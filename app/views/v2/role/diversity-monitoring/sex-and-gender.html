@@ -1,0 +1,116 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container govuk-!-padding-top-0">
+<form action="../../role/main-application-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Application",
+        href: "../../role/main-application-dashboard"
+      },
+      {
+        text: "Sex and gender"
+      }
+    ]
+  }) }}
+
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Diversity monitoring
+          <span class="govuk-caption-l">
+            Step 1 of 3
+          </span>
+        </h1>
+        {{ govukWarningText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer.",
+          iconFallbackText: "Warning"
+        }) }}
+      
+
+        <h2 class="govuk-heading-m">
+          About you
+        </h2>
+
+        {{ govukRadios({
+          idPrefix: "your-sex",
+          name: "your-sex",
+          fieldset: {
+            legend: {
+              text: "What is your sex?"
+            }
+          },
+          items: [
+            {
+              value: "male",
+              text: "Male"
+            },
+            {
+              value: "female",
+              text: "Female"
+            },
+            {
+              value: "prefer-not-to-say",
+              text: "Prefer not to say"
+            }
+          ]
+        }) }}
+
+
+
+        {{ govukRadios({
+          idPrefix: "gender-identity-same-as-sex",
+          name: "gender-identity-same-as-sex",
+          fieldset: {
+            legend: {
+              text: "Is the gender you identify with the same as your sex registered at birth?"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            },
+            {
+              value: "prefer-not-to-say",
+              text: "Prefer not to say"
+            }
+          ]
+        }) }}
+
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Save"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

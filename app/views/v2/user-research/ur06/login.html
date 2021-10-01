@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post">
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Sign in</h1>
+        
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      Sign in or <a href="#" class="govuk-link">create an account</a> to manage your Public appointments account.
+    <p>
+          
+
+          {{ govukInput({
+            id: "email",
+            name: "email",
+            label: {
+              text: "Email address",
+              classes: "govuk-!-font-weight-bold",
+            isPageHeading: false
+            },
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false,
+              classes: " govuk-input--width-30",
+            isPageHeading: false
+          }) }}
+
+          {{ govukInput({
+            id: "password",
+            name: "password",
+            type: "password",
+            classes: "govuk-input--width-30 ",
+            label: {
+              text: "Password",
+              isPageHeading: false,
+              classes: " govuk-!-font-weight-bold ",
+            isPageHeading: false
+            }
+          }) }}
+          
+         
+                <div class="govuk-button-group govuk-!-margin-bottom-6">
+                  
+                  {{ govukButton({
+                    text: "Sign in"
+                  }) }}
+                
+                 
+                </div>
+                <div class="govuk-grid-row ">
+                  <div class="govuk-grid-column-two-thirds">
+                    <h3 class="govuk-heading-m">
+                      Problems signing in?
+                    </h3>
+                    <a href="#" class="govuk-link">Forgotten your password?</a>
+                  </div>
+                </div>
+                              
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

@@ -22,14 +22,28 @@ Public appointments
                   </span>Research links</h2>
                      <h2 class="govuk-heading-m">
                        UR06 
+                       <span class="govuk-caption-l">
+                         Sprints 21 and 22
+                       </span>
                      </h2>
+                     <h2 class="govuk-heading-l">
+                      Feedback and other links
+                    </h2>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <a href="#" class="govuk-link">User research feedback - LINK TBC</a>
+                      </li>
+                      <li>
+                        <a href="#" class="govuk-link">Feedback - visual version - LINK TBC</a>
+                      </li>
+                    </ul>
+                    <h2 class="govuk-heading-l">
+                      Journeys included in UR
+                    </h2>
                      <h3 class="govuk-heading-s">
                       Grouped questions journey
                     </h3>
-                     {{ govukButton({
-                       text: "Account creation",
-                       href: "v1/ur06/new-account/personal-details"
-                     }) }}
+                   
                      {{ govukButton({
                        text: "Account login",
                        href: "/v1/ur06/login-to-account"
@@ -43,14 +57,9 @@ Public appointments
                        href: "/v1/ur06/split-version/login-to-account"
                      }) }}
 
-                     <h3 class="govuk-heading-s">
-                      Role detail
-                    </h3>
 
-                     {{ govukButton({
-                      text: "Example role detail",
-                      href: "/v1/ur06/role-details"
-                    }) }}
+                 
+
               {% endset -%}
       <!--Research section ends-->
 
@@ -70,25 +79,53 @@ Public appointments
                         }) }}
 
                         <h2 class="govuk-heading-l">
-                            Version 1
+                            Version 2 - as-is
+                            <span class="govuk-caption-l">
+                              Sprint 22
+                            </span>
                         </h2>
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <a href="/v2/account/dashboard" class="govuk-link">V2 Account dashboard and diversity flow</a>
+                          </li>
+                          <li>
+                            <a href="/v2/role/main-application-dashboard" class="govuk-link">V2 role application and 'More about you' workflow</a>
+                          </li>
+                         
+                        </ul>
 
-                      {{ govukButton({
-                        text: "V1 dashboard",
-                        href: "/v1/transaction-site/dashboard"
-                      }) }}
+                      <hr>
 
-                      {{ govukButton({
-                        text: "V1 account creation",
-                        href: "/v1/account/new-account/personal-details"
-                      }) }}
-
-                      {{ govukButton({
-                        text: "Login screen",
-                        href: "/v1/account/login"
-                      }) }}
-
-
+                      <h2 class="govuk-heading-l">
+                        Version 1 - as-is
+                        <span class="govuk-caption-l">
+                          Spint 21
+                        </span>
+                    </h2>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <a href="/v1/transaction-site/dashboard" class="govuk-link">V1 dashboard</a>
+                      </li>
+                      <li>
+                        <a href="/v1/account/new-account/personal-details" class="govuk-link">V1 account creation and dashboard</a>
+                      </li>
+                      <li>
+                        <a href="/v1/account/login" class="govuk-link">V1 Login to application</a>
+                      </li>
+                    </ul>
+                   
+                 
+                    <h3 class="govuk-heading-l">
+                      Work carried out during this sprint
+                    </h3>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li><a href="https://technologyprogramme.atlassian.net/jira/software/projects/PAPT/boards/123?assignee=6138887671a7e700721f07ba&selectedIssue=PAPT-765" class="govuk-link">Jira ticket PAPT-765 - removed content from role details</a> List item
+                      </li>
+                      <li>
+                        Creation of 'as-is' prototype ahead of design iterations
+                      </li>
+                    </ul>
 
               {% endset -%}
         <!-- Beta section ends-->

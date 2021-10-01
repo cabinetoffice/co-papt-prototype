@@ -1,0 +1,317 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Public appointments",
+        href: "#"
+      },
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "My account"
+      }
+    ]
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-m">
+          Welcome back,
+        </span>
+        <h1 class="govuk-heading-xl">Account home</h1>   
+       </div>
+       </div>
+       <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            
+           <div class="govuk-grid-row">
+            
+             <div class="govuk-grid-column-one-third border-full">
+               <h3 class="govuk-heading-m">
+                 Activity
+               </h3>
+               <ul class="govuk-list govuk-list--spaced">
+                 <li>
+                   <a href="#" class="govuk-link">Application overview</a>
+                 </li>
+                
+               </ul>
+             </div>
+             <div class="govuk-grid-column-one-third border-full">
+              <h3 class="govuk-heading-m">
+                Personal details
+              </h3>
+              <ul class="govuk-list govuk-list--spaced">
+                <li>
+                  <a href="#" class="govuk-link">Name, date of birth</a>
+                </li>
+                <li>
+                 <a href="#" class="govuk-link">Address</a>
+                </li>
+                <li>
+                 <a href="#" class="govuk-link">Telephone number</a>
+                </li>
+                <li>
+                  <a href="#" class="govuk-link">Email address</a>
+                 </li>
+                 <li>
+                  <a href="#" class="govuk-link">CV</a>
+                 </li>
+              </ul>
+            </div>
+            <div class="govuk-grid-column-one-third border-full">
+              <h3 class="govuk-heading-m">
+                Account
+              </h3>
+              <ul class="govuk-list govuk-list--spaced">
+                <li>
+                  <a href="#" class="govuk-link">Email alerts</a>
+                </li>
+                <li>
+                 <a href="#" class="govuk-link">Change password</a>
+                </li>
+                <li>
+                 <a href="#" class="govuk-link">Delete account</a>
+                </li>
+                
+              </ul>
+            </div>
+           </div>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Why we collect diversity data
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p class="govuk-body">
+                    We are committed to recruiting people that reflect the diverse communities we serve. To do this we need your help in filling out these monitoring questions. You can select ‘prefer not to say’ for any questions you do not want to answer. 
+                  <p>
+                  <p class="govuk-body">
+                    The information you provide in the diversity monitoring and more about you sections will:
+                  <p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      not be used as part of the selection process
+                    </li>
+                    <li>
+                      not be seen by the interview panel
+                    </li>
+                    <li>
+                      only be used by the department, the Commissioner for Public Appointments and the Cabinet Office for statistical purposes
+                    </li>
+                  </ul>
+                  <p class="govuk-body">
+                    No information will be published which allows any individual to be identified.
+                  <p>
+                  <p class="govuk-body">
+                    Your responses are collected by the Cabinet Office and the government departments managing applications. The data is used to produce management information about the diversity of applicants. Your information will also help ensure that our recruitment processes are fair to all. Read more about <a href="#" class="govuk-link">your data and diversity data</a>.
+                  <p>
+    
+                </div>
+              </details>
+          </div>
+     </div>
+     <div class="govuk-grid-row">
+       <div class="govuk-grid-column-two-thirds">
+         <!--Diversity task list starts-->
+         <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header left" scope="col"> Diversity monitoring </th>
+              <th class="govuk-table__header  " scope="col"> Status </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="diversity-monitoring/sex-and-gender" class="govuk-link">Sex and gender</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['your-sex'] === 'male' or  data['your-sex']  === 'female' or  data['your-sex'] === 'prefer-not-to-say' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="diversity-monitoring/disability" class="govuk-link">Disability</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['disability'] === 'yes' or data['disability'] === 'no' or data['disability'] === 'prefer-not-to-say' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="diversity-monitoring/ethnicity-religion-sexual-orientation" class="govuk-link">Ethnicity, religion, sexual orientation</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['ethnicity'] === 'white' or data['ethnicity'] === 'multiple-ethnic-groups'  or data['ethnicity'] === 'asian' or data['ethnicity'] === 'black' or data['ethnicity'] === 'other' or  data['ethnicity'] === 'prefer-not-to-say'  %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        <!--Diversity task list ends-->
+
+
+
+
+        <!--More about you task list starts-->
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header left" scope="col"> More about you </th>
+              <th class="govuk-table__header  " scope="col"> Status </th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/professional-qualificiations" class="govuk-link">Professional qualifications</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['professional-qualifications'] === 'yes' or data['professional-qualifications'] === 'no' or data['professional-qualifications'] === 'prefer-not-to-say' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/employment" class="govuk-link">Employment</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['employment-status'] === 'employee' or data['employment-status'] === 'self-employed-with-employees'  or data['employment-status'] === 'self-employed-freelance-without-employees'  or data['employment-status'] === 'student' or data['employment-status'] === 'unemployed' or data['employment-status'] === 'looking-after-family'  or data['employment-status'] === 'sick' or data['employment-status'] === 'retired'   or data['employment-status'] === 'prefer-not-to-say'   %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+
+
+           
+
+           
+
+
+
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['highest-qualification'] === 'one-to-four-gcses' or data['highest-qualification'] === 'five-or-more' or data['highest-qualification'] === 'tow-or-more-a-levels' or data['highest-qualification'] === 'sub-degree' or  data['highest-qualification'] === 'apprenticeship' or data['highest-qualification'] === 'no-qualifciations' or  data['highest-qualification'] === 'other' or data['highest-qualification'] === 'prefer-not-to-say' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                <strong class="govuk-tag govuk-tag--red">
+                  Not Complete
+                 </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['public-appointments'] === 'yes' or data['public-appointments'] === 'no' or data['public-appointments'] === 'prefer-not-to-say' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                        <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+
+                        {% endif %}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- More about you task list ends-->
+       </div>
+     </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

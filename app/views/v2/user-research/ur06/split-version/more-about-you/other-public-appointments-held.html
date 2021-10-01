@@ -1,0 +1,164 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            More about you
+          </span>
+          Do you hold any other public appointments?
+        </h1>
+        {{ govukInsetText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
+        }) }}
+      
+          
+                  
+
+
+              {% set otherappointmentsHtml %}
+              
+
+
+              {{ govukSelect({
+                id: "public-appointments-held",
+                name: "public-appointments-held",
+                label: {
+                  text: "How many other public appointments do you currently hold?"
+                },
+                items: [
+                {
+                  value: "how-many-appointments",
+                  text: "Select how many"
+                },
+                  
+                  {
+                    value: "1",
+                    text: "1"
+                  },
+                  {
+                    value: "2",
+                    text: "2"
+                  },
+                  {
+                    value: "3",
+                    text: "3"
+                  },
+                  {
+                    value: "4",
+                    text: "4"
+                  },
+                  {
+                    value: "5",
+                    text: "5"
+                  },
+                  {
+                    value: "6",
+                    text: "6"
+                  },
+                  {
+                    value: "7",
+                    text: "7"
+                  },
+                  {
+                    value: "8",
+                    text: "8"
+                  },
+                  {
+                    value: "9",
+                    text: "9"
+                  },
+                  {
+                    value: "10 or more",
+                    text: "10 or more"
+                  },
+                  {
+                    value: "prefer-not-to-say",
+                    text: "Prefer not to say"
+                  }
+                ]
+              }) }}
+
+              {% endset -%}
+              
+              {{ govukRadios({
+                idPrefix: "public-appointments",
+                name: "public-appointments",
+               
+                
+                items: [
+                  {
+                    value: "yes",
+                    text: "Yes",
+                    conditional: {
+                      html: otherappointmentsHtml
+                    }
+                  },
+                  {
+                    value: "no",
+                    text: "No"
+                  },
+                  {
+                    divider: "or"
+                  },
+                  {
+                    value: "prefer-not-to-say",
+                    text: "Prefer not to say"
+                  }
+                ]
+              }) }}
+
+              {{ govukDetails({
+                summaryText: "Help with public appointments",
+                text: " This includes all non-departmental public bodies (NDPBs), NHS bodies, parole boards and research councils. It does not incude sitting as a school governor, being a magistrate or any positions within charities."
+              }) }}
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../account-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "public-appointments": {
+      "presence": {
+        "message": "^Enter information of your highest qualification"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}
