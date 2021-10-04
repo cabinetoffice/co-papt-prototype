@@ -8,16 +8,9 @@ Public appointments
 {% block content %}
 <div class="govuk-width-container">
 <form action="change-cv" method="post" novalidate data-validate='error-state-validation'>
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Application",
-        href: "../../role/main-application-dashboard"
-      },
-      {
-        text: "Conflicts of Interest"
-      }
-    ]
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
   }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -76,7 +69,7 @@ Public appointments
   { 		  	
     "use-profile-cv": {
       "presence": {
-        "message": "^just for the prototype to work here"
+        "message": "^Select if you want to use this CV or upload a new cv"
       }
     }
   }

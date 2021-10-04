@@ -8,17 +8,10 @@ Public appointments
 {% block content %}
 <div class="govuk-width-container">
 <form action="../../role/main-application-dashboard" method="post">
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Application",
-        href: "../../role/main-application-dashboard"
-      },
-      {
-        text: "Conflicts of Interest"
-      }
-    ]
-  }) }}
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">

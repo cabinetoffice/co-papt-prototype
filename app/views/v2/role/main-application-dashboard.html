@@ -323,7 +323,6 @@ Public appointments
                           </td>
                           <td class="govuk-table__cell">
                             
-    
                             <strong class="govuk-tag govuk-tag--blue">
                               Complete
                              </strong>
@@ -530,6 +529,27 @@ Public appointments
 
                 <!--checkboxes end-->
       
+
+
+                {% if data['sex-and-gender-check'] === 'confirm' and  data['disability-check'] === 'confirm' and data['ethnicity-check'] === 'confirm' and data['religion-check'] === 'confirm' and data['sexual-orientation-check'] === 'confirm' and data['employment-check'] === 'confirm' and data['professional-qualifications-check'] === 'confirm' and data['education-check'] === 'confirm' and data['other-check'] === 'confirm'  and data['use-profile-cv'] === 'yes' or data['use-profile-cv'] === 'no' or data['supporting-statement'] === 'supporting-statement' or data['video-statement'] === 'written-statement' or data['conflicts-of-interest'] === 'yes' or data['conflicts-of-interest'] === 'no' %}
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Submit application",
+                    href: "application-check-answer"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Withdraw application",
+                    classes: "govuk-button--warning",
+                    href: "delete-application"
+                  }) }}
+                </div>
+               
+
+                {% else %}
+
                 <div class="govuk-button-group">
                   {{ govukButton({
                     text: "Submit application",
@@ -537,11 +557,14 @@ Public appointments
                   }) }}
                 
                   {{ govukButton({
-                    text: "Delete application",
-                    classes: "govuk-button--warning"
+                    text: "Withdraw application",
+                    classes: "govuk-button--warning",
+                    href: "delete-application"
                   }) }}
                 </div>
+               
 
+                {% endif %}
 
               </div>
     </div>

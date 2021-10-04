@@ -16,7 +16,7 @@ Public appointments
 
         <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
 
-        <h2 class="govuk-heading-m">Employment</h2>
+        <h2 class="govuk-heading-m">Professional qaulifications</h2>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
@@ -24,7 +24,7 @@ Public appointments
               Do you hold a professional qualification?
             </dt>
             <dd class="govuk-summary-list__value">
-              Yes
+              {{ data['professional-qualifications'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/professional-qualificiations">
@@ -32,12 +32,18 @@ Public appointments
               </a>
             </dd>
           </div>
+
+
+          {% if data['professional-qualifications'] === 'yes' %}
+
+
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               What professional field(s) is the qualification(s) within?
             </dt>
             <dd class="govuk-summary-list__value">
-              Private Sector
+              {{ data['professional-qualifications-fields'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/professional-qualificiations-detail">
@@ -45,9 +51,13 @@ Public appointments
               </a>
             </dd>
           </div>
-        </dl>
+        
 
+         {% else %}
+      
+          {% endif %}
 
+        </dl>  
         <h2 class="govuk-heading-m">Now save this section of your application</h2>
 
         <p class="govuk-body">By including these details within your application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
