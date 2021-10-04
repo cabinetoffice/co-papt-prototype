@@ -21,7 +21,7 @@ Public appointments
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           
 
-            {% if data['your-sex'] === 'male' or data['your-sex'] === 'female' or data['your-sex'] === 'prefer-not-to-say' %}
+            {% if data['your-sex'] === 'Male' or data['your-sex'] === 'Female' or data['your-sex'] === 'Prefer not to say' %}
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -55,37 +55,59 @@ Public appointments
 
             {% endif %}
 
-            {% if data['gender-identity-same-as-sex'] === 'yes' or data['gender-identity-same-as-sex'] === 'no' or data['gender-identity-same-as-sex'] === 'prefer-not-to-say' %}
+            {% if data['gender-identity-same-as-sex'] === 'Yes' or data['gender-identity-same-as-sex'] === 'No' or data['gender-identity-same-as-sex'] === 'Prefer not to say' %}
 
            
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Is the gender you identify with the same as your sex registered at birth?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['gender-identity-same-as-sex'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
-                Change<span class="govuk-visually-hidden"> gender identified at birth</span>
-              </a>
-            </dd>
-          </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Is the gender you identify with the same as your sex registered at birth?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['gender-identity-same-as-sex'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                    Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                  </a>
+                </dd>
+              </div>
           {% else %}
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Is the gender you identify with the same as your sex registered at birth?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Yes
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
-                Change<span class="govuk-visually-hidden"> gender identified at birth</span>
-              </a>
-            </dd>
-          </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Is the gender you identify with the same as your sex registered at birth?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                    Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                  </a>
+                </dd>
+              </div>
+
+          {% endif %}
+
+          {% if data['gender-identity-same-as-sex'] === 'No' %}
+
+           
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What is the gender you identity with?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['other-sex-and-gender-identity-birth'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                    Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                  </a>
+                </dd>
+              </div>
+          {% else %}
+
+             
 
           {% endif %}
         </dl>

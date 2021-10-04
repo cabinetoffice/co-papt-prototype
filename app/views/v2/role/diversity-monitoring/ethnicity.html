@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../check-answers/check-answer-ethnicity" method="post" novalidate data-validate='example-validation'>
+<form action="ethnicity" method="post" novalidate data-validate='example-validation'>
  {{ govukBackLink({
    text: "Back",
    href: "#"
@@ -46,30 +46,31 @@ Public appointments
             items: [
             
             {
-              value: "white",
-              text: "White"
+              value: "White",
+              text: "White",
+              checked:"true"
             },
             {
-              value: "multiple-ethnic-groups",
+              value: "Mixed or multiple ethnic groups",
               text: "Mixed or multiple ethnic groups"
             },
             {
-              value: "asian",
+              value: "Asian or Asian British",
               text: "Asian or Asian British"
             },
             {
-              value: "black",
+              value: "Black, African, Caribbean or Black British",
               text: "Black, African, Caribbean or Black British"
             },
             {
-              value: "other",
+              value: "Other ethnic group",
               text: "Other ethnic group"
             },
             {
               divider: "or"
             },
             {
-              value: "prefer-not-to-say",
+              value: "Prefer not to say",
               text: "Prefer not to say"
             }
             ]
@@ -95,7 +96,7 @@ Public appointments
                   {{ govukButton({
                     text: "Cancel",
                     classes: "govuk-button--secondary",
-                    href: "../account-dashboard"
+                    href: "../main-application-dashboard"
                   }) }}
                 </div>
 

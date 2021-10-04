@@ -288,86 +288,115 @@ Public appointments
                   </thead>
                   <tbody class="govuk-table__body">
                     
+                    {% if data['employment-check'] === 'confirm' %}
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="more-about-you/employment" class="govuk-link">Employment</a>
+                        <a href="../check-answers/check-answer-employment" class="govuk-link">Employment</a>
                       </td>
                       <td class="govuk-table__cell">
-                        {% if data['employment-check'] === 'confirm' %}
+                       
 
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete
                          </strong>
-
+                        </td>
+                      </tr>
                          {% else %}
-
+                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <a href="more-about-you/employment" class="govuk-link">Employment</a>
+                          </td>
+                          <td class="govuk-table__cell">
                          <strong class="govuk-tag govuk-tag--red">
                           Not Complete
                          </strong>
-
+                        </td>
+                      </tr>
                         {% endif %}
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a href="more-about-you/professional-qualificiations" class="govuk-link">Professional qualifications</a>
-                      </td>
-                      <td class="govuk-table__cell">
+                     
+
                         {% if data['professional-qualifications-check'] === 'confirm' %}
 
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Complete
-                         </strong>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <a href="../check-answers/check-answer-professional-qualifications" class="govuk-link">Professional qualifications</a>
+                          </td>
+                          <td class="govuk-table__cell">
+                            
+    
+                            <strong class="govuk-tag govuk-tag--blue">
+                              Complete
+                             </strong>
+                            </td>
+                          </tr>
+                             {% else %}
+                             <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <a href="more-about-you/professional-qualificiations" class="govuk-link">Professional qualifications</a>
+                              </td>
+                              <td class="govuk-table__cell">
+                             <strong class="govuk-tag govuk-tag--red">
+                              Not Complete
+                             </strong>
+                            </td>
+                          </tr>
+                            {% endif %}
+                         
+                            {% if data['education-check'] === 'confirm' %}
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
+                              </td>
+                              <td class="govuk-table__cell">
+                                
+        
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Complete
+                                 </strong>
+                                </td>
+                              </tr>
+                                 {% else %}
+                                 <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                 <strong class="govuk-tag govuk-tag--red">
+                                  Not Complete
+                                 </strong>
+                                </td>
+                              </tr>
+                                {% endif %}
+                              
 
-                         {% else %}
 
-                         <strong class="govuk-tag govuk-tag--red">
-                          Not Complete
-                         </strong>
+                   
+                                {% if data['other-check'] === 'confirm' %}
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <a href="../check-answers/check-answer-other-public-appointments" class="govuk-link">Other public appointments held</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                  
 
-                        {% endif %}
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
-                      </td>
-                      <td class="govuk-table__cell">
-                        {% if data['education-check'] === 'confirm' %}
-
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Complete
-                         </strong>
-
-                         {% else %}
-
-                         <strong class="govuk-tag govuk-tag--red">
-                          Not Complete
-                         </strong>
-
-                        {% endif %}
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a href="more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
-                      </td>
-                      <td class="govuk-table__cell">
-                        {% if data['other-check'] === 'confirm' %}
-
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Complete
-                         </strong>
-
-                         {% else %}
-
-                         <strong class="govuk-tag govuk-tag--red">
-                          Not Complete
-                         </strong>
-
-                        {% endif %}
-                      </td>
-                    </tr>
+                                  <strong class="govuk-tag govuk-tag--blue">
+                                    Complete
+                                  </strong>
+                                  </td>
+                                </tr>
+                                {% else %}
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--red">
+                                  Not Complete
+                                </strong>
+                                </td>
+                              </tr>
+                                {% endif %}
+                     
                   </tbody>
                 </table>
                 <!-- More about you task list ends-->

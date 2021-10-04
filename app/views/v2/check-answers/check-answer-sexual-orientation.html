@@ -22,7 +22,12 @@ Public appointments
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
-          {% if data['sexual-orientation'] === 'heterosexual' or data['sexual-orientation'] === 'gay-lesbian' or data['sexual-orientation'] === 'bisexual' or data['sexual-orientation'] === 'other'  or data['sexual-orientation'] === 'prefer-not-to-say'   %}
+          {% if data['sexual-orientation'] === 'Heterosexual or straight' or data['sexual-orientation'] === 'Gay or lesbian' or data['sexual-orientation'] === 'Bisexual' or data['sexual-orientation'] === 'other'  or data['sexual-orientation'] === 'Prefer not to say'   %}
+
+
+         
+
+
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -32,7 +37,7 @@ Public appointments
                 {{ data['sexual-orientation'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="../role/diversity-monitoring/disability#disability">
+                <a class="govuk-link" href="../role/diversity-monitoring/sexual-orientation">
                   Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
                 </a>
               </dd>
@@ -45,9 +50,7 @@ Public appointments
                   Which of the following best describes your sexual orientation?
                 </dt>
                 <dd class="govuk-summary-list__value">
-                  Straight/Heterosexual
-    
-    
+                  Heterosexual or straight
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="../role/diversity-monitoring/sexual-orientation">
@@ -59,10 +62,6 @@ Public appointments
             {% endif %}
 
       </dl>
-
-
-
-
 
 
         <h2 class="govuk-heading-m">Now save this section of your application</h2>

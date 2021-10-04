@@ -73,6 +73,26 @@ Public appointments
            {% else %}
           <!--show nothing-->
           {% endif %}
+
+          {% if data['disability'] === 'yes' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which if any conditions or illnesses listed affect you?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['affected-ability'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/disability-reduced-ability">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
           
         </dl>
 

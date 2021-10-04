@@ -16,7 +16,7 @@ Public appointments
 
         <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
 
-        <h2 class="govuk-heading-m">Employment</h2>
+        <h2 class="govuk-heading-m">Education</h2>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
@@ -24,7 +24,7 @@ Public appointments
               What is the highest level of qualification you hold?
             </dt>
             <dd class="govuk-summary-list__value">
-              One to four GCSEs (any grade) or equivalent - Level 1 qualifications
+              {{ data['highest-qualification'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/education#highest-qualification">
@@ -37,8 +37,8 @@ Public appointments
               Do you hold a degree? (may change)
             </dt>
             <dd class="govuk-summary-list__value">
-              Yes<br>
-              Bristol University
+              {{ data['degree'] }} <br>
+              {{ data['uni-list'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/education#degree">
@@ -51,7 +51,7 @@ Public appointments
               What is/are the discipline(s) of your highest level of qualification?
             </dt>
             <dd class="govuk-summary-list__value">
-              Education
+              {{ data['highest-disc-select'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/education#highest-disc-select">

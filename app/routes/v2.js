@@ -177,5 +177,35 @@ router.post(`/v${verNum}/role/diversity-monitoring/disability-mental-health`, fu
 
 
 
+//ethnicity starts
+
+router.post(`/v${verNum}/role/diversity-monitoring/ethnicity`, function (req, res) {
+    const ethnicity = req.session.data['ethnicity'];
+
+    if (ethnicity === 'White') {
+        res.redirect(`/v${verNum}/role/diversity-monitoring/ethnicity-white`);
+    } 
+    else if (ethnicity === 'Mixed or multiple ethnic groups') {
+        res.redirect(`/v${verNum}/role/diversity-monitoring/ethnicity-mixed`);
+    } 
+    else if (ethnicity === 'Asian or Asian British') {
+        res.redirect(`/v${verNum}/role/diversity-monitoring/ethnicity-asian`);
+    } 
+    else if (ethnicity === 'Black, African, Caribbean or Black British') {
+        res.redirect(`/v${verNum}/role/diversity-monitoring/ethnicity-black`);
+    } 
+    else if (ethnicity === 'Other ethnic group') {
+        res.redirect(`/v${verNum}/role/diversity-monitoring/ethnicity-other`);
+    } 
+    else {
+        res.redirect(`/v${verNum}/check-answers/check-answer-ethnicity`);
+    }
+});
+
+
+
+//ethnicity ends
+
+
 module.exports = router
 
