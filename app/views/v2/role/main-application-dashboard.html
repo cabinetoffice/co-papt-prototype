@@ -488,6 +488,22 @@ Public appointments
       
                 <!--checkboxes start-->
 
+
+                {% set otherHtml %}
+                  {{ govukCharacterCount({
+                    name: "with-hint",
+                    id: "with-hint",
+                    maxlength: 200,
+                    label: {
+                      text: "Provide more detail on the reasonable adjustments you'd like to make to the application process.",
+                      classes: "govuk-label--s",
+                      isPageHeading: true
+                    }
+                  }) }}
+                  {% endset -%}
+
+
+
                     {{ govukCheckboxes({
                       idPrefix: "privacy-policy",
                       name: "privacy-policy",
@@ -508,7 +524,10 @@ Public appointments
                       items: [
                         {
                           value: "reasonable-adjustments-checked",
-                          html: "Tick this box if you would like to make reasonable adjustments to the application process due to a health condition that you may have."
+                          text: "Tick this box if you would like to make reasonable adjustments to the application process due to a health condition that you may have.",
+                          conditional: {
+                            html: otherHtml
+                          }
                         }
                       ]
                     }) }}
