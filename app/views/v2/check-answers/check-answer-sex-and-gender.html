@@ -113,25 +113,27 @@ Public appointments
         </dl>
         
 
-        <h2 class="govuk-heading-m">Now save this section of your application</h2>
-
-        <p class="govuk-body">By including these details within your application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
-
-       {{ govukCheckboxes({
-         idPrefix: "sex-and-gender-check",
-         name: "sex-and-gender-check",
-         
+      
         
-         items: [
-           {
-             value: "confirm",
-             text: "Confirm that you are happy with these details"
-           }
-         ]
-       }) }}
-
+         <!--for prototype validation only-->
+         <span class="govuk-visually-hidden">
+                {{ govukCheckboxes({
+                  idPrefix: "sex-and-gender-check",
+                  name: "sex-and-gender-check",
+                  
+                  
+                  items: [
+                  {
+                    value: "confirm",
+                    text: "Confirm that you are happy with these details - this section requires content design.",
+                    checked: "true"
+                  }
+                ]
+              }) }}
           <input type="hidden" name="answers-checked" value="true">
-
+              </span>
+               <!--for prototype validation only-->
+        
           <button class="govuk-button" data-module="govuk-button">
             Accept and save
           </button>
@@ -149,7 +151,7 @@ Public appointments
   { 		  	
     "sex-and-gender-check": {
       "presence": {
-        "message": "^confirm that the details for this section are correct."
+        "message": "^validation to be confirmed."
       }
     }
   }

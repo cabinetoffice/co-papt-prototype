@@ -62,24 +62,31 @@ Public appointments
         </dl>
 
 
-        <h2 class="govuk-heading-m">Now save this section of your application</h2>
+       
 
-        <p class="govuk-body">By including these details within your application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+              
+          <!--for prototype validation only-->
+          <span class="govuk-visually-hidden">
+            {{ govukCheckboxes({
+              idPrefix: "education-check",
+              name: "education-check",
+              
+            
+            
+              items: [
+                {
+                  value: "confirm",
+                  text: "Confirm that you are happy with these details - this section requires content design.",
+                  checked: "true"
+                }
+              ]
+            }) }}
+            </span>
+            <input type="hidden" name="answers-checked" value="true">
+         <!--for prototype validation only-->
 
-        {{ govukCheckboxes({
-          idPrefix: "education-check",
-          name: "education-check",
-          
+
          
-          items: [
-            {
-              value: "confirm",
-              text: "Confirm that you are happy with these details"
-            }
-          ]
-        }) }}
-
-          <input type="hidden" name="answers-checked" value="true">
 
           <button class="govuk-button" data-module="govuk-button">
             Accept and save
@@ -96,7 +103,7 @@ Public appointments
   { 		  	
     "education-check": {
       "presence": {
-        "message": "^confirm that the details for this section are correct."
+        "message": "^validation to be confirmed."
       }
     }
   }
