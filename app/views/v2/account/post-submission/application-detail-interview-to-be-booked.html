@@ -1,0 +1,226 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Public appointments",
+        href: "#"
+      },
+      {
+        text: "My account",
+        href: "#"
+      },
+      {
+        text: "Applications overview",
+        href: "application-listing"
+      },
+      {
+        text: "Chair - Distribution Centre Manager"
+      }
+    ]
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+          <span class="govuk-caption-xl">
+            Application for
+          </span>
+          Chair - Distribution Centre Manager
+        </h1>   
+       </div>
+       </div>
+      
+     <div class="govuk-grid-row">
+      
+         <div class="govuk-grid-column-two-thirds">
+           
+          {{ govukInsetText({
+            text: "You will receive notifications via email and SMS at each stage of the process."
+          }) }}
+       
+      <table class="govuk-table govuk-!-margin-bottom-9 govuk-!-margin-top-9">
+        <caption class="govuk-table__caption govuk-table__caption--l">Application process</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Stage</th>
+            
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Application submitted
+            </th>
+           
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "submitted"
+              }) }}
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <!--job split-->
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="#" class="govuk-link">Interview requested</a>
+            </th>
+           
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "Book your interview",
+                classes: "govuk-tag--blue"
+              }) }}
+            </td>
+            <td class="govuk-table__cell">
+              <a href="#" class="govuk-link">Book</a>
+            </td>
+           
+          </tr>
+          <!--job split-->
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Interview scheduled
+            </th>
+           
+            <td class="govuk-table__cell">
+              <!--tage here-->
+            </td>
+            <td class="govuk-table__cell">
+              <!--tage here-->
+            </td>
+          </tr>
+           <!--job split-->
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Interview
+            </th>
+           
+            <td class="govuk-table__cell">
+             <!--tag here-->
+            </td>
+            <td class="govuk-table__cell">
+              <!--tage here-->
+            </td>
+          </tr>
+          
+           <!-- job split-->
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Decisions / outcome
+            </th>
+           
+            <td class="govuk-table__cell">
+             <!--tag here-->
+            </td>
+            <td class="govuk-table__cell">
+              <!--tage here-->
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+   
+      
+
+
+      <!--Application timeline starts-->
+      <h2 class="govuk-heading-l">
+        Timeline for this appointment
+      </h2>
+
+      <ul class="vacancyTimeline govuk-!-margin-bottom-9">
+        <li>
+          <div>Opening date</div>
+          <div></div>
+          <div>
+            <p class="govuk-body-s">
+              17 December 2020
+            <p>
+           </div>
+        </li>
+        <li>
+          <div>Closing date</div>
+          <div></div>
+          <div><p class="govuk-body-s">
+            7 December 2020
+          <p></div>
+        </li>
+        <li>
+          <div>Sifting date</div>
+          <div></div>
+          <div><p class="govuk-body-s">
+            23 November 2020
+          <p></div>
+        </li>
+        <li>
+          <div>Interview date</div>
+          <div></div>
+          <div><p class="govuk-body-s">
+            23 November 2020
+          <p></div>
+        </li>
+        <li>
+          <div>Announcement</div>
+          <div></div>
+          <div><p class="govuk-body-s">
+            23 November 2020
+          <p></div>
+        </li>
+      </ul>
+      <!--Application timeline ends-->
+     <h2 class="govuk-heading-l">
+       Your submission
+     </h2>
+      {{ govukAccordion({
+        id: "role-detail",
+        items: [
+          {
+            heading: {
+              text: "Supporting statement"
+            },
+            content: {
+              text: "Detail here as entered as part of the application"
+            }
+          },
+          {
+            heading: {
+              text: "CV"
+            },
+            content: {
+              text: "Detail here as entered as part of the application"
+            }
+          },
+          {
+            heading: {
+              text: "Conflicts of interest"
+            },
+            content: {
+              text: "Detail here as entered as part of the application"
+            }
+          }
+        ]
+      }) }}
+      
+    </div>
+     </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

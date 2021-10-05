@@ -1,0 +1,149 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Public appointments",
+        href: "#"
+      },
+      {
+        text: "My account",
+        href: "#"
+      },
+      {
+        text: "Applications overview"
+      }
+    ]
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Applications overview</h1>   
+       </div>
+       </div>
+      
+     <div class="govuk-grid-row">
+       <div class="govuk-grid-column-full">
+         
+       
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Your applications</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Role</th>
+            <th scope="col" class="govuk-table__header">Last updated</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Update</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="application-detail-submitted" class="govuk-link">Chair - British Broadcasting Company (BBC)</a>
+            </th>
+            <td class="govuk-table__cell">20 October 2021, 15:00</td>
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "Submitted"
+              }) }}
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <!--job split-->
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="application-detail-interview-to-be-booked" class="govuk-link">Chair - Distribution Centre Manager</a>
+            </th>
+            <td class="govuk-table__cell">20 October 2021, 15:00</td>
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "Book your interview",
+                classes: "govuk-tag--blue"
+              }) }}
+            </td>
+            <td class="govuk-table__cell">
+              <a href="application-detail-interview-to-be-booked" class="govuk-link">View update</a>
+            </td>
+          </tr>
+           <!--job split-->
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="application-detail-interview-scheduled" class="govuk-link">Distribution Centre Manager</a>
+            </th>
+            <td class="govuk-table__cell">20 October 2021, 15:00</td>
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "Interview scheduled",
+                classes: "govuk-tag--blue"
+              }) }}
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          
+           <!-- job split-->
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="application-detail-interview-done" class="govuk-link">Chair- OFGEM</a>
+            </th>
+            <td class="govuk-table__cell">20 October 2021, 15:00</td>
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "Awaiting outcome",
+                classes: "govuk-tag--blue"
+              }) }}
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <!-- job split-->
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="#" class="govuk-link">Non-Executive Director - OFGEM</a>
+            </th>
+            <td class="govuk-table__cell">20 October 2021, 15:00</td>
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "Unsucessful",
+                classes: "govuk-tag--red"
+              }) }}
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+           <!-- job split-->
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="#" class="govuk-link">Non-Executive Director - BBC</a>
+            </th>
+            <td class="govuk-table__cell">20 October 2021, 15:00</td>
+            <td class="govuk-table__cell">
+              {{ govukTag({
+                text: "Successful",
+                classes: "govuk-tag--green"
+              }) }}
+            </td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+     </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}
