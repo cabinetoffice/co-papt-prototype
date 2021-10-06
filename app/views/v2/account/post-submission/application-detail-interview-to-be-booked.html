@@ -23,7 +23,7 @@ Public appointments
         href: "application-listing"
       },
       {
-        text: "Chair - Distribution Centre Manager"
+        text: "Distribution Centre Manager - North offices"
       }
     ]
   }) }}
@@ -31,11 +31,26 @@ Public appointments
     <div class="govuk-grid-row">
       
       <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <p class='govuk-notification-banner__heading'>
+          Congratulations on being selected to attend an interview for this role. You will need to follow the steps below to <a href="#" class="govuk-link">schedule your interview</a>.
+        </p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          titleHtml: 
+          "
+          Application update
+          "
+        }) }}
+
         <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
           <span class="govuk-caption-xl">
             Application for
           </span>
-          Chair - Distribution Centre Manager
+          Distribution Centre Manager - North offices
         </h1>   
        </div>
        </div>
@@ -45,7 +60,7 @@ Public appointments
          <div class="govuk-grid-column-two-thirds">
            
           {{ govukInsetText({
-            text: "You will receive notifications via email and SMS at each stage of the process."
+            text: "You will receive notifications via email and SMS at each stage of the application process."
           }) }}
        
       <table class="govuk-table govuk-!-margin-bottom-9 govuk-!-margin-top-9">
@@ -74,7 +89,7 @@ Public appointments
           <!--job split-->
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
-              <a href="#" class="govuk-link">Interview requested</a>
+              <a href="#" class="govuk-link">Interview</a>
             </th>
            
             <td class="govuk-table__cell">
@@ -88,33 +103,7 @@ Public appointments
             </td>
            
           </tr>
-          <!--job split-->
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              Interview scheduled
-            </th>
-           
-            <td class="govuk-table__cell">
-              <!--tage here-->
-            </td>
-            <td class="govuk-table__cell">
-              <!--tage here-->
-            </td>
-          </tr>
-           <!--job split-->
-           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              Interview
-            </th>
-           
-            <td class="govuk-table__cell">
-             <!--tag here-->
-            </td>
-            <td class="govuk-table__cell">
-              <!--tage here-->
-            </td>
-          </tr>
-          
+        
            <!-- job split-->
            <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
@@ -146,7 +135,7 @@ Public appointments
           <div></div>
           <div>
             <p class="govuk-body-s">
-              17 December 2020
+              17 October 2020
             <p>
            </div>
         </li>
@@ -154,7 +143,7 @@ Public appointments
           <div>Closing date</div>
           <div></div>
           <div><p class="govuk-body-s">
-            7 December 2020
+            7 November 2020
           <p></div>
         </li>
         <li>
@@ -212,7 +201,10 @@ Public appointments
           }
         ]
       }) }}
-      
+      {{ govukButton({
+        text: "Withdraw application",
+        classes: "govuk-button--warning govuk-!-margin-top-6"
+      }) }}
     </div>
      </div>
   </main>

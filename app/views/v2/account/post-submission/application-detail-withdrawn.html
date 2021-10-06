@@ -23,26 +23,45 @@ Public appointments
         href: "application-listing"
       },
       {
-        text: "Distribution Centre Manager"
+        text: "Non-Executive Director"
       }
     ]
   }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       
+      
+
+
+      
       <div class="govuk-grid-column-two-thirds">
+
+        {% set html %}
+        <p class='govuk-notification-banner__heading'>
+          You have chosen to withdraw yourself from this application. 
+        </p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+          html: html,
+          titleHtml: 
+          "
+          Application update
+          "
+        }) }}
+
         <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
           <span class="govuk-caption-xl">
             Application for
           </span>
-          Distribution Centre Manager
+          Non-Executive Director
         </h1>   
        </div>
        </div>
       
-     <div class="govuk-grid-row">
+     <div class="govuk-grid-row ">
       
-         <div class="govuk-grid-column-two-thirds">
+         <div class="govuk-grid-column-two-thirds ">
            
           {{ govukInsetText({
             text: "You will receive notifications via email and SMS at each stage of the application process."
@@ -72,23 +91,23 @@ Public appointments
             <td class="govuk-table__cell"></td>
           </tr>
          
-          <!--job split-->
-          <tr class="govuk-table__row">
+          
+           <!--job split-->
+           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
-              <a href="#" class="govuk-link">Interview</a> 
+              Interview
             </th>
            
             <td class="govuk-table__cell">
               {{ govukTag({
-                text: "Booked",
+                text: "Attended",
                 classes: "govuk-tag--blue"
               }) }}
             </td>
             <td class="govuk-table__cell">
-              <a href="#" class="govuk-link">View details or amend</a>
+              <!--tage here-->
             </td>
           </tr>
-          
           
            <!-- job split-->
            <tr class="govuk-table__row">
@@ -97,7 +116,10 @@ Public appointments
             </th>
            
             <td class="govuk-table__cell">
-             <!--tag here-->
+              {{ govukTag({
+                text: "Withdrawn",
+                classes: "govuk-tag--red"
+              }) }}
             </td>
             <td class="govuk-table__cell">
               <!--tage here-->
@@ -187,10 +209,7 @@ Public appointments
           }
         ]
       }) }}
-      {{ govukButton({
-        text: "Withdraw application",
-        classes: "govuk-button--warning govuk-!-margin-top-6"
-      }) }}
+     
     </div>
      </div>
   </main>
