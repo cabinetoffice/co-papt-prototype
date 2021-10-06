@@ -207,5 +207,91 @@ router.post(`/v${verNum}/role/diversity-monitoring/ethnicity`, function (req, re
 //ethnicity ends
 
 
+
+//professional-qualifications starts
+
+router.post(`/v${verNum}/user-research/ur06e/role/more-about-you/professionalQualificiations`, function (req, res) {
+    const professionalqualificiations = req.session.data['professional-qualifications'];
+
+    if (professionalqualificiations === 'yes') {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/more-about-you/professional-qualificiations-detail`);
+    } else {
+        res.redirect(`/v${verNum}/user-research/ur06e/check-answers/check-answer-professional-qualifications`);
+    }
+});
+
+
+
+//professional-qualifications ends
+
+
+
+
+//disability starts
+
+router.post(`/v${verNum}/user-research/ur06e/role/diversity-monitoring/disability-mental-health`, function (req, res) {
+    const disability = req.session.data['disability'];
+
+    if (disability === 'yes') {
+        res.redirect(`/v${verNum}/user-research/ur06e//role/diversity-monitoring/disability-reduced-ability`);
+    } else {
+        res.redirect(`/v${verNum}/user-research/ur06e//check-answers/check-answer-disability`);
+    }
+});
+
+
+
+//disability ends
+
+
+
+
+
+//ethnicity starts
+
+router.post(`/v${verNum}/user-research/ur06e/role/diversity-monitoring/ethnicity`, function (req, res) {
+    const ethnicity = req.session.data['ethnicity'];
+
+    if (ethnicity === 'White') {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/diversity-monitoring/ethnicity-white`);
+    } 
+    else if (ethnicity === 'Mixed or multiple ethnic groups') {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/diversity-monitoring/ethnicity-mixed`);
+    } 
+    else if (ethnicity === 'Asian or Asian British') {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/diversity-monitoring/ethnicity-asian`);
+    } 
+    else if (ethnicity === 'Black, African, Caribbean or Black British') {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/diversity-monitoring/ethnicity-black`);
+    } 
+    else if (ethnicity === 'Other ethnic group') {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/diversity-monitoring/ethnicity-other`);
+    } 
+    else {
+        res.redirect(`/v${verNum}/user-research/ur06e/check-answers/check-answer-ethnicity`);
+    }
+});
+
+
+
+//ethnicity ends
+
+
+//UPLOAD A NEW CV start
+
+router.post(`/v${verNum}/user-research/ur06e/role/application/change-cv`, function (req, res) {
+    const newCV = req.session.data['use-profile-cv'];
+
+    if (newCV === 'no') {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/application/cv-load`);
+    } else {
+        res.redirect(`/v${verNum}/user-research/ur06e/role/main-application-dashboard`);
+    }
+});
+
+
+
+// UIPLOAD A NEW CV end
+
 module.exports = router
 
