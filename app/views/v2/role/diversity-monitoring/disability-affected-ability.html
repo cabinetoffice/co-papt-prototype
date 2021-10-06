@@ -41,9 +41,10 @@ Public appointments
 
         {% endset -%}
        
+       
 
         
-        {{ govukRadios({
+        {{ govukCheckboxes({
           idPrefix: "affected-ability",
           name: "affected-ability",
           fieldset: {
