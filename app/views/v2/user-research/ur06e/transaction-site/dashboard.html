@@ -49,12 +49,12 @@ Public appointments
             items: [
               {
                 heading: {
-                  text: "Location"
+                  html: " <div class='icon'></div>Location"
                 },
                 content: {
                   html: 
                   "
-                  <div class='govuk-form-group'>
+                  <div class='govuk-form-group limited'>
                     <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
                       
                       <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
@@ -158,7 +158,9 @@ Public appointments
                 content: {
                   html: 
                   "
-                  <div class='govuk-form-group'>
+     
+                  
+                  <div class='govuk-form-group limited'>
                     <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
                       
                       <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
@@ -319,7 +321,7 @@ Public appointments
                 content: {
                   html: 
                   " 
-                  <div class='govuk-form-group'>
+                  <div class='govuk-form-group limited'>
                     <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
                       
                       <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
@@ -691,7 +693,7 @@ Public appointments
                 content: {
                   html: 
                   "
-                  <div class='govuk-form-group'>
+                  <div class='govuk-form-group limited'>
                     <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
                       
                       <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
@@ -937,13 +939,13 @@ Public appointments
                    
                     <div class='govuk-radios govuk-radios--small'>
                       <div class='govuk-radios__item'>
-                        <input class='govuk-radios__input' id='status' name='status' type='radio' value='open'>
+                        <input class='govuk-radios__input' id='status' name='status' type='radio' value='open' checked>
                         <label class='govuk-label govuk-radios__label' for='status'>
                           Open
                         </label>
                       </div>
                       <div class='govuk-radios__item'>
-                        <input class='govuk-radios__input' id='status-2' name='status' type='radio' value='closed'>
+                        <input class='govuk-radios__input' id='status-2' name='status' type='radio' value='closed' >
                         <label class='govuk-label govuk-radios__label' for='status-2'>
                           Closed
                         </label>

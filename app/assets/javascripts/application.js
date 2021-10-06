@@ -14,3 +14,14 @@ accessibleAutocomplete.enhanceSelectElement({
   selectElement: selectElement
 })
 })
+
+
+$(document).ready(function () {
+  window.GOVUKFrontend.initAll()
+  let selectElement = document.querySelector('#org-list-autocomplete')
+
+accessibleAutocomplete.enhanceSelectElement({
+  defaultValue: '',
+  selectElement: selectElement
+})
+})

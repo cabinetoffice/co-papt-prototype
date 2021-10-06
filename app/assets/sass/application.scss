@@ -86,3 +86,8 @@ $govuk-assets-path: '/govuk/assets/';
   }
 .noButton{background-color:#fff;border:none;font-size:12pt;margin-top:20px;padding-bottom:1px;border-bottom:1px solid #000}
 .noButton:hover{cursor: pointer}
+.limited{height:400px;overflow:auto;}
+#sidesort.govuk-accordion__open-all{display:none;}
+.js-enabled .govuk-accordion__open-all {
+    font-size: 0px; 
+}
