@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="address-list" method="post">
+<form action="email-address" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -17,25 +17,35 @@ Public appointments
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Create account
           <span class="govuk-caption-l">
-            Step 2 of 5
+            Step 3 of 5
           </span>
         </h1>
-        <h2 class="govuk-heading-l">
-          What is your home address?
-        </h2>
         {{ govukInput({
-          id: "address-postcode",
-          name: "address-postcode",
-          classes: "govuk-input--width-10",
+          id: "telephone-number",
+          name: "telephone-number",
           label: {
-            text: "Postcode"
+            text: "Main contact number"
+          },
+          hint: {
+            text: "This may be a landline or mobile number"
           }
         }) }}
         
+        {{ govukInput({
+          id: "alt-telephone-number",
+          name: "alt-telephone-number",
+          label: {
+            text: "Alternative contact number"
+          },
+          hint: {
+            text: "This may be a landline or mobile number"
+          }
+        }) }}
+       
          
         <div class="govuk-button-group">
           {{ govukButton({
-            text: "Find address"
+            text: "Continue"
           }) }}
         
           {{ govukButton({
@@ -44,8 +54,7 @@ Public appointments
           }) }}
         </div>
 
-                            
-                <a href="address-manual" class="govuk-link">I live outside of the UK</a>    
+                 
               </div>
     </div>
   </main>

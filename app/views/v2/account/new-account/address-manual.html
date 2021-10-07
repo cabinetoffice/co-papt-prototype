@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="email-address" method="post">
+<form action="telephone-number" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -68,6 +68,8 @@ Public appointments
                 name: "address-county"
               }) }}
 
+              
+
               {{ govukInput({
                 label: {
                   text: "Postcode"
@@ -77,6 +79,552 @@ Public appointments
                 name: "address-postcode",
                 autocomplete: "postal-code"
               }) }}
+
+              {{ govukSelect({
+                id: "uni-list-autocomplete",
+                name: "uni-list-autocomplete",
+                label: {
+                  text: "Country",
+                 
+                  isPageHeading: false
+                },
+               
+                items: [
+                  {
+                    value: "",
+                    text: ""
+                  },
+                  {
+                    value: "Andorra",
+                    text: "Andorra"
+                  },
+                  {
+                    value: "United Arab Emirates",
+                    text: "United Arab Emirates"
+                  },
+                  {
+                    value: "Afghanistan",
+                    text: "Afghanistan"
+                  },
+                  {
+                    value: "Antigua and Barbuda",
+                    text: "Antigua and Barbuda"
+                  },
+                  {
+                    value: "Anguilla",
+                    text: "Anguilla"
+                  },
+                  {
+                    value: "Albania",
+                    text: "Albania"
+                  },
+                  {
+                    value: "Armenia",
+                    text: "Armenia"
+                  },
+                  {
+                    value: "Angola",
+                    text: "Angola"
+                  },
+                  {
+                    value: "Antarctica",
+                    text: "Antarctica"
+                  },
+                  {
+                    value: "Argentina",
+                    text: "Argentina"
+                  },
+                  {
+                    value: "American Samoa",
+                    text: "American Samoa"
+                  },
+                  {
+                    value: "Austria",
+                    text: "Austria"
+                  },
+                  {
+                    value: "Australia",
+                    text: "Australia"
+                  },
+                  {
+                    value: "Aruba",
+                    text: "Aruba"
+                  },
+                  {
+                    value: "Åland Islands",
+                    text: "Åland Islands"
+                  },
+                  {
+                    value: "Azerbaijan",
+                    text: "Azerbaijan"
+                  },
+                  {
+                    value: "Bosnia and Herzegovina",
+                    text: "Bosnia and Herzegovina"
+                  },
+                  {
+                    value: "Barbados",
+                    text: "Barbados"
+                  },
+                  {
+                    value: "Afghanistan",
+                    text: "Afghanistan"
+                  },
+                  {
+                    value: "Bangladesh",
+                    text: "Bangladesh"
+                  },
+                  {
+                    value: "Belgium",
+                    text: "Belgium"
+                  },
+                  {
+                    value: "Burkina Faso",
+                    text: "Burkina Faso"
+                  },
+                  {
+                    value: "Bulgaria",
+                    text: "Bulgaria"
+                  },
+                  {
+                    value: "Bahrain",
+                    text: "Bahrain"
+                  },
+                  {
+                    value: "Burundi",
+                    text: "Burundi"
+                  },
+                  {
+                    value: "Benin",
+                    text: "Benin"
+                  },
+                  {
+                    value: "Saint Barthélemy",
+                    text: "Saint Barthélemy"
+                  },
+                  {
+                    value: "Bermuda",
+                    text: "Bermuda"
+                  },
+                  {
+                    value: "Brunei Darussalam",
+                    text: "Brunei Darussalam"
+                  },
+                  {
+                    value: "Bolivia (Plurinational State of)",
+                    text: "Bolivia (Plurinational State of)"
+                  },
+                  {
+                    value: "Bonaire, Sint Eustatius and Saba",
+                    text: "Bonaire, Sint Eustatius and Saba"
+                  },
+                  {
+                    value: "Brazil",
+                    text: "Brazil"
+                  },
+                  {
+                    value: "Bahamas",
+                    text: "Bahamas"
+                  },
+                  {
+                    value: "Bhutan",
+                    text: "Bhutan"
+                  },
+                  {
+                    value: "Bouvet Island",
+                    text: "Bouvet Island"
+                  },
+                  {
+                    value: "Botswana",
+                    text: "Botswana"
+                  },
+                  {
+                    value: "Belarus",
+                    text: "Belarus"
+                  },
+                  {
+                    value: "Belize",
+                    text: "Belize"
+                  },
+                  {
+                    value: "Canada",
+                    text: "Canada"
+                  },
+                  {
+                    value: "Cocos (Keeling) Islands",
+                    text: "Cocos (Keeling) Islands"
+                  },
+                  {
+                    value: "Congo, Democratic Republic of the",
+                    text: "Congo, Democratic Republic of the"
+                  },
+                  {
+                    value: "Central African Republic",
+                    text: "Central African Republic"
+                  },
+                  {
+                    value: "Congo",
+                    text: "Congo"
+                  },
+                  {
+                    value: "Côte d'Ivoire",
+                    text: "Côte d'Ivoire"
+                  },
+                  {
+                    value: "Cook Islands",
+                    text: "Cook Islands"
+                  },
+                  {
+                    value: "Chile",
+                    text: "Chile"
+                  },
+                  {
+                    value: "Cameroon",
+                    text: "Cameroon"
+                  },
+                  {
+                    value: "China",
+                    text: "China"
+                  },
+                  {
+                    value: "Colombia",
+                    text: "Colombia"
+                  },
+                  {
+                    value: "Costa Rica",
+                    text: "Costa Rica"
+                  },
+                  {
+                    value: "Cuba",
+                    text: "Cuba"
+                  },
+                  {
+                    value: "Cabo Verde",
+                    text: "Cabo Verde"
+                  },
+                  {
+                    value: "Curaçao",
+                    text: "Curaçao"
+                  },
+                  {
+                    value: "Christmas Island",
+                    text: "Christmas Island"
+                  },
+                  {
+                    value: "Cyprus",
+                    text: "Cyprus"
+                  },
+                  {
+                    value: "Czechia",
+                    text: "Czechia"
+                  },
+                  {
+                    value: "Germany",
+                    text: "Germany"
+                  },
+                  {
+                    value: "Djibouti",
+                    text: "Djibouti"
+                  },
+                  {
+                    value: "Denmark",
+                    text: "Denmark"
+                  },
+                  {
+                    value: "Dominica",
+                    text: "Dominica"
+                  },
+                  {
+                    value: "Dominican Republic",
+                    text: "Dominican Republic"
+                  },
+                  {
+                    value: "Algeria",
+                    text: "Algeria"
+                  },
+                  {
+                    value: "Ecuador",
+                    text: "Ecuador"
+                  },
+                  {
+                    value: "Estonia",
+                    text: "Estonia"
+                  },
+                  {
+                    value: "Egypt",
+                    text: "Egypt"
+                  },
+                  {
+                    value: "Eritrea",
+                    text: "Eritrea"
+                  },
+                  {
+                    value: "Spain",
+                    text: "Spain"
+                  },
+                  {
+                    value: "Ethiopia",
+                    text: "Ethiopia"
+                  },
+                  {
+                    value: "Finland",
+                    text: "Finland"
+                  },
+                  {
+                    value: "Fiji",
+                    text: "Fiji"
+                  },
+                  {
+                    value: "France",
+                    text: "France"
+                  },
+                  {
+                    value: "Gabon",
+                    text: "Gabon"
+                  },
+                  {
+                    value: "United Kingdom of Great Britain and Northern Ireland",
+                    text: "United Kingdom of Great Britain and Northern Ireland"
+                  },
+                  {
+                    value: "Grenada",
+                    text: "Grenada"
+                  },
+                  {
+                    value: "Greece",
+                    text: "Greece"
+                  },
+                  {
+                    value: "Croatia",
+                    text: "Croatia"
+                  },
+                  {
+                    value: "Haiti",
+                    text: "Haiti"
+                  },
+                  {
+                    value: "Hungary",
+                    text: "Hungary"
+                  },
+                  {
+                    value: "India",
+                    text: "India"
+                  },
+                  {
+                    value: "Iraq",
+                    text: "Iraq"
+                  },
+                  {
+                    value: "Indonesia",
+                    text: "Indonesia"
+                  },
+                  {
+                    value: "Iceland",
+                    text: "Iceland"
+                  },
+                  {
+                    value: "Italy",
+                    text: "Italy"
+                  },
+                  {
+                    value: "Jersey",
+                    text: "Jersey"
+                  },
+                  {
+                    value: "Kenya",
+                    text: "Kenya"
+                  },
+                  {
+                    value: "Jordan",
+                    text: "Jordan"
+                  },
+                  {
+                    value: "Japan",
+                    text: "Japan"
+                  },
+                  {
+                    value: "Cambodia",
+                    text: "Cambodia"
+                  },
+                  {
+                    value: "Luxembourg",
+                    text: "Luxembourg"
+                  },
+                  {
+                    value: "Morocco",
+                    text: "Morocco"
+                  },
+                  {
+                    value: "Moldova, Republic of",
+                    text: "Moldova, Republic of"
+                  },
+                  {
+                    value: "Montenegro",
+                    text: "Montenegro"
+                  },
+                  {
+                    value: "Madagascar",
+                    text: "Madagascar"
+                  },
+                  {
+                    value: "Mali",
+                    text: "Mali"
+                  },
+                  {
+                    value: "Myanmar",
+                    text: "Myanmar"
+                  },
+                  {
+                    value: "Mongolia",
+                    text: "Mongolia"
+                  },
+                  {
+                    value: "Malta",
+                    text: "Malta"
+                  },
+                  {
+                    value: "Mauritius",
+                    text: "Mauritius"
+                  },
+                  {
+                    value: "Mexico",
+                    text: "Mexico"
+                  },
+                  {
+                    value: "Namibia",
+                    text: "Namibia"
+                  },
+                  {
+                    value: "Norway",
+                    text: "Norway"
+                  },
+                  {
+                    value: "Nepal",
+                    text: "Nepal"
+                  },
+                  {
+                    value: "New Zealand",
+                    text: "New Zealand"
+                  },
+                  {
+                    value: "Poland",
+                    text: "Poland"
+                  },
+                  {
+                    value: "Pakistan",
+                    text: "Pakistan"
+                  },
+                  {
+                    value: "Portugal",
+                    text: "Portugal"
+                  },
+                  {
+                    value: "Qatar",
+                    text: "Qatar"
+                  },
+                  {
+                    value: "Romania",
+                    text: "Romania"
+                  },
+                  {
+                    value: "Rwanda",
+                    text: "Rwanda"
+                  },
+                  {
+                    value: "Sweden",
+                    text: "Sweden"
+                  },
+                  {
+                    value: "Slovakia",
+                    text: "Slovakia"
+                  },
+                  {
+                    value: "Senegal",
+                    text: "Senegal"
+                  },
+                  {
+                    value: "Somalia",
+                    text: "Somalia"
+                  },
+                  {
+                    value: "Suriname",
+                    text: "Suriname"
+                  },
+                  {
+                    value: "Thailand",
+                    text: "Thailand"
+                  },
+                  {
+                    value: "Russian Federation",
+                    text: "Russian Federation"
+                  },
+                  {
+                    value: "Romania",
+                    text: "Romania"
+                  },
+                  {
+                    value: "Tajikistan",
+                    text: "Tajikistan"
+                  },
+                  {
+                    value: "San Marino",
+                    text: "San Marino"
+                  },
+                  {
+                    value: "Tokelau",
+                    text: "Tokelau"
+                  },
+                  {
+                    value: "Turkmenistan",
+                    text: "Turkmenistan"
+                  },
+                  {
+                    value: "Tunisia",
+                    text: "Tunisia"
+                  },
+                  {
+                    value: "Ukraine",
+                    text: "Ukraine"
+                  },
+                  {
+                    value: "United States of America",
+                    text: "United States of America"
+                  },
+                  {
+                    value: "South Africa",
+                    text: "South Africa"
+                  },
+                  {
+                    value: "Togo",
+                    text: "Togo"
+                  },
+                  {
+                    value: "French Southern Territories",
+                    text: "French Southern Territories"
+                  },
+                  {
+                    value: "Afghanistan",
+                    text: "Afghanistan"
+                  },
+                  {
+                    value: "Afghanistan",
+                    text: "Afghanistan"
+                  },
+                  {
+                    value: "Yemen",
+                    text: "Yemen"
+                  },
+                  {
+                    value: "Zimbabwe",
+                    text: "Zimbabwe"
+                  },
+                  {
+                    value: "Zambia",
+                    text: "Zambia"
+                  }
+                  
+                  ]
+                }) }}
 
             {% endcall %}
          

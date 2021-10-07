@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="email-address-auth-code" method="post">
+<form action="talent-pool-question" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -20,17 +20,15 @@ Public appointments
             Step 3 of 5
           </span>
         </h1>
-        <h2 class="govuk-heading-l">
-          Create a username
-        </h2>
-        <p class="govuk-body">
-          content here to explain which email address to use. Do we need detail about the TFA?
-        <p>
         {{ govukInput({
           id: "email-address",
           name: "email-address",
-          type: "email"
+          label: {
+            text: "Email address"
+          }
+
         }) }}
+        
         
        
          
