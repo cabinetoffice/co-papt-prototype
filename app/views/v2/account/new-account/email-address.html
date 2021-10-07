@@ -15,18 +15,18 @@ Public appointments
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Create account
+        <h1 class="govuk-heading-xl">
           <span class="govuk-caption-l">
-            Step 3 of 5
-          </span>
+            Create your account - Step 4 of 5
+          </span>Email address
         </h1>
         {{ govukInput({
           id: "email-address",
           name: "email-address",
-          label: {
-            text: "Email address"
+          type: "email",
+          hint: {
+            text: "This will be used when you log into your account "
           }
-
         }) }}
         
         
