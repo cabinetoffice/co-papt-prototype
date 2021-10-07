@@ -31,11 +31,11 @@ Public appointments
             id: "email",
             name: "email",
             label: {
-              text: "Email address"
+              text: "Email address",
+              classes: "govuk-label--l",
+            isPageHeading: false
             },
-            hint: {
-              text: "This is the email address you used to register your account"
-            },
+           
             type: "email",
             autocomplete: "email",
             spellcheck: false
@@ -53,7 +53,11 @@ Public appointments
           }) }}
           <div class="govuk-grid-row govuk-!-margin-bottom-6">
             <div class="govuk-grid-column-two-thirds">
-              <a href="#" class="govuk-link">Forgotten password</a>
+              <p class="govuk-body">
+                
+              
+              <a href="#" class="govuk-link">Forgotten password?</a>
+              </p>
             </div>
           </div>
          
@@ -67,7 +71,10 @@ Public appointments
 
                 <div class="govuk-grid-row">
                   <div class="govuk-grid-column-two-thirds">
-                    <a href="#" class="govuk-link">Create an applicant account</a>
+                    <p class="govuk-body">
+                      Don't have an account? <a href="#" class="govuk-link">Create an applicant account</a>.
+                    <p>
+                    
                   </div>
                 </div>                  
 
