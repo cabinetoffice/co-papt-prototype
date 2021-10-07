@@ -383,6 +383,31 @@ Public appointments
                                 </td>
                               </tr>
                                 {% endif %}
+                                {% if data['political-check'] === 'confirm' %}
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="../check-answers/check-answer-significant-political-activity" class="govuk-link">Significant Political Activity</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                    
+
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Complete
+                                </strong>
+                                </td>
+                              </tr>
+                              {% else %}
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <a href="more-about-you/significant-political-activity" class="govuk-link">Significant Political Activity</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">
+                                Not Complete
+                              </strong>
+                              </td>
+                            </tr>
+                              {% endif %}
                      
                   </tbody>
                 </table>

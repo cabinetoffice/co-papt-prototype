@@ -41,10 +41,28 @@ Public appointments
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="written-statement">
                 
-                  {{ govukTextarea({
-                    id: "supporting-statement-text-area",
-                    name: "supporting-statement-text-area"
-                  }) }}
+                  <p class="govuk-body">
+                    You should ensure that your statement is:
+                  <p>                    
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          under 10 Mb in file size
+                        </li>
+                        <li>
+                          a supported filetype; DOC, DOCX, ODT, PDF, RTF, TXT, WPS
+                        </li>
+                      </ul>
+         
+
+
+
+                {{ govukFileUpload({
+                  id: "file-upload-1",
+                  name: "file-upload-1",
+                  label: {
+                    text: "Upload a file"
+                  }
+                }) }}
           
                 </div>
                 <div class="govuk-radios__item">
@@ -56,7 +74,7 @@ Public appointments
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="supporting-video">
                  
 
-                  <div class="govuk-inset-text">
+                 
                     <p class="govuk-body">
                       You should ensure that your video is:
                     <p>                    
@@ -71,7 +89,7 @@ Public appointments
                             supported by file types mp4, mov, avi or mk4
                           </li>
                         </ul>
-            </div>
+           
 
 
 

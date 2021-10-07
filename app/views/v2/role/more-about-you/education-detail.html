@@ -1,0 +1,176 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../check-answers/check-answer-professional-qualifications" method="post" novalidate data-validate='example-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            More about you
+          </span>
+          What is/are the discipline(s) of your highest level of qualification?
+        </h1>
+
+
+
+        
+
+
+        {% set otherHtml %}
+        {{ govukCharacterCount({
+          name: "with-hint",
+          id: "with-hint",
+          maxlength: 200,
+          label: {
+            text: "Provide more detail"
+          }
+        }) }}
+        {% endset -%}
+
+        {{ govukCheckboxes({
+          idPrefix: "highest-disc-select",
+          name: "highest-disc-select",
+          
+          hint: {
+            text: "Select all fields that apply"
+          },
+          items: [
+            {
+              value: "Languages",
+              text: "Languages"
+            },
+            {
+              value: "Humanities",
+              text: "Humanities"
+            },
+            {
+              value: "Linguistics,English and Classics",
+              text: "Linguistics,English and Classics"
+            },
+            {
+              value: "Education",
+              text: "Education"
+            },
+            {
+              value: "Social Sciences and Law",
+              text: "Social Sciences and Law"
+            },
+            {
+              value: "Physical/Environmental Subjects",
+              text: "Physical/Environmental Subjects"
+            },
+            {
+              value: "Law",
+              text: "Law"
+            },
+            {
+              value: "Technology",
+              text: "Technology"
+            },
+            {
+              value: "Biological Sciences",
+              text: "Biological Sciences"
+            },
+            {
+              value: "Medical related subjects",
+              text: "Medical related subjects"
+            },
+            {
+              value: "Arts",
+              text: "Arts"
+            },
+            {
+              value: "Media and Information Studies",
+              text: "Media and Information Studies"
+            },
+            {
+              value: "Business and Finance",
+              text: "Business and Finance"
+            },
+            {
+              value: "Maths or Computer Science",
+              text: "Maths or Computer Science"
+            },
+            {
+              value: "Agricultural Sciences",
+              text: "Agricultural Sciences"
+            },
+            {
+              value: "Architecture",
+              text: "Architecture"
+            },
+            {
+              value: "Engineering",
+              text: "Engineering"
+            },
+            {
+              value: "Medicine",
+              text: "Medicine"
+            },
+            
+            {
+              value: "other",
+              text: "Other",
+              conditional: {
+                html: otherHtml
+              }
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "Prefer not to say",
+              text: "Prefer not to say",
+              behaviour: "exclusive"
+            }
+          ]
+        }) }}
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "highest-disc-select": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

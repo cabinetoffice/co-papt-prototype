@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../check-answers/check-answer-education" method="post" method="post" novalidate data-validate='example-validation'>
+<form action="education-detail" method="post" method="post" novalidate data-validate='example-validation'>
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -23,9 +23,6 @@ Public appointments
           Education
         </h1>
         
-        {{ govukInsetText({
-          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
-        }) }}
       
 
                     {% set otherHtml %}
@@ -883,120 +880,7 @@ Public appointments
 
                     
                  
-                  
-              <h3 class="govuk-heading-l">
-                What is the discipline of your highest level of qualification?
-              </h3>
-
-
-                  {{ govukSelect({
-                    id: "highest-disc-select",
-                    name: "highest-disc-select",
-                   
-                   
-                    items: [
-                    {
-                      value: "",
-                      text: "Select a discipline"
-                    },
-                    {
-                      value: "Agricultural Sciences",
-                      text: "Agricultural Sciences"
-                    },
-                    {
-                      value: "Architecture",
-                      text: "Architecture"
-                    },
-                    {
-                      value: "Arts",
-                      text: "Arts"
-                    },
-                    {
-                      value: "Biological Sciences",
-                      text: "Biological Sciences"
-                    },
-                    {
-                      value: "Business and Finance",
-                      text: "Business and Finance"
-                    },
-                    {
-                      value: "Education",
-                      text: "Education"
-                    },
-                    {
-                      value: "Engineering",
-                      text: "Engineering"
-                    },
-                   
-                    {
-                      value: "Humanities",
-                      text: "Humanities"
-                    },
-                    {
-                      value: "Law",
-                      text: "Law"
-                    },
-                    {
-                      value: "Languages",
-                      text: "Languages"
-                    },
-                    {
-                      value: "Linguistics, English and Classics Education",
-                      text: "Linguistics, English and Classics Education"
-                    },
-                    {
-                      value: "Maths or Computer Science",
-                      text: "Maths or Computer Science"
-                    },
-                    {
-                      value: "Medicine",
-                      text: "Medicine"
-                    },
-                    {
-                      value: "Media and Information Studies",
-                      text: "Media and Information Studies"
-                    },
-                    {
-                      value: "Medical related subjects",
-                      text: "Medical related subjects"
-                    },
-                    {
-                      value: "Physical/Environmental Subjects",
-                      text: "Physical/Environmental Subjects"
-                    },
-                    {
-                      value: "Social Sciences and Law",
-                      text: "Social Sciences and Law"
-                    },
-                    {
-                      value: "Technology",
-                      text: "Technology"
-                    }
-                    
-                    
-                  ]
-                  }) }}
-
-                  {{ govukRadios({
-                    idPrefix: "disc-rad-list",
-                    name: "disc-rad-list",
-                    
-                    
-                    items: [
-                    {
-                      value: "Other",
-                      text: "Other",
-                      conditional: {
-                        html: otherdiscHtml
-                      }
-                    },
-                    
-                    {
-                      value: "prefer-not-to-say",
-                      text: "Prefer not to say"
-                    }
-                    ]
-                  }) }}
+                
 
 
                 <div class="govuk-button-group">
@@ -1031,11 +915,6 @@ Public appointments
     "degree": {
       "presence": {
         "message": "^Select an option or 'Prefer not to say'"
-      }
-    },
-    "highest-disc-select": {
-      "presence": {
-        "message": "^You must inform of us of the discipline of your highest level of qualification?"
       }
     }
     
