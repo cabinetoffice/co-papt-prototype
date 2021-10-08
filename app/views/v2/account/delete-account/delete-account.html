@@ -1,0 +1,140 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Delete account</h1>
+        
+   
+          <p class="govuk-body">
+            You have selected to delete your account. 
+          <p>
+            <p class="govuk-body">
+              Deleting your account will remove your application from the following roles:
+            <p>
+
+              <table class="govuk-table">
+               
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-third">Role</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Last updated</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                     Chair - British Broadcasting Company (BBC)
+                    </th>
+                    <td class="govuk-table__cell">22 September 2021, 15:00</td>
+                    <td class="govuk-table__cell">
+                      {{ govukTag({
+                        text: "Submitted"
+                      }) }}
+                    </td>
+                   
+                  <!--job split-->
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                      Distribution Centre Manager - North offices
+                    </th>
+                    <td class="govuk-table__cell">21 September 2021, 12:56</td>
+                    <td class="govuk-table__cell">
+                      {{ govukTag({
+                        text: "Book your interview",
+                        classes: "govuk-tag--blue"
+                      }) }}
+                    </td>
+                   
+                  </tr>
+                  
+                   <!--job split-->
+                   <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                     Distribution Centre Manager
+                    </th>
+                    <td class="govuk-table__cell">19 September 2021, 11:10</td>
+                    <td class="govuk-table__cell">
+                      {{ govukTag({
+                        text: "Interview booked",
+                        classes: "govuk-tag--blue"
+                      }) }}
+                    </td>
+                   
+                  </tr>
+                  
+                   <!-- job split-->
+                   <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">
+                     Chair- OFGEM
+                    </th>
+                    <td class="govuk-table__cell">18 September 2021, 15:14</td>
+                    <td class="govuk-table__cell">
+                      {{ govukTag({
+                        text: "Awaiting outcome",
+                        classes: "govuk-tag--blue"
+                      }) }}
+                    </td>
+                   
+                  </tr>
+                 
+                  
+                 
+                </tbody>
+              </table>
+
+         
+              {{ govukInsetText({
+                text: "This action cannot be reveresed, all data and role application history will be lost. final content here tbc"
+              }) }}
+         
+                <div class="govuk-button-group govuk-!-margin-bottom-6">
+                  
+                  
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary"
+                  }) }}
+                  {{ govukButton({
+                    text: "Delete account",
+                    classes: "govuk-button--warning",
+                    href: "delete-account-confirmation"
+                  }) }}
+                </div>
+                
+                              
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "auth-code": {
+      "presence": {
+        "message": "^Enter the correct auth code sent to you via SMS."
+      }
+    }
+  }
+</script>
+     
+
+{% endblock %}

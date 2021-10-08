@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Delete account</h1>
+        
+   
+          <p class="govuk-body">
+            You have selected to delete your account. 
+          <p>
+           
+
+              
+
+         
+              {{ govukInsetText({
+                text: "This action cannot be reveresed, all data and role application history will be lost. final content here tbc"
+              }) }}
+         
+                <div class="govuk-button-group govuk-!-margin-bottom-6">
+                  
+                  
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary"
+                  }) }}
+                  {{ govukButton({
+                    text: "Delete account",
+                    classes: "govuk-button--warning",
+                    href: "delete-account-confirmation"
+                  }) }}
+                </div>
+                
+                              
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "auth-code": {
+      "presence": {
+        "message": "^Enter the correct auth code sent to you via SMS."
+      }
+    }
+  }
+</script>
+     
+
+{% endblock %}
