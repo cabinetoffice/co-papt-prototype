@@ -314,7 +314,7 @@ router.post(`/v${verNum}/account/more-about-you/change-cv`, function (req, res) 
     if (newCV === 'no') {
         res.redirect(`/v${verNum}/account/more-about-you/cv-load`);
     } else {
-        res.redirect(`/v${verNum}account/account-dashboard`);
+        res.redirect(`/v${verNum}/account/account-dashboard`);
     }
 });
 
