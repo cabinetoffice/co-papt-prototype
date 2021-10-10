@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="contact-details" method="post">
+<form action="address" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -33,7 +33,7 @@ Public appointments
         <a href="address-manual" class="govuk-link">I want to enter my address manually</a>
         <div class="govuk-button-group govuk-!-padding-top-6">
           {{ govukButton({
-            text: "Select address"
+            text: "Change post code"
           }) }}
         
           {{ govukButton({
