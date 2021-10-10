@@ -1,0 +1,110 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Public appointments",
+        href: "#"
+      },
+      {
+        text: "My account",
+        href: "#"
+      },
+      {
+        text: "Applications in progress"
+      }
+    ]
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Applications in progress</h1>   
+        {{ govukInsetText({
+          html: "The following list highlights roles that you have started an application for but yet to complete and submit.
+           <br><br>If you wish to apply for any of the following roles you will need to complete and submit your application before the application closing date."
+        }) }}
+       </div>
+       </div>
+      
+     <div class="govuk-grid-row">
+       <div class="govuk-grid-column-full">
+         
+       
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Your applications - in progress</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header ">Role</th>
+            <th scope="col" class="govuk-table__header ">Application closing date</th>
+            
+            <th scope="col" class="govuk-table__header">Complete application</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="application-detail-interview-to-be-booked" class="govuk-link">Distribution Centre Manager - North offices</a>
+            </th>
+            <td class="govuk-table__cell">21 November 2021</td>
+           
+            <td class="govuk-table__cell">
+              <a href="application-detail-interview-to-be-booked" class="govuk-link">Complete application</a>
+            </td>
+          </tr>
+           <!--job split-->
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="application-detail-no-interview" class="govuk-link">Distribution Centre Manager - North offices</a>
+            </th>
+            <td class="govuk-table__cell">20 November 2021</td>
+           
+            <td class="govuk-table__cell">
+              <a href="application-detail-no-interview" class="govuk-link">Complete application</a>
+            </td>
+          </tr>
+           <!--job split-->
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="application-detail-interview-scheduled" class="govuk-link">Distribution Centre Manager</a>
+            </th>
+            <td class="govuk-table__cell">19 November 2021</td>
+           
+            <td class="govuk-table__cell">
+              <a href="application-detail-no-interview" class="govuk-link">Complete application</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+             Chair - British Broadcasting Company (BBC)
+            </th>
+            <td class="govuk-table__cell">22 September 2021</td>
+           
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <!--job split-->
+        </tbody>
+      </table>
+
+    </div>
+
+
+     </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

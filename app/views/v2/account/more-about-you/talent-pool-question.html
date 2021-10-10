@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../account-dashboard" method="post">
+<form action="talent-pool" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -18,33 +18,7 @@ Public appointments
         <h1 class="govuk-heading-xl">
           Do you wish to opt into the talent pool?
         </h1>
-        {% set yesHtml %}
-       <p class='govuk-body'>
-        Please submit your CV including education, employment history and professional qualifications.
-       <p>
-        <p class='govuk-body'>
-          You should ensure your CV:
-        </p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>
-            is not more than two pages
-          </li>
-          <li>
-            meets the requirements set out in the vacancy specification
-          </li>
-          <li>
-            is under 10 Mb in file size
-          </li>
-          <li>
-            is a supported filetype; DOC, DOCX, ODT, PDF, RTF, TXT, WPS
-          </li>
-        </ul>
-        {{ govukFileUpload({
-          id: "cv-upload",
-          name: "cv-upload"
-        }) }}
-
-        {% endset -%}
+       
 
 
 
@@ -55,10 +29,7 @@ Public appointments
             {
               value: "Yes",
               text: "Yes",
-              checked: "true",
-              conditional: {
-                html: yesHtml
-              }
+              checked: "true"
             },
             {
               value: "No",

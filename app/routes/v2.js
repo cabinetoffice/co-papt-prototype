@@ -289,9 +289,37 @@ router.post(`/v${verNum}/user-research/ur06e/role/application/change-cv`, functi
     }
 });
 
+// UIPLOAD A NEW CV end
 
+
+//TALENT POOL start
+
+router.post(`/v${verNum}/account/more-about-you/talent-pool`, function (req, res) {
+    const talentPool = req.session.data['talent-pool'];
+
+    if (talentPool === 'Yes') {
+        res.redirect(`/v${verNum}/account/more-about-you/cv-update`);
+    } else {
+        res.redirect(`/v${verNum}/account/account-dashboard`);
+    }
+});
+
+// TALENT POOL end
+
+//UPLOAD A NEW CV start
+
+router.post(`/v${verNum}/account/more-about-you/change-cv`, function (req, res) {
+    const newCV = req.session.data['use-profile-cv'];
+
+    if (newCV === 'no') {
+        res.redirect(`/v${verNum}/account/more-about-you/cv-load`);
+    } else {
+        res.redirect(`/v${verNum}account/account-dashboard`);
+    }
+});
 
 // UIPLOAD A NEW CV end
+
 
 module.exports = router
 
