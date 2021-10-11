@@ -76,15 +76,15 @@ Public appointments
                     {% set degreeHtml %}
                     
                   {{ govukSelect({
-                    id: "uni-list",
-                    name: "uni-list",
+                    id: "uni-list-autocomplete",
+                    name: "uni-list-autocomplete",
                     label: {
                       text: "Select the correct university"
                     },
                     items: [
                       {
-                        value: " ",
-                        text: "Select a university"
+                        value: "",
+                        text: ""
                       },
                       {
                         value: "University of Aberdeen",
@@ -883,7 +883,7 @@ Public appointments
 
 
                     
-                 
+                  
                 
 
 
