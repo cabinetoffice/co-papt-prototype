@@ -173,7 +173,21 @@ router.post(`/v${verNum}/role/diversity-monitoring/disability-mental-health`, fu
 
 //disability ends
 
+//disability-accounts starts
 
+router.post(`/v${verNum}/account/diversity-monitoring/disability-mental-health-account`, function (req, res) {
+    const disability = req.session.data['disability'];
+
+    if (disability === 'yes') {
+        res.redirect(`/v${verNum}/account/diversity-monitoring/disability-reduced-ability`);
+    } else {
+        res.redirect(`/v${verNum}/account/account-dashboard`);
+    }
+});
+
+
+
+//disability-accounts ends
 
 
 
@@ -206,7 +220,34 @@ router.post(`/v${verNum}/role/diversity-monitoring/ethnicity`, function (req, re
 
 //ethnicity ends
 
+//ethnicity-account starts
 
+router.post(`/v${verNum}/account/diversity-monitoring/ethnicity`, function (req, res) {
+    const ethnicity = req.session.data['ethnicity'];
+
+    if (ethnicity === 'White') {
+        res.redirect(`/v${verNum}/account/diversity-monitoring/ethnicity-white`);
+    } 
+    else if (ethnicity === 'Mixed or multiple ethnic groups') {
+        res.redirect(`/v${verNum}/account/diversity-monitoring/ethnicity-mixed`);
+    } 
+    else if (ethnicity === 'Asian or Asian British') {
+        res.redirect(`/v${verNum}/account/diversity-monitoring/ethnicity-asian`);
+    } 
+    else if (ethnicity === 'Black, African, Caribbean or Black British') {
+        res.redirect(`/v${verNum}/account/diversity-monitoring/ethnicity-black`);
+    } 
+    else if (ethnicity === 'Other ethnic group') {
+        res.redirect(`/v${verNum}/account/diversity-monitoring/ethnicity-other`);
+    } 
+    else {
+        res.redirect(`/v${verNum}/account/account-dashboard`);
+    }
+});
+
+
+
+//ethnicity-account ends
 
 //professional-qualifications starts
 
@@ -224,6 +265,22 @@ router.post(`/v${verNum}/user-research/ur06e/role/more-about-you/professionalQua
 
 //professional-qualifications ends
 
+
+//professional-qualifications starts
+
+router.post(`/v${verNum}/account/diversity-monitoring/professionalQualificiations`, function (req, res) {
+    const professionalqualificiations = req.session.data['professional-qualifications'];
+
+    if (professionalqualificiations === 'yes') {
+        res.redirect(`/v${verNum}/account/diversity-monitoring/professional-qualificiations-detail`);
+    } else {
+        res.redirect(`/v${verNum}/account/account-dashboard`);
+    }
+});
+
+
+
+//professional-qualifications ends
 
 
 

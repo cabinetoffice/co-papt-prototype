@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="disability-mental-health-account" method="post" novalidate data-validate='example-validation'>
+<form action="disability-affected-ability"post" novalidate data-validate='example-validation'>
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -21,7 +21,7 @@ Public appointments
           <span class="govuk-caption-l">
             Diversity monitoring
           </span>
-          Do you have any physical or mental health conditions or illnesses lasting, or expecting to last, 12 months or more?
+          Do any of your conditions or illnesses reduce your ability to carry out day to day activities?
         </h1>
         
         {{ govukInsetText({
@@ -31,21 +31,25 @@ Public appointments
 
        
 
-       
-        
-       
         
         {{ govukRadios({
-          idPrefix: "disability",
-          name: "disability",
-          
+          idPrefix: "reduced-ability",
+          name: "reduced-ability",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
           items: [
             {
-              value: "yes",
-              text: "Yes",
-              conditional: {
-                html: yesHtml
-              }
+              value: "yes a lot",
+              text: "Yes, a lot"
+            },
+            {
+              value: "yes a little",
+              text: "Yes, a little"
             },
             {
               value: "no",
@@ -56,13 +60,12 @@ Public appointments
             },
             {
               value: "prefer-not-to-say",
-              text: "Prefer not to say",
-              conditional: {
-                html: prefer-not-to-sayHtml
-              }
+              text: "Prefer not to say"
             }
           ]
         }) }}
+
+       
 
 
 
@@ -74,12 +77,12 @@ Public appointments
                   {{ govukButton({
                     text: "Cancel",
                     classes: "govuk-button--secondary",
-                    href: "../account-dashboard"
+                    href: "../main-application-dashboard"
                   }) }}
                 </div>
 
                   <p class="govuk-body">
-                    Read more about <a href="#" class="govuk-link">your data and diversity data</a>.
+                    Read more about <a href="../your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
                   <p>
 
               </div>
@@ -92,7 +95,7 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "disability": {
+    "reduced-ability": {
       "presence": {
         "message": "^Select an option or 'Prefer not to say'"
       }

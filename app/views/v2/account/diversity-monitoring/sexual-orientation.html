@@ -7,62 +7,75 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="disability-mental-health-account" method="post" novalidate data-validate='example-validation'>
-  {{ govukBackLink({
-    text: "Back",
-    href: "#"
-  }) }}
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
        
-        <h1 class="govuk-heading-l">
+        <h1 class="govuk-heading-xl">
           <span class="govuk-caption-l">
             Diversity monitoring
           </span>
-          Do you have any physical or mental health conditions or illnesses lasting, or expecting to last, 12 months or more?
-        </h1>
-        
+          Which of the following options best describes your sexual orientation?</h1>
+
+
         {{ govukInsetText({
           text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
         }) }}
       
 
-       
+
 
        
-        
-       
-        
+
+
+
+
         {{ govukRadios({
-          idPrefix: "disability",
-          name: "disability",
-          
-          items: [
-            {
-              value: "yes",
-              text: "Yes",
-              conditional: {
-                html: yesHtml
-              }
-            },
-            {
-              value: "no",
-              text: "No"
-            },
-            {
-              divider: "or"
-            },
-            {
-              value: "prefer-not-to-say",
-              text: "Prefer not to say",
-              conditional: {
-                html: prefer-not-to-sayHtml
-              }
+          idPrefix: "sexual-orientation",
+          name: "sexual-orientation",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
             }
+          },
+         
+          items: [
+          {
+            value: "Heterosexual or straight",
+            text: "Heterosexual or straight"
+          },
+          {
+            value: "Gay or lesbian",
+            text: "Gay or lesbian"
+          },
+          {
+            value: "Bisexual",
+            text: "Bisexual"
+          },
+          {
+            value: "other",
+            text: "Other"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "Prefer not to say",
+            text: "Prefer not to say"
+          }
           ]
         }) }}
+
+
+
 
 
 
@@ -79,7 +92,7 @@ Public appointments
                 </div>
 
                   <p class="govuk-body">
-                    Read more about <a href="#" class="govuk-link">your data and diversity data</a>.
+                    Read more about <a href="../your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
                   <p>
 
               </div>
@@ -92,7 +105,8 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "disability": {
+   
+    "sexual-orientation": {
       "presence": {
         "message": "^Select an option or 'Prefer not to say'"
       }
