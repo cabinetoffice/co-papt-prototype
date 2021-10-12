@@ -1,5 +1,5 @@
 
-{% extends "layout.html" %}
+{% extends "layout-no-head.html" %}
 
 {% block pageTitle %}
 Public appointments
@@ -99,7 +99,7 @@ Public appointments
                             <a href="/v2/account/new-account/personal-details" class="govuk-link">Account creation</a>
                            </li>
                            <li>
-                            <a href="/v2/account/account-dashboard" class="govuk-link">Account dashboard</a>
+                            <a href="/v2/account/account-dashboard" class="govuk-link">Account dashboard (including linked functionality)</a>
                           </li>
                           <li>
                             <a href="/v2/role/main-application-dashboard" class="govuk-link">Role application and 'More about you' workflow</a>
@@ -121,6 +121,9 @@ Public appointments
                         </li>
                         <li>
                           <a href="/v2/account/delete-account/delete-account-no-roles" class="govuk-link">Account - deletion (no live applications)</a>
+                        </li>
+                        <li>
+                          <a href="/v2/account/sign-out/sign-out-confirmation" class="govuk-link">Account - Sign out</a>
                         </li>
                         </ul>
                         <h2 class="govuk-heading-l">
