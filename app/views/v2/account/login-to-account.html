@@ -22,7 +22,7 @@ Public appointments
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Log in to Public Appointments</h1>
+        <h1 class="govuk-heading-xl">Sign in</h1>
         
     
           
@@ -32,51 +32,49 @@ Public appointments
             name: "email",
             label: {
               text: "Email address",
-              classes: "govuk-label--l",
+              classes: "govuk-!-font-weight-bold",
             isPageHeading: false
             },
-           
             type: "email",
             autocomplete: "email",
-            spellcheck: false
+            spellcheck: false,
+              classes: " govuk-input--width-30",
+            isPageHeading: false
           }) }}
 
           {{ govukInput({
             id: "password",
             name: "password",
             type: "password",
+            classes: "govuk-input--width-30 ",
             label: {
               text: "Password",
-              classes: "govuk-label--l",
+              isPageHeading: false,
+              classes: " govuk-!-font-weight-bold ",
             isPageHeading: false
             }
           }) }}
-          <div class="govuk-grid-row govuk-!-margin-bottom-6">
-            <div class="govuk-grid-column-two-thirds">
-              <p class="govuk-body">
-                
-              
-              <a href="#" class="govuk-link">Forgotten password?</a>
-              </p>
-            </div>
-          </div>
+          <p class="govuk-body govuk-!-margin-bottom-6">
+            <a href="#" class="govuk-link">Create an account</a>
+         <p>
          
-                <div class="govuk-button-group">
+                <div class="govuk-button-group govuk-!-margin-bottom-6">
+                  
                   {{ govukButton({
-                    text: "Log in"
+                    text: "Sign in"
                   }) }}
                 
                  
                 </div>
-
-                <div class="govuk-grid-row">
+                <div class="govuk-grid-row ">
                   <div class="govuk-grid-column-two-thirds">
-                    <p class="govuk-body">
-                      Don't have an account? <a href="#" class="govuk-link">Create an applicant account</a>.
-                    <p>
-                    
+                    <h3 class="govuk-heading-m">
+                      Problems signing in?
+                    </h3>
+                    <a href="forgot-password/forgotten-password" class="govuk-link">Forgotten my password</a>
                   </div>
-                </div>                  
+                </div>
+                              
 
               </div>
     </div>

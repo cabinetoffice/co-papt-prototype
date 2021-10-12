@@ -8,18 +8,13 @@ Public appointments
 {% block content %}
 <div class="govuk-width-container">
 <form action="login-two-factor-authentication/two-factor-confirmation" method="post">
- {{ govukBackLink({
-   text: "Back",
-   href: "#"
- }) }}
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Sign in</h1>
         
-    <p class="govuk-body govuk-!-margin-bottom-6">
-      Sign in or <a href="#" class="govuk-link">create an account</a>.
-    <p>
+    
           
 
           {{ govukInput({
@@ -49,7 +44,9 @@ Public appointments
             isPageHeading: false
             }
           }) }}
-          
+          <p class="govuk-body govuk-!-margin-bottom-6">
+            <a href="#" class="govuk-link">Create an account</a>
+         <p>
          
                 <div class="govuk-button-group govuk-!-margin-bottom-6">
                   
@@ -64,7 +61,7 @@ Public appointments
                     <h3 class="govuk-heading-m">
                       Problems signing in?
                     </h3>
-                    <a href="forgot-password/forgotten-password" class="govuk-link">Forgotten your password?</a>
+                    <a href="forgot-password/forgotten-password" class="govuk-link">Forgotten my password</a>
                   </div>
                 </div>
                               
