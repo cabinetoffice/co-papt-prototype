@@ -5,26 +5,79 @@
 {% endblock %}
 
 {% block content %}
-  <a href="#" class="govuk-back-link">Back</a>
-
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Public appointments",
+      href: "#"
+    },
+    {
+      text: "My account",
+      href: "#"
+    },
+    {
+      text: "Role alerts"
+    }
+  ]
+}) }}
+<main class="govuk-main-wrapper " id="main-content" role="main">
+ 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
-        Role Alert
+      <h1 class="govuk-heading-xl">
+        Role alert
       </h1>
 
+    
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
+          {{ govukRadios({
+            idPrefix: "email-alert-role-frequency",
+            name: "email-alert-role-frequency",
+            fieldset: {
+              legend: {
+                text: "How frequently should we notify you when roles of interest are published on our website?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+          
+            items: [
+              {
+                value: "Disabled",
+                text: "Disabled"
+              },
+              {
+                value: "Immediately",
+                text: "Immediately"
+              },
+              {
+                value: "Daily",
+                text: "Daily"
+              },
+              {
+                value: "Weekly",
+                text: "Weekly"
+              }
+            ]
+          }) }}
 
               <!-- accordion starts here-->
               <div id="page-filtering-filters">
-                <input type="hidden" name="filter_custom" value="1">
+                <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+                  Alert filters
+                </h2>
+                <p class="govuk-body govuk-!-margin-bottom-1">
+                  Use the filters below to target roles which are of interest to you. 
+                <p>
+                {{ govukInsetText({
+                  text: "If no roles match the criteria you set here we won't email you."
+                }) }}
+               
+                
 
-                <div class="govuk-accordion govuk-accordion--singular" data-module="govuk-accordion" id="accordion-default">
+                <div class="govuk-accordion govuk-accordion--singular margin-top-neg-3" data-module="govuk-accordion" id="accordion-default">
                   <div class="govuk-accordion__controls">
                     <button type="button" class="govuk-accordion__open-all" aria-expanded="false">Open all<span class="govuk-visually-hidden">
                         sections</span></button>
@@ -45,19 +98,19 @@
                       <div class="govuk-form-group">
                         <div class="govuk-checkboxes govuk-checkboxes--small">
                           <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_locations" name="filter_locations" type="checkbox" value="1000">
+                            <input class="govuk-checkboxes__input" id="filter_locations" name="filter_locations" type="checkbox" value="1000" checked>
                             <label class="govuk-label govuk-checkboxes__label" for="filter_locations">
                               East Midlands
                             </label>
                           </div>
                           <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_locations-2" name="filter_locations" type="checkbox" value="1001">
+                            <input class="govuk-checkboxes__input" id="filter_locations-2" name="filter_locations" type="checkbox" value="1001" checked>
                             <label class="govuk-label govuk-checkboxes__label" for="filter_locations-2">
                               East of England
                             </label>
                           </div>
                           <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_locations-3" name="filter_locations" type="checkbox" value="1002">
+                            <input class="govuk-checkboxes__input" id="filter_locations-3" name="filter_locations" type="checkbox" value="1002" checked>
                             <label class="govuk-label govuk-checkboxes__label" for="filter_locations-3">
                               London
                             </label>
@@ -143,13 +196,13 @@
                       <div class="govuk-form-group">
                         <div class="govuk-checkboxes govuk-checkboxes--small">
                           <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_skills" name="filter_skills" type="checkbox" value="1000">
+                            <input class="govuk-checkboxes__input" id="filter_skills" name="filter_skills" type="checkbox" value="1000" checked>
                             <label class="govuk-label govuk-checkboxes__label" for="filter_skills">
                               Accountancy
                             </label>
                           </div>
                           <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_skills-2" name="filter_skills" type="checkbox" value="1001">
+                            <input class="govuk-checkboxes__input" id="filter_skills-2" name="filter_skills" type="checkbox" value="1001" checked>
                             <label class="govuk-label govuk-checkboxes__label" for="filter_skills-2">
                               Audit and Risk
                             </label>
@@ -680,44 +733,7 @@
 
                     </div>
                   </div>
-                  <div class="govuk-accordion__section">
-                    <div class="govuk-accordion__section-header">
-                      <h2 class="govuk-accordion__section-heading">
-
-                        <button type="button" id="accordion-default-heading-6" aria-controls="accordion-default-content-6" class="govuk-accordion__section-button" aria-expanded="false">
-                          Organisation
-                          <span class="govuk-accordion__icon" aria-hidden="true"></span></button>
-                        <div class="icon"></div>
-                        <div class="count"></div>
-                      </h2>
-                    </div>
-                    <div id="accordion-default-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-6">
-
-                      <div class="govuk-form-group">
-                        <div class="govuk-checkboxes govuk-checkboxes--small">
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_organizations" name="filter_organizations" type="checkbox" value="1000">
-                            <label class="govuk-label govuk-checkboxes__label" for="filter_organizations">
-                              National Nuclear Laboratory
-                            </label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_organizations-2" name="filter_organizations" type="checkbox" value="1001">
-                            <label class="govuk-label govuk-checkboxes__label" for="filter_organizations-2">
-                              Oil and Pipelines Agency
-                            </label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="filter_organizations-3" name="filter_organizations" type="checkbox" value="1002">
-                            <label class="govuk-label govuk-checkboxes__label" for="filter_organizations-3">
-                              British Council
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
+                 
                   <div class="govuk-accordion__section">
                     <div class="govuk-accordion__section-header">
                       <h2 class="govuk-accordion__section-heading">
@@ -790,56 +806,82 @@
 
                     </div>
                   </div>
-                  <div class="govuk-accordion__section">
-                    <div class="govuk-accordion__section-header">
-                      <h2 class="govuk-accordion__section-heading">
-
-                        <button type="button" id="accordion-default-heading-9" aria-controls="accordion-default-content-9" class="govuk-accordion__section-button" aria-expanded="false">
-                          Status
-                          <span class="govuk-accordion__icon" aria-hidden="true"></span></button>
-                        <div class="icon"></div>
-                        <div class="count"></div>
-                      </h2>
-                    </div>
-                    <div id="accordion-default-content-9" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-9">
-
-                      <div class="govuk-form-group">
-                        <div class="govuk-radios govuk-radios--small">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="filter_status" name="filter_status" type="radio" value="1000" checked="">
-                            <label class="govuk-label govuk-radios__label" for="filter_status">
-                              Open
-                            </label>
-                          </div>
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="filter_status-2" name="filter_status" type="radio" value="1001">
-                            <label class="govuk-label govuk-radios__label" for="filter_status-2">
-                              Closed
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
+                 
                 </div>
-
+                <div id="vacancies-pills" class="govuk-!-margin-bottom-9 govuk-!-margin-top-9">
+                  <h3 class="govuk-heading-m">
+                    Selected criteria
+                  </h3>
+                  <p class="govuk-body">
+                    We will email you role details at your selected interval using the following criteria.
+                  <p>
+                  <dl>
+                    <dt>For location</dt>
+                    <span>
+                      <span>
+                        <button class="wire" data-filter="locations" data-value="1000" aria="Remove filter Location">East Midlands</button>
+                      </span>
+                      <noscript>
+                        <dd>East Midlands</dd>
+                      </noscript>
+                    </span>
+                    <span>
+              <span>or</span>        <span>
+                        <button class="wire" data-filter="locations" data-value="1001" aria="Remove filter Location">East of England</button>
+                      </span>
+                      <noscript>
+                        <dd>East of England</dd>
+                      </noscript>
+                    </span>
+                    <span>
+              <span>or</span>        <span>
+                        <button class="wire" data-filter="locations" data-value="1002" aria="Remove filter Location">London</button>
+                      </span>
+                      <noscript>
+                        <dd>London</dd>
+                      </noscript>
+                    </span>
+                  </dl>
+                    <dl>
+                    <dt>Ideal skills</dt>
+                    <span>
+                      <span>
+                        <button class="wire" data-filter="skills" data-value="1000" aria="Remove filter Skills">Accountancy</button>
+                      </span>
+                      <noscript>
+                        <dd>Accountancy</dd>
+                      </noscript>
+                    </span>
+                    <span>
+              <span>or</span>        <span>
+                        <button class="wire" data-filter="skills" data-value="1001" aria="Remove filter Skills">Audit and Risk</button>
+                      </span>
+                      <noscript>
+                        <dd>Audit and Risk</dd>
+                      </noscript>
+                    </span>
+                  </dl>
+              
+              
+              </div>
+                
               </div>
               <!-- accordion ends here-->
 
               {{ govukButton({
-                  text: "Apply for this role",
-                  href: "start-application"
+                  text: "Set alert and continune",
+                  href: ""
                 }) }}
 
               <!-- role as end-->
             </div>
           </div>
-        </div>
-      </div>
+        
 
     </div>
 
   </div>
+  
+  </main>
 
 {% endblock %}

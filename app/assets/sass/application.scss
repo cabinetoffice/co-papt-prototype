@@ -163,3 +163,55 @@ $govuk-assets-path: '/govuk/assets/';
       }
     }
   }
+  .margin-top-neg-3{margin-top: -40px;}
+  #vacancies-pills {
+    display: block;
+}
+.js-enabled #vacancies-pills>dl>span>span {
+  display: inline-block;
+}
+#vacancies-pills>dl>dt, #vacancies-pills>dl * {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+#vacancies-pills>dl>dt, #vacancies-pills>dl * {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.1428571429;
+  display: inline-block;
+}
+#vacancies-pills>dl>span {
+  white-space: nowrap;
+  margin: 0;
+}
+#vacancies-pills>dl>span>span>button {
+  padding-left: 1.5em;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTI0IDIwLjE4OGwtOC4zMTUtOC4yMDkgOC4yLTguMjgyLTMuNjk3LTMuNjk3LTguMjEyIDguMzE4LTguMzEtOC4yMDMtMy42NjYgMy42NjYgOC4zMjEgOC4yNC04LjIwNiA4LjMxMyAzLjY2NiAzLjY2NiA4LjIzNy04LjMxOCA4LjI4NSA4LjIwM3oiLz48L3N2Zz4=);
+  background-position: .35em 45%;
+  background-repeat: no-repeat;
+  background-size: .75em .75em;
+}
+.js-enabled #vacancies-pills>dl>span>span>button {
+  display: inline-block;
+  cursor: pointer;
+}
+#vacancies-pills>dl>span dd, #vacancies-pills>dl>span button {
+  padding: 10px 5px;
+  border: 1px solid #505a5f;
+  border-radius: 5px;
+  background-color: #f3f2f1;
+}
+#vacancies-pills>dl>dt {
+  margin-right: 5px;
+  padding: 0;
+  font-weight: bold;
+}
+#vacancies-pills>dl:nth-child(odd) {
+  background-color: #f3f2f1;
+  padding:10px 0px 10px 10px;
+}
