@@ -91,3 +91,75 @@ $govuk-assets-path: '/govuk/assets/';
 .js-enabled .govuk-accordion__open-all {
     font-size: 0px; 
 }
+
+#page-filtering-filters {
+    .govuk-accordion__section-heading {
+        padding-left: 50px !important;
+    }
+    .govuk-accordion {
+      border: 0;
+      .govuk-accordion__section {
+        position: relative;
+        padding: 0 0 10px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #b1b4b6;
+      }
+      .govuk-accordion__section-header {
+        padding: 10px 8px 5px 43px;
+        border: 0;
+        .govuk-accordion__icon {
+          display:none;
+        }
+        .icon {
+          position: absolute;
+          left: .3em;
+          width: 30px;
+          height: 1.8em;
+          top: .2em;
+          background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHBhdGggZD0ibTc5OC4xNiA2MDkuODRsLTI1Ni0yNTZjLTE2LjY4My0xNi42ODMtNDMuNjkxLTE2LjY4My02MC4zMzEgMGwtMjU2IDI1NmMtMTYuNjgzIDE2LjY4My0xNi42ODMgNDMuNjkxIDAgNjAuMzMxczQzLjY5MSAxNi42ODMgNjAuMzMxIDBsMjI1Ljg0LTIyNS44NCAyMjUuODQgMjI1Ljg0YzE2LjY4MyAxNi42ODMgNDMuNjkxIDE2LjY4MyA2MC4zMzEgMHMxNi42ODMtNDMuNjkxIDAtNjAuMzMxeiI+PC9wYXRoPjwvc3ZnPg==") no-repeat 50% 50%;
+        }
+        .govuk-accordion__section-button {
+          margin-left: 0;
+          @include govuk-font(19);
+        }
+        .count {
+          @include govuk-font($size: 14);
+          color: $govuk-text-colour;
+          margin-top: 3px;
+        }
+      }
+      .govuk-accordion__section--expanded {
+        >.govuk-accordion__section-header {
+          >.govuk-accordion__section-heading {
+            .icon {
+              background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTIyNS44NCA0MTQuMTZsMjU2IDI1NmMxNi42ODMgMTYuNjgzIDQzLjY5MSAxNi42ODMgNjAuMzMxIDBsMjU2LTI1NmMxNi42ODMtMTYuNjgzIDE2LjY4My00My42OTEgMC02MC4zMzFzLTQzLjY5MS0xNi42ODMtNjAuMzMxIDBsLTIyNS44NCAyMjUuODQtMjI1Ljg0LTIyNS44NGMtMTYuNjgzLTE2LjY4My00My42OTEtMTYuNjgzLTYwLjMzMSAwcy0xNi42ODMgNDMuNjkxIDAgNjAuMzMxeiI+PC9wYXRoPjwvc3ZnPg==") no-repeat 50% 50%;
+            }
+          }
+        }
+      }
+      .govuk-accordion__section-content {
+        position: relative;
+        max-height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        &:focus {
+          outline: 0;
+        }
+        padding: 0.1em 0 0 0;
+      }
+      .govuk-accordion__section-header, .govuk-accordion__section-content {
+        padding-left: .5em;
+      }
+      @include govuk-media-query($from: desktop) {
+        ::-webkit-scrollbar {
+          -webkit-appearance: none;
+          width: 7px;
+        }
+        ::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background-color: rgba(0, 0, 0, .5);
+          -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .87);
+        }
+      }
+    }
+  }
