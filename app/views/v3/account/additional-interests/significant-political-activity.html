@@ -1,0 +1,105 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            More about you
+          </span>
+          Are you involved in significant political activity?
+        </h1>
+       
+      
+          
+                  
+
+
+              {% set otherappointmentsHtml %}
+              
+
+              {{ govukCharacterCount({
+                name: "political-detail",
+                id: "political-detail",
+                maxlength: 200,
+                label: {
+                  text: "Please indicate for which party or parties"
+                }
+              }) }}
+             
+
+              {% endset -%}
+              
+              {{ govukRadios({
+                idPrefix: "significant-political-activity",
+                name: "significant-political-activity",
+               
+                
+                items: [
+                  {
+                    value: "yes",
+                    text: "Yes",
+                    conditional: {
+                      html: otherappointmentsHtml
+                    }
+                  },
+                  {
+                    value: "no",
+                    text: "No"
+                  }
+                ]
+              }) }}
+
+              {{ govukDetails({
+                summaryText: "Help with significant political activity",
+                text: "Significant political activity is defined as being employed by a political party, holding significant office in a party, standing as a candidate for a party in an election, having publicly spoken on behalf of a political party or having made significant donations or loans to a party. Significant loans and donations are those of a size which are reported to the Electoral Commission, in line with a central party’s reporting threshold. Have you undertaken any significant political activity for a political party in the past five years?"
+              }) }}
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../account-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "significant-political-activity": {
+      "presence": {
+        "message": "^Enter information of your highest qualification"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

@@ -1,0 +1,611 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form method="post">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-xl">
+            Application for
+          </span>
+            Distribution Centre Manager</h1>
+        <p class="govuk-body">
+          Check your details and complete all the sections below in order to submit your application
+        <p>
+          <h2 class="govuk-heading-m">Personal details</h2>
+          <!--personal details start-->
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Title
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Mr
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> title</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              First name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              John 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Last name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Philips
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 January 1978
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              72 Guild Street<br>London<br>SE23 6FH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+               <p class="govuk-body">john.phillips@example.com</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> email address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Telephone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">07700 900457</p> 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> telephone number</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <!--personal details end-->
+
+        
+
+
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Why we collect diversity data
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">
+                We are committed to recruiting people that reflect the diverse communities we serve. To do this we need your help in filling out these monitoring questions. You can select ‘prefer not to say’ for any questions you do not want to answer. 
+              <p>
+              <p class="govuk-body">
+                The information you provide in the diversity monitoring and more about you sections will:
+              <p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  not be used as part of the selection process
+                </li>
+                <li>
+                  not be seen by the interview panel
+                </li>
+                <li>
+                  only be used by the department, the Commissioner for Public Appointments and the Cabinet Office for statistical purposes
+                </li>
+              </ul>
+              <p class="govuk-body">
+                No information will be published which allows any individual to be identified.
+              <p>
+              <p class="govuk-body">
+                Your responses are collected by the Cabinet Office and the government departments managing applications. The data is used to produce management information about the diversity of applicants. Your information will also help ensure that our recruitment processes are fair to all. Read more about <a href="#" class="govuk-link">your data and diversity data</a>.
+              <p>
+
+            </div>
+          </details>
+             
+
+
+        
+
+                <!--Diversity task list starts-->
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header left" scope="col"> Diversity monitoring </th>
+                      <th class="govuk-table__header  " scope="col"> Status </th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="../check-answers/check-answer-sex-and-gender" class="govuk-link">Sex and gender</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        <!--
+                                                {% if data['sex-and-gender-check'] === 'confirm' %}
+
+                                                <strong class="govuk-tag govuk-tag--blue">
+                                                  Complete
+                                                </strong>
+
+                                                {% else %}
+
+                                                <strong class="govuk-tag govuk-tag--yellow">
+                                                  Check and confirm
+                                                </strong>
+
+                                                {% endif %}
+
+                        -->
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                        </strong>
+                      
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="../check-answers/check-answer-disability" class="govuk-link">Disability</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        <!--{% if data['disability-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
+                          Check and confirm
+                        </strong>
+
+                        {% endif %}-->
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="../check-answers/check-answer-ethnicity" class="govuk-link">Ethnicity </a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        {% if data['ethnicity-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
+                          Check and confirm
+                        </strong>
+
+                        {% endif %}
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="../check-answers/check-answer-religion" class="govuk-link">Religion</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        {% if data['religion-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
+                          Check and confirm
+                        </strong>
+
+                        {% endif %}
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="../check-answers/check-answer-sexual-orientation" class="govuk-link">Sexual orientation</a>
+                      </td>
+                    <td class="govuk-table__cell">
+                         <!-- {% if data['sexual-orientation-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--yellow">
+                          Check and confirm
+                        </strong>
+
+                        {% endif %} -->
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!--Diversity task list ends-->
+                
+
+
+                <!--More about you task list starts-->
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header left" scope="col"> More about you </th>
+                      <th class="govuk-table__header  " scope="col"> Status </th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    
+                   
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="../check-answers/check-answer-employment" class="govuk-link">Employment</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                       
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+                        </td>
+                      </tr>
+                        
+                     
+
+                       
+
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <a href="../check-answers/check-answer-professional-qualifications" class="govuk-link">Professional qualifications</a>
+                          </td>
+                          <td class="govuk-table__cell">
+                            
+                            <strong class="govuk-tag govuk-tag--blue">
+                              Complete
+                             </strong>
+                            </td>
+                          </tr>
+                             
+                         
+                            {% if data['education-check'] === 'confirm' %}
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
+                              </td>
+                              <td class="govuk-table__cell">
+                                
+        
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Complete
+                                 </strong>
+                                </td>
+                              </tr>
+                                 {% else %}
+                                 <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="../check-answers/check-answer-education" class="govuk-link">Educational qualifications</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                 <strong class="govuk-tag govuk-tag--yellow">
+                                  Check and confirm
+                                 </strong>
+                                </td>
+                              </tr>
+                                {% endif %}
+                              
+
+
+                   
+                                {% if data['other-check'] === 'confirm' %}
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <a href="../check-answers/check-answer-other-public-appointments" class="govuk-link">Other public appointments held</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                                  
+
+                                  <strong class="govuk-tag govuk-tag--blue">
+                                    Complete
+                                  </strong>
+                                  </td>
+                                </tr>
+                                {% else %}
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="../check-answers/check-answer-other-public-appointments" class="govuk-link">Other public appointments held</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--yellow">
+                                  Check and confirm
+                                </strong>
+                                </td>
+                              </tr>
+                                {% endif %}
+                                {% if data['political-check'] === 'confirm' %}
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="../check-answers/check-answer-significant-political-activity" class="govuk-link">Significant Political Activity</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                    
+
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Complete
+                                </strong>
+                                </td>
+                              </tr>
+                              {% else %}
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <a href="more-about-you/significant-political-activity" class="govuk-link">Significant Political Activity</a>
+                                </td>
+                                <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">
+                                Not Complete
+                              </strong>
+                              </td>
+                            </tr>
+                              {% endif %}
+                     
+                  </tbody>
+                </table>
+                <!-- More about you task list ends-->
+
+
+                
+
+                
+
+
+
+                <!--More about you task list starts-->
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header left" scope="col"> Application </th>
+                      <th class="govuk-table__header " scope="col"> Status </th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="application/cv-update" class="govuk-link">Curriculum vitae</a>
+                      </td>
+                      <td class="govuk-table__cell">
+
+
+
+                        {% if data['use-profile-cv'] === 'yes' or data['use-profile-cv'] === 'no' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                        <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+
+                        {% endif %}
+
+                       
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row ">
+                      <td class="govuk-table__cell ">
+                        <a href="application/supporting-statement" class="govuk-link">Supporting statement</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                        <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+
+                        {% endif %}
+                      </td>
+                    </tr>
+                   
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="application/conflicts-of-interest" class="govuk-link">Conflicts of interest</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        {% if data['conflicts-of-interest'] === 'yes'  or data['conflicts-of-interest'] === 'no' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                        <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+
+                        {% endif %}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- More about you task list ends-->
+      
+                <!--checkboxes start-->
+
+
+                {% set otherHtml %}
+                  {{ govukCharacterCount({
+                    name: "with-hint",
+                    id: "with-hint",
+                    maxlength: 200,
+                    label: {
+                      text: "Provide more detail on the reasonable adjustments you'd like to make to the application process.",
+                      classes: "govuk-label--s",
+                      isPageHeading: true
+                    }
+                  }) }}
+                  {% endset -%}
+
+
+
+                    {{ govukCheckboxes({
+                      idPrefix: "privacy-policy",
+                      name: "privacy-policy",
+                      items: [
+                        {
+                          value: "privacy-policy-checked",
+                          html: "Your <b>privacy and personal data</b> is important to us. Tick this box if you agree to the 
+                          Public Appointments <a href=# class=govuk-link>privacy policy</a> and the hiring departments <a href=# class=govuk-link>privacy policy</a>."
+                        }
+                      ]
+                    }) }}
+
+
+
+                    {{ govukCheckboxes({
+                      idPrefix: "reasonable-adjustments",
+                      name: "reasonable-adjustments",
+                      items: [
+                        {
+                          value: "reasonable-adjustments-checked",
+                          text: "Tick this box if you would like to make reasonable adjustments to the application process due to a health condition that you may have.",
+                          conditional: {
+                            html: otherHtml
+                          }
+                        }
+                      ]
+                    }) }}
+
+
+
+                    {{ govukCheckboxes({
+                      idPrefix: "privacy-policy",
+                      name: "privacy-policy",
+                      items: [
+                        {
+                          value: "privacy-policy-checked",
+                          html: "Tick this box if you would like your application to be considered under the <a href=# class=govuk-link>Disability Confident Scheme</a>. The scheme helps recruit and retain disabled people by offering a guaranteed interview if minimum criteria  are met, as well as free access to additional resources."
+                        }
+                      ]
+                    }) }}
+
+
+                <!--checkboxes end-->
+      
+
+
+                {% if data['sex-and-gender-check'] === 'confirm' and  data['disability-check'] === 'confirm' and data['ethnicity-check'] === 'confirm' and data['religion-check'] === 'confirm' and data['sexual-orientation-check'] === 'confirm' and data['employment-check'] === 'confirm' and data['professional-qualifications-check'] === 'confirm' and data['education-check'] === 'confirm' and data['other-check'] === 'confirm'  and data['use-profile-cv'] === 'yes' or data['use-profile-cv'] === 'no' or data['supporting-statement'] === 'supporting-statement' or data['video-statement'] === 'written-statement' or data['conflicts-of-interest'] === 'yes' or data['conflicts-of-interest'] === 'no' %}
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Submit application",
+                    href: "application-check-answer"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Withdraw application",
+                    classes: "govuk-button--warning",
+                    href: "delete-application"
+                  }) }}
+                </div>
+               
+
+                {% else %}
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Submit application",
+                    classes: "govuk-button--disabled"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Withdraw application",
+                    classes: "govuk-button--warning",
+                    href: "delete-application"
+                  }) }}
+                </div>
+               
+
+                {% endif %}
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

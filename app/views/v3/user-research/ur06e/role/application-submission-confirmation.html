@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({
+      titleText: "Application complete",
+      html: "Your reference number<br><strong>HDJ2123F</strong>"
+    }) }}
+
+    <p class="govuk-body">We have sent you a confirmation email.</p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">
+      We’ve submitted your application for review.
+    </p>
+    <h3 class="govuk-heading-m">
+      Timeline for this appointment
+    </h3>
+    <ul class="vacancyTimeline">
+      <li>
+        <div>Opening date</div>
+        <div></div>
+        <div>
+          <p class="govuk-body-s">
+            17 December 2019
+          <p>
+         </div>
+      </li>
+      <li>
+        <div>Closing date</div>
+        <div></div>
+        <div><p class="govuk-body-s">
+          7 December 2030
+        <p></div>
+      </li>
+      <li>
+        <div>Sifting date</div>
+        <div></div>
+        <div><p class="govuk-body-s">
+          23 November 2020
+        <p></div>
+      </li>
+      <li>
+        <div>Interview date</div>
+        <div></div>
+        <div><p class="govuk-body-s">
+          23 November 2020
+        <p></div>
+      </li>
+      <li>
+        <div>Announcement</div>
+        <div></div>
+        <div><p class="govuk-body-s">
+          23 November 2020
+        <p></div>
+      </li>
+    </ul>
+    <p class="govuk-body">
+      Read more information about the application process. <a href="#" class="govuk-link">application process</a>. 
+    </p>
+  </div>
+</div>
+ 
+     
+
+{% endblock %}

@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../check-answers/check-answer-professional-qualifications" method="post" novalidate data-validate='example-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            More about you
+          </span>
+          What is your professional qualification? 
+        </h1>
+
+        
+
+{{ govukCharacterCount({
+  name: "what-is-your-professional-qualification",
+  id: "what-is-your-professional-qualification",
+  maxlength: 2000
+}) }}
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "what-is-your-professional-qualification": {
+      "presence": {
+        "message": "^Provide detail on your professional qualification"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

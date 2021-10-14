@@ -1,0 +1,107 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
+
+        <h2 class="govuk-heading-m">Employment</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How would you describe your employment status?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['employment-status'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/employment#employment-status">
+                Change<span class="govuk-visually-hidden"> employment status</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which occupational sector best describes your main employment?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['occupational-sector'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/employment#occupational-sector">
+                Change<span class="govuk-visually-hidden"> occupational sector</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your main profession?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['main-profession'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/employment#main-profession">
+                Change<span class="govuk-visually-hidden"> main profession</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+       
+
+         
+        <!--for prototype validation only-->
+        <span class="govuk-visually-hidden">
+        {{ govukCheckboxes({
+          idPrefix: "employment-check",
+          name: "employment-check",
+          
+         
+          items: [
+            {
+              value: "confirm",
+              text: "Confirm that you are happy with these details - this section requires content design.",
+              checked: "true"
+            }
+          ]
+        }) }}
+          <input type="hidden" name="answers-checked" value="true">
+          </span>
+           <!--for prototype validation only-->
+
+
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and save
+          </button>
+
+       
+
+      </div>
+    </div>
+  </main>
+</div>
+</form>
+<script type="application/json" id="example-validation">
+  { 		  	
+    "employment-check": {
+      "presence": {
+        "message": "^validation to be confirmed."
+      }
+    }
+  }
+</script>
+{% endblock %}
