@@ -14,36 +14,13 @@ Public appointments
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
          <h1 class="govuk-heading-xl">
-          Contact us
+          Feedback
          </h1>
          {{ govukInsetText({
-           text: "Replies are typically made within 24 hours but may take longer based on the nature of your request.
-           "
+           text: "A response to your feedback isn't guaranteed, however where there's a need to reply or we need further information we'll endeavour to do so within 48 hours."
          }) }}
            
-         {{ govukSelect({
-           id: "department",
-           name: "department",
-           label: {
-             text: "Department"
-           },
-          
-           items: [
-             {
-               value: "",
-               text: "Select a department",
-               selected: "true"
-             },
-             {
-              value: "PAPT",
-              text: "PAPT"
-            },
-            {
-              value: "Department A",
-              text: "Department A"
-            }
-           ]
-         }) }}
+         
 
          {{ govukInput({
           classes: "govuk-input--width-30",
@@ -57,6 +34,37 @@ Public appointments
              "
            }
          }) }}
+
+         {{ govukSelect({
+          id: "subject",
+          name: "subject",
+          label: {
+            text: "Subject"
+          },
+         
+          items: [
+          {
+            value: " ",
+            text: "Select a subject"
+          },
+            {
+             value: "I have a question about the application process",
+             text: "I have a question about the application process"
+           },
+           {
+             value: "I have a question about my application",
+             text: "I have a question about my application"
+           },
+           {
+             value: "I require technical support",
+             text: "I require technical support"
+           },
+           {
+             value: "I want to provide some general feedback about the website",
+             text: "I want to provide some general feedback about the website"
+           }
+          ]
+        }) }}
          
          {{ govukCharacterCount({
            name: "message-text",
@@ -72,7 +80,7 @@ Public appointments
 
          {{ govukButton({
            text: "Send",
-           href: "contact-us-confirmation"
+           href: "feedback-confirmation"
          }) }}
         </div>
       </div>
