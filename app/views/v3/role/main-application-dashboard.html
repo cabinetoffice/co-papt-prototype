@@ -272,13 +272,146 @@ Public appointments
                         {% endif %}
                       </td>
                     </tr>
+
+                    {% if data['employment-check'] === 'confirm' %}
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="../check-answers/check-answer-employment" class="govuk-link">Employment</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                       
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+                        </td>
+                      </tr>
+                         {% else %}
+                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <a href="more-about-you/employment" class="govuk-link">Employment</a>
+                          </td>
+                          <td class="govuk-table__cell">
+                         <strong class="govuk-tag govuk-tag--red">
+                          Not Complete
+                         </strong>
+                        </td>
+                      </tr>
+                        {% endif %}
+                     
+
+                       
+                         
+                            {% if data['education-check'] === 'confirm' %}
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
+                              </td>
+                              <td class="govuk-table__cell">
+                                
+        
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Complete
+                                 </strong>
+                                </td>
+                              </tr>
+                                 {% else %}
+                                 <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="more-about-you/education" class="govuk-link">Educational qualifications</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                 <strong class="govuk-tag govuk-tag--red">
+                                  Not Complete
+                                 </strong>
+                                </td>
+                              </tr>
+                                {% endif %}
+                              
+
+                                {% if data['professional-qualifications-check'] === 'confirm' %}
+
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="../check-answers/check-answer-professional-qualifications" class="govuk-link">Professional qualifications</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                    
+                                    <strong class="govuk-tag govuk-tag--blue">
+                                      Complete
+                                     </strong>
+                                    </td>
+                                  </tr>
+                                     {% else %}
+                                     <tr class="govuk-table__row">
+                                      <td class="govuk-table__cell">
+                                        <a href="more-about-you/professional-qualificiations" class="govuk-link">Professional qualifications</a>
+                                      </td>
+                                      <td class="govuk-table__cell">
+                                     <strong class="govuk-tag govuk-tag--red">
+                                      Not Complete
+                                     </strong>
+                                    </td>
+                                  </tr>
+                                    {% endif %}
+                   
+                                {% if data['other-check'] === 'confirm' %}
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <a href="../check-answers/check-answer-other-public-appointments" class="govuk-link">Other public appointments held</a>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                      
+
+                                  <strong class="govuk-tag govuk-tag--blue">
+                                    Complete
+                                  </strong>
+                                  </td>
+                                </tr>
+                                {% else %}
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--red">
+                                  Not Complete
+                                </strong>
+                                </td>
+                              </tr>
+                                {% endif %}
+                                {% if data['political-check'] === 'confirm' %}
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <a href="../check-answers/check-answer-significant-political-activity" class="govuk-link">Significant Political Activity</a>
+                                    </td>
+                                    <td class="govuk-table__cell">
+                                      
+
+                                  <strong class="govuk-tag govuk-tag--blue">
+                                    Complete
+                                  </strong>
+                                  </td>
+                                </tr>
+                                {% else %}
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <a href="more-about-you/significant-political-activity" class="govuk-link">Significant Political Activity</a>
+                                  </td>
+                                  <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--red">
+                                  Not Complete
+                                </strong>
+                                </td>
+                              </tr>
+                                {% endif %}
                   </tbody>
                 </table>
                 <!--Diversity task list ends-->
                 
 
 
-                <!--More about you task list starts-->
+                <!--More about you task list starts
                 <table class="govuk-table">
                   <thead class="govuk-table__head">
                     <tr class="govuk-table__row">
@@ -423,10 +556,39 @@ Public appointments
                      
                   </tbody>
                 </table>
-                <!-- More about you task list ends-->
+                 More about you task list ends-->
 
 
-                
+                 <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header left" scope="col">Management of outside interests & reputational issues</th>
+                      <th class="govuk-table__header  " scope="col"> Status </th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="additional-interests/significant-political-activity" class="govuk-link">Political activity and interests</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                        </strong>
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="#" class="govuk-link">Social media accounts</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                        </strong>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
                 
 

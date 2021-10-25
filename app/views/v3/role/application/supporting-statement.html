@@ -15,7 +15,7 @@ Public appointments
         href: "../../role/main-application-dashboard"
       },
       {
-        text: "Conflicts of Interest"
+        text: "Supporting statement"
       }
     ]
   }) }}
@@ -25,91 +25,45 @@ Public appointments
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Supporting statement</h1>
         <p class="govuk-body">
-          Please submit a statement to demonstrate how suitable you are for this role.  You should ensure that your statement meets the requirements set out in the role specification. 
+          Please submit a statement to demonstrate your suitability for this role. 
         <p>
           
+
+
+
+          <p class="govuk-body">
+            You should ensure that your statement is:
+          <p>                    
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  is kept to two pages
+                </li>
+                <li>
+                  uses a minimum 12 font size
+                </li>
+                <li>
+                  meets the requirements set out in the role specification
+                </li>
+                <li>
+                  is under 10 Mb in file size
+                </li>
+                <li>
+                  is a supported file type; DOC, DOCX, ODT, PDF, RTF, TXT, WPS
+                </li>
+              </ul>
+ 
+
+
+
+        {{ govukFileUpload({
+          id: "file-upload-1",
+          name: "file-upload-1",
+          label: {
+            text: "Upload a file"
+          }
+        }) }}
          
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-             
-              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="supporting-statement" name="supporting-statement" type="radio" value="written-statement" data-aria-controls="written-statement">
-                  <label class="govuk-label govuk-radios__label" for="contact">
-                    Written statement
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="written-statement">
-                
-                  <p class="govuk-body">
-                    You should ensure that your statement is:
-                  <p>                    
-                      <ul class="govuk-list govuk-list--bullet">
-                        <li>
-                          under 10 Mb in file size
-                        </li>
-                        <li>
-                          a supported filetype; DOC, DOCX, ODT, PDF, RTF, TXT, WPS
-                        </li>
-                      </ul>
-         
-
-
-
-                {{ govukFileUpload({
-                  id: "file-upload-1",
-                  name: "file-upload-1",
-                  label: {
-                    text: "Upload a file"
-                  }
-                }) }}
           
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="supporting-statement-2" name="supporting-statement" type="radio" value="video-statement" data-aria-controls="supporting-video">
-                  <label class="govuk-label govuk-radios__label" for="supporting-statement-2">
-                    Video statement
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="supporting-video">
-                 
-
-                 
-                    <p class="govuk-body">
-                      You should ensure that your video is:
-                    <p>                    
-                        <ul class="govuk-list govuk-list--bullet">
-                          <li>
-                            under 700MB in file size
-                          </li>
-                          <li>
-                            no more than 10 minutes long
-                          </li>
-                          <li>
-                            supported by file types mp4, mov, avi or mk4
-                          </li>
-                        </ul>
-           
-
-
-
-                  {{ govukFileUpload({
-                    id: "file-upload-1",
-                    name: "file-upload-1",
-                    label: {
-                      text: "Upload a file"
-                    }
-                  }) }}
-
-                  
-                 
-                   
-
-                </div>
-              </div>
-          
-            </fieldset>
-          </div>
 
 
 
