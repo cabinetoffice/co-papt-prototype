@@ -1,0 +1,88 @@
+
+{% extends "layout-with-official-footer.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="#" method="post" >
+ 
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+         <h1 class="govuk-heading-xl">
+          Contact Us
+         </h1>
+         {{ govukInsetText({
+           text: "Replies are typically made within 24 hours but may take longer based on the nature of your request.
+           "
+         }) }}
+           
+         {{ govukSelect({
+           id: "department",
+           name: "department",
+           label: {
+             text: "Department"
+           },
+          
+           items: [
+             {
+               value: "",
+               text: "Select a department",
+               selected: "true"
+             },
+             {
+              value: "PAPT",
+              text: "PAPT"
+            },
+            {
+              value: "Department A",
+              text: "Department A"
+            }
+           ]
+         }) }}
+
+         {{ govukInput({
+          classes: "govuk-input--width-30",
+           id: "email-address",
+           name: "email-address",
+           label: {
+             text: "Email address"
+           },
+           hint: {
+             text: "We'll reply to your email address. It won't be used for any other purpose.
+             "
+           }
+         }) }}
+         
+         {{ govukCharacterCount({
+           name: "message-text",
+           id: "message-text",
+           maxlength: 200,
+           label: {
+             text: "Message"
+           },
+           hint: {
+             text: "Do not include sensitive information such as personal details or passwords."
+           }
+         }) }}
+
+         {{ govukButton({
+           text: "Send",
+           href: "contact-us-confirmation"
+         }) }}
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}
