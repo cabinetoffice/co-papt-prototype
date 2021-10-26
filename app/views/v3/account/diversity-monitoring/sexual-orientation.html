@@ -31,7 +31,18 @@ Public appointments
 
 
 
-       
+        {% set otherHtml %}
+                    
+                    {{ govukInput({
+                      id: "other-sexual-orientation",
+                      name: "other-sexual-orientation",
+                      label: {
+                        text: "How would you describe your sexual orientation?"
+                      }
+                    }) }}
+                    
+
+        {% endset -%}
 
 
 
@@ -62,7 +73,10 @@ Public appointments
           },
           {
             value: "other",
-            text: "Other"
+            text: "Other",
+            conditional: {
+              html: otherHtml
+            }
           },
           {
             divider: "or"
