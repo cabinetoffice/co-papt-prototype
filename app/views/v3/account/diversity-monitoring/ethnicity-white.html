@@ -30,17 +30,7 @@ Public appointments
         }) }}
       
 
-        {% set ethnicityHtml %}
-  {{ govukInput({
-    id: "other-description",
-    name: "other-description",
-    type: "text",
-    classes: "govuk-!-width-one-half",
-    label: {
-      text: "How would you describe your background? (optional)"
-    }
-  }) }}
-{% endset -%}
+      
       
       {{ govukRadios({
         idPrefix: "ethnicity-detail",
@@ -61,10 +51,7 @@ Public appointments
           },
           {
             value: "other",
-            text: "Any other White background",
-            conditional: {
-              html: ethnicityHtml
-            }
+            text: "Any other White background"
           },
           {
             divider: "or"

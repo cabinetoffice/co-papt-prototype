@@ -29,17 +29,7 @@ Public appointments
           text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
         }) }}
       
-        {% set ethnicityHtml %}
-        {{ govukInput({
-          id: "other-description",
-          name: "other-description",
-          type: "text",
-          classes: "govuk-!-width-one-half",
-          label: {
-            text: "How would you describe your background? (optional)"
-          }
-        }) }}
-      {% endset -%}
+       
       
       {{ govukRadios({
         idPrefix: "ethnicity-detail",
@@ -52,10 +42,7 @@ Public appointments
           },
           {
             value: "other",
-            text: "Any other ethnic group",
-            conditional: {
-              html: ethnicityHtml
-            }
+            text: "Any other ethnic group"
           },
           {
             divider: "or"
