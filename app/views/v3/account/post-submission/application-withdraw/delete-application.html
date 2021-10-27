@@ -1,0 +1,75 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="withdrawl-confirmation" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "My account",
+        href: "#"
+      },
+      {
+        text: "Applications overview",
+        href: "#"
+      },
+      {
+        text: "[Role title]",
+        href: "#"
+      },
+      {
+        text: "Withdraw application"
+      }
+    ]
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Withdraw from application</h1>
+        <p class="govuk-body">
+          You are about to withdraw yourself from the following appointment application.
+        <p>
+          
+          
+
+          <h2 class="govuk-heading-m">
+            [Role title]
+          </h2>
+
+          {{ govukInsetText({
+            text: "This will remove you from the selection process for this appointment and we will anonymise your application data."
+          }) }}
+         
+
+            
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Confirm withdrawl",
+                    classes: "govuk-button--warning"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary"
+                  }) }}
+                </div>
+
+                 
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ 
+     
+
+{% endblock %}

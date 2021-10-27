@@ -34,7 +34,7 @@ Public appointments
 
         {% set html %}
         <p class='govuk-notification-banner__heading'>
-          Congratulations on being selected to attend an interview for this role. You will need to follow the steps below to <a href="#" class="govuk-link">schedule your interview</a>.
+          Congratulations on being selected to attend an interview for this role. You will have been sent an email to confirm the date, time and venue of your interview.
         </p>
         {% endset %}
 
@@ -70,7 +70,7 @@ Public appointments
             <th scope="col" class="govuk-table__header">Stage</th>
             
             <th scope="col" class="govuk-table__header">Status</th>
-            <th scope="col" class="govuk-table__header"></th>
+           
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -89,18 +89,16 @@ Public appointments
           <!--job split-->
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
-              <a href="#" class="govuk-link">Interview</a>
+             Interview
             </th>
            
             <td class="govuk-table__cell">
               {{ govukTag({
-                text: "Book your interview",
+                text: "Confirm your interview",
                 classes: "govuk-tag--blue"
               }) }}
             </td>
-            <td class="govuk-table__cell">
-              <a href="#" class="govuk-link">Book</a>
-            </td>
+           
            
           </tr>
         
@@ -169,41 +167,57 @@ Public appointments
         </li>
       </ul>
       <!--Application timeline ends-->
-     <h2 class="govuk-heading-l">
-       Your submission
-     </h2>
-      {{ govukAccordion({
-        id: "role-detail",
-        items: [
-          {
-            heading: {
-              text: "Supporting statement"
-            },
-            content: {
-              text: "Detail here as entered as part of the application"
-            }
-          },
-          {
-            heading: {
-              text: "CV"
-            },
-            content: {
-              text: "Detail here as entered as part of the application"
-            }
-          },
-          {
-            heading: {
-              text: "Conflicts of interest"
-            },
-            content: {
-              text: "Detail here as entered as part of the application"
-            }
-          }
-        ]
-      }) }}
+      <h2 class="govuk-heading-m">Your application details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            CV
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a class="govuk-link" href="#">
+               CV.PDF</span>
+            </a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              View</span>
+           </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting statement
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a class="govuk-link" href="#">
+              supporting_statement.PDF</span>
+           </a>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              View</span>
+           </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Conflicts of interest
+          </dt>
+          <dd class="govuk-summary-list__value">
+            None
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            
+          </dd>
+        </div>
+       
+      </dl>
+
       {{ govukButton({
         text: "Withdraw application",
-        classes: "govuk-button--warning govuk-!-margin-top-6"
+        classes: "govuk-button--warning",
+        href: "application-withdraw/delete-application"
       }) }}
     </div>
      </div>
