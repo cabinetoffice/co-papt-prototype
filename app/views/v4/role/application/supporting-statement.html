@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../role/main-application-dashboard" method="post">
+<form action="../../role/main-application-dashboard"  method="post" novalidate data-validate='example-validation'>
   {{ govukBreadcrumbs({
     items: [
       {
@@ -53,7 +53,26 @@ Public appointments
               </ul>
  
 
+              <span class="govuk-visually-hidden">
 
+                <!--this is just here for the prototype and should not be included in production-->
+
+                {{ govukCheckboxes({
+                  idPrefix: "supporting-statement-check",
+                  name: "supporting-statement-check",
+                  
+                  items: [
+                    {
+                      value: "confirm",
+                      text: "confirm",
+                      checked: "true"
+                    }
+                  ]
+                }) }}
+
+                <!--this is just here for the prototype and should not be included in production-->
+
+              </span>
 
         {{ govukFileUpload({
           id: "file-upload-1",
@@ -113,6 +132,15 @@ Public appointments
 </form>
  </div>
  
-     
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "supporting-statement-check": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
 
 {% endblock %}

@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form method="post">
+<form action="application-check-answer" method="post" novalidate data-validate='example-validation'>
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -609,7 +609,7 @@ Public appointments
                         <a href="application/supporting-statement" class="govuk-link">Supporting statement</a>
                       </td>
                       <td class="govuk-table__cell">
-                        {% if data['supporting-statement'] === 'written-statement' or data['supporting-statement'] === 'video-statement' %}
+                        {% if data['supporting-statement-check'] === 'confirm'%}
 
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete
@@ -718,8 +718,7 @@ Public appointments
 
                 <div class="govuk-button-group">
                   {{ govukButton({
-                    text: "Submit application",
-                    href: "application-check-answer"
+                    text: "Submit application" 
                   }) }}
                 
                   {{ govukButton({
@@ -756,6 +755,15 @@ Public appointments
 </form>
  </div>
 
-     
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "privacy-policy": {
+      "presence": {
+        "message": "^Regrettably we cannot accept your application without your consent to the privacy statement'"
+      }
+    }
+    
+  }
+</script>
 
 {% endblock %}
