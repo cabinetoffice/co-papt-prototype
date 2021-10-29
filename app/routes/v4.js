@@ -372,6 +372,24 @@ router.post(
   }
 )
 
-// UIPLOAD A NEW CV end
+// UPLOAD A NEW CV end
+
+
+//SOCIAL MEDIA ACCOUNTS  start
+
+router.post(
+  `/v${verNum}/account/additional-interests/social-accounts`,
+  function (req, res) {
+    const socialMedia = req.session.data["social-media-accounts"]
+
+    if (socialMedia === "yes") {
+      res.redirect(`/v${verNum}/account/additional-interests/social-media-account-lists`)
+    } else {
+      res.redirect(`/v${verNum}/account/account-dashboard`)
+    }
+  }
+)
+
+// SOCIAL MEDIA ACCOUNTS end
 
 module.exports = router
