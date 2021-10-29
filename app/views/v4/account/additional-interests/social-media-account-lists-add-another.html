@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+<form action="social-accounts" method="post" novalidate data-validate='example-validation'>
  {{ govukBackLink({
    text: "Back",
    href: "#"
@@ -23,6 +23,34 @@ Public appointments
           Please provide information for all that apply
         </h1>
        
+
+
+            {{ govukTable({
+              caption: "Your social media accounts",
+              captionClasses: "govuk-table__caption--m",
+              firstCellIsHeader: true,
+              head: [
+                {
+                  text: "Platform"
+                },
+                {
+                  text: "Account"
+                }
+              ],
+              rows: [
+                [
+                  {
+                    text: "Twitter"
+                  },
+                  {
+                    text: "example.account.name"
+                  }
+                ]
+              ]
+            }) }}
+
+
+
     <div class="app-add-another">
         <div class="app-add-another__item">
 
@@ -94,14 +122,10 @@ Public appointments
             
         </div>
       
-        
         {{ govukButton({
           text: "Add another account",
-          classes: "govuk-button--secondary app-add-another__add-button",
-          href: "social-media-account-lists-add-another"
+          classes: "govuk-button--secondary app-add-another__add-button"
         }) }}
-
-       
 
       </div>
               
