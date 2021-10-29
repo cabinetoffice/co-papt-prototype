@@ -883,9 +883,24 @@ Public appointments
                     ]
                   }) }}
 
+                  <span class="govuk-visually-hidden">
+                      <!--this is just here for the prototype and should not be included in production-->
 
+                  {{ govukCheckboxes({
+                    idPrefix: "education-check",
+                    name: "education-check",
                     
-                  
+                    items: [
+                      {
+                        value: "confirm",
+                        text: "confirm",
+                        checked: "true"
+                      }
+                    ]
+                  }) }}
+
+            <!--this is just here for the prototype and should not be included in production-->
+                  </span>
                 
 
 

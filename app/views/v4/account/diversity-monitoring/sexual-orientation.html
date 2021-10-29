@@ -88,10 +88,24 @@ Public appointments
           ]
         }) }}
 
+        <span class="govuk-visually-hidden">
+        <!--this is just here for the prototype and should not be included in production-->
 
+        {{ govukCheckboxes({
+          idPrefix: "sexual-orientation-check",
+          name: "sexual-orientation-check",
+          
+          items: [
+            {
+              value: "confirm",
+              text: "confirm",
+              checked: "true"
+            }
+          ]
+        }) }}
 
-
-
+        <!--this is just here for the prototype and should not be included in production-->
+</span>
 
                 <div class="govuk-button-group">
                   {{ govukButton({

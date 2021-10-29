@@ -78,6 +78,36 @@ Public appointments
                   }) }}
                 </div>
 
+
+
+                <span class="govuk-visually-hidden">
+
+                    <!--this is just here for the prototype and should not be included in production-->
+
+                    {{ govukCheckboxes({
+                      idPrefix: "disability-check",
+                      name: "disability-check",
+                      
+                      items: [
+                        {
+                          value: "confirm",
+                          text: "confirm",
+                          checked: "true"
+                        }
+                      ]
+                    }) }}
+
+                    <!--this is just here for the prototype and should not be included in production-->
+
+                  </span>
+
+
+
+
+
+
+
+
                   <p class="govuk-body">
                     Read more about <a href="#" class="govuk-link">your data and diversity data</a>.
                   <p>

@@ -67,8 +67,25 @@ Public appointments
                 summaryText: "Help with significant political activity",
                 text: "Significant political activity is defined as being employed by a political party, holding significant office in a party, standing as a candidate for a party in an election, having publicly spoken on behalf of a political party or having made significant donations or loans to a party. Significant loans and donations are those of a size which are reported to the Electoral Commission, in line with a central party’s reporting threshold. Have you undertaken any significant political activity for a political party in the past five years?"
               }) }}
+              <span class="govuk-visually-hidden">
 
+                <!--this is just here for the prototype and should not be included in production-->
 
+               {{ govukCheckboxes({
+                idPrefix: "political-activity-and-interests-check",
+                name: "political-activity-and-interests-check",
+                
+                items: [
+                  {
+                    value: "confirm",
+                    text: "confirm",
+                    checked: "true"
+                  }
+                ]
+              }) }}
+
+              <!--this is just here for the prototype and should not be included in production-->
+              </span>
                 <div class="govuk-button-group">
                   {{ govukButton({
                     text: "Continue"

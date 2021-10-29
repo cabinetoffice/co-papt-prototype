@@ -134,9 +134,22 @@ Public appointments
                 <a href="diversity-monitoring/sex-and-gender" class="govuk-link">Sex and gender</a>
               </td>
               <td class="govuk-table__cell">
+               
+                {% if data['sex-and-gender-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
+
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -144,9 +157,21 @@ Public appointments
                 <a href="diversity-monitoring/disability" class="govuk-link">Disability</a>
               </td>
               <td class="govuk-table__cell">
+
+                {% if data['disability-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -154,9 +179,23 @@ Public appointments
                 <a href="diversity-monitoring/ethnicity" class="govuk-link">Ethnicity</a>
               </td>
               <td class="govuk-table__cell">
+                
+                {% if data['ethnicity-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
+
+
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -164,9 +203,21 @@ Public appointments
                 <a href="diversity-monitoring/religion" class="govuk-link">Religion</a>
               </td>
               <td class="govuk-table__cell">
+               
+                {% if data['religion-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -174,9 +225,22 @@ Public appointments
                 <a href="diversity-monitoring/sexual-orientation" class="govuk-link">Sexual orientation</a>
               </td>
               <td class="govuk-table__cell">
+                
+                {% if data['sexual-orientation-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
+
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -184,9 +248,21 @@ Public appointments
                 <a href="diversity-monitoring/employment" class="govuk-link">Employment</a>
               </td>
               <td class="govuk-table__cell">
+               
+                {% if data['employment-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
               </td>
             </tr>
            
@@ -197,9 +273,21 @@ Public appointments
                 <a href="diversity-monitoring/professional-qualificiations" class="govuk-link">Professional qualifications</a>
               </td>
               <td class="govuk-table__cell">
+                
+                {% if data['professional-qualifictions-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
               </td>
             </tr>
            
@@ -208,9 +296,21 @@ Public appointments
                 <a href="diversity-monitoring/education" class="govuk-link">Educational qualifications</a>
               </td>
               <td class="govuk-table__cell">
+               
+                {% if data['education-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -218,9 +318,19 @@ Public appointments
                 <a href="diversity-monitoring/other-public-appointments-held" class="govuk-link">Other public appointments held</a>
               </td>
               <td class="govuk-table__cell">
+                {% if data['other-public-appointments-held-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
               </td>
             </tr>
           </tbody>
@@ -240,9 +350,21 @@ Public appointments
                 <a href="additional-interests/significant-political-activity" class="govuk-link">Political activity and interests</a>
               </td>
               <td class="govuk-table__cell">
+               
+                {% if data['political-activity-and-interests-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -250,9 +372,21 @@ Public appointments
                 <a href="additional-interests/social-media-accounts" class="govuk-link">Social media accounts</a>
               </td>
               <td class="govuk-table__cell">
+               
+                {% if data['social-media-accounts-check'] === 'confirm' %}
+
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
                 </strong>
+
+                {% endif %}
+
               </td>
             </tr>
           </tbody>

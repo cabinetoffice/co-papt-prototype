@@ -105,12 +105,27 @@ Public appointments
           ]
         }) }}
 
-       
+        <span class="govuk-visually-hidden">     
+
+              <!--this is just here for the prototype and should not be included in production-->
+
+              {{ govukCheckboxes({
+                idPrefix: "religion-check",
+                name: "religion-check",
+                
+                items: [
+                  {
+                    value: "confirm",
+                    text: "confirm",
+                    checked: "true"
+                  }
+                ]
+              }) }}
+
+              <!--this is just here for the prototype and should not be included in production-->
 
 
-
-
-
+</span>
 
 
                 <div class="govuk-button-group">

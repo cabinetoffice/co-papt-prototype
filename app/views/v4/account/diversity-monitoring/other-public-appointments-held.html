@@ -128,6 +128,31 @@ Public appointments
               }) }}
 
 
+
+              <span class="govuk-visually-hidden">
+               <!--this is just here for the prototype and should not be included in production-->
+
+               {{ govukCheckboxes({
+                idPrefix: "other-public-appointments-held-check",
+                name: "other-public-appointments-held-check",
+                
+                items: [
+                  {
+                    value: "confirm",
+                    text: "confirm",
+                    checked: "true"
+                  }
+                ]
+              }) }}
+
+              <!--this is just here for the prototype and should not be included in production-->
+              </span>
+
+
+
+
+
+
                 <div class="govuk-button-group">
                   {{ govukButton({
                     text: "Continue"
