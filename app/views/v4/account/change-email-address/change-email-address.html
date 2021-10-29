@@ -1,0 +1,66 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="change-request-email-address-confirmation" method="post">
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Update email address</h1>
+        
+    
+          
+
+          
+
+          {{ govukInput({
+            id: "password",
+            name: "password",
+            type: "email",
+            classes: "govuk-input--width-30 ",
+            label: {
+              text: "Enter your new email address",
+              isPageHeading: false,
+              classes: " govuk-!-font-weight-bold ",
+            isPageHeading: false
+            }
+          }) }}
+
+         
+          
+         
+                <div class="govuk-button-group govuk-!-margin-bottom-6">
+                  
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary"
+                  }) }}
+                 
+                </div>
+               
+                              
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

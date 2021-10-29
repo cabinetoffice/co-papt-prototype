@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../role/main-application-dashboard" method="post">
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Curriculum vitae</h1>
+        <p class="govuk-body">
+          Please upload your CV. Your CV should provide details of your education and qualifications, employment history, directorships, membership of professional bodies and details of any publications or awards.
+        <p>
+          
+          <p class="govuk-body">
+            You should ensure your CV:
+          <p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                Is kept to two pages
+              </li>
+              <li>
+                Uses a minimum 12 font size
+              </li>
+              <li>
+                meets the requirements set out in the role specification
+              </li>
+              <li>
+                is under 10 Mb in file size
+              </li>
+              <li>
+                is a supported file type; DOC, DOCX, ODT, PDF, RTF, TXT, WPS
+              </li>
+            </ul>
+
+            {{ govukFileUpload({
+              id: "file-upload-1",
+              name: "file-upload-1",
+              value: "file-uploaded",
+              label: {
+                text: "Upload a file"
+              }
+            }) }}
+       
+
+           
+
+
+         
+
+            
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Save and continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                 
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ 
+     
+
+{% endblock %}

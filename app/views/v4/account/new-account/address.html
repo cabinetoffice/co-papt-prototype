@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="address-list" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-l">
+            Create your account - Step 2 of 5
+          </span>What is your home address?
+        </h1>
+       
+        {{ govukInput({
+          id: "address-postcode",
+          name: "address-postcode",
+          classes: "govuk-input--width-10",
+          label: {
+            text: "Postcode"
+          }
+        }) }}
+        
+         
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Find address"
+          }) }}
+        
+          {{ govukButton({
+            text: "Cancel",
+            classes: "govuk-button--secondary",
+            href: "../login-to-account"
+          }) }}
+        </div>
+
+                            
+                <a href="address-manual-international" class="govuk-link">I live outside of the UK</a>    
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

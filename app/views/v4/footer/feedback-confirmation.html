@@ -1,0 +1,44 @@
+
+{% extends "layout-with-official-footer.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="#" method="post" >
+ 
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukPanel({
+            titleText: "Success",
+            html: "Your feedback has been submitted."
+
+          }) }}
+    
+         
+    
+          <h2 class="govuk-heading-m">What happens next</h2>
+    
+          <p class="govuk-body">
+            A response to your feedback isn't guaranteed, however where there's a need to reply or we need further information we'll endeavour to do so within 48 hours.
+          </p>
+          
+    
+          
+          
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

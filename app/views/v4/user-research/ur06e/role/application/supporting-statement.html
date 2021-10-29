@@ -1,0 +1,146 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../role/main-application-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Application",
+        href: "../../role/main-application-dashboard"
+      },
+      {
+        text: "Conflicts of Interest"
+      }
+    ]
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Supporting statement</h1>
+        <p class="govuk-body">
+          Please submit a statement to demonstrate how suitable you are for this role.  You should ensure that your statement meets the requirements set out in the role specification. 
+        <p>
+          
+         
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+             
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="supporting-statement" name="supporting-statement" type="radio" value="written-statement" data-aria-controls="written-statement">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Written statement
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="written-statement">
+                
+                  {{ govukTextarea({
+                    id: "supporting-statement-text-area",
+                    name: "supporting-statement-text-area"
+                  }) }}
+          
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="supporting-statement-2" name="supporting-statement" type="radio" value="video-statement" data-aria-controls="supporting-video">
+                  <label class="govuk-label govuk-radios__label" for="supporting-statement-2">
+                    Video statement
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="supporting-video">
+                 
+
+                  <div class="govuk-inset-text">
+                    <p class="govuk-body">
+                      You should ensure that your video is:
+                    <p>                    
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            under 700MB in file size
+                          </li>
+                          <li>
+                            no more than 10 minutes long
+                          </li>
+                          <li>
+                            supported by file types mp4, mov, avi or mk4
+                          </li>
+                        </ul>
+            </div>
+
+
+
+                  {{ govukFileUpload({
+                    id: "file-upload-1",
+                    name: "file-upload-1",
+                    label: {
+                      text: "Upload a file"
+                    }
+                  }) }}
+
+                  
+                 
+                   
+
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+
+
+
+
+         
+
+            
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Save and continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                 
+
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <hr>
+                <h3 class="govuk-heading-m">
+                  Related content
+                </h3>
+                <ul class="govuk-list ">
+                  <li>
+                    <a href="#" class="govuk-link">Appointment details</a>
+                    
+                  </li>
+                  <li>
+                    <a href="#" class="govuk-link">Writing a supporting statement</a>
+                    
+                  </li>
+                  <li>
+                    <a href="#" class="govuk-link">Guidance for applications</a>
+                    
+                  </li>
+                </ul>
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ 
+     
+
+{% endblock %}

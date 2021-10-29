@@ -1,0 +1,111 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../check-answers/check-answer-ethnicity" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Diversity monitoring
+          </span>
+          Which of the following best describes your White background?
+        </h1>
+        
+
+        {{ govukInsetText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
+        }) }}
+      
+
+        {% set ethnicityHtml %}
+  {{ govukInput({
+    id: "other-description",
+    name: "other-description",
+    type: "text",
+    classes: "govuk-!-width-one-half",
+    label: {
+      text: "How would you describe your background? (optional)"
+    }
+  }) }}
+{% endset -%}
+      
+      {{ govukRadios({
+        idPrefix: "ethnicity-detail",
+        name: "ethnicity-detail",
+        
+        items: [
+          {
+            value: "English, Welsh, Scottish, Northern Irish or British",
+            text: "English, Welsh, Scottish, Northern Irish or British"
+          },
+          {
+            value: "Irish",
+            text: "Irish"
+          },
+          {
+            value: "Gypsy or Irish Traveller",
+            text: "Gypsy or Irish Traveller"
+          },
+          {
+            value: "other",
+            text: "Any other White background",
+            conditional: {
+              html: ethnicityHtml
+            }
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "Prefer not to say",
+            text: "Prefer not to say"
+          }
+        ]
+      }) }}
+      
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+      {{ govukButton({
+        text: "Cancel",
+        classes: "govuk-button--secondary",
+        href: "../main-application-dashboard"
+      }) }}
+
+                  <p class="govuk-body">
+                    Read more about <a href="../your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
+                  <p>
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "ethnicity-detail": {
+      "presence": {
+        "message": "^Select an ethnic group or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

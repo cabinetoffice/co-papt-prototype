@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../account-dashboard" method="post">
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Public appointments",
+        href: "#"
+      },
+      {
+        text: "My account",
+        href: "#"
+      },
+      {
+        text: "Communication preferences"
+      }
+    ]
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Communication preferences</h1>   
+      </div>
+    </div>
+      
+     <div class="govuk-grid-row">
+       <div class="govuk-grid-column-two-thirds">
+         
+       <h2 class="govuk-heading-l">
+         Email newsletter
+       </h2>
+       <p class="govuk-body">
+        We publish a regular newsletter which highlights a selection of currently open Public Appointment roles. If you would like to sign up to the newsletter please opt-in below:
+       <p>
+
+
+
+        {{ govukRadios({
+          idPrefix: "newsletter-opt-in-out",
+          name: "newsletter-opt-in-out",
+          fieldset: {
+            legend: {
+              text: "Do you wish to opt-in to receiving our email newsletter?",
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes"
+            },
+            {
+              value: "Not",
+              text: "No",
+              checked: "true"
+            }
+          ]
+        }) }}
+
+
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+    </div>
+
+
+     </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

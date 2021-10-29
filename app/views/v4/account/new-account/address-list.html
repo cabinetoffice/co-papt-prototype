@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="contact-details" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-l">
+            Create your account - Step 2 of 5
+          </span>What is your home address?
+        </h1>
+        <h3 class="govuk-heading-m">
+          Postcode
+        </h3>
+        <h3 class="govuk-heading-m">
+          <span class="upper">{{ data['address-postcode'] }}</span> <a href="address" class="govuk-link govuk-!-padding-left-3 thin">change</a>
+        </h3>
+        <h3 class="govuk-heading-m">
+          Select an address 
+         </h3> 
+        {{ govukSelect({
+          id: "address-list",
+          name: "address-list",
+          
+          items: [
+            {
+              value: "1 address",
+              text: "1 address found"
+            },
+            {
+              value: "address-selected",
+              text: "12 Leigh gardens, Southampton, countyville"
+            }
+          ]
+        }) }}
+        <a href="address-manual" class="govuk-link">I can't find my address in the list</a>
+        <div class="govuk-button-group govuk-!-padding-top-6">
+          {{ govukButton({
+            text: "Select address"
+          }) }}
+        
+          {{ govukButton({
+            text: "Cancel",
+            classes: "govuk-button--secondary",
+            href: "../login-to-account"
+          }) }}
+        </div>
+
+                            
+                  
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

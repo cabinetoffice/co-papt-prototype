@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../role/main-application-dashboard" method="post" novalidate data-validate='error-state-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Conflicts of Interest</h1>
+        <p class="govuk-body">
+          Do you consider yourself to have a real or perceived conflict of interest in relation to the role you are applying for?
+        <p>
+          {{ govukDetails({
+            summaryText: "Examples of conflict of interest",
+            html: "Any private, voluntary, charitable or political interest which might be relevant to the work of the body concerned should be declared. If you declare a conflict, this does not mean you will not be considered for the appointment. If you are shortlisted for interview, the panel will explore with you how far the conflict might affect you. See more <a href=>guidance on conflicts of interest</a>.
+            "
+          }) }}
+
+
+
+          {% set yesHtml %}
+            {{ govukCharacterCount({
+              name: "conflicts-of-interest-details",
+              id: "conflicts-of-interest-details",
+              maxlength: 200,
+              label: {
+                text: "Supply details of the conflict of interest"
+              }
+            }) }}
+            {% endset -%}
+
+
+
+            {{ govukRadios({
+             
+              idPrefix: "conflicts-of-interest",
+              name: "conflicts-of-interest",
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes" ,
+                  conditional: {
+                    html: yesHtml
+                  }
+                },
+                {
+                  value: "no",
+                  text: "No"
+                }
+              ]
+            }) }}
+
+           
+
+            
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Save and continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                 
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="error-state-validation">
+  { 		  	
+    "conflicts-of-interest": {
+      "presence": {
+        "message": "^State if you have any conflicts of interest or not"
+      }
+    }
+  }
+  </script>
+
+{% endblock %}
