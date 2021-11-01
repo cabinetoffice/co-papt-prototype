@@ -402,9 +402,19 @@ Public appointments
                         <a href="additional-interests/significant-political-activity" class="govuk-link">Political activity and interests</a>
                       </td>
                       <td class="govuk-table__cell">
+                        {% if data['political-check'] === 'confirm' %}
+
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
+                          Not complete
                         </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                     <tr class="govuk-table__row">
@@ -412,9 +422,19 @@ Public appointments
                         <a href="additional-interests/social-media-accounts" class="govuk-link">Social media accounts</a>
                       </td>
                       <td class="govuk-table__cell">
+                        {% if data['social-media-check'] === 'confirm' %}
+
                         <strong class="govuk-tag govuk-tag--blue">
                           Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
+                          Not complete
                         </strong>
+
+                        {% endif %}
                       </td>
                     </tr>
                   </tbody>
