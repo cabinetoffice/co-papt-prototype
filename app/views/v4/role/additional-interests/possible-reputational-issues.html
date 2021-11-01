@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="social-accounts" method="post" novalidate data-validate='example-validation'>
+<form action="../../check-answers/check-answer-socia-medial" method="post" novalidate data-validate='example-validation'>
  {{ govukBackLink({
    text: "Back",
    href: "#"
@@ -44,8 +44,8 @@ Public appointments
               
               
               {{ govukRadios({
-                idPrefix: "social-media-accounts",
-                name: "social-media-accounts",
+                idPrefix: "reputational-issues",
+                name: "reputational-issues",
                
                 
                 items: [
@@ -105,9 +105,9 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "social-media-accounts": {
+    "reputational-issues": {
       "presence": {
-        "message": "^Select yes, no or prefer not to say"
+        "message": "^Select yes or no"
       }
     }
     
