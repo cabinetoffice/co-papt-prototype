@@ -16,13 +16,9 @@ Public appointments
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">
-          <span class="govuk-caption-l">
-            Create your account - Step 3 of 5
-          </span>Contact details
+          Update telephone numbers
         </h1>
-        <h2 class="govuk-heading-l">
-          Telephone numbers
-        </h2>
+       
         {{ govukInput({
           id: "telephone-number",
           name: "telephone-number",
@@ -33,7 +29,8 @@ Public appointments
           },
           hint: {
             text: "This must be a mobile number"
-          }
+          },
+          value :"07363 999888"
         }) }}
         
         {{ govukInput({
@@ -46,7 +43,8 @@ Public appointments
           },
           hint: {
             text: "This may be a landline or mobile number"
-          }
+          },
+          value :"07363 444888"
         }) }}
        
        
