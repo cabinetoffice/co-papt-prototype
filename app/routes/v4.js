@@ -392,4 +392,23 @@ router.post(
 
 // SOCIAL MEDIA ACCOUNTS end
 
+
+
+//DEGREE INSTITUTION  start
+
+router.post(
+  `/v${verNum}/account/diversity-monitoring/education-institution`,
+  function (req, res) {
+    const degreeInstitution = req.session.data["degree"]
+
+    if (degreeInstitution === "Yes") {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
+    } else {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
+    }
+  }
+)
+
+//DEGREE INSTITUTION end
+
 module.exports = router
