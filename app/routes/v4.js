@@ -385,7 +385,7 @@ router.post(
     if (socialMedia === "yes") {
       res.redirect(`/v${verNum}/account/additional-interests/social-media-account-lists`)
     } else {
-      res.redirect(`/v${verNum}/account/account-dashboard`)
+      res.redirect(`/v${verNum}/account/additional-interests/possible-reputational-issues`)
     }
   }
 )
