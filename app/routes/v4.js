@@ -445,4 +445,39 @@ router.post(
 
 //DEGREE INSTITUTION ROLE end
 
+
+//highest qualification  start
+
+router.post(
+  `/v${verNum}/account/diversity-monitoring/highest-qualification`,
+  function (req, res) {
+    const highestQualification = req.session.data["highest-qualification"]
+
+    if (highestQualification === "No qualifications") {
+      res.redirect(`/v${verNum}/account/account-dashboard`)
+    } else {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
+    }
+  }
+)
+
+//highest qualification end
+
+//highest qualification ROLE start
+
+router.post(
+  `/v${verNum}/role/more-about-you/highest-qualification`,
+  function (req, res) {
+    const highestQualification = req.session.data["highest-qualification"]
+
+    if (highestQualification === "No qualifications") {
+      res.redirect(`/v${verNum}/check-answers/check-answer-education`)
+    } else {
+      res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
+    }
+  }
+)
+
+//highest qualification ROLE end
+
 module.exports = router
