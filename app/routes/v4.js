@@ -375,7 +375,7 @@ router.post(
 // UPLOAD A NEW CV end
 
 
-//SOCIAL MEDIA ACCOUNTS  start
+//SOCIAL MEDIA ACCOUNTS ACCOUNT start
 
 router.post(
   `/v${verNum}/account/additional-interests/social-accounts`,
@@ -390,11 +390,28 @@ router.post(
   }
 )
 
-// SOCIAL MEDIA ACCOUNTS end
+// SOCIAL MEDIA ACCOUNTS ACCOUNT end
+
+//SOCIAL MEDIA ACCOUNTS ROLE start
+
+router.post(
+  `/v${verNum}/role/additional-interests/social-accounts`,
+  function (req, res) {
+    const socialMedia = req.session.data["social-media-accounts"]
+
+    if (socialMedia === "yes") {
+      res.redirect(`/v${verNum}/role/additional-interests/social-media-account-lists`)
+    } else {
+      res.redirect(`/v${verNum}/role/additional-interests/possible-reputational-issues`)
+    }
+  }
+)
+
+// SOCIAL MEDIA ACCOUNTS ROLE end
 
 
 
-//DEGREE INSTITUTION  start
+//DEGREE INSTITUTION ACCOUNT start
 
 router.post(
   `/v${verNum}/account/diversity-monitoring/education-institution`,
@@ -409,6 +426,23 @@ router.post(
   }
 )
 
-//DEGREE INSTITUTION end
+//DEGREE INSTITUTION ACCOUNT end
+
+//DEGREE INSTITUTION ROLE  start
+
+router.post(
+  `/v${verNum}/role/more-about-you/education-institution`,
+  function (req, res) {
+    const degreeInstitution = req.session.data["degree"]
+
+    if (degreeInstitution === "Yes") {
+      res.redirect(`/v${verNum}/role/more-about-you/education-degree-institution`)
+    } else {
+      res.redirect(`/v${verNum}/role/more-about-you/education-detail`)
+    }
+  }
+)
+
+//DEGREE INSTITUTION ROLE end
 
 module.exports = router

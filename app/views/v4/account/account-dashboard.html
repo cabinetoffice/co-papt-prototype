@@ -268,13 +268,15 @@ Public appointments
            
           </thead>
           <tbody class="govuk-table__body">
+            
+           
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <a href="diversity-monitoring/professional-qualificiations" class="govuk-link">Professional qualifications</a>
+                <a href="diversity-monitoring/education" class="govuk-link">Educational qualifications</a>
               </td>
               <td class="govuk-table__cell">
-                
-                {% if data['professional-qualifictions-check'] === 'confirm' %}
+               
+                {% if data['education-check'] === 'confirm' %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete
@@ -290,14 +292,13 @@ Public appointments
 
               </td>
             </tr>
-           
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
-                <a href="diversity-monitoring/education" class="govuk-link">Educational qualifications</a>
+                <a href="diversity-monitoring/professional-qualificiations" class="govuk-link">Professional qualifications</a>
               </td>
               <td class="govuk-table__cell">
-               
-                {% if data['education-check'] === 'confirm' %}
+                
+                {% if data['professional-qualifictions-check'] === 'confirm' %}
 
                 <strong class="govuk-tag govuk-tag--blue">
                   Complete

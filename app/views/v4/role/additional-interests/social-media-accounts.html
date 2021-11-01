@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+<form action="social-accounts" method="post" novalidate data-validate='example-validation'>
  {{ govukBackLink({
    text: "Back",
    href: "#"
@@ -16,27 +16,17 @@ Public appointments
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-m">
+        <h1 class="govuk-heading-l">
           <span class="govuk-caption-l">
             Management of outside interests & reputational issues
           </span>
-          Are there any other possible reputational issues arising from previous public statements, articles, blogs or any other publicly available information that you have made which you want to bring to the attention of the Advisory Assessment Panel? 
+          Do you publish on any social media accounts that can be viewed by the public?
         </h1>
        
       
           
                    
-        {% set repuationHtml %}
 
-          {{ govukTextarea({
-            id: "reputational-issues-info",
-            name: "reputational-issues-info",
-            label: {
-              text: "Please give details and include links to relevant articles"
-            }
-          }) }}
-
-        {% endset -%}
 
             
               
@@ -51,14 +41,18 @@ Public appointments
                 items: [
                   {
                     value: "yes",
-                    text: "Yes",
-                    conditional: {
-                      html: repuationHtml
-                    }
+                    text: "Yes"
                   },
                   {
                     value: "No",
                     text: "No"
+                  },
+                  {
+                    divider: "or"
+                  },
+                  {
+                    value: "Prefer not to say",
+                    text: "Prefer not to say"
                   }
                 ]
               }) }}

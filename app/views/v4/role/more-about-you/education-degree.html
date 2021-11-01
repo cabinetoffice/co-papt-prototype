@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="education-degree" method="post" method="post" novalidate data-validate='example-validation'>
+<form action="education-institution" method="post" method="post" novalidate data-validate='example-validation'>
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -20,7 +20,7 @@ Public appointments
           <span class="govuk-caption-l">
             Diversity monitoring
           </span>
-          Highest qualification
+          Degrees held
         </h1>
         
         {{ govukInsetText({
@@ -781,49 +781,28 @@ Public appointments
                     {% endset -%}
 
 
+                  
+
+
                   {{ govukRadios({
-                    idPrefix: "highest-qualification",
-                    name: "highest-qualification",
-                    
+                    idPrefix: "degree",
+                    name: "degree",
                     fieldset: {
                       legend: {
-                        text: "What is the highest qualification you hold?",
+                        text: "Do you hold a degree?",
                         isPageHeading: false,
                         classes: "govuk-fieldset__legend--l"
                       }
                     },
-                   
+                    
                     items: [
                       {
-                        value: "One to four GCSEs (any grade) or equivalent - Level 1 qualifications",
-                        text: "One to four GCSEs (any grade) or equivalent - Level 1 qualifications"
+                        value: "Yes",
+                        text: "Yes"
                       },
                       {
-                        value: "Five or more GCSEs (grades A* to C) or equivalent - Level 2 qualifications",
-                        text: "Five or more GCSEs (grades A* to C) or equivalent - Level 2 qualifications"
-                      },
-                      {
-                        value: "Two or more A Levels or equivalent - Level 3 qualifications",
-                        text: "Two or more A Levels or equivalent - Level 3 qualifications"
-                      },
-                      {
-                        value: "Sub-degree, higher-level education and above - Level 4 qualifications and above",
-                        text: "Sub-degree, higher-level education and above - Level 4 qualifications and above"
-                      },
-                      {
-                        value: "Apprenticeship",
-                        text: "Apprenticeship"
-                      },
-                      {
-                        value: "other",
-                        text: "Other qualification (please specify)",
-                        conditional: {
-                          html: otherHtml
-                        }
-                      },
-                      {
-                        value: "No qualifications",
-                        text: "No qualifications"
+                        value: "No",
+                        text: "No"
                       },
                       {
                         divider: "or"
@@ -835,12 +814,24 @@ Public appointments
                     ]
                   }) }}
 
+                  <span class="govuk-visually-hidden">
+                      <!--this is just here for the prototype and should not be included in production-->
 
-                 
-
-
+                  {{ govukCheckboxes({
+                    idPrefix: "education-check",
+                    name: "education-check",
                     
-                  
+                    items: [
+                      {
+                        value: "confirm",
+                        text: "confirm",
+                        checked: "true"
+                      }
+                    ]
+                  }) }}
+
+            <!--this is just here for the prototype and should not be included in production-->
+                  </span>
                 
 
 
@@ -852,7 +843,7 @@ Public appointments
                   {{ govukButton({
                     text: "Cancel",
                     classes: "govuk-button--secondary",
-                    href: "../main-application-dashboard"
+                    href: "../account-dashboard"
                   }) }}
                 </div>
 
@@ -868,7 +859,8 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "highest-qualification": {
+   
+    "degree": {
       "presence": {
         "message": "^Select an option or 'Prefer not to say'"
       }

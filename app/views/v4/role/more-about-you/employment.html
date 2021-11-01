@@ -292,10 +292,6 @@ Public appointments
               {
                 value: "Unknown",
                 text: "Unknown"
-              },
-              {
-                value: "Prefer not to say",
-                text: "Prefer not to say"
               }
             ]
           }) }}
@@ -307,7 +303,19 @@ Public appointments
               text: "If other is selected, tell us which main profession"
             }
           }) }}
-          
+          {{ govukRadios({
+            idPrefix: "prefer-not-to-say",
+            name: "prefer-not-to-say",
+            items: [
+            {
+              divider: "or"
+            },
+              {
+                value: "Prefer not to say",
+                text: "Prefer not to say"
+              }
+            ]
+          }) }}
 
 
                 <div class="govuk-button-group">
