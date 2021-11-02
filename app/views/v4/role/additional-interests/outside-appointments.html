@@ -20,62 +20,65 @@ Public appointments
           <span class="govuk-caption-l">
             Management of outside interests & reputational issues
           </span>
-          Have you undertaken any significant political activity for a political party in the past five years?
+          Please state what Employment, appointments and other outside roles (including voluntary / advisory) you have
         </h1>
        
+        {{ govukInsetText({
+          html: 
+          "
+            <p class='govuk-body'>
+              Please consider the following:
+            <p>
+              <ul class='govuk-list govuk-list--bullet'>
+                <li>
+                  Other organisations that employ you?
+                </li>
+                <li>
+                  Any consultancy or business that you run?
+                </li>
+                <li>
+                  Are you a company director? Please give company details of your directorship and your role below (e.g Chair, NED executive).
+                </li>
+                <li>
+                  Are you a trustee of any charity or charities? Please give details of the charity or charities.
+                </li>
+                <li>
+                  Do you receive remuneration for any other work?
+                </li>
+                <li>
+                  Do you have any other interests related to outside roles to declare. Other relevant interests to declare here could include, any other public appointments (i.e. school Governor, magistrate, reservist, special constable) or membership of a professional body or think tank board etc.) Please give details.
+                </li>
+              </ul>
+          "
+        }) }}
       
-          
+       
+
+        {{ govukCharacterCount({
+          name: "with-hint",
+          id: "with-hint",
+          maxlength: 2000
+        }) }}
                   
 
-
-              {% set otherappointmentsHtml %}
-              
-
-              {{ govukCharacterCount({
-                name: "political-detail",
-                id: "political-detail",
-                maxlength: 500,
-                label: {
-                  text: "Please indicate for which party or parties"
-                }
-              }) }}
+        {{ govukCheckboxes({
+          idPrefix: "declaration",
+          name: "declaration",
+          fieldset: {
+            legend: {
+              text: "Declaration",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "declaration",
+              text: "I understand that in the event that a conflict of interest was not able to be satisfactorily resolved or was deemed to be unmanageable, an offer of appointment may be withdrawn."
+            }
+          ]
+        }) }}
              
-
-              {% endset -%}
-              
-              {{ govukRadios({
-                idPrefix: "significant-political-activity",
-                name: "significant-political-activity",
-               
-                
-                items: [
-                  {
-                    value: "yes",
-                    text: "Yes",
-                    conditional: {
-                      html: otherappointmentsHtml
-                    }
-                  },
-                  {
-                    value: "no",
-                    text: "No"
-                  }
-                ]
-              }) }}
-
-              {{ govukDetails({
-                summaryText: "Help with significant political activity",
-                html: 
-                "
-                <p class='govuk-body'>
-                  Details of declared political activity will be published when the appointment is announced, as required by the Governance Code (political activity is not a bar to appointment, but must be declared).
-                <p>
-                  <p class='govuk-body'>
-                    Significant political activity is defined as being employed by a political party, holding significant office in a party, standing as a candidate for a party in an election, having publicly spoken on behalf of a political party or having made significant donations or loans to a party. Significant loans and donations are those of a size which are reported to the Electoral Commission, in line with a central party’s reporting threshold.
-                  <p>
-                "
-              }) }}
-
 
                 <div class="govuk-button-group">
                   {{ govukButton({

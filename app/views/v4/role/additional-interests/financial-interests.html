@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../check-answers/check-answer-significant-political-activity" method="post" novalidate data-validate='example-validation'>
+<form action="../../check-answers/check-answer-financial-interests" method="post" novalidate data-validate='example-validation'>
  {{ govukBackLink({
    text: "Back",
    href: "#"
@@ -20,62 +20,85 @@ Public appointments
           <span class="govuk-caption-l">
             Management of outside interests & reputational issues
           </span>
-          Have you undertaken any significant political activity for a political party in the past five years?
+          Please state what outside financial interests you have 
         </h1>
        
-      
+      {{ govukInsetText({
+        text: "Financial interests may include shareholdings or share options you have in individual companies (please specify the: name of the company; nature of their business; percentage and value of your shareholding in each, or the value and terms of your option). If you have none to declare, please state a nil return. These should only be those interests that are relevant to the role the individual is in."
+      }) }}
           
                   
 
 
-              {% set otherappointmentsHtml %}
-              
-
-              {{ govukCharacterCount({
-                name: "political-detail",
-                id: "political-detail",
-                maxlength: 500,
-                label: {
-                  text: "Please indicate for which party or parties"
-                }
-              }) }}
-             
-
-              {% endset -%}
-              
-              {{ govukRadios({
-                idPrefix: "significant-political-activity",
-                name: "significant-political-activity",
-               
-                
-                items: [
-                  {
-                    value: "yes",
-                    text: "Yes",
-                    conditional: {
-                      html: otherappointmentsHtml
-                    }
-                  },
-                  {
-                    value: "no",
-                    text: "No"
-                  }
-                ]
-              }) }}
 
               {{ govukDetails({
-                summaryText: "Help with significant political activity",
+                summaryText: "Further help with financial interets",
                 html: 
                 "
                 <p class='govuk-body'>
-                  Details of declared political activity will be published when the appointment is announced, as required by the Governance Code (political activity is not a bar to appointment, but must be declared).
+                  Please consider:
                 <p>
-                  <p class='govuk-body'>
-                    Significant political activity is defined as being employed by a political party, holding significant office in a party, standing as a candidate for a party in an election, having publicly spoken on behalf of a political party or having made significant donations or loans to a party. Significant loans and donations are those of a size which are reported to the Electoral Commission, in line with a central party’s reporting threshold.
-                  <p>
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>
+                    Any shares you hold in a particular company or corporate bonds (whether held directly or indirectly via a PEP or ISA);
+                  </li>
+                  <li>
+                    Unit Trusts;
+                  </li>
+                  <li>
+                    Personal or stakeholder pensions (including Added Voluntary Contributions);
+                  </li>
+                  <li>
+                    Insurance products (including Friendly assurance bonds)
+                  </li>
+                  <li>
+                    Bank or building society accounts in excess of £20,000;
+                  </li>
+                  <li>
+                    Gilt-edged stocks or National Savings products in excess of £20,000;
+                  </li>
+                  <li>
+                    Loans outstanding to particular banks, building societies or consumer credit companies in excess of £5,000;
+                  </li>
+                  <li>
+                    Tax allowances that impact on you or your immediate families.
+                  </li>
+                  <li>
+                    Whether or not you have been in a dispute of a significant nature with HMRC
+                  </li>
+                </ul>
+                <p class='govuk-body'>
+                  This list is non-exhaustive and is designed to give you an idea of the type of things you may need to disclose in this section.
+                <p>
                 "
               }) }}
 
+
+              {{ govukCharacterCount({
+                name: "financial-interests",
+                id: "financial-interests",
+                maxlength: 2000
+              }) }}
+
+
+
+              {{ govukCheckboxes({
+                idPrefix: "declaration",
+                name: "declaration",
+                fieldset: {
+                  legend: {
+                    text: "Declaration",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+                items: [
+                  {
+                    value: "declaration",
+                    text: "I understand that in the event that a conflict of interest was not able to be satisfactorily resolved or was deemed to be unmanageable, an offer of appointment may be withdrawn."
+                  }
+                ]
+              }) }}
 
                 <div class="govuk-button-group">
                   {{ govukButton({
@@ -101,9 +124,9 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "significant-political-activity": {
+    "declaration": {
       "presence": {
-        "message": "^Enter information of your highest qualification"
+        "message": "^exact error content to be confirmed"
       }
     }
     
