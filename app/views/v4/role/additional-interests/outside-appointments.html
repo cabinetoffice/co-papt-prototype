@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="../../check-answers/check-answer-significant-political-activity" method="post" novalidate data-validate='example-validation'>
+<form action="../../check-answers/check-answer-outside-appointments" method="post" novalidate data-validate='example-validation'>
  {{ govukBackLink({
    text: "Back",
    href: "#"
@@ -22,41 +22,42 @@ Public appointments
           </span>
           Please state what Employment, appointments and other outside roles (including voluntary / advisory) you have
         </h1>
-       
-        {{ govukInsetText({
+
+        {{ govukDetails({
+          summaryText: "Please consider the following",
           html: 
           "
-            <p class='govuk-body'>
-              Please consider the following:
-            <p>
-              <ul class='govuk-list govuk-list--bullet'>
-                <li>
-                  Other organisations that employ you?
-                </li>
-                <li>
-                  Any consultancy or business that you run?
-                </li>
-                <li>
-                  Are you a company director? Please give company details of your directorship and your role below (e.g Chair, NED executive).
-                </li>
-                <li>
-                  Are you a trustee of any charity or charities? Please give details of the charity or charities.
-                </li>
-                <li>
-                  Do you receive remuneration for any other work?
-                </li>
-                <li>
-                  Do you have any other interests related to outside roles to declare. Other relevant interests to declare here could include, any other public appointments (i.e. school Governor, magistrate, reservist, special constable) or membership of a professional body or think tank board etc.) Please give details.
-                </li>
-              </ul>
+          
+            <ul class='govuk-list govuk-list--bullet'>
+              <li>
+                Other organisations that employ you?
+              </li>
+              <li>
+                Any consultancy or business that you run?
+              </li>
+              <li>
+                Are you a company director? Please give company details of your directorship and your role below (e.g Chair, NED executive).
+              </li>
+              <li>
+                Are you a trustee of any charity or charities? Please give details of the charity or charities.
+              </li>
+              <li>
+                Do you receive remuneration for any other work?
+              </li>
+              <li>
+                Do you have any other interests related to outside roles to declare. Other relevant interests to declare here could include, any other public appointments (i.e. school Governor, magistrate, reservist, special constable) or membership of a professional body or think tank board etc.) Please give details.
+              </li>
+            </ul>
           "
         }) }}
+       
+        
       
        
 
         {{ govukCharacterCount({
-          name: "with-hint",
-          id: "with-hint",
+          name: "outside-appointments",
+          id: "outside-appointments",
           maxlength: 2000
         }) }}
                   
@@ -104,7 +105,7 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "significant-political-activity": {
+    "declaration": {
       "presence": {
         "message": "^Enter information of your highest qualification"
       }
