@@ -7,15 +7,23 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="talent-pool-upload-one" method="post">
- {{ govukBackLink({
-   text: "Back",
-   href: "#"
- }) }}
-
+<form action="talent-pool-opt-in" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+        {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: [
+            {
+              text: "Relevant error message displayed",
+              href: "#passport-issued-day"
+            }
+          ]
+        }) }}
         <h1 class="govuk-heading-xl">Curriculum vitae</h1>
         <p class="govuk-body">
           Please submit your CV including education, employment history and professional qualifications.
@@ -48,6 +56,9 @@ Public appointments
               value: "file-uploaded",
               label: {
                 text: "Upload a file"
+              },
+              errorMessage: {
+                text: "Relevant error message displayed"
               }
             }) }}
        
@@ -79,7 +90,7 @@ Public appointments
   </div>
 </form>
  </div>
- 
+
      
 
 {% endblock %}
