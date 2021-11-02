@@ -480,4 +480,25 @@ router.post(
 
 //highest qualification ROLE end
 
+//TALENT POOL - ACCOUNT CREATION start
+
+router.post(
+  `/v${verNum}/account/new-account/talent-pool-opt-in`,
+  function (req, res) {
+    const talentPoolOptIn = req.session.data["talent-pool"]
+
+    if (talentPoolOptIn === "Yes") {
+      res.redirect(`/v${verNum}/account/new-account/talent-pool-upload-one`)
+    } else {
+      res.redirect(`/v${verNum}/account/new-account/check-account-answers`)
+    }
+  }
+)
+
+//TALENT POOL - ACCOUNT CREATION end
+
+
+
+
+
 module.exports = router

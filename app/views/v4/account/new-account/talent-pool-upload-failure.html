@@ -14,7 +14,17 @@ Public appointments
   }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
+      
       <div class="govuk-grid-column-two-thirds">
+        {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: [
+            {
+              text: "Relevant error message here regarding the file upload failure",
+              href: "#cv-upload"
+            }
+          ]
+        }) }}
         <h1 class="govuk-heading-xl">
           <span class="govuk-caption-l">
             Create your account - Step 5 of 5
@@ -46,7 +56,10 @@ Public appointments
         </ul>
         {{ govukFileUpload({
           id: "cv-upload",
-          name: "cv-upload"
+          name: "cv-upload",
+          errorMessage: {
+            text: "Relevant error message here regarding the file upload failure"
+          }
         }) }}
 
         {% endset -%}
@@ -62,7 +75,8 @@ Public appointments
               text: "Yes",
               conditional: {
                 html: yesHtml
-              }
+              },
+              checked: "true"
             },
             {
               value: "No",
@@ -71,11 +85,7 @@ Public appointments
           ]
         }) }}
 
-        {{ govukDetails({
-          summaryText: "Help with the talent pool",
-          text: "Require text on what the talent pool is"
-        }) }}
-         
+        
         <div class="govuk-button-group">
           {{ govukButton({
             text: "Continue"

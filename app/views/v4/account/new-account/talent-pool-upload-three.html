@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="talent-pool-upload-two" method="post">
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+     <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-panel govuk-panel--confirmation">
+                  <h1 class="govuk-panel__title">
+                    Uploading file
+                  </h1>
+                  <div class="govuk-panel__body">
+                    Please wait while we upload your file
+                    <br><br>
+                    <b>Queued</b> - completed
+                    <br>
+                   <b> Processing</b> - completed
+                    <br>
+                    <b>Finalised</b> - in progress
+                </div>
+                </div>
+                <a href="talent-pool-upload-success" class="govuk-link">proto link only to show success of upload</a>
+                <br><br>
+                <a href="talent-pool-upload-failure" class="govuk-link">proto link only to show failue of upload</a>
+              </div>
+            </div>
+      </div>
+  </main>
+</form>
+</div>
+
+     
+
+{% endblock %}
