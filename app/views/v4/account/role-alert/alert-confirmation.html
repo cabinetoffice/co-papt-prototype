@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Public appointments
+{% endblock %}
+
+{% block content %}
+
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+ 
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Alert email set up complete"
+        
+      }) }}
+
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        We will start to send you emails based upon the following criteria
+      </p>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: "Frequency"
+            },
+            {
+              text: "Weekly"
+            }
+          ],
+          [
+            {
+              text: "Location"
+            },
+            {
+              text: "East Midlands, East of England, London"
+            }
+          ],
+          [
+            {
+              text: "Skills"
+            },
+            {
+              text: "Accountancy, Audit and Risk"
+            }
+          ]
+        ]
+      }) }}
+
+{{ govukInsetText({
+  text: "If no roles match the criteria you have set here we won't email you."
+}) }}
+
+    <p class="govuk-body">
+      You may now return to your account.
+    <p>
+      <a href="../account-dashboard" class="govuk-link">Back to account dashboard</a>
+    </div>
+  </div>
+
+  
+  </main>
+  {% endblock %}

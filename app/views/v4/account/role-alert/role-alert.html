@@ -37,12 +37,14 @@
             name: "email-alert-role-frequency",
             fieldset: {
               legend: {
-                text: "How frequently should we notify you when roles of interest are published on our website?",
+                text: "Alert frequency",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--m"
               }
             },
-          
+            hint: {
+              text: "How frequently should we notify you when roles of interest are published on our website?"
+            },
             items: [
               {
                 value: "Disabled",
@@ -71,9 +73,7 @@
                 <p class="govuk-body govuk-!-margin-bottom-1">
                   Use the filters below to target roles which are of interest to you. 
                 <p>
-                {{ govukInsetText({
-                  text: "If no roles match the criteria you set here we won't email you."
-                }) }}
+                
                
                 
 
@@ -813,7 +813,7 @@
                     Selected criteria
                   </h3>
                   <p class="govuk-body">
-                    We will email you role details at your selected interval using the following criteria.
+                    You have selected the following criteria.
                   <p>
                   <dl>
                     <dt>Location</dt>
@@ -868,10 +868,20 @@
               </div>
               <!-- accordion ends here-->
 
-              {{ govukButton({
-                  text: "Set alert and continune",
-                  href: ""
+              <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Continue",
+                  href: "alert-confirmation"
                 }) }}
+              
+                {{ govukButton({
+                  text: "Cancel",
+                  classes: "govuk-button--secondary",
+                  href: "../account-dashboard"
+                }) }}
+              </div>
+
+
 
               <!-- role as end-->
             </div>
