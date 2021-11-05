@@ -107,24 +107,97 @@ Public appointments
                           <h2 class="govuk-heading-m">
                             Links to service design
                           </h2>
-                          <ul class="govuk-list govuk-list--bullet">
+                          <ul class="govuk-list">
                             <li>
-                              <a href="/v4/account/account-dashboard" class="govuk-link">Account dashboard (including linked functionality)</a>
-                            </li>
-                            <li>
-                              <a href="/v4/role/main-application-dashboard" class="govuk-link">Role application dashboard</a>
-                            </li>
-                            <li>
-                              <a href="/v4/account/new-account/personal-details" class="govuk-link">Account creation</a>
+                              {{ govukButton({
+                                text: "Account creation",
+                                classes: "govuk-!-margin-bottom-1",
+                                href: "/v4/account/new-account/personal-details"
+                              }) }}
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  <a href="/v4/account/new-account/personal-details" class="govuk-link">Personal details - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/address" class="govuk-link">Address - default - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/address-manual-international" class="govuk-link">Address manual entry outside UK - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/address-manual" class="govuk-link">Address manual entry - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/contact-details" class="govuk-link">Telephone numbers - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/password" class="govuk-link">Password creation - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/talent-pool-question" class="govuk-link">Talent pool - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/check-account-answers" class="govuk-link">Check answers  - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/account-created-confirmation" class="govuk-link">Confirmation  - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/new-account/account-created-confirmation" class="govuk-link">Confirmation  - done</a>
+                                </li>
+                              </ul>
                             </li> 
                             <li>
-                              <a href="/v4/role/role-details" class="govuk-link">Role details</a>
+                              {{ govukButton({
+                                text: "Role details",
+                             
+                                href: "/v4/role/role-details"
+                              }) }}
+                              
                             </li> 
+                            <li>
+                              {{ govukButton({
+                                text: "Account dashboard (including linked functionality)",
+                                classes: "govuk-!-margin-bottom-1",
+                                href: "/v4/account/account-dashboard"
+                              }) }}
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  <a href="/v4/account/applications-in-progress/application-lin-progress" class="govuk-link">Applications in progress - done</a>
+                                </li>
+                                <li>
+                                  <a href="/v4/account/account/post-submission/application-listing" class="govuk-link">Submitted applications - done</a>
+                                </li>
+                                <li>
+                                  <a href="v4/account/personal-details/address-manual" class="govuk-link">Address update - done</a>
+                                </li>
+                                <li>
+                                  <a href="v4/account/existing-account/telephone-number" class="govuk-link">Update telephone numbers - done</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              {{ govukButton({
+                                text: "Role application dashboard",
+                                classes: "govuk-!-margin-bottom-1",
+                                href: "/v4/role/main-application-dashboard"
+                              }) }}
+                              
+                            </li>
+                            <li>
+                              {{ govukButton({
+                                text: "Account creation",
+                                classes: "govuk-!-margin-bottom-1",
+                                href: "/v4/account/new-account/personal-details"
+                              }) }}
+                               
+                            </li> 
+                           
 
                             
                             </ul>
                             <h2 class="govuk-heading-m">
-                              Jira tickets worked on in Sprint 23
+                              Jira tickets worked on in Sprint 24
                             </h2>
                             <ul class="govuk-list govuk-list--bullet">
                               <li>
@@ -144,6 +217,18 @@ Public appointments
                               </li>
                               <li>
                                 874
+                              </li>
+                              <li>
+                                993
+                              </li>
+                              <li>
+                                856
+                              </li>
+                              <li>
+                                798
+                              </li>
+                              <li>
+                                792
                               </li>
                             </ul>
                         <hr class="govuk-!-margin-top-9 govuk-!-margin-bottom-9">
