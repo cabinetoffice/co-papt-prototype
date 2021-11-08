@@ -1,0 +1,1046 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+        Announcements
+      </h1>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+           
+      
+      <h2 class="govuk-heading-l">
+        Search
+      </h2>
+      <p class="govuk-body">
+        Search for announcements on the board of a public body or advisory committee.
+      <p>
+     
+    </div>
+    </div>
+      <!--main body of role dashboard starts-->
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third side-sort">
+         
+
+          <!-- Side accordion STARTS here-->
+
+          {{ govukAccordion({
+            id: "accordion-default",
+            items: [
+              {
+                heading: {
+                  text: "Location"
+                },
+                content: {
+                  html: 
+                  "
+                  <div class='govuk-form-group'>
+                    <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+                      
+                      <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='East Midlands'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            East Midlands
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='East of England'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            East of England
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='London'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            London
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='North East'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            North East
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='North West'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                           North West
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='Northern Ireland'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            Northern Ireland
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='Scotland'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            Scotland
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='South East'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            South East
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='South West'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            South West
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='Wales'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            Wales
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='West Midlands'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            West Midlands
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='location' name='location' type='checkbox' value='Yorkshire and the Humber'>
+                          <label class='govuk-label govuk-checkboxes__label' for='location'>
+                            Yorkshire and the Humber
+                          </label>
+                        </div>
+                       
+                        
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+                  "
+                }
+              },
+              {
+                heading: {
+                  text: "Skills"
+                },
+                content: {
+                  html: 
+                  "
+
+                  
+
+                  <div class='govuk-form-group'>
+                    <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+                      
+                      <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Accountancy'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Accountancy
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Audit and Risk'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Audit and Risk
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='East Midlands'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            East Midlands
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Business'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Business
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Change Management'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Change Management
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Commercial'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Commercial
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Communication'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Communication
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Media'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Media
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Marketing'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Marketing
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Human Resources'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Human Resources
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Insurance'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Insurance
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='International Experience'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            International Experience
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='IT / Digital'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            IT / Digital
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Legal'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Legal
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Judicial'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Judicial
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Major Projects'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Major Projects
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Procurement'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Procurement
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Regulation'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Regulation
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Retail'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Retail
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Transformation'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Transformation
+                          </label>
+                        </div>
+                        
+                       
+                        
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+                  "
+                }
+              },
+                {
+                heading: {
+                  text: "Sponsor department"
+                },
+                content: {
+                  html: 
+                  " 
+                  <div class='govuk-form-group'>
+                    <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+                      
+                      <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Attorney Generals Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Attorney General's Office
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Cabinet Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Cabinet Office
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Crown Prosecution Services'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Crown Prosecution Service
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for Communities Local Government'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for Communities & Local Government
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for Digital, Culture, Media and Sport'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for Digital, Culture, Media and Sport
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for Education'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for Education
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for Environment Food Rural Affairs'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for Environment, Food & Rural Affairs
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for Exiting the European Union'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for Exiting the European Union
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for International Development'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for International Development
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for International Trade'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for International Trade
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for Transport'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for Transport
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department for Work and Pensions'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department for Work and Pensions
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department of Business Energy and Industrial Strategy'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department of Business, Energy and Industrial Strategy
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department of Energy & Climate Change'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department of Energy & Climate Change
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Department of Health'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Department of Health
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Foreign & Commonwealth Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Foreign & Commonwealth Office
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Foreign Commonwealth & Development Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Foreign Commonwealth & Development Office
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Government Legal Department'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Government Legal Department
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='HM Courts Tribunals Service'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            HM Courts & Tribunals Service
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='HM Revenue Customs'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            HM Revenue & Customs
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='HM Treasury'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            HM Treasury
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Home Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Home Office
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='House of Commons'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            House of Commons
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='House of Lords'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            House of Lords
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Local Government Social Care Ombudsman'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Local Government & Social Care Ombudsman
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Ministry of Defence'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Ministry of Defence
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Ministry of Justice'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Ministry of Justice
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='NHS'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            NHS
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='NHS Improvement'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            NHS Improvement
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='NHS Trust Development Authority'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            NHS Trust Development Authority
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Northern Ireland Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Northern Ireland Office
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Office of First Minister and deputy First Minister'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Office of First Minister and deputy First Minister
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Office of the Secretary of State for Scotland and OAG'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Office of the Secretary of State for Scotland and OAG
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Other'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Other
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Scotland Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Scotland Office
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Scotland Office and Office of the Advocate General'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Scotland Office and Office of the Advocate General
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='The Civil Service Commission'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            The Civil Service Commission
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='The Supreme Court of the United Kingdom'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            The Supreme Court of the United Kingdom
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='UK Export Finance'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            UK Export Finance
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='UK Government Investments'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            UK Government Investments
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Various Government Departments'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Various Government Departments
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Wales Office'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Wales Office
+                          </label>
+                        </div>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sponsor-dept' name='sponsor-dept' type='checkbox' value='Welsh Government'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sponsor-dept'>
+                            Welsh Government
+                          </label>
+                        </div>
+                        
+                       
+                        
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+                  "
+                }
+              },
+                {
+                heading: {
+                  text: "Regulated"
+                },
+                content: {
+                  html: 
+                  "
+                  <div class='govuk-form-group'>
+                    <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+                      
+                      <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Yes'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            Yes
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='No'>
+                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
+                            No
+                          </label>
+                        </div>
+                         
+                        
+                       
+                        
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+
+
+                  <details class='govuk-details' data-module='govuk-details'>
+                    <summary class='govuk-details__summary'>
+                      <span class='govuk-details__summary-text'>
+                        Help with Regulated appointments
+                      </span>
+                    </summary>
+                    <div class='govuk-details__text'>
+                      Appointments made by United Kingdom Government Ministers to bodies and offices listed in the Public Appointments Order in Council are regulated by the Commissioner for Public Appointments and are referred to as regulated public appointments.
+                    </div>
+                  </details>
+                  
+                  
+                  "
+                }
+              },
+              {
+              heading: {
+                text: "Sector"
+                },
+                content: {
+                  html: 
+                  "
+                  <div class='govuk-form-group'>
+                    <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+                      
+                      <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Business Finance Skills'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Business, Finance & Skills
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Culture Media Sport'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Culture, Media & Sport
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Defence'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Defence
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Education'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Education
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Energy'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Energy
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Environment Food Rural Affairs'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Environment, Food & Rural Affairs
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Health'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Health
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='International'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            International
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Judicial Prison Policing'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Judicial, Prison & Policing
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Prison Policing'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Prison & Policing
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Regulation'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Regulation
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Science Technology'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Science & Technology
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='sector' name='sector' type='checkbox' value='Transport'>
+                          <label class='govuk-label govuk-checkboxes__label' for='sector'>
+                            Transport
+                          </label>
+                        </div>
+                         
+                        
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+                  "
+                }
+              },
+            {
+            heading: {
+              text: "Organisation"
+            },
+            content: {
+              html: 
+                  "
+                  <div class='govuk-form-group'>
+                    <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+                      
+                      <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                        <!--checkbox item-->
+                        <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='organisation' name='organisation' type='checkbox' value='National Nuclear Laboratory'>
+                          <label class='govuk-label govuk-checkboxes__label' for='organisation'>
+                            National Nuclear Laboratory
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='organisation' name='organisation' type='checkbox' value='Oil and Pipelines Agency'>
+                          <label class='govuk-label govuk-checkboxes__label' for='organisation'>
+                            Oil and Pipelines Agency
+                          </label>
+                        </div>
+                         <!--checkbox item-->
+                         <div class='govuk-checkboxes__item'>
+                          <input class='govuk-checkboxes__input' id='organisation' name='organisation' type='checkbox' value='British Council'>
+                          <label class='govuk-label govuk-checkboxes__label' for='organisation'>
+                            British Council
+                          </label>
+                        </div>
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+                  "
+            }
+          },
+          {
+          heading: {
+            text: "Appointment type"
+          },
+          content: {
+            html: 
+            "
+            <div class='govuk-form-group'>
+              <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+                
+                <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                  <!--checkbox item-->
+                  <div class='govuk-checkboxes__item'>
+                    <input class='govuk-checkboxes__input' id='appoint-type' name='appoint-type' type='checkbox' value='National Nuclear Laboratory'>
+                    <label class='govuk-label govuk-checkboxes__label' for='appoint-type'>
+                      Chair (or equivalent)
+                    </label>
+                  </div>
+                  <details class='govuk-details' data-module='govuk-details'>
+                    <summary class='govuk-details__summary'>
+                      <span class='govuk-details__summary-text'>
+                        Help with Chair responsibilities
+                      </span>
+                    </summary>
+                    <div class='govuk-details__text'>
+                      The Chair is responsible for strategic leadership of the board of an organisation and for ensuring its overall effectiveness and delivery against agreed purpose and objectives. More information about the role of Chairs in the public sector can be found <a href='#'' class='govuk-link'>here</a>
+                    </div>
+                  </details>
+                   <!--checkbox item-->
+                   <div class='govuk-checkboxes__item'>
+                    <input class='govuk-checkboxes__input' id='appoint-type' name='appoint-type' type='checkbox' value='Oil and Pipelines Agency'>
+                    <label class='govuk-label govuk-checkboxes__label' for='appoint-type'>
+                      Member (or equivalent)
+                    </label>
+                  </div>
+                   
+                </div>
+            
+              </fieldset>
+              
+              <details class='govuk-details' data-module='govuk-details'>
+                <summary class='govuk-details__summary'>
+                  <span class='govuk-details__summary-text'>
+                    Help with Member responsibilities
+                  </span>
+                </summary>
+                <div class='govuk-details__text'>
+                  A member (often referred to as a non-executive director (NED)) supports the Chair in their leadership of the board and provides appropriate scrutiny and challenge to the executive of the organisation. More information on the role of non-executive directors in the public sector can be found <a href='#'' class='govuk-link'>here</a>
+                </div>
+              </details>
+            </div>
+
+
+
+
+            "
+          }
+        },
+        {
+        heading: {
+          text: "Remunerated"
+        },
+        content: {
+          html: 
+          "
+          <div class='govuk-form-group'>
+            <fieldset class='govuk-fieldset' aria-describedby='waste-hint'>
+              
+              <div class='govuk-checkboxes govuk-checkboxes--small' data-module='govuk-checkboxes'>
+                <!--checkbox item-->
+                <div class='govuk-checkboxes__item'>
+                  <input class='govuk-checkboxes__input' id='remunerated' name='remunerated' type='checkbox' value='Yes'>
+                  <label class='govuk-label govuk-checkboxes__label' for='remunerated'>
+                    Yes
+                  </label>
+                </div>
+                 <!--checkbox item-->
+                 <div class='govuk-checkboxes__item'>
+                  <input class='govuk-checkboxes__input' id='remunerated' name='remunerated' type='checkbox' value='No'>
+                  <label class='govuk-label govuk-checkboxes__label' for='remunerated'>
+                    No
+                  </label>
+                </div>
+                </div>
+
+              </fieldset>
+            </div>
+          "
+        }
+      },
+      
+        {
+        heading: {
+          text: "Status"
+        },
+        content: {
+          html: 
+                "
+                <div class='govuk-form-group'>
+                  <fieldset class='govuk-fieldset'>
+                   
+                    <div class='govuk-radios govuk-radios--small'>
+                      <div class='govuk-radios__item'>
+                        <input class='govuk-radios__input' id='status' name='status' type='radio' value='open'>
+                        <label class='govuk-label govuk-radios__label' for='status'>
+                          Open
+                        </label>
+                      </div>
+                      <div class='govuk-radios__item'>
+                        <input class='govuk-radios__input' id='status-2' name='status' type='radio' value='closed'>
+                        <label class='govuk-label govuk-radios__label' for='status-2'>
+                          Closed
+                        </label>
+                      </div>
+                    </div>
+                
+                  </fieldset>
+                </div>
+                "
+        }
+      }
+            ]
+          }) }}
+
+
+
+
+
+          <!-- Side accordion ENDS here-->
+
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <p class="govuk-body-l">
+                <b>2</b> roles
+              <p>    
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <label class="govuk-label right" for="sort">
+                    Sort by
+                  </label>
+                </div>
+                <div class="govuk-grid-column-two-thirds">
+                  <div class="govuk-form-group">
+                  
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="comments">Announcement date [earliest]</option>
+                      <option value="published">Announcement date [latest]</option>
+                      
+                    </select>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+          </div>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <div class="greyBack">
+              <h3 class="govuk-heading-s">
+                Status
+              </h3>
+              </div>
+            </div>
+          </div>
+
+          <hr class="govuk-!-margin-bottom-6">
+
+          <!--main jobs listing starts-->
+
+          <ul class="govuk-list">
+            <li>
+              <a href="../role/role-details" class="govuk-link large">Distribution Centre Manager</a>
+              <span class="govuk-caption-m">
+                Oil and Pipelines Agency
+              </span>
+              <table class="govuk-table">
+               
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Sponsor Department</th>
+                    <td class="govuk-table__cell">Department of Health</td>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Announcement</th>
+                    <td class="govuk-table__cell">
+                      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Date</th>
+                    <td class="govuk-table__cell">23 November 2021</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </li>
+
+
+
+            
+          </ul>
+
+
+          <!--main jobs listing ends-->
+
+        </div>
+      </div>
+
+      <!--main body of role dashboard ends-->
+    </div>
+  </div>
+
+{% endblock %}
