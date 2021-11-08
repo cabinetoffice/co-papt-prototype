@@ -490,7 +490,7 @@ router.post(
     if (talentPoolOptIn === "Yes") {
       res.redirect(`/v${verNum}/account/new-account/talent-pool-upload-one`)
     } else {
-      res.redirect(`/v${verNum}/account/new-account/check-account-answers`)
+      res.redirect(`/v${verNum}/account/new-account/how-did-you-hear-about-us`)
     }
   }
 )

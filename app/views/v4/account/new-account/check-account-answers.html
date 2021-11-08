@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="account-created-confirmation" method="post">
+<form action="email-verification-sent" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -131,10 +131,36 @@ Public appointments
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['email-address'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> email address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               Do you wish to opt into the talent pool?
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">{{ data['talent-pool'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> talent pool</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How did you hear about us??
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">{{ data['how-did-you-hear-about-us'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
