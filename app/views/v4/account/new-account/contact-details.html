@@ -39,6 +39,7 @@ Public appointments
         {{ govukInput({
           id: "alt-telephone-number",
           name: "alt-telephone-number",
+          classes: "govuk-!-margin-bottom-6",
           label: {
             text: "Alternative contact number (optional)",
             classes: "govuk-label--m",
@@ -46,6 +47,21 @@ Public appointments
           },
           hint: {
             text: "This may be a landline or mobile number"
+          }
+        }) }}
+
+       
+        {{ govukInput({
+          id: "email-address",
+          name: "email-address",
+          classes: "govuk-!-margin-bottom-6",
+          label: {
+            text: "Email address",
+            classes: "govuk-label--l",
+            isPageHeading: false
+          },
+          hint: {
+            text: "This will be used when you log into your account. We will send you an email to verify this address."
           }
         }) }}
        
