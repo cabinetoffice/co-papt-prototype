@@ -23,14 +23,25 @@ Public appointments
         </h1>
        
     
-          {{ govukInput({
-            id: "title",
-            name: "title",
-            classes: "govuk-input--width-10",
-            label: {
-              text: "Title (optional)"
+
+        {{ govukSelect({
+          id: "title",
+          name: "title",
+          label: {
+            text: "Title (optional)"
+          },
+          hint: {
+            text: "This will be used with any correspondence"
+          },
+          items: [
+            {
+              value: "Value",
+              text: "List yet to be supplied"
             }
-          }) }}
+          ]
+        }) }}
+
+         
           
          
           {{ govukInput({
@@ -61,10 +72,14 @@ Public appointments
             fieldset: {
               legend: {
                 text: "Date of birth",
-                isPageHeading: false
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m "
               }
             },
-           
+            hint: {
+              text: "For example, 27 10 1977"
+            },
+            
             items: [
               {
                 name: "day",

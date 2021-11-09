@@ -1,0 +1,117 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Management of outside interests & reputational issues
+          </span>
+          Please state what Employment, appointments and other outside roles (including voluntary / advisory) you have
+        </h1>
+
+        {{ govukDetails({
+          summaryText: "Please consider the following",
+          html: 
+          "
+          
+            <ul class='govuk-list govuk-list--bullet'>
+              <li>
+                Other organisations that employ you?
+              </li>
+              <li>
+                Any consultancy or business that you run?
+              </li>
+              <li>
+                Are you a company director? Please give company details of your directorship and your role below (e.g Chair, NED executive).
+              </li>
+              <li>
+                Are you a trustee of any charity or charities? Please give details of the charity or charities.
+              </li>
+              <li>
+                Do you receive remuneration for any other work?
+              </li>
+              <li>
+                Do you have any other interests related to outside roles to declare. Other relevant interests to declare here could include, any other public appointments (i.e. school Governor, magistrate, reservist, special constable) or membership of a professional body or think tank board etc.) Please give details.
+              </li>
+            </ul>
+          "
+        }) }}
+       
+        
+      
+       
+
+        {{ govukCharacterCount({
+          name: "outside-appointments",
+          id: "outside-appointments",
+          maxlength: 2000
+        }) }}
+                  
+
+        {{ govukCheckboxes({
+          idPrefix: "outside-appointments-declaration",
+          name: "outside-appointments-declaration",
+          fieldset: {
+            legend: {
+              text: "Declaration",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "declaration",
+              text: "I understand that in the event that a conflict of interest was not able to be satisfactorily resolved or was deemed to be unmanageable, an offer of appointment may be withdrawn."
+            }
+          ]
+        }) }}
+             
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "outside-appointments-declaration": {
+      "presence": {
+        "message": "^error content tbc"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

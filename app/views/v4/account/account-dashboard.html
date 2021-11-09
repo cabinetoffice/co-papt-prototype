@@ -390,6 +390,86 @@ Public appointments
 
               </td>
             </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="additional-interests/financial-interests" class="govuk-link">Financial interests</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['financial-declaration'] === 'declaration' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
+                </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="additional-interests/outside-appointments" class="govuk-link">Appointments and other outside roles</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['outside-appointments-declaration'] === 'declaration' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
+                </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="additional-interests/personal-interests" class="govuk-link">Personal interests</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['personal-interets-declaration'] === 'declaration' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
+                </strong>
+
+                {% endif %}
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="additional-interests/other-relevant-interests" class="govuk-link">Other relevant interests</a>
+              </td>
+              <td class="govuk-table__cell">
+                {% if data['other-interets-declaration'] === 'declaration' %}
+
+                <strong class="govuk-tag govuk-tag--blue">
+                  Complete
+                 </strong>
+
+                 {% else %}
+
+                 <strong class="govuk-tag govuk-tag--red">
+                  Not complete
+                </strong>
+
+                {% endif %}
+              </td>
+            </tr>
           </tbody>
         </table>
        
