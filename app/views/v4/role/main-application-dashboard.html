@@ -612,11 +612,24 @@ Public appointments
                     id: "with-hint",
                     maxlength: 2000,
                     label: {
-                      text: "Provide more detail on the reasonable adjustments you'd like to make to the application process.",
+                      text: "If possible, please provide any further detail below on the reasonable adjustment(s) you are requesting",
                       classes: "govuk-label--s",
                       isPageHeading: true
                     }
                   }) }}
+
+                  {{ govukCheckboxes({
+                    idPrefix: "reasonable-adjustments-sensitive",
+                    name: "reasonable-adjustments-sensitive",
+                    
+                    items: [
+                      {
+                        value: "confirm",
+                        text: "If you would like a confidential discussion regarding any reasonable adjustments during the process, please tick this box and a member of the appointments team will be in touch."
+                      }
+                    ]
+                  }) }}
+
                   {% endset -%}
 
 
@@ -636,12 +649,13 @@ Public appointments
 
 
                     {{ govukCheckboxes({
+                      classes: "govuk-!-margin-bottom-1",
                       idPrefix: "reasonable-adjustments",
                       name: "reasonable-adjustments",
                       items: [
                         {
                           value: "reasonable-adjustments-checked",
-                          text: "Tick this box if you would like to make reasonable adjustments to the application process due to a health condition that you may have.",
+                          text: "Tick this box if you would like to request reasonable adjustments to the application process due to a specific need or barrier that you may have.",
                           conditional: {
                             html: otherHtml
                           }
@@ -649,20 +663,64 @@ Public appointments
                       ]
                     }) }}
 
+                    {{ govukDetails({
+                      summaryText: "Help with reasonable adjustments",
+                      html: 
+                      "
+                        <p class='govuk-body'>
+                          Government departments are committed to making reasonable adjustments to make sure applicants with disabilities, physical or mental health conditions, or other needs are not substantially disadvantaged when applying for public appointments. This can include changing the recruitment process to enable people who wish to apply to do so:
+                        <p>
+                          <p class='govuk-body'>
+                            Some examples of common changes are
+                          <p>
+                            <ul class='govuk-list govuk-list--bullet'>
+                              <li>
+                                ensuring that application forms are available in different or accessible formats
+                              </li>
+                              <li>
+                                making adaptations to interview locations
+                              </li>
+                              <li>
+                                allowing candidates to present their skills and experience in a different way
+                              </li>
+                              <li>
+                                giving detailed information on the selection / interview process in advance to allow candidates time to prepare themselves
+                              </li>
+                              <li>
+                                allowing support workers, for example sign language interpreters etc
+                              </li>
+                              <li>
+                                making provision for support animals to attend
+                              </li>
+                            </ul>
+                      "
+                    }) }}
 
 
                     {{ govukCheckboxes({
-                      idPrefix: "privacy-policy",
-                      name: "privacy-policy",
+                      idPrefix: "disability-confident",
+                      name: "disability-confident",
                       items: [
                         {
-                          value: "privacy-policy-checked",
+                          value: "disability-confident-checked",
                           html: "Tick this box if you would like your application to be considered under the <a href=# class=govuk-link>Disability Confident Scheme</a>. The scheme helps recruit and retain disabled people by offering a guaranteed interview if minimum criteria  are met, as well as free access to additional resources."
                         }
                       ]
                     }) }}
 
-
+                    {{ govukDetails({
+                      summaryText: "Help about disability confident",
+                      html: 
+                      "
+                        <p class='govuk-body'>
+                          We are a member of the Government’s Disability Confident scheme. We use the
+Disability Confident scheme symbol, along with other like-minded employers, to show our commitment to good practice in employing people with a disability. The scheme helps recruit and retain disabled people. 
+                        <p>
+                          <p class='govuk-body'>
+                            As part of implementing the scheme, we guarantee an interview for anyone with a disability whose application meets the minimum criteria for the role and who has asked that their application is considered under the scheme. Indicating that you wish your application to be considered under the scheme will in no way prejudice your application. By ‘minimum criteria,’ we mean that you must provide evidence which demonstrates that you meet the level of competence required under each of the essential criteria, as set out in the job-advert.
+                          <p>
+                      "
+                    }) }}
                 <!--checkboxes end-->
       
 
