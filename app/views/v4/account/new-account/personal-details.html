@@ -65,6 +65,22 @@ Public appointments
               text: "Last name"
             }
           }) }}
+
+
+          {{ govukSelect({
+            id: "name-suffix",
+            name: "name-suffix",
+            label: {
+              text: "Suffix (optional)"
+            },
+           
+            items: [
+              {
+                value: "Value",
+                text: "List yet to be supplied"
+              }
+            ]
+          }) }}
           
           {{ govukDateInput({
             id: "date-of-birth",
