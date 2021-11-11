@@ -158,7 +158,7 @@ Public appointments
         
 
                 <!--Diversity task list starts-->
-                <table class="govuk-table">
+                <table class="govuk-table ">
                   <thead class="govuk-table__head">
                     <tr class="govuk-table__row">
                       <th class="govuk-table__header left" scope="col"> Diversity monitoring </th>
@@ -384,8 +384,66 @@ Public appointments
                   </tbody>
                 </table>
                 <!--Diversity task list ends-->
-                
-
+                <br><br>
+                {{ govukDetails({
+                  summaryText: "What is management of outside interests & reputational issues?",
+                  html: 
+                  "
+                  <p class='govuk-body'>
+                    Holders of public office are expected to adhere to and uphold the Seven Principles of Public Life and the principles contained within the Code of Conduct for Board Members:
+                  <p>
+                    <ul class='govuk-list govuk-list--bullet'>
+                      <li>
+                        SELFLESSNESS - Holders of public office should act solely in terms of the public interest. They should not do so in order to gain financial or other material benefits for themselves, their family or their friends.
+                      </li>
+                      <li>
+                        INTEGRITY - Holders of public office should not place themselves under any financial or other obligation to outside individuals or organisations that might seek to influence them in the performance of their official duties.
+                      </li>
+                      <li>
+                        OBJECTIVITY - In carrying out public business, including making public appointments, awarding contracts, or recommending individuals for rewards and benefits, holders of public office should make choices on merit.
+                      </li>
+                      <li>
+                        ACCOUNTABILITY - Holders of public office are accountable for their decisions and actions to the public and must submit themselves to whatever scrutiny is appropriate to their office.
+                      </li>
+                      <li>
+                        OPENNESS - Holders of public office should be as open as possible about all the decisions and actions that they take. They should give reasons for their decisions and restrict information only when the wider public interest clearly demands.
+                      </li>
+                      <li>
+                        HONESTY - Holders of public office have a duty to declare any private interests relating to their public duties and to take steps to resolve any conflicts arising in a way that protects the public interest.
+                      </li>
+                      <li>
+                        LEADERSHIP - Holders of public office should promote and support these principles by leadership and example.
+                      </li>
+                    </ul>
+                    <p class='govuk-body'>
+                      Applicants and appointees need to abide by these principles and you should consider carefully:
+                    <p>
+                      <ul class='govuk-list govuk-list--bullet'>
+                        <li>
+                          any outside interests that you may have, such as shares you may hold in a company providing services to government;
+                        </li>
+                        <li>
+                          any possible reputational issues arising from your past actions or or public statements that you have made;
+                        </li>
+                        <li>
+                          any political roles you hold or political campaigns you have supported;
+                        </li>
+                      </ul>
+                      <p class='govuk-body'>
+                        Which may call into question your ability to do the role you are applying for.
+                      <p>
+                      <p class='govuk-body'>
+                        Please make sure that you answer the relevant questions below in advance of making an application.
+                      <p>
+                      <p class='govuk-body'>
+                        Many conflicts of interest can be satisfactorily resolved and declaring a potential conflict does not prevent you from being interviewed. If you are shortlisted for an interview, the panel will discuss any potential conflicts with you during that interview, including any proposals you may have to mitigate them and record that in their advice to ministers.
+                      <p>
+                        <p class='govuk-body'>
+                          The successful candidate(s) may be required to give up any conflicting interests and their other business and financial interests may be published in line with organisational policies.
+                        <p>
+                        
+                  "
+                }) }}
 
 
 
@@ -579,7 +637,7 @@ Public appointments
                       </td>
                     </tr>
                    
-                    <tr class="govuk-table__row">
+                    <!--<tr class="govuk-table__row">
                       <td class="govuk-table__cell">
                         <a href="application/conflicts-of-interest" class="govuk-link">Conflicts of interest</a>
                       </td>
@@ -598,7 +656,7 @@ Public appointments
 
                         {% endif %}
                       </td>
-                    </tr>
+                    </tr>-->
                   </tbody>
                 </table>
                 <!-- More about you task list ends-->
@@ -641,7 +699,7 @@ Public appointments
                         {
                           value: "privacy-policy-checked",
                           html: "Your <b>privacy and personal data</b> is important to us. Tick this box if you agree to the 
-                          Public Appointments <a href=# class=govuk-link>privacy policy</a> and the hiring departments <a href=# class=govuk-link>privacy policy</a>."
+                          Public Appointments <a href=# class=govuk-link>privacy policy</a> and the <a href=# class=govuk-link>hiring departments privacy policy</a>."
                         }
                       ]
                     }) }}
@@ -734,7 +792,7 @@ Disability Confident scheme symbol, along with other like-minded employers, to s
                   }) }}
                 
                   {{ govukButton({
-                    text: "Withdraw application",
+                    text: "Delete application",
                     classes: "govuk-button--warning",
                     href: "delete-application"
                   }) }}
@@ -750,7 +808,7 @@ Disability Confident scheme symbol, along with other like-minded employers, to s
                   }) }}
                 
                   {{ govukButton({
-                    text: "Withdraw application",
+                    text: "Delete application",
                     classes: "govuk-button--warning",
                     href: "delete-application"
                   }) }}
