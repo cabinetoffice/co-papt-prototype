@@ -76,6 +76,23 @@ Public appointments
                 "
               }) }}
 
+              {{ govukCheckboxes({
+                idPrefix: "sig-political-declaration",
+                name: "sig-political-declaration",
+                fieldset: {
+                  legend: {
+                    text: "Declaration",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+                items: [
+                  {
+                    value: "declaration",
+                    text: "I understand that in the event that a conflict of interest was not able to be satisfactorily resolved or was deemed to be unmanageable, an offer of appointment may be withdrawn."
+                  }
+                ]
+              }) }}
 
                 <div class="govuk-button-group">
                   {{ govukButton({
@@ -101,9 +118,9 @@ Public appointments
 
  <script type="application/json" id="example-validation">
   { 		  	
-    "significant-political-activity": {
+    "sig-political-declaration": {
       "presence": {
-        "message": "^Enter information of your highest qualification"
+        "message": "^You must complete the declaration to continue"
       }
     }
     

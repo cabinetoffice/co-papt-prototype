@@ -457,46 +457,6 @@ Public appointments
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="additional-interests/significant-political-activity" class="govuk-link">Political activity and interests</a>
-                      </td>
-                      <td class="govuk-table__cell">
-                        {% if data['political-check'] === 'confirm' %}
-
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Complete
-                         </strong>
-
-                         {% else %}
-
-                         <strong class="govuk-tag govuk-tag--red">
-                          Not complete
-                        </strong>
-
-                        {% endif %}
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a href="additional-interests/social-media-accounts" class="govuk-link">Social media accounts</a>
-                      </td>
-                      <td class="govuk-table__cell">
-                        {% if data['social-media-check'] === 'confirm' %}
-
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Complete
-                         </strong>
-
-                         {% else %}
-
-                         <strong class="govuk-tag govuk-tag--red">
-                          Not complete
-                        </strong>
-
-                        {% endif %}
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
                         <a href="additional-interests/financial-interests" class="govuk-link">Financial interests</a>
                       </td>
                       <td class="govuk-table__cell">
@@ -517,7 +477,7 @@ Public appointments
                     </tr>
                     <tr class="govuk-table__row">
                       <td class="govuk-table__cell">
-                        <a href="additional-interests/outside-appointments" class="govuk-link">Appointments and other outside roles</a>
+                        <a href="additional-interests/outside-appointments" class="govuk-link">Employment,Appointments and other outside roles</a>
                       </td>
                       <td class="govuk-table__cell">
                         {% if data['social-media-check'] === 'confirm' %}
@@ -575,6 +535,50 @@ Public appointments
                         {% endif %}
                       </td>
                     </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="additional-interests/significant-political-activity" class="govuk-link">Political activity and interests</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        {% if data['political-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
+                          Not complete
+                        </strong>
+
+                        {% endif %}
+                      </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <a href="additional-interests/social-media-accounts" class="govuk-link">Social Media Accounts</a>
+                      </td>
+                      <td class="govuk-table__cell">
+                        {% if data['social-media-check'] === 'confirm' %}
+
+                        <strong class="govuk-tag govuk-tag--blue">
+                          Complete
+                         </strong>
+
+                         {% else %}
+
+                         <strong class="govuk-tag govuk-tag--red">
+                          Not complete
+                        </strong>
+
+                        {% endif %}
+                      </td>
+                    </tr>
+                    
+                    
+                    
+                    
                   </tbody>
                 </table>
 
