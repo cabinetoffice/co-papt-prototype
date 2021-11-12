@@ -1,0 +1,139 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="address" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-l">
+            Create your account - Step 1 of 6
+          </span>
+            Personal details 
+        </h1>
+       
+    
+
+        {{ govukSelect({
+          id: "title",
+          name: "title",
+          label: {
+            text: "Title (optional)"
+          },
+          hint: {
+            text: "This will be used with any correspondence"
+          },
+          items: [
+            {
+              value: "Value",
+              text: "List yet to be supplied"
+            }
+          ]
+        }) }}
+
+         
+          
+         
+          {{ govukInput({
+            id: "first-name",
+            name: "first-name",
+            label: {
+              text: "First name"
+            }
+          }) }}
+          {{ govukInput({
+            id: "middle-name",
+            name: "middle-name",
+            label: {
+              text: "Middle name(s)"
+            }
+          }) }}
+          {{ govukInput({
+            id: "last-name",
+            name: "last-name",
+            label: {
+              text: "Last name"
+            }
+          }) }}
+
+
+          {{ govukSelect({
+            id: "name-suffix",
+            name: "name-suffix",
+            label: {
+              text: "Suffix (optional)"
+            },
+           
+            items: [
+              {
+                value: "Value",
+                text: "List yet to be supplied"
+              }
+            ]
+          }) }}
+          
+          {{ govukDateInput({
+            id: "date-of-birth",
+            name: "date-of-birth",
+            fieldset: {
+              legend: {
+                text: "Date of birth",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m "
+              }
+            },
+            hint: {
+              text: "For example, 27 10 1977"
+            },
+            
+            items: [
+              {
+                name: "day",
+                classes: "govuk-input--width-2"
+              },
+              {
+                name: "month",
+                classes: "govuk-input--width-2"
+              },
+              {
+                name: "year",
+                classes: "govuk-input--width-4"
+              }
+            ]
+          }) }}
+         
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Cancel",
+            classes: "govuk-button--secondary",
+            href: "../login-to-account"
+          }) }}
+        </div>
+
+                                
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

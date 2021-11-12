@@ -1,0 +1,693 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+
+        <h2 class="govuk-heading-m">Personal details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Sarah Philips
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 January 1978
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              72 Guild Street<br>London<br>SE23 6FH
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Contact details
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">07700 900457</p>
+              <p class="govuk-body">sarah.phillips@example.com</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Diversity monitoring</h2>
+
+        <dl class="govuk-summary-list ">
+          
+
+          {% if data['your-sex'] === 'Male' or data['your-sex'] === 'Female' or data['your-sex'] === 'Prefer not to say' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your sex?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['your-sex'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#your-sex">
+                Change<span class="govuk-visually-hidden"> your sex?</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your sex?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Male
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#your-sex">
+                Change<span class="govuk-visually-hidden"> your sex?</span>
+              </a>
+            </dd>
+          </div>
+
+          {% endif %}
+
+          {% if data['gender-identity-same-as-sex'] === 'Yes' or data['gender-identity-same-as-sex'] === 'No' or data['gender-identity-same-as-sex'] === 'Prefer not to say' %}
+
+         
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Is the gender you identify with the same as your sex registered at birth?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['gender-identity-same-as-sex'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                  Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                </a>
+              </dd>
+            </div>
+        {% else %}
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Is the gender you identify with the same as your sex registered at birth?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                  Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                </a>
+              </dd>
+            </div>
+
+        {% endif %}
+
+        {% if data['gender-identity-same-as-sex'] === 'No' %}
+
+         
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What is the gender you identity with?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['other-sex-and-gender-identity-birth'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                  Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                </a>
+              </dd>
+            </div>
+        {% else %}
+
+           
+
+        {% endif %}
+     
+
+          {% if data['disability'] === 'yes' or data['disability'] === 'no' or data['disability'] === 'prefer-not-to-say' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['disability'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/disability#disability">
+                Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+              </a>
+            </dd>
+          </div>
+  
+             {% else %}
+            
+             <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/diversity-monitoring/disability#disability">
+                  Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+                </a>
+              </dd>
+            </div>
+
+            {% endif %}
+
+          {% if data['disability'] === 'yes' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do any of your conditions or illnesses reduce your ability to carry out day-to-day activities?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['reduced-ability'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/disability-reduced-ability">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+          {% if data['disability'] === 'yes' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which if any conditions or illnesses listed affect you?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['affected-ability'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/disability-reduced-ability">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+          
+       
+          {% if data['ethnicity'] === 'White' or data['ethnicity'] === 'Black, African, Caribbean or Black British' or data['ethnicity'] === 'Asian or Asian British' or data['ethnicity'] === 'Mixed or multiple ethnic groups' or data['ethnicity'] === 'Other ethnic group' %}
+
+         
+
+         
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your ethnic group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['ethnicity'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+          {% else %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your ethnic group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              White
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+           
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your White background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              English, Welsh, Scottish, Northern Irish or British
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-white">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+          {% endif %}
+
+          {% if data['ethnicity'] === 'White' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your White background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-white">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+
+          {% if data['ethnicity'] === 'Mixed or multiple ethnic groups' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your Mixed or Multiple ethnic groups background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-mixed">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+          {% if data['ethnicity'] === 'Asian or Asian British' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your Asian or Asian British background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-asian">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+          {% if data['ethnicity'] === 'Black, African, Caribbean or Black British' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your Black, African, Caribbean or Black British background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-black">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+          {% if data['ethnicity'] === 'Other ethnic group' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-other">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+        
+         <!--RELIGION STARTS-->
+         {% if data['Religion'] === 'Christian' or data['Religion'] === 'Buddhist' or data['Religion'] === 'Hindu' or data['Religion'] === 'Sikh'  or data['Religion'] === 'other'  or data['Religion'] === 'Muslim' or data['Religion'] === 'Jewish' or data['Religion'] === 'Prefer not to say' %}
+
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             What  is your religion?
+           </dt>
+           <dd class="govuk-summary-list__value">
+             {{ data['Religion'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="../role/diversity-monitoring/religion#Religion">
+               Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+             </a>
+           </dd>
+         </div>
+ 
+           {% else %}
+           
+           <div class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               What  is your religion?
+             </dt>
+             <dd class="govuk-summary-list__value">
+               Christian
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a class="govuk-link" href="../role/diversity-monitoring/religion#Religion">
+                 Change<span class="govuk-visually-hidden"> religion</span>
+               </a>
+             </dd>
+           </div>
+
+         {% endif %}
+
+
+          <!--RELIGION ENDS-->
+
+           <!--SEXUAL ORIENTATION STARTS-->
+           {% if data['sexual-orientation'] === 'Heterosexual or straight' or data['sexual-orientation'] === 'Gay or lesbian' or data['sexual-orientation'] === 'Bisexual' or data['sexual-orientation'] === 'other'  or data['sexual-orientation'] === 'Prefer not to say'   %}
+
+
+
+           <div class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               Do you have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?
+             </dt>
+             <dd class="govuk-summary-list__value">
+               {{ data['sexual-orientation'] }}
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a class="govuk-link" href="../role/diversity-monitoring/sexual-orientation">
+                 Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+               </a>
+             </dd>
+           </div>
+   
+             {% else %}
+             
+             <div class="govuk-summary-list__row">
+               <dt class="govuk-summary-list__key">
+                 Which of the following best describes your sexual orientation?
+               </dt>
+               <dd class="govuk-summary-list__value">
+                 Heterosexual or straight
+               </dd>
+               <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link" href="../role/diversity-monitoring/sexual-orientation">
+                   Change<span class="govuk-visually-hidden"> sexual orientation</span>
+                 </a>
+               </dd>
+             </div>
+
+           {% endif %}
+           <!--SEXUAL ORIENTATION ENDS-->
+
+        </dl>
+
+
+
+
+        <h2 class="govuk-heading-m">More about you</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+          <!--EMPLOYMENT STARTS-->
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How would you describe your employment status?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['employment-status'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/employment#employment-status">
+                Change<span class="govuk-visually-hidden"> employment status</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which occupational sector best describes your main employment?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['occupational-sector'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/employment#occupational-sector">
+                Change<span class="govuk-visually-hidden"> occupational sector</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your main profession?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['main-profession'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/employment#main-profession">
+                Change<span class="govuk-visually-hidden"> main profession</span>
+              </a>
+            </dd>
+          </div>
+
+          <!--EMPLOYMENT ENDS-->
+
+          <!--PROFESIONAL QUALIFICATIONS START-->
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you hold a professional qualification?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['professional-qualifications'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/professional-qualificiations">
+                Change<span class="govuk-visually-hidden"> professional qualifications</span>
+              </a>
+            </dd>
+          </div>
+
+
+          {% if data['professional-qualifications'] === 'yes' %}
+
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What professional field(s) is the qualification(s) within?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['professional-qualifications-fields'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/professional-qualificiations-detail">
+                Change<span class="govuk-visually-hidden"> professional field qualification is in</span>
+              </a>
+            </dd>
+          </div>
+        
+
+         {% else %}
+      
+          {% endif %}
+          <!--PROFESSIONAL QUALIFICATIONS END-->
+
+          <!--EDUCATIONAL STARTS-->
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is the highest level of qualification you hold?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['highest-qualification'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/education#highest-qualification">
+                Change<span class="govuk-visually-hidden"> highest level of qualifciation</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you hold a degree? (may change)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['degree'] }} <br>
+              {{ data['uni-list'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/education#degree">
+                Change<span class="govuk-visually-hidden"> degree held</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is/are the discipline(s) of your highest level of qualification?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['highest-disc-select'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/education#highest-disc-select">
+                Change<span class="govuk-visually-hidden"> qualification discpline</span>
+              </a>
+            </dd>
+          </div>
+          <!--EDUCATIONAL ENDS-->
+          <!--OTHER PUBLIC APPOINTMENTS STARTS-->
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you hold any other public appointments?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['public-appointments'] }}<br>
+              {{ data['public-appointments-held'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/other-public-appointments-held">
+                Change<span class="govuk-visually-hidden"> ethnic group</span>
+              </a>
+            </dd>
+          </div>
+          <!--OTHER PUBLIC APPOINTMENTS ENDS-->
+        </dl>
+
+
+        <h2 class="govuk-heading-m">Application</h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Curriculum vitae
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#" class="govuk-link">View</a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> ethnic group</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Supporting statement
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#" class="govuk-link">View</a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> ethnic group</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Conflicts of interest
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> ethnic group</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+        <h2 class="govuk-heading-m">Now send your application</h2>
+
+        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+        <form action="application-submission-confirmation" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and send
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+ 
+     
+
+{% endblock %}

@@ -1,0 +1,226 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
+
+        <h2 class="govuk-heading-m">Ethnicity</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          {% if data['ethnicity'] === 'White' or data['ethnicity'] === 'Black, African, Caribbean or Black British' or data['ethnicity'] === 'Asian or Asian British' or data['ethnicity'] === 'Mixed or multiple ethnic groups' or data['ethnicity'] === 'Other ethnic group' %}
+
+         
+
+         
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your ethnic group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['ethnicity'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+          {% else %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is your ethnic group?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              White
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+           
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your White background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              English, Welsh, Scottish, Northern Irish or British
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-white">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+          {% endif %}
+
+          {% if data['ethnicity'] === 'White' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your White background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-white">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+
+          {% if data['ethnicity'] === 'Mixed or multiple ethnic groups' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your Mixed or Multiple ethnic groups background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-mixed">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+          {% if data['ethnicity'] === 'Asian or Asian British' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your Asian or Asian British background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-asian">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+          {% if data['ethnicity'] === 'Black, African, Caribbean or Black British' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your Black, African, Caribbean or Black British background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-black">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+
+          {% if data['ethnicity'] === 'Other ethnic group' %}
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Which of the following best describes your background?
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['ethnicity-detail'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-other">
+                Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+              </a>
+            </dd>
+          </div>
+
+           {% else %}
+          <!--show nothing-->
+          {% endif %}
+        
+         
+         
+
+
+
+
+
+
+        </dl>
+
+
+       
+ 
+
+           <!--for prototype validation only-->
+           <span class="govuk-visually-hidden">
+              {{ govukCheckboxes({
+                idPrefix: "ethnicity-check",
+                name: "ethnicity-check",
+                
+              
+                items: [
+                {
+                  value: "confirm",
+                  text: "Confirm that you are happy with these details - this section requires content design.",
+                  checked: "true"
+                }
+              ]
+            }) }}
+                <input type="hidden" name="answers-checked" value="true">
+          </span>
+           <!--for prototype validation only-->      
+
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and save
+          </button>
+
+       
+
+      </div>
+    </div>
+  </main>
+</div>
+</form>
+<script type="application/json" id="example-validation">
+  { 		  	
+    "ethnicity-check": {
+      "presence": {
+        "message": "^validation to be confirmed."
+      }
+    }
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,86 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../main-application-dashboard-nio-role" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Community background
+          </span>
+          Would you consider yourself associated to any of the following communities?
+        </h1>
+
+          {{ govukRadios({
+            idPrefix: "community-background",
+            name: "community-background",
+            
+            
+            items: [
+              {
+                value: "Roman Catholic",
+                text: "Roman Catholic"
+                
+              },
+              {
+                value: "Protestant",
+                text: "Protestant"
+                
+              },
+              {
+                value: "Neither",
+                text: "Neither"
+                
+              }
+            ]
+          }) }}
+
+
+
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "community-background": {
+      "presence": {
+        "message": "^Select a community group or 'neither'"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

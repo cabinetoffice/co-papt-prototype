@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+ 
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukPanel({
+            titleText: "Account deleted"
+          }) }}
+    
+          <p class="govuk-body">Your account has been deleted and you have been removed from any live applications.</p>
+ 
+         
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "auth-code": {
+      "presence": {
+        "message": "^Enter the correct auth code sent to you via SMS."
+      }
+    }
+  }
+</script>
+     
+
+{% endblock %}

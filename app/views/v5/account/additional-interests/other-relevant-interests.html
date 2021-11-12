@@ -1,0 +1,91 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Management of outside interests & reputational issues
+          </span>
+          Please state about any other relevant interests
+        </h1>
+       {{ govukInsetText({
+         text: "Please include any other interests you hold which might reasonably be perceived as relevant to your responsibilities as an office holder."
+       }) }}
+      
+          
+                  
+       {{ govukCharacterCount({
+        name: "other-interests",
+        id: "other-interests",
+        maxlength: 2000
+      }) }}
+                
+
+      {{ govukCheckboxes({
+        idPrefix: "other-interets-declaration",
+        name: "other-interets-declaration",
+        fieldset: {
+          legend: {
+            text: "Declaration",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "declaration",
+            text: "I understand that in the event that a conflict of interest was not able to be satisfactorily resolved or was deemed to be unmanageable, an offer of appointment may be withdrawn."
+          }
+        ]
+      }) }}
+
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "other-interets-declaration": {
+      "presence": {
+        "message": "^You must complete the declaration to continue"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

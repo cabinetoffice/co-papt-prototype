@@ -1,0 +1,134 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
+
+        <h2 class="govuk-heading-m">Social media Activity</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          
+
+            {% if data['social-media-accounts'] === 'yes' or data['social-media-accounts'] === 'No' or data['social-media-accounts'] === 'Prefer not to say' %}
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you publish on any social media accounts that can be viewed by the public?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['social-media-accounts'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/additional-interests/social-media-accounts#social-media-accounts">
+                  Change<span class="govuk-visually-hidden"> Social media publishing</span>
+                </a>
+              </dd>
+            </div>
+  
+             {% else %}
+            
+            
+            {% endif %}
+
+            {% if data['social-media-accounts'] === 'yes' %}
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                {{ data['social-media-platform'] }}  
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['social-media-account'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/additional-interests/social-media-accounts#social-media-accounts">
+                  Change<span class="govuk-visually-hidden"> Social media accounts</span>
+                </a>
+              </dd>
+            </div>
+  
+             {% else %}
+            
+            
+            {% endif %}          
+            
+            
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Are there any other possible reputational issues?   
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['reputational-issues'] }}<br>
+                {{ data['reputational-issues-info'] }}
+                
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/additional-interests/possible-reputational-issues#reputational-issues">
+                  Change<span class="govuk-visually-hidden"> reputational issues</span>
+                </a>
+              </dd>
+            </div>
+  
+                   
+
+        </dl>
+        
+
+      
+        
+         <!--for prototype validation only-->
+         <span class="govuk-visually-hidden">
+                {{ govukCheckboxes({
+                  idPrefix: "social-media-check",
+                  name: "social-media-check",
+                  
+                  
+                  items: [
+                  {
+                    value: "confirm",
+                    text: "Confirm that you are happy with these details - this section requires content design.",
+                    checked: "true"
+                  }
+                ]
+              }) }}
+          <input type="hidden" name="answers-checked" value="true">
+              </span>
+               <!--for prototype validation only-->
+        
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and save
+          </button>
+
+       
+
+      </div>
+    </div>
+  </main>
+</div>
+</form>
+
+
+<script type="application/json" id="example-validation">
+  { 		  	
+    "social-media-check": {
+      "presence": {
+        "message": "^validation to be confirmed."
+      }
+    }
+  }
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,136 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../check-answers/check-answer-financial-interests" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Management of outside interests & reputational issues
+          </span>
+          Please state what outside financial interests you have 
+        </h1>
+       
+      {{ govukInsetText({
+        text: "Financial interests may include shareholdings or share options you have in individual companies (please specify the: name of the company; nature of their business; percentage and value of your shareholding in each, or the value and terms of your option). If you have none to declare, please state a nil return. These should only be those interests that are relevant to the role the individual is in."
+      }) }}
+          
+                  
+
+
+
+              {{ govukDetails({
+                summaryText: "Further help with financial interets",
+                html: 
+                "
+                <p class='govuk-body'>
+                  Please consider:
+                <p>
+                <ul class='govuk-list govuk-list--bullet'>
+                  <li>
+                    Any shares you hold in a particular company or corporate bonds (whether held directly or indirectly via a PEP or ISA);
+                  </li>
+                  <li>
+                    Unit Trusts;
+                  </li>
+                  <li>
+                    Personal or stakeholder pensions (including Added Voluntary Contributions);
+                  </li>
+                  <li>
+                    Insurance products (including Friendly assurance bonds)
+                  </li>
+                  <li>
+                    Bank or building society accounts in excess of £20,000;
+                  </li>
+                  <li>
+                    Gilt-edged stocks or National Savings products in excess of £20,000;
+                  </li>
+                  <li>
+                    Loans outstanding to particular banks, building societies or consumer credit companies in excess of £5,000;
+                  </li>
+                  <li>
+                    Tax allowances that impact on you or your immediate families.
+                  </li>
+                  <li>
+                    Whether or not you have been in a dispute of a significant nature with HMRC
+                  </li>
+                </ul>
+                <p class='govuk-body'>
+                  This list is non-exhaustive and is designed to give you an idea of the type of things you may need to disclose in this section.
+                <p>
+                "
+              }) }}
+
+
+              {{ govukCharacterCount({
+                name: "financial-interests",
+                id: "financial-interests",
+                maxlength: 2000
+              }) }}
+
+
+
+              {{ govukCheckboxes({
+                idPrefix: "declaration",
+                name: "declaration",
+                fieldset: {
+                  legend: {
+                    text: "Declaration",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+                items: [
+                  {
+                    value: "declaration",
+                    text: "I understand that in the event that a conflict of interest was not able to be satisfactorily resolved or was deemed to be unmanageable, an offer of appointment may be withdrawn."
+                  }
+                ]
+              }) }}
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "declaration": {
+      "presence": {
+        "message": "^You must complete the declaration to continue"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

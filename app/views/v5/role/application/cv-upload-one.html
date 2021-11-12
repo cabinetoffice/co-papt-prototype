@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="cv-upload-two" method="post">
+  
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+     <div class="govuk-grid-row">
+          
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+               
+               
+                <h1 class="govuk-heading-xl">
+                  Uploading file
+                </h1>
+                <h2 class="govuk-heading-l">
+                  Please wait while we upload your file
+                </h2>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <p class="govuk-body govuk-!-font-size-24">Queueing - in progress</p>
+                  </li>
+                  <li>
+                    <p class="govuk-body govuk-!-font-size-24">Processing</p>
+                  </li>
+                </ul>
+
+                <br><br><br><br>
+
+                <a href="cv-upload-two" class="govuk-link">proto link only to show the next stage - this will not appear in production</a>
+        
+               
+               
+              </div>
+            </div>
+      
+                
+      </div>
+  </main>
+</form>
+</div>
+
+     
+
+{% endblock %}

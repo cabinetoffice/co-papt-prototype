@@ -1,0 +1,134 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="disability-mental-health-account" method="post" novalidate data-validate='example-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+       
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Diversity monitoring
+          </span>
+          Do you have any physical or mental health conditions or illnesses lasting, or expecting to last, 12 months or more?
+        </h1>
+        
+        {{ govukInsetText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
+        }) }}
+      
+
+       
+
+       
+        
+       
+        
+        {{ govukRadios({
+          idPrefix: "disability",
+          name: "disability",
+          
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              conditional: {
+                html: yesHtml
+              }
+            },
+            {
+              value: "no",
+              text: "No"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "prefer-not-to-say",
+              text: "Prefer not to say",
+              conditional: {
+                html: prefer-not-to-sayHtml
+              }
+            }
+          ]
+        }) }}
+
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../account-dashboard"
+                  }) }}
+                </div>
+
+
+
+                <span class="govuk-visually-hidden">
+
+                    <!--this is just here for the prototype and should not be included in production-->
+
+                    {{ govukCheckboxes({
+                      idPrefix: "disability-check",
+                      name: "disability-check",
+                      
+                      items: [
+                        {
+                          value: "confirm",
+                          text: "confirm",
+                          checked: "true"
+                        }
+                      ]
+                    }) }}
+
+                    <!--this is just here for the prototype and should not be included in production-->
+
+                  </span>
+
+
+
+
+
+
+
+
+                  <p class="govuk-body">
+                    Read more about <a href="#" class="govuk-link">your data and diversity data</a>.
+                  <p>
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "disability": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

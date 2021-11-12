@@ -1,0 +1,104 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="social-accounts" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Management of outside interests & reputational issues
+          </span>
+          Do you publish on any social media accounts that can be viewed by the public?
+        </h1>
+       
+      
+          
+                   
+
+
+            
+              
+
+              
+              
+              {{ govukRadios({
+                idPrefix: "social-media-accounts",
+                name: "social-media-accounts",
+               
+                
+                items: [
+                  {
+                    value: "yes",
+                    text: "Yes"
+                  },
+                  {
+                    value: "No",
+                    text: "No"
+                  }
+                ]
+              }) }}
+
+              <span class="govuk-visually-hidden">
+                 <!--this is just here for the prototype and should not be included in production-->
+
+               {{ govukCheckboxes({
+                idPrefix: "social-media-accounts-check",
+                name: "social-media-accounts-check",
+                
+                items: [
+                  {
+                    value: "confirm",
+                    text: "confirm",
+                    checked: "true"
+                  }
+                ]
+              }) }}
+
+              <!--this is just here for the prototype and should not be included in production-->
+            </span>
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../account-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "social-media-accounts": {
+      "presence": {
+        "message": "^Select yes, no or prefer not to say"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

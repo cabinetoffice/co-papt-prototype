@@ -1,0 +1,358 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<a href="#" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+        <span class="govuk-caption-l">
+          Role details
+        </span>
+        Distribution Centre Manager
+      </h1>
+      <span class="govuk-caption-l govuk-!-margin-bottom-9">
+        Application deadline 17 July 2028
+      </span>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+         
+     
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+          <!--Summary starts-->
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption>
+            <thead class="govuk-table__head">
+             
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Department</th>
+                <td class="govuk-table__cell">Department of Health</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Organisation</th>
+                <td class="govuk-table__cell">Oil and Pipelines Agency</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location</th>
+                <td class="govuk-table__cell">East of England</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Sector</th>
+                <td class="govuk-table__cell">Communities</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Skills</th>
+                <td class="govuk-table__cell">Audit and Risk</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Time commitment</th>
+                <td class="govuk-table__cell">45 hours per week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Remuneration</th>
+                <td class="govuk-table__cell">From £30,000 to £35,000 per annum</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Application deadline</th>
+                <td class="govuk-table__cell">17 July 2028</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!--summary ends-->
+
+
+
+
+
+          <!--accordion starts here-->
+
+         
+
+          {{ govukAccordion({
+            classes: "govuk-!-margin-bottom-9",
+            id: "role-detail",
+            items: [
+              {
+                heading: {
+                  text: "Position"
+                },
+                expanded: "true",
+                content: {
+                  html: 
+                  "
+                  <p class=govuk-body>
+                    OPA INDEPENDENT BOARD MEMBER & MEMBER OF THE AUDIT, RISK & ASSURANCE COMMITTEE. The role is responsible for providing independent commercial and business advice to support and challenge the OPA’s expansion agenda across Defence.
+                  <p>
+                    <p class=govuk-body>
+                      As an Independent Board Member, the role includes responsibilities for objectivity and scrutiny of the Board business, corporate governance and propriety guidance and stewardship of public funds. The successful candidate is required to attend approximately 8 OPA Board Meetings per year and visit OPA operated facilities.
+                    <p>
+                      <p class=govuk-body>
+                        The Board Member will also be a member of the of at least one of the Committees, which meets 4 times a year, normally on the same day following the OPA Board Meetings, as well as the Audit, Risk and Assurance Committee. The ARAC Chair, MOD NED and other representatives from OPA sit on the ARAC. The role will include specific project support to the Chair and CEO in development of commercial and business elements of the OPA Strategy.
+                      <p>
+                  "
+                }
+              },
+              
+              {
+                heading: {
+                  text: "Responsibilities"
+                },
+                expanded: "true",
+                content: {
+                  html: 
+                  "
+                  <p class=govuk-body>
+                    The role requires high moral stature, excellent interpersonal skills, tact and diplomacy and strategic vision with the ability to positively influence those inside and outside of the Agency who impact on the strategic direction of the organisation.
+        
+                  <p>
+                  "
+                }
+              },
+              {
+                heading: {
+                  text: "Timeline for this appointment"
+                },
+                expanded: "true",
+                content: {
+                  html: 
+                  "
+                    <div class='grid-row'>
+                      <div class='column-one-third'>
+                  
+                        <ul class='dwp-timeline'>
+                          <li class='dwp-timeline__entry'>
+                            <h3 class='govuk-heading-m'>Opening date</h3>
+                            <p class='dwp-timeline__info'>
+                              <span class='govuk-visually-hidden visually-hidden'>Opening date - 17 November 2021</span>
+                            </p>
+                            <p class='dwp-timeline__body'>
+                              17 November 2021
+                            </p>
+                          </li>
+                          <li class='dwp-timeline__entry'>
+                            <h3 class='govuk-heading-m'>Closing date</h3>
+                            <p class='dwp-timeline__info'>
+                              <span class='govuk-visually-hidden visually-hidden'>Closing date - 7 December 2021</span>
+                            </p>
+                            <p class='dwp-timeline__body'>
+                              7 December 2021
+                            </p>
+                          </li>
+                          <li class='dwp-timeline__entry'>
+                            <h3 class='govuk-heading-m'>Sifting date</h3>
+                            <p class='dwp-timeline__info'>
+                              <span class='govuk-visually-hidden visually-hidden'>Sifting date - 17 January 2022</span>
+                            </p>
+                            <p class='dwp-timeline__body'>
+                              17 January 2022
+                            </p>
+                          </li>
+                          <li class='dwp-timeline__entry'>
+                            <h3 class='govuk-heading-m'>Interviews expected to end on</h3>
+                            <p class='dwp-timeline__info'>
+                              <span class='govuk-visually-hidden visually-hidden'>Interview date - 10 February 2022</span>
+                            </p>
+                            <p class='dwp-timeline__body'>
+                              10 February 2022
+                            </p>
+                          </li>
+                          <li class='dwp-timeline__entry'>
+                            <h3 class='govuk-heading-m'>Announcement</h3>
+                            <p class='dwp-timeline__info'>
+                              <span class='govuk-visually-hidden visually-hidden'>Announcement - 20 March 2022</span>
+                            </p>
+                            <p class='dwp-timeline__body'>
+                              20 March 2022
+                            </p>
+                          </li>
+                        </ul>
+                  
+                      </div>
+                    </div>
+                  "
+                }
+              }
+            ]
+          }) }}
+ <!-- accordion ends here-->
+
+  
+  
+<!-- accordion starts here-->
+<h3 class="govuk-heading-m">
+  Further details
+</h3>
+        {{ govukAccordion({
+          id: "further-role-details",
+          items: [
+            {
+              heading: {
+                text: "Body"
+              },
+              content: {
+                html: 
+                "
+                <p class=govuk-body>
+                  Key responsibilities will be to provide financial, corporate governance and stewardship to the OPA Board, the Chief Executive and their Senior Leadership Team, to review the risks to the business and their management and through your membership of the OPA Audit, Risk & Assurance committee, to provide the OPA Board with key assurances on the performance of OPA.<br><br>In addition, it is crucial that OPA can lever your business and professional experience to develop the business whilst ensuring the core business outputs meet the needs of the customer and the Regulator.
+                <p>
+                "
+              }
+            },
+            {
+              heading: {
+                text: "Essential criteria"
+              },
+              content: {
+                html: 
+                "
+                <p class=govuk-body>
+                  Board-level experience with sound background in, commercial and business development particularly at a strategic level with an ability to challenge organisational performance using clear, consistent and comparable key performance indicators, holding an organisation to account for its performance, continued improvement and risk management; <br><br>Experience within a major hazard industry or similarly regulated organisation; Demonstrable ability to assist development of strategic 5 Year and 10 year plans as well as current tactical business plans in support of the OPA’s growth agenda both within MOD and in the commercial world. An engaging and collaborative working style with the ability to adapt to a range of partners whilst demonstrating leadership and influencing skills; demonstrate the ability to provide a challenging and supportive role to the Chief Executive and the senior leadership team; Sound judgment, analysis and decision-making skills; An enthusiasm and a desire to support the successful delivery of OPA’s challenging agenda.
+                  <p>
+                "
+              }
+            },
+            {
+              heading: {
+                text: "Desirable criteria"
+              },
+              content: {
+                html: 
+                "
+                <p class=govuk-body>
+                  Experience of current corporate governance best practice; Knowledge of the workings of Statutory Public Corporations and /or Arm’s Length Bodies; Knowledge of Managing Public Money. Experience of financial risk
+                <p>
+                "
+              }
+            },
+            {
+              heading: {
+                text: "Reasonable adjustments required due to a health condition"
+              },
+              content: {
+                html: 
+                " 
+                <p class=govuk-body>
+                  Government departments are committed to making <a href=https://www.gov.uk/reasonable-adjustments-for-disabled-workers class=govuk-link>reasonable adjustments</a> to make sure applicants with disabilities, physical or mental health conditions, or other needs are not substantially disadvantaged when applying for public appointments. This can include changing the recruitment process to enable people who wish to apply to do so:
+                <p>
+                  <p class=govuk-body>
+                    Some examples of common changes are:
+                  <p>
+                 <ul class='govuk-list govuk-list--bullet'>
+                   <li>
+                    ensuring that application forms are available in different or accessible formats
+                   </li>
+                   <li>
+                     making adaptations to interview locations 
+                   </li>
+                   <li>
+                    allowing candidates to present their skills and experience in a different way
+                   </li>
+                   <li>
+                    giving detailed information on the selection / interview process in advance to allow candidates time to prepare themselves
+                   </li>
+                   <li>
+                    allowing support workers, for example sign language interpreters etc
+                   </li>
+                   <li>
+                    making provision for support animals to attend
+                   </li>
+                 </ul>
+                "
+              }
+            },
+            {
+              heading: {
+                text: " Disability confident"
+              },
+              content: {
+                html: 
+                "
+                <p class=govuk-body>
+                  We are a member of the Government’s Disability Confident scheme. We use the
+Disability Confident scheme symbol, along with other like-minded employers, to show our commitment to good practice in employing people with a disability. The scheme helps recruit and retain disabled people. 
+                <p>
+                  <p class=govuk-body>
+                    As part of implementing the scheme, we guarantee an interview for anyone with a disability whose application meets the minimum criteria for the role and who has asked that their application is considered under the scheme. Indicating that you wish your application to be considered under the scheme will in no way prejudice your application. By ‘minimum criteria,’ we mean that you must provide evidence which demonstrates that you meet the level of competence required under each of the essential criteria, as set out in the job-advert.
+                  <p>
+                "
+              }
+            },
+            {
+              heading: {
+                text: "Additional information"
+              },
+              content: {
+                html: 
+                " 
+                <p class=govuk-body>
+                  The Government expects all holders of public office to work to the highest personal and professional standards. In support of this, all non-executive board members of UK public bodies must abide by the principles set out in the Code of Conduct for Board Members of Public Bodies.<br><br>The Code sets out, clearly and openly, the standards expected from those who serve on the boards of UK public bodies and will form part of your terms and conditions of appointment.
+                <p>
+                "
+              }
+            },
+            {
+              heading: {
+                text: " Process"
+              },
+              content: {
+                html: 
+                "
+                  <p class=govuk-body>
+                      All appointments are made on the basis of fair and open competition.
+                  <p> 
+                "
+              }
+            }
+          ]
+        }) }}
+
+ <!-- accordion ends here-->
+
+  
+
+      
+
+     
+
+      {{ govukButton({
+        text: "Apply for this role",
+        classes: "govuk-!-margin-top-6",
+        href: "start-application"
+      }) }}
+
+          <!-- role as end-->
+
+          <!--logos 
+          <div class="govuk-grid-row govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+           
+            <div class="govuk-grid-column-one-third oneHundred">
+              <img src="/public/images/department-of-health-icon.png" alt="Department of health logo">
+            </div>
+            <div class="govuk-grid-column-one-third oneHundred">
+              <img src="/public/images/opa-icon.png" alt="Oil and Pipelines Agency Logo">
+            </div>
+            <div class="govuk-grid-column-one-third oneHundred">
+              <a href="https://publicappointmentscommissioner.independent.gov.uk/" target="_blank" class="govuk-link"><img src="/public/images/regulated-icon.png" alt="Regulated by the Commissioner for Public Appointments logo"></a>  
+            </div>
+          </div>-->
+      </div>
+    </div>
+  </div>
+  
+ </div>
+
+     
+
+{% endblock %}

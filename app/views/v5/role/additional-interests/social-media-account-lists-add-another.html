@@ -1,0 +1,158 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form  method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Management of outside interests & reputational issues
+          </span>
+          Provide information for each of your accounts
+        </h1>
+       
+
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Your social media accounts</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Platform</th>
+              <th scope="col" class="govuk-table__header">Account</th>
+              <th scope="col" class="govuk-table__header"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">{{ data['social-media-platform'] }}</th>
+              <td class="govuk-table__cell">{{ data['social-media-account'] }} {{ data['other-social-account'] }}</td>
+              <td class="govuk-table__cell">  <a href="social-media-account-lists" class="govuk-link">remove</a>  </td>
+            </tr>
+           
+          </tbody>
+        </table>
+
+
+
+
+            
+
+
+    <div class="app-add-another">
+        <div class="app-add-another__item">
+
+
+
+          {% set otheraccountHtml %}
+              
+
+         {{ govukInput({
+           id: "other-social-account",
+           name: "other-social-account",
+           label: {
+             text: "What is the name of the platform?"
+           }
+         }) }}
+         
+         
+
+          {% endset -%}
+                   
+{{ govukRadios({
+  id: "social-media-platform",
+  name: "social-media-platform",
+  fieldset: {
+    legend: {
+      text: "Social media platform",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  
+  items: [
+    
+    {
+      value: "Twitter",
+      text: "Twitter"
+    },
+    {
+      value: "LinkedIn",
+      text: "LinkedIn"
+    },
+    {
+      value: "Facebook",
+      text: "Facebook / Meta"
+    },
+    {
+      value: "Instagram",
+      text: "Instagram"
+    },
+    {
+      value: "Other",
+      text: "Other",
+      conditional: {
+        html: otheraccountHtml
+      }
+    }
+  ]
+}) }}
+
+         {{ govukInput({
+           id: "social-media-account",
+           name: "social-media-account",
+           label: {
+             text: "Username/handle or link to account",
+             classes: "govuk-label--m",
+             isPageHeading: false
+           }
+         }) }}
+            
+        </div>
+      
+        {{ govukButton({
+          text: "Add another account",
+          classes: "govuk-button--secondary app-add-another__add-button"
+        }) }}
+
+      </div>
+              
+
+
+                <div class="govuk-button-group govuk-!-margin-top-6">
+                  {{ govukButton({
+                    text: "Continue",
+                    href: "possible-reputational-issues"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+              </div>
+
+             
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+
+
+{% endblock %}
