@@ -168,61 +168,627 @@ Public appointments
     
 
 
-     <h2 class="govuk-heading-m">Your application details</h2>
+     <h2 class="govuk-heading-l">Your application details</h2>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              CV
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <a class="govuk-link" href="#">
-                 CV.PDF</span>
-              </a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                View</span>
-             </a>
-            </dd>
+       
+
+
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Personal details
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <!--Personal details starts-->
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Sarah Philips
+                  </dd>
+                  
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    5 January 1978
+                  </dd>
+                 
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    72 Guild Street<br>London<br>SE23 6FH
+                  </dd>
+                 
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Contact details
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <p class="govuk-body">07700 900457</p>
+                    <p class="govuk-body">sarah.phillips@example.com</p>
+                  </dd>
+                
+                </div>
+              </dl>
+
+               <!--Personal details ends-->
+            </div>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Supporting statement
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <a class="govuk-link" href="#">
-                supporting_statement.PDF</span>
-             </a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                View</span>
-             </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Conflicts of interest
-            </dt>
-            <dd class="govuk-summary-list__value">
-              None
-            </dd>
-            <dd class="govuk-summary-list__actions">
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Diversity monitoring
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+              <!--Diversity monitoring starts-->
+
+              <dl class="govuk-summary-list ">
+          
+
+                {% if data['your-sex'] === 'Male' or data['your-sex'] === 'Female' or data['your-sex'] === 'Prefer not to say' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    
+                    What is your sex?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['your-sex'] }}
+                  </dd>
+                 
+                </div>
+      
+                 {% else %}
+                
+                 <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    
+                    What is your sex?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Female
+                  </dd>
+                  
+                </div>
+      
+                {% endif %}
+      
+                {% if data['gender-identity-same-as-sex'] === 'Yes' or data['gender-identity-same-as-sex'] === 'No' or data['gender-identity-same-as-sex'] === 'Prefer not to say' %}
+      
+               
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Is the gender you identify with the same as your sex registered at birth?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['gender-identity-same-as-sex'] }}
+                    </dd>
+                   
+                  </div>
+              {% else %}
+      
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Is the gender you identify with the same as your sex registered at birth?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Yes
+                    </dd>
+                   
+                  </div>
+      
+              {% endif %}
+      
+              {% if data['gender-identity-same-as-sex'] === 'No' %}
+      
+               
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What is the gender you identity with?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['other-sex-and-gender-identity-birth'] }}
+                    </dd>
+                    
+                  </div>
+              {% else %}
+      
+                 
+      
+              {% endif %}
+           
+      
+                {% if data['disability'] === 'yes' or data['disability'] === 'no' or data['disability'] === 'prefer-not-to-say' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do you have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['disability'] }}
+                  </dd>
+                  
+                </div>
+        
+                   {% else %}
+                  
+                   <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Do you have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                   
+                  </div>
+      
+                  {% endif %}
+      
+                {% if data['disability'] === 'yes' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do any of your conditions or illnesses reduce your ability to carry out day-to-day activities?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     {{ data['reduced-ability'] }}
+                  </dd>
+                 
+                </div>
+      
+                 {% else %}
+                <!--show nothing-->
+                {% endif %}
+      
+                {% if data['disability'] === 'yes' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which if any conditions or illnesses listed affect you?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     {{ data['affected-ability'] }}
+                  </dd>
+                 
+                </div>
+      
+                 {% else %}
+                <!--show nothing-->
+                {% endif %}
+                
+             
+                {% if data['ethnicity'] === 'White' or data['ethnicity'] === 'Black, African, Caribbean or Black British' or data['ethnicity'] === 'Asian or Asian British' or data['ethnicity'] === 'Mixed or multiple ethnic groups' or data['ethnicity'] === 'Other ethnic group' %}
+      
+               
+      
+               
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is your ethnic group?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['ethnicity'] }}
+                  </dd>
+                 
+                </div>
+      
+                {% else %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is your ethnic group?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    White
+                  </dd>
+                  
+                </div>
+                 
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which of the following best describes your White background?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    English, Welsh, Scottish, Northern Irish or British
+                  </dd>
+                  
+                </div>
+                {% endif %}
+      
+                {% if data['ethnicity'] === 'White' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which of the following best describes your White background?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     {{ data['ethnicity-detail'] }}
+                  </dd>
+                 
+                </div>
+      
+                 {% else %}
+                <!--show nothing-->
+                {% endif %}
+      
+      
+                {% if data['ethnicity'] === 'Mixed or multiple ethnic groups' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which of the following best describes your Mixed or Multiple ethnic groups background?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     {{ data['ethnicity-detail'] }}
+                  </dd>
+                 
+                </div>
+      
+                 {% else %}
+                <!--show nothing-->
+                {% endif %}
+      
+                {% if data['ethnicity'] === 'Asian or Asian British' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which of the following best describes your Asian or Asian British background?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     {{ data['ethnicity-detail'] }}
+                  </dd>
+                  
+                </div>
+      
+                 {% else %}
+                <!--show nothing-->
+                {% endif %}
+      
+                {% if data['ethnicity'] === 'Black, African, Caribbean or Black British' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which of the following best describes your Black, African, Caribbean or Black British background?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     {{ data['ethnicity-detail'] }}
+                  </dd>
+                  
+                </div>
+      
+                 {% else %}
+                <!--show nothing-->
+                {% endif %}
+      
+                {% if data['ethnicity'] === 'Other ethnic group' %}
+      
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which of the following best describes your background?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                     {{ data['ethnicity-detail'] }}
+                  </dd>
+                 
+                </div>
+      
+                 {% else %}
+                <!--show nothing-->
+                {% endif %}
               
-            </dd>
-          </div>
+               <!--RELIGION STARTS-->
+               {% if data['Religion'] === 'Christian' or data['Religion'] === 'Buddhist' or data['Religion'] === 'Hindu' or data['Religion'] === 'Sikh'  or data['Religion'] === 'other'  or data['Religion'] === 'Muslim' or data['Religion'] === 'Jewish' or data['Religion'] === 'Prefer not to say' %}
+      
+               <div class="govuk-summary-list__row">
+                 <dt class="govuk-summary-list__key">
+                   What  is your religion?
+                 </dt>
+                 <dd class="govuk-summary-list__value">
+                   {{ data['Religion'] }}
+                 </dd>
+                
+               </div>
+       
+                 {% else %}
+                 
+                 <div class="govuk-summary-list__row">
+                   <dt class="govuk-summary-list__key">
+                     What  is your religion?
+                   </dt>
+                   <dd class="govuk-summary-list__value">
+                     Christian
+                   </dd>
+                  
+                 </div>
+      
+               {% endif %}
+      
+      
+                <!--RELIGION ENDS-->
+      
+                 <!--SEXUAL ORIENTATION STARTS-->
+                 {% if data['sexual-orientation'] === 'Heterosexual or straight' or data['sexual-orientation'] === 'Gay or lesbian' or data['sexual-orientation'] === 'Bisexual' or data['sexual-orientation'] === 'other'  or data['sexual-orientation'] === 'Prefer not to say'   %}
+      
+      
+      
+                 <div class="govuk-summary-list__row">
+                   <dt class="govuk-summary-list__key">
+                     Do you have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?
+                   </dt>
+                   <dd class="govuk-summary-list__value">
+                     {{ data['sexual-orientation'] }}
+                   </dd>
+                   
+                 </div>
          
-        </dl>
+                   {% else %}
+                   
+                   <div class="govuk-summary-list__row">
+                     <dt class="govuk-summary-list__key">
+                       Which of the following best describes your sexual orientation?
+                     </dt>
+                     <dd class="govuk-summary-list__value">
+                       Straight/Heterosexual 
+                     </dd>
+                     
+                   </div>
+      
+                 {% endif %}
+                 <!--SEXUAL ORIENTATION ENDS-->
+                 <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How would you describe your employment status?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Employee 
+                  </dd>
+                  
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Which occupational sector best describes your main employment?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Private sector
+                  </dd>
+                 
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is your main profession?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Commercial 
+                  </dd>
+                 
+                </div>
+      
+                <!--EMPLOYMENT ENDS-->
+      
+                <!--PROFESIONAL QUALIFICATIONS START-->
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do you hold a professional qualification?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                 
+                </div>
+      
+      
+                
+                <!--PROFESSIONAL QUALIFICATIONS END-->
+      
+                <!--EDUCATIONAL STARTS-->
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is the highest level of qualification you hold?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Five or more GCSEs (grades A* to C) or equivalent - Level 2 qualifications
+                  </dd>
+                  
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do you hold a degree? (may change)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  
+                </div>
+               
+                <!--EDUCATIONAL ENDS-->
+                <!--OTHER PUBLIC APPOINTMENTS STARTS-->
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do you hold any other public appointments?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                 
+                </div>
+                <!--OTHER PUBLIC APPOINTMENTS ENDS-->
+              </dl>
+
+               <!--Diversity monitoring ends-->
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Management of outside interest
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+              <!--Management of outside interest starts-->
+
+              {{ govukTable({
+                caption: "Please state any financial interests you may have",
+               
+                rows: [
+                  [
+                    
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                    }
+                  ]
+                ]
+              }) }}
+
+              {{ govukTable({
+                caption: "Please state any employment, appointments and other outside roles (including voluntary / advisory) you may have",
+               
+                rows: [
+                  [
+                    
+                    {
+                      text: "-"
+                    }
+                  ]
+                ]
+              }) }}
+
+
+              {{ govukTable({
+                caption: "Please state any personal interests you may have",
+               
+                rows: [
+                  [
+                    
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                  ]
+                ]
+              }) }}
+
+
+              {{ govukTable({
+                caption: "Please state any other relevant interests you may have",
+               
+                rows: [
+                  [
+                    
+                    {
+                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    }
+                  ]
+                ]
+              }) }}
+
+
+              {{ govukTable({
+                caption: "Have you undertaken any significant political activity for a political party in the past five years?",
+               
+                rows: [
+                  [
+                    
+                    {
+                      text: "-"
+                    }
+                  ]
+                ]
+              }) }}
+            
+              
+               <!--Management of outside interest ends-->
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  CV
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    CV
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a class="govuk-link" href="#">
+                       CV.PDF</span>
+                    </a>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      View</span>
+                   </a>
+                  </dd>
+                </div>
+                </dl>
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Supporting statement
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Supporting statement
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a class="govuk-link" href="#">
+                    supporting_statement.PDF</span>
+                 </a>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    View</span>
+                 </a>
+                </dd>
+              </div>
+              </dl>
+            </div>
+          </div>
+        </div>
 
 
 
 
         {{ govukButton({
+          text: "Amend application",
+          classes: "govuk-button--secondary",
+          href: "#"
+        }) }}
+        {{ govukButton({
           text: "Withdraw application",
           classes: "govuk-button--warning",
           href: "application-withdraw/delete-application"
         }) }}
+        
 
     </div>
      </div>
