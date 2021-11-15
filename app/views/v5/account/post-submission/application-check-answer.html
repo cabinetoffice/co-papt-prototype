@@ -7,13 +7,13 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="#" class="govuk-back-link">Back</a>
+  <a href="application-detail-submitted" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds-from-desktop">
 
-        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+        <h1 class="govuk-heading-l">You may change any of your submitted answers up until the application deadline date.</h1>
 
         <h2 class="govuk-heading-m">Personal details</h2>
 
@@ -480,7 +480,7 @@ Public appointments
               How would you describe your employment status?
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['employment-status'] }} 
+              Employee
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/employment#employment-status">
@@ -493,7 +493,7 @@ Public appointments
               Which occupational sector best describes your main employment?
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['occupational-sector'] }} 
+              Private sector 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/employment#occupational-sector">
@@ -506,7 +506,7 @@ Public appointments
               What is your main profession?
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['main-profession'] }} 
+              Commercial 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="../role/more-about-you/employment#main-profession">
@@ -517,45 +517,7 @@ Public appointments
 
           <!--EMPLOYMENT ENDS-->
 
-          <!--PROFESIONAL QUALIFICATIONS START-->
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Do you hold a professional qualification?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['professional-qualifications'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="../role/more-about-you/professional-qualificiations">
-                Change<span class="govuk-visually-hidden"> professional qualifications</span>
-              </a>
-            </dd>
-          </div>
-
-
-          {% if data['professional-qualifications'] === 'yes' %}
-
-
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              What professional field(s) is the qualification(s) within?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['professional-qualifications-fields'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="../role/more-about-you/professional-qualificiations-detail">
-                Change<span class="govuk-visually-hidden"> professional field qualification is in</span>
-              </a>
-            </dd>
-          </div>
-        
-
-         {% else %}
-      
-          {% endif %}
-          <!--PROFESSIONAL QUALIFICATIONS END-->
+       
 
           <!--EDUCATIONAL STARTS-->
           <div class="govuk-summary-list__row">
@@ -599,6 +561,45 @@ Public appointments
             </dd>
           </div>
           <!--EDUCATIONAL ENDS-->
+             <!--PROFESIONAL QUALIFICATIONS START-->
+             <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you hold a professional qualification?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/more-about-you/professional-qualificiations">
+                  Change<span class="govuk-visually-hidden"> professional qualifications</span>
+                </a>
+              </dd>
+            </div>
+  
+  
+            {% if data['professional-qualifications'] === 'yes' %}
+  
+  
+  
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What professional field(s) is the qualification(s) within?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['professional-qualifications-fields'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/more-about-you/professional-qualificiations-detail">
+                  Change<span class="govuk-visually-hidden"> professional field qualification is in</span>
+                </a>
+              </dd>
+            </div>
+          
+  
+           {% else %}
+        
+            {% endif %}
+            <!--PROFESSIONAL QUALIFICATIONS END-->
           <!--OTHER PUBLIC APPOINTMENTS STARTS-->
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -685,6 +686,19 @@ Public appointments
               </a>
             </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you publish on any social media accounts that can be viewed by the public?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> other interets</span>
+              </a>
+            </dd>
+          </div>
         </dl>
 
         <h2 class="govuk-heading-m">Application</h2>
@@ -716,21 +730,20 @@ Public appointments
               </a>
             </dd>
           </div>
-        
-          
+         
         </dl>
 
 
-        <h2 class="govuk-heading-m">Now send your application</h2>
+        <h2 class="govuk-heading-m">Now update your application</h2>
 
         <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-        <form action="application-submission-confirmation" method="post" novalidate>
+        <form action="application-detail-submitted" method="post" novalidate>
 
           <input type="hidden" name="answers-checked" value="true">
 
           <button class="govuk-button" data-module="govuk-button">
-            Accept and send
+            Accept and update application
           </button>
 
         </form>

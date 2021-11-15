@@ -193,7 +193,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     Sarah Philips
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -202,7 +206,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     5 January 1978
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> date of birth</span>
+                    </a>
+                  </dd>
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -211,7 +219,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     72 Guild Street<br>London<br>SE23 6FH
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd>
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -221,7 +233,11 @@ Public appointments
                     <p class="govuk-body">07700 900457</p>
                     <p class="govuk-body">sarah.phillips@example.com</p>
                   </dd>
-                
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
                 </div>
               </dl>
 
@@ -239,33 +255,39 @@ Public appointments
             <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
               <!--Diversity monitoring starts-->
 
-              <dl class="govuk-summary-list ">
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9"">
           
 
                 {% if data['your-sex'] === 'Male' or data['your-sex'] === 'Female' or data['your-sex'] === 'Prefer not to say' %}
       
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    
                     What is your sex?
                   </dt>
                   <dd class="govuk-summary-list__value">
                     {{ data['your-sex'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#your-sex">
+                      Change<span class="govuk-visually-hidden"> your sex?</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
                 
                  <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
-                    
                     What is your sex?
                   </dt>
                   <dd class="govuk-summary-list__value">
                     Female
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#your-sex">
+                      Change<span class="govuk-visually-hidden"> your sex?</span>
+                    </a>
+                  </dd>
                 </div>
       
                 {% endif %}
@@ -280,7 +302,11 @@ Public appointments
                     <dd class="govuk-summary-list__value">
                       {{ data['gender-identity-same-as-sex'] }}
                     </dd>
-                   
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                        Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                      </a>
+                    </dd>
                   </div>
               {% else %}
       
@@ -291,7 +317,11 @@ Public appointments
                     <dd class="govuk-summary-list__value">
                       Yes
                     </dd>
-                   
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                        Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                      </a>
+                    </dd>
                   </div>
       
               {% endif %}
@@ -306,7 +336,11 @@ Public appointments
                     <dd class="govuk-summary-list__value">
                       {{ data['other-sex-and-gender-identity-birth'] }}
                     </dd>
-                    
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                        Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                      </a>
+                    </dd>
                   </div>
               {% else %}
       
@@ -324,7 +358,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     {{ data['disability'] }}
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/disability#disability">
+                      Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+                    </a>
+                  </dd>
                 </div>
         
                    {% else %}
@@ -336,7 +374,11 @@ Public appointments
                     <dd class="govuk-summary-list__value">
                       No
                     </dd>
-                   
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="../role/diversity-monitoring/disability#disability">
+                        Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+                      </a>
+                    </dd>
                   </div>
       
                   {% endif %}
@@ -350,7 +392,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                      {{ data['reduced-ability'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/disability-reduced-ability">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
@@ -366,7 +412,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                      {{ data['affected-ability'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/disability-reduced-ability">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
@@ -386,7 +436,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     {{ data['ethnicity'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                 {% else %}
@@ -398,7 +452,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     White
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
                  
                 <div class="govuk-summary-list__row">
@@ -408,7 +466,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     English, Welsh, Scottish, Northern Irish or British
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-white">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
                 {% endif %}
       
@@ -421,7 +483,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                      {{ data['ethnicity-detail'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-white">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
@@ -438,7 +504,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                      {{ data['ethnicity-detail'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-mixed">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
@@ -454,7 +524,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                      {{ data['ethnicity-detail'] }}
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-asian">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
@@ -470,7 +544,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                      {{ data['ethnicity-detail'] }}
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-black">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
@@ -486,7 +564,11 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                      {{ data['ethnicity-detail'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/diversity-monitoring/ethnicity-other">
+                      Change<span class="govuk-visually-hidden"> ability to carry out day-to-day activities</span>
+                    </a>
+                  </dd>
                 </div>
       
                  {% else %}
@@ -503,7 +585,11 @@ Public appointments
                  <dd class="govuk-summary-list__value">
                    {{ data['Religion'] }}
                  </dd>
-                
+                 <dd class="govuk-summary-list__actions">
+                   <a class="govuk-link" href="../role/diversity-monitoring/religion#Religion">
+                     Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+                   </a>
+                 </dd>
                </div>
        
                  {% else %}
@@ -515,7 +601,11 @@ Public appointments
                    <dd class="govuk-summary-list__value">
                      Christian
                    </dd>
-                  
+                   <dd class="govuk-summary-list__actions">
+                     <a class="govuk-link" href="../role/diversity-monitoring/religion#Religion">
+                       Change<span class="govuk-visually-hidden"> religion</span>
+                     </a>
+                   </dd>
                  </div>
       
                {% endif %}
@@ -535,7 +625,11 @@ Public appointments
                    <dd class="govuk-summary-list__value">
                      {{ data['sexual-orientation'] }}
                    </dd>
-                   
+                   <dd class="govuk-summary-list__actions">
+                     <a class="govuk-link" href="../role/diversity-monitoring/sexual-orientation">
+                       Change<span class="govuk-visually-hidden"> physical or mental health conditions lasting 12 months or more</span>
+                     </a>
+                   </dd>
                  </div>
          
                    {% else %}
@@ -545,30 +639,47 @@ Public appointments
                        Which of the following best describes your sexual orientation?
                      </dt>
                      <dd class="govuk-summary-list__value">
-                       Straight/Heterosexual 
+                      Straight/Heterosexual
                      </dd>
-                     
+                     <dd class="govuk-summary-list__actions">
+                       <a class="govuk-link" href="../role/diversity-monitoring/sexual-orientation">
+                         Change<span class="govuk-visually-hidden"> sexual orientation</span>
+                       </a>
+                     </dd>
                    </div>
       
                  {% endif %}
                  <!--SEXUAL ORIENTATION ENDS-->
-                 <div class="govuk-summary-list__row">
+      
+            
+      
+                <!--EMPLOYMENT STARTS-->
+      
+                <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     How would you describe your employment status?
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    Employee 
+                    Employee
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/more-about-you/employment#employment-status">
+                      Change<span class="govuk-visually-hidden"> employment status</span>
+                    </a>
+                  </dd>
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Which occupational sector best describes your main employment?
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    Private sector
+                    Private sector 
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/more-about-you/employment#occupational-sector">
+                      Change<span class="govuk-visually-hidden"> occupational sector</span>
+                    </a>
+                  </dd>
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
@@ -577,25 +688,16 @@ Public appointments
                   <dd class="govuk-summary-list__value">
                     Commercial 
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/more-about-you/employment#main-profession">
+                      Change<span class="govuk-visually-hidden"> main profession</span>
+                    </a>
+                  </dd>
                 </div>
       
                 <!--EMPLOYMENT ENDS-->
       
-                <!--PROFESIONAL QUALIFICATIONS START-->
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Do you hold a professional qualification?
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    No
-                  </dd>
-                 
-                </div>
-      
-      
-                
-                <!--PROFESSIONAL QUALIFICATIONS END-->
+             
       
                 <!--EDUCATIONAL STARTS-->
                 <div class="govuk-summary-list__row">
@@ -603,30 +705,95 @@ Public appointments
                     What is the highest level of qualification you hold?
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    Five or more GCSEs (grades A* to C) or equivalent - Level 2 qualifications
+                    {{ data['highest-qualification'] }}
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/more-about-you/education#highest-qualification">
+                      Change<span class="govuk-visually-hidden"> highest level of qualifciation</span>
+                    </a>
+                  </dd>
                 </div>
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Do you hold a degree? (may change)
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    No
+                    {{ data['degree'] }} <br>
+                    {{ data['uni-list'] }}
                   </dd>
-                  
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/more-about-you/education#degree">
+                      Change<span class="govuk-visually-hidden"> degree held</span>
+                    </a>
+                  </dd>
                 </div>
-               
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What is/are the discipline(s) of your highest level of qualification?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{ data['highest-disc-select'] }} 
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/more-about-you/education#highest-disc-select">
+                      Change<span class="govuk-visually-hidden"> qualification discpline</span>
+                    </a>
+                  </dd>
+                </div>
                 <!--EDUCATIONAL ENDS-->
+                   <!--PROFESIONAL QUALIFICATIONS START-->
+                   <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Do you hold a professional qualification?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="../role/more-about-you/professional-qualificiations">
+                        Change<span class="govuk-visually-hidden"> professional qualifications</span>
+                      </a>
+                    </dd>
+                  </div>
+        
+        
+                  {% if data['professional-qualifications'] === 'yes' %}
+        
+        
+        
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What professional field(s) is the qualification(s) within?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{ data['professional-qualifications-fields'] }}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="../role/more-about-you/professional-qualificiations-detail">
+                        Change<span class="govuk-visually-hidden"> professional field qualification is in</span>
+                      </a>
+                    </dd>
+                  </div>
+                
+        
+                 {% else %}
+              
+                  {% endif %}
+                  <!--PROFESSIONAL QUALIFICATIONS END-->
                 <!--OTHER PUBLIC APPOINTMENTS STARTS-->
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
                     Do you hold any other public appointments?
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    No
+                    {{ data['public-appointments'] }}<br>
+                    {{ data['public-appointments-held'] }}
                   </dd>
-                 
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="../role/more-about-you/other-public-appointments-held">
+                      Change<span class="govuk-visually-hidden"> ethnic group</span>
+                    </a>
+                  </dd>
                 </div>
                 <!--OTHER PUBLIC APPOINTMENTS ENDS-->
               </dl>
@@ -645,73 +812,90 @@ Public appointments
             <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
               <!--Management of outside interest starts-->
 
-              {{ govukTable({
-                caption: "Please state any financial interests you may have",
-               
-                rows: [
-                  [
-                    
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-                    }
-                  ]
-                ]
-              }) }}
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Please state any financial interests you may have
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Please state any employment, appointments and other outside roles (including voluntary / advisory) you may have
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    None recorded
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> date of birth</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Please state any personal interests you may have
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    None recorded
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> address</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Please state any other relevant interests you may have
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.                    
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Have you undertaken any significant political activity for a political party in the past five years?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> contact details</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Do you publish on any social media accounts that can be viewed by the public?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                      Change<span class="govuk-visually-hidden"> social media</span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
 
-              {{ govukTable({
-                caption: "Please state any employment, appointments and other outside roles (including voluntary / advisory) you may have",
-               
-                rows: [
-                  [
-                    
-                    {
-                      text: "-"
-                    }
-                  ]
-                ]
-              }) }}
 
 
-              {{ govukTable({
-                caption: "Please state any personal interests you may have",
-               
-                rows: [
-                  [
-                    
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    }
-                  ]
-                ]
-              }) }}
 
-
-              {{ govukTable({
-                caption: "Please state any other relevant interests you may have",
-               
-                rows: [
-                  [
-                    
-                    {
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    }
-                  ]
-                ]
-              }) }}
-
-
-              {{ govukTable({
-                caption: "Have you undertaken any significant political activity for a political party in the past five years?",
-               
-                rows: [
-                  [
-                    
-                    {
-                      text: "-"
-                    }
-                  ]
-                ]
-              }) }}
             
               
                <!--Management of outside interest ends-->
@@ -738,7 +922,7 @@ Public appointments
                   </dd>
                   <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="#">
-                      View</span>
+                      Change</span>
                    </a>
                   </dd>
                 </div>
@@ -766,7 +950,7 @@ Public appointments
                 </dd>
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="#">
-                    View</span>
+                    Change</span>
                  </a>
                 </dd>
               </div>
