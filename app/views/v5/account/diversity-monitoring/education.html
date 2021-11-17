@@ -20,7 +20,7 @@ Public appointments
           <span class="govuk-caption-l">
             Diversity monitoring
           </span>
-          Highest qualification
+           Qualifications
         </h1>
         
         {{ govukInsetText({
@@ -42,56 +42,61 @@ Public appointments
 
 
 
-                  {{ govukRadios({
+                  {{ govukCheckboxes({
                     idPrefix: "highest-qualification",
                     name: "highest-qualification",
                     
                     fieldset: {
                       legend: {
-                        text: "What is the highest qualification you hold?",
+                        text: "Which of the following qualifications have you ever achieved",
                         isPageHeading: false,
                         classes: "govuk-fieldset__legend--l"
                       }
                     },
-                   
+                   hint: {
+                     html: "This includes any qualifications gained in England, Wales or worldwide, including equivalents,
+                     even if you are not using them now.<br><br>Select all that apply."
+                   },
                     items: [
                       {
-                        value: "One to four GCSEs (any grade) or equivalent - Level 1 qualifications",
-                        text: "One to four GCSEs (any grade) or equivalent - Level 1 qualifications"
+                        value: "GCSEs or equivalent",
+                        text: "GCSEs or equivalent"
                       },
                       {
-                        value: "Five or more GCSEs (grades A* to C) or equivalent - Level 2 qualifications",
-                        text: "Five or more GCSEs (grades A* to C) or equivalent - Level 2 qualifications"
+                        value: "AS, A level or equivalent",
+                        text: "AS, A level or equivalent"
                       },
                       {
-                        value: "Two or more A Levels or equivalent - Level 3 qualifications",
-                        text: "Two or more A Levels or equivalent - Level 3 qualifications"
-                      },
-                      {
-                        value: "Sub-degree, higher-level education and above - Level 4 qualifications and above",
-                        text: "Sub-degree, higher-level education and above - Level 4 qualifications and above"
+                        value: "NVQ or equivalent",
+                        text: "NVQ or equivalent",
+                        hint: {
+                          text: "For example BTEC National, ONDor ONC, City and Guilds Advanced Craft "
+                        }
                       },
                       {
                         value: "Apprenticeship",
                         text: "Apprenticeship"
                       },
                       {
-                        value: "other",
-                        text: "Other qualification (please specify)",
-                        conditional: {
-                          html: otherHtml
+                        value: "Degree or above",
+                        text: "Degree or above",
+                        hint: {
+                          text: "For example, degree, foundation degree, HND or
+                        HNC,NVQ level 4 and above, teaching or nursing "
                         }
                       },
                       {
                         value: "No qualifications",
-                        text: "No qualifications"
+                        text: "No qualifications",
+                        behaviour: "exclusive"
                       },
                       {
                         divider: "or"
                       },
                       {
                         value: "Prefer not to say",
-                        text: "Prefer not to say"
+                        text: "Prefer not to say",
+                        behaviour: "exclusive"
                       }
                     ]
                   }) }}

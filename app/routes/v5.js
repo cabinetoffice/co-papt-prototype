@@ -455,11 +455,27 @@ router.post(
 
     if (highestQualification === "No qualifications") {
       res.redirect(`/v${verNum}/account/account-dashboard`)
-    } else {
+    } else if (highestQualification === "Apprenticeship") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
+    } else if (highestQualification === "Degree or above" && highestQualification === "Apprenticeship") {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
+    } else if (
+      highestQualification === "Degree or above" 
+    && highestQualification === "GCSEs or equivalent"
+    || highestQualification === "AS, A level or equivalent"
+    || highestQualification === "NVQ or equivalent"
+    ) {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
+    } else if (highestQualification === "Apprenticeship") {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
+    }  else if (highestQualification === "Degree or above") {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
+    } else {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
     }
   }
 )
+
 
 //highest qualification end
 
