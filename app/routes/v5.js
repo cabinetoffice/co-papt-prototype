@@ -452,25 +452,31 @@ router.post(
   `/v${verNum}/account/diversity-monitoring/highest-qualification`,
   function (req, res) {
     const highestQualification = req.session.data["highest-qualification"]
-
     if (highestQualification === "No qualifications") {
       res.redirect(`/v${verNum}/account/account-dashboard`)
-    } else if (highestQualification === "Apprenticeship") {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
-    } else if (highestQualification === "Degree or above" && highestQualification === "Apprenticeship") {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
-    } else if (
-      highestQualification === "Degree or above" 
-    && highestQualification === "GCSEs or equivalent"
-    || highestQualification === "AS, A level or equivalent"
-    || highestQualification === "NVQ or equivalent"
-    ) {
+    } else if (highestQualification === "Prefer not to say") {
+      res.redirect(`/v${verNum}/account/account-dashboard`)
+    } else if (highestQualification === "Degree or above") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
     } else if (highestQualification === "Apprenticeship") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
-    }  else if (highestQualification === "Degree or above") {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
-    } else {
+    } else if 
+    (
+    highestQualification === "GCSEs or equivalent" ||
+    highestQualification === "AS, A level or equivalent" ||
+    highestQualification === "NVQ or equivalent"
+    ) 
+    {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
+    } 
+    else if 
+    (
+    highestQualification === "Apprenticeship" &&
+    highestQualification === "Degree or above"
+    ) 
+    {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
+    }  else {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
     }
   }
@@ -478,6 +484,13 @@ router.post(
 
 
 //highest qualification end
+
+
+
+
+
+
+
 
 //highest qualification ROLE start
 
