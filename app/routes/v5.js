@@ -486,28 +486,49 @@ router.post(
 //highest qualification end
 
 
-
-
-
-
-
-
-//highest qualification ROLE start
+//highest qualification  start
 
 router.post(
   `/v${verNum}/role/more-about-you/highest-qualification`,
   function (req, res) {
     const highestQualification = req.session.data["highest-qualification"]
-
     if (highestQualification === "No qualifications") {
       res.redirect(`/v${verNum}/check-answers/check-answer-education`)
-    } else {
+    } else if (highestQualification === "Prefer not to say") {
+      res.redirect(`/v${verNum}/check-answers/check-answer-education`)
+    } else if (highestQualification === "Degree or above") {
+      res.redirect(`/v${verNum}/role/more-about-you/education-degree-institution`)
+    } else if (highestQualification === "Apprenticeship") {
       res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
+    } else if 
+    (
+    highestQualification === "GCSEs or equivalent" ||
+    highestQualification === "AS, A level or equivalent" ||
+    highestQualification === "NVQ or equivalent"
+    ) 
+    {
+      res.redirect(`/v${verNum}/role/more-about-you/education-detail`)
+    } 
+    else if 
+    (
+    highestQualification === "Apprenticeship" &&
+    highestQualification === "Degree or above"
+    ) 
+    {
+      res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
+    }  else {
+      res.redirect(`/v${verNum}/role/more-about-you/education-detail`)
     }
   }
 )
 
-//highest qualification ROLE end
+
+//highest qualification end
+
+
+
+
+
 
 //TALENT POOL - ACCOUNT CREATION start
 
