@@ -511,8 +511,8 @@ router.post(
     } 
     else if 
     (
-    highestQualification === "Apprenticeship" &&
-    highestQualification === "Degree or above"
+    highestQualification == "Apprenticeship" &&
+    highestQualification == "Degree or above"
     ) 
     {
       res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
