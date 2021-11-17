@@ -89,7 +89,7 @@ Public appointments
         
         {{ govukInput({
           label: {
-            text: "Enter the sector"
+            text: "Please specify"
           },
           classes: "govuk-input--width-20",
           id: "other-sector",
@@ -165,10 +165,7 @@ Public appointments
                 selected: true
               },
               
-              {
-                value: "Not applicable",
-                text: "Not applicable"
-              },
+            
               {
                 value: "Commercial",
                 text: "Commercial"
@@ -198,24 +195,24 @@ Public appointments
                 text: "Finance"
               },
               {
-                value: "Human resources",
-                text: "Human resources"
+                value: "Human Resources",
+                text: "Human Resources"
               },
               {
-                value: "Inspector of education and training",
-                text: "Inspector of education and training"
+                value: "Inspector of Education and Training",
+                text: "Inspector of Education and Training"
               },
               {
-                value: "Intelligence analysis",
-                text: "Intelligence analysis"
+                value: "Intelligence Analysis",
+                text: "Intelligence Analysis"
               },
               {
-                value: "Internal audit",
-                text: "Internal audit"
+                value: "Internal Audit",
+                text: "Internal Audit"
               },
               {
-                value: "Knowledge and information management",
-                text: "Knowledge and information management"
+                value: "Knowledge and Information Management",
+                text: "Knowledge and Information Management"
               },
               {
                 value: "Legal",
@@ -226,15 +223,15 @@ Public appointments
                 text: "Medicine"
               },
               {
-                value: "Operational delivery",
-                text: "Operational delivery"
+                value: "Operational Delivery",
+                text: "Operational Delivery"
               },
               {
-                value: "Operational research",
-                text: "Operational research"
+                value: "Operational Research",
+                text: "Operational Research"
               },
               {
-                value: "other",
+                value: "Other",
                 text: "Other"
               },
               {
@@ -242,16 +239,16 @@ Public appointments
                 text: "Planning"
               },
               {
-                value: "Planning inspectors",
-                text: "Planning inspectors"
+                value: "Planning Inspectors",
+                text: "Planning Inspectors"
               },
               {
                 value: "Policy",
                 text: "Policy"
               },
               {
-                value: "Project delivery",
-                text: "Project delivery"
+                value: "Project Delivery",
+                text: "Project Delivery"
               },
               {
                 value: "Property",
@@ -270,8 +267,8 @@ Public appointments
                 text: "Security"
               },
               {
-                value: "Social research",
-                text: "Social research"
+                value: "Social Research",
+                text: "Social Research"
               },
               {
                 value: "Statistics",
@@ -286,12 +283,16 @@ Public appointments
                 text: "Veterinarian"
               },
               {
-                value: "International trade",
-                text: "International trade"
+                value: "International Trade",
+                text: "International Trade"
               },
               {
                 value: "Unknown",
                 text: "Unknown"
+              },
+              {
+                value: "Prefer not to say",
+                text: "Prefer not to say"
               }
             ]
           }) }}
@@ -300,7 +301,7 @@ Public appointments
             id: "other-main-profession",
             name: "other-main-profession",
             label: {
-              text: "If other is selected, tell us which main profession"
+              text: "If other is selected, please specify"
             }
           }) }}
 
