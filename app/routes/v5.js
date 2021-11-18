@@ -419,9 +419,9 @@ router.post(
     const degreeInstitution = req.session.data["degree"]
 
     if (degreeInstitution === "Yes") {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
-    } else {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
+    } else {
+      res.redirect(`/v${verNum}/account/account-dashboard`)
     }
   }
 )
@@ -436,9 +436,9 @@ router.post(
     const degreeInstitution = req.session.data["degree"]
 
     if (degreeInstitution === "Yes") {
-      res.redirect(`/v${verNum}/role/more-about-you/education-degree-institution`)
-    } else {
       res.redirect(`/v${verNum}/role/more-about-you/education-detail`)
+    } else {
+      res.redirect(`/v${verNum}/check-answers/check-answer-education`)
     }
   }
 )
@@ -458,7 +458,7 @@ router.post(
       res.redirect(`/v${verNum}/account/account-dashboard`)
     } else if (highestQualification === "Prefer not to say") {
       res.redirect(`/v${verNum}/account/account-dashboard`)
-    } else if (highestQualificationThree === "Degree or above") {
+    } else if (highestQualificationThree === "Degree level or above") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
     } else if (highestQualificationTwo === "Apprenticeship") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
@@ -470,15 +470,9 @@ router.post(
     highestQualification === "NVQ or equivalent"
     ) 
     {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
+      res.redirect(`/v${verNum}/account/account-dashboard`)
     } 
-    else if 
-    (
-      highestQualificationThree === "Degree or above" 
-    ) 
-    {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-institution`)
-    } 
+    
     else if 
     (
     highestQualificationTwo === "Apprenticeship" &&
@@ -487,7 +481,7 @@ router.post(
     {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-institution`)
     }  else {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
+      res.redirect(`/v${verNum}/account/account-dashboard`)
     }
   }
 )
@@ -510,7 +504,7 @@ router.post(
       res.redirect(`/v${verNum}/check-answers/check-answer-education`)
     } else if (highestQualification === "Prefer not to say") {
       res.redirect(`/v${verNum}/check-answers/check-answer-education`)
-    } else if (highestQualificationThree === "Degree or above") {
+    } else if (highestQualificationThree === "Degree level or above") {
       res.redirect(`/v${verNum}/role/more-about-you/education-degree-institution`)
     } else if (highestQualificationTwo === "Apprenticeship") {
       res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
@@ -522,11 +516,11 @@ router.post(
     highestQualification === "NVQ or equivalent"
     ) 
     {
-      res.redirect(`/v${verNum}/role/more-about-you/education-detail`)
+      res.redirect(`/v${verNum}/check-answers/check-answer-education`)
     } 
     else if 
     (
-      highestQualificationThree === "Degree or above" 
+      highestQualificationThree === "Degree level or above" 
     ) 
     {
       res.redirect(`/v${verNum}/role/more-about-you/education-institution`)
@@ -539,7 +533,7 @@ router.post(
     {
       res.redirect(`/v${verNum}/role/more-about-you/education-institution`)
     }  else {
-      res.redirect(`/v${verNum}/role/more-about-you/education-detail`)
+      res.redirect(`/v${verNum}/check-answers/check-answer-education`)
     }
   }
 )
