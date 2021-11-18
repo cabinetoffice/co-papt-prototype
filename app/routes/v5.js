@@ -452,15 +452,18 @@ router.post(
   `/v${verNum}/account/diversity-monitoring/highest-qualification`,
   function (req, res) {
     const highestQualification = req.session.data["highest-qualification"]
+    const highestQualificationTwo = req.session.data["highest-qualification-two"]
+    const highestQualificationThree = req.session.data["highest-qualification-three"]
     if (highestQualification === "No qualifications") {
       res.redirect(`/v${verNum}/account/account-dashboard`)
     } else if (highestQualification === "Prefer not to say") {
       res.redirect(`/v${verNum}/account/account-dashboard`)
-    } else if (highestQualification === "Degree or above") {
+    } else if (highestQualificationThree === "Degree or above") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
-    } else if (highestQualification === "Apprenticeship") {
+    } else if (highestQualificationTwo === "Apprenticeship") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
-    } else if 
+    } 
+    else if 
     (
     highestQualification === "GCSEs or equivalent" ||
     highestQualification === "AS, A level or equivalent" ||
@@ -471,11 +474,18 @@ router.post(
     } 
     else if 
     (
-    highestQualification === "Apprenticeship" &&
-    highestQualification === "Degree or above"
+      highestQualificationThree === "Degree or above" 
     ) 
     {
-      res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-institution`)
+    } 
+    else if 
+    (
+    highestQualificationTwo === "Apprenticeship" &&
+    highestQualificationThree === "Degree or above"
+    ) 
+    {
+      res.redirect(`/v${verNum}/account/diversity-monitoring/education-institution`)
     }  else {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-detail`)
     }
@@ -484,6 +494,8 @@ router.post(
 
 
 //highest qualification end
+
+
 
 
 //highest qualification  start
@@ -492,15 +504,18 @@ router.post(
   `/v${verNum}/role/more-about-you/highest-qualification`,
   function (req, res) {
     const highestQualification = req.session.data["highest-qualification"]
+    const highestQualificationTwo = req.session.data["highest-qualification-two"]
+    const highestQualificationThree = req.session.data["highest-qualification-three"]
     if (highestQualification === "No qualifications") {
       res.redirect(`/v${verNum}/check-answers/check-answer-education`)
     } else if (highestQualification === "Prefer not to say") {
       res.redirect(`/v${verNum}/check-answers/check-answer-education`)
-    } else if (highestQualification === "Degree or above") {
+    } else if (highestQualificationThree === "Degree or above") {
       res.redirect(`/v${verNum}/role/more-about-you/education-degree-institution`)
-    } else if (highestQualification === "Apprenticeship") {
+    } else if (highestQualificationTwo === "Apprenticeship") {
       res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
-    } else if 
+    } 
+    else if 
     (
     highestQualification === "GCSEs or equivalent" ||
     highestQualification === "AS, A level or equivalent" ||
@@ -511,11 +526,18 @@ router.post(
     } 
     else if 
     (
-    highestQualification == "Apprenticeship" &&
-    highestQualification == "Degree or above"
+      highestQualificationThree === "Degree or above" 
     ) 
     {
-      res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
+      res.redirect(`/v${verNum}/role/more-about-you/education-institution`)
+    } 
+    else if 
+    (
+    highestQualificationTwo === "Apprenticeship" &&
+    highestQualificationThree === "Degree or above"
+    ) 
+    {
+      res.redirect(`/v${verNum}/role/more-about-you/education-institution`)
     }  else {
       res.redirect(`/v${verNum}/role/more-about-you/education-detail`)
     }
@@ -524,6 +546,8 @@ router.post(
 
 
 //highest qualification end
+
+
 
 
 

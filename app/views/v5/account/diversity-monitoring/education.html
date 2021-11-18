@@ -72,11 +72,28 @@ Public appointments
                         hint: {
                           text: "For example BTEC National, OND or ONC, City and Guilds Advanced Craft. "
                         }
-                      },
+                      }
+                    ]
+                  }) }}
+                  {{ govukCheckboxes({
+                    idPrefix: "highest-qualification-two",
+                    name: "highest-qualification-two",
+                    
+                  
+                    items: [
                       {
                         value: "Apprenticeship",
                         text: "Apprenticeship"
-                      },
+                      }
+                    ]
+                  }) }}
+                  {{ govukCheckboxes({
+                    idPrefix: "highest-qualification-three",
+                    name: "highest-qualification-three",
+                    
+                  
+                    items: [
+                      
                       {
                         value: "Degree or above",
                         text: "Degree or above",
@@ -85,6 +102,29 @@ Public appointments
                         HNC,NVQ level 4 and above, teaching or nursing. "
                         }
                       },
+                      {
+                        value: "No qualifications",
+                        text: "No qualifications",
+                        behaviour: "exclusive"
+                      },
+                      {
+                        divider: "or"
+                      },
+                      {
+                        value: "Prefer not to say",
+                        text: "Prefer not to say",
+                        behaviour: "exclusive"
+                      }
+                    ]
+                  }) }}
+
+                  {{ govukCheckboxes({
+                    idPrefix: "highest-qualification",
+                    name: "highest-qualification",
+                    
+                  
+                    items: [
+                     
                       {
                         value: "No qualifications",
                         text: "No qualifications",

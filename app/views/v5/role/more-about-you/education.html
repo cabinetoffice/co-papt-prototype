@@ -42,65 +42,91 @@ Public appointments
 
 
 
-                  {{ govukCheckboxes({
-                    idPrefix: "highest-qualification",
-                    name: "highest-qualification",
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification",
+                      name: "highest-qualification",
+                      
+                      fieldset: {
+                        legend: {
+                          text: "Which of the following qualifications have you ever achieved",
+                          isPageHeading: false,
+                          classes: "govuk-fieldset__legend--l"
+                        }
+                      },
+                     hint: {
+                       html: "This includes any qualifications gained in England, Wales or worldwide, including equivalents,
+                       even if you are not using them now.<br><br>Select all that apply."
+                     },
+                      items: [
+                        {
+                          value: "GCSEs or equivalent",
+                          text: "GCSEs or equivalent"
+                        },
+                        {
+                          value: "AS, A level or equivalent",
+                          text: "AS, A level or equivalent"
+                        },
+                        {
+                          value: "NVQ or equivalent",
+                          text: "NVQ or equivalent",
+                          hint: {
+                            text: "For example BTEC National, OND or ONC, City and Guilds Advanced Craft. "
+                          }
+                        }
+                      ]
+                    }) }}
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification-two",
+                      name: "highest-qualification-two",
+                      
                     
-                    fieldset: {
-                      legend: {
-                        text: "Which of the following qualifications have you ever achieved",
-                        isPageHeading: false,
-                        classes: "govuk-fieldset__legend--l"
-                      }
-                    },
-                   hint: {
-                     html: "This includes any qualifications gained in England, Wales or worldwide, including equivalents,
-                     even if you are not using them now.<br><br>Select all that apply."
-                   },
-                    items: [
-                      {
-                        value: "GCSEs or equivalent",
-                        text: "GCSEs or equivalent"
-                      },
-                      {
-                        value: "AS, A level or equivalent",
-                        text: "AS, A level or equivalent"
-                      },
-                      {
-                        value: "NVQ or equivalent",
-                        text: "NVQ or equivalent",
-                        hint: {
-                          text: "For example BTEC National, OND or ONC, City and Guilds Advanced Craft. "
+                      items: [
+                        {
+                          value: "Apprenticeship",
+                          text: "Apprenticeship"
                         }
-                      },
-                      {
-                        value: "Apprenticeship",
-                        text: "Apprenticeship"
-                      },
-                      {
-                        value: "Degree or above",
-                        text: "Degree or above",
-                        hint: {
-                          text: "For example, degree, foundation degree, HND or
-                        HNC,NVQ level 4 and above, teaching or nursing. "
+                      ]
+                    }) }}
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification-three",
+                      name: "highest-qualification-three",
+                      
+                    
+                      items: [
+                        
+                        {
+                          value: "Degree or above",
+                          text: "Degree or above",
+                          hint: {
+                            text: "For example, degree, foundation degree, HND or
+                          HNC,NVQ level 4 and above, teaching or nursing. "
+                          }
                         }
-                      },
-                      {
-                        value: "No qualifications",
-                        text: "No qualifications",
-                        behaviour: "exclusive"
-                      },
-                      {
-                        divider: "or"
-                      },
-                      {
-                        value: "Prefer not to say",
-                        text: "Prefer not to say",
-                        behaviour: "exclusive"
-                      }
-                    ]
-                  }) }}
-
+                      ]
+                    }) }}
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification",
+                      name: "highest-qualification",
+                      
+                    
+                      items: [
+                        
+                        
+                        {
+                          value: "No qualifications",
+                          text: "No qualifications",
+                          behaviour: "exclusive"
+                        },
+                        {
+                          divider: "or"
+                        },
+                        {
+                          value: "Prefer not to say",
+                          text: "Prefer not to say",
+                          behaviour: "exclusive"
+                        }
+                      ]
+                    }) }}
 
                 
 
