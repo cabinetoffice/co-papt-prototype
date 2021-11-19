@@ -19,6 +19,7 @@
     "body-parser": "^1.14.1",
     "browser-sync": "^2.11.1",
     "client-sessions": "^0.8.0",
+    "co-cookie-consent": "github:cabinetoffice/co-cookie-consent",
     "cross-spawn": "^7.0.2",
     "del": "^5.1.0",
     "dotenv": "^8.2.0",
