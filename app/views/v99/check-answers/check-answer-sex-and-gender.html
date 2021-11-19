@@ -1,0 +1,161 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
+
+        <h2 class="govuk-heading-m">Sex and gender identity</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          
+
+            {% if data['your-sex'] === 'Male' or data['your-sex'] === 'Female' or data['your-sex'] === 'Prefer not to say' %}
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What is your sex?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['your-sex'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#your-sex">
+                  Change<span class="govuk-visually-hidden"> your sex?</span>
+                </a>
+              </dd>
+            </div>
+  
+             {% else %}
+            
+             <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What is your sex?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Male
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#your-sex">
+                  Change<span class="govuk-visually-hidden"> your sex?</span>
+                </a>
+              </dd>
+            </div>
+
+            {% endif %}
+
+            {% if data['gender-identity-same-as-sex'] === 'Yes' or data['gender-identity-same-as-sex'] === 'No' or data['gender-identity-same-as-sex'] === 'Prefer not to say' %}
+
+           
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Is the gender you identify with the same as your sex registered at birth?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['gender-identity-same-as-sex'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                    Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                  </a>
+                </dd>
+              </div>
+          {% else %}
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Is the gender you identify with the same as your sex registered at birth?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                    Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                  </a>
+                </dd>
+              </div>
+
+          {% endif %}
+
+          {% if data['gender-identity-same-as-sex'] === 'No' %}
+
+           
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  What is the gender you identity with?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['other-sex-and-gender-identity-birth'] }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="../role/diversity-monitoring/sex-and-gender#gender-identity-same-as-sex">
+                    Change<span class="govuk-visually-hidden"> gender identified at birth</span>
+                  </a>
+                </dd>
+              </div>
+          {% else %}
+
+             
+
+          {% endif %}
+        </dl>
+        
+
+      
+        
+         <!--for prototype validation only-->
+         <span class="govuk-visually-hidden">
+                {{ govukCheckboxes({
+                  idPrefix: "sex-and-gender-check",
+                  name: "sex-and-gender-check",
+                  
+                  
+                  items: [
+                  {
+                    value: "confirm",
+                    text: "Confirm that you are happy with these details - this section requires content design.",
+                    checked: "true"
+                  }
+                ]
+              }) }}
+          <input type="hidden" name="answers-checked" value="true">
+              </span>
+               <!--for prototype validation only-->
+        
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and save
+          </button>
+
+       
+
+      </div>
+    </div>
+  </main>
+</div>
+</form>
+
+
+<script type="application/json" id="example-validation">
+  { 		  	
+    "sex-and-gender-check": {
+      "presence": {
+        "message": "^validation to be confirmed."
+      }
+    }
+  }
+</script>
+
+
+{% endblock %}

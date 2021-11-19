@@ -1,0 +1,185 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="highest-qualification" method="post" method="post" novalidate data-validate='example-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-l">
+            Diversity monitoring
+          </span>
+           Qualifications
+        </h1>
+        
+        {{ govukInsetText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
+        }) }}
+
+                    {% set otherHtml %}
+                    
+                    {{ govukInput({
+                      id: "other-qualification",
+                      name: "other-qualification",
+                      label: {
+                        text: "Enter qualification"
+                      }
+                    }) }}
+                    {% endset -%}
+                    
+                 
+
+
+
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification",
+                      name: "highest-qualification",
+                      
+                      fieldset: {
+                        legend: {
+                          text: "Which of the following qualifications have you ever achieved",
+                          isPageHeading: false,
+                          classes: "govuk-fieldset__legend--l"
+                        }
+                      },
+                     hint: {
+                       html: "This includes any qualifications gained in England, Wales or worldwide, including equivalents,
+                       even if you are not using them now.<br><br>Select all that apply."
+                     },
+                      items: [
+                        {
+                          value: "GCSEs or equivalent",
+                          text: "GCSEs or equivalent"
+                        },
+                        {
+                          value: "AS, A level or equivalent",
+                          text: "AS, A level or equivalent"
+                        },
+                        {
+                          value: "NVQ or equivalent",
+                          text: "NVQ or equivalent",
+                          hint: {
+                            text: "For example BTEC National, OND or ONC, City and Guilds Advanced Craft. "
+                          }
+                        }
+                      ]
+                    }) }}
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification-two",
+                      name: "highest-qualification-two",
+                      
+                    
+                      items: [
+                        {
+                          value: "Apprenticeship",
+                          text: "Apprenticeship"
+                        }
+                      ]
+                    }) }}
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification-three",
+                      name: "highest-qualification-three",
+                      
+                    
+                      items: [
+                        
+                        {
+                          value: "Degree level or above",
+                          text: "Degree level or above",
+                          hint: {
+                            text: "For example, degree, foundation degree, HND or
+                          HNC,NVQ level 4 and above, teaching or nursing. "
+                          }
+                        }
+                      ]
+                    }) }}
+                    {{ govukCheckboxes({
+                      idPrefix: "highest-qualification",
+                      name: "highest-qualification",
+                      
+                    
+                      items: [
+                        {
+                          value: "No qualifications",
+                          text: "No qualifications",
+                          behaviour: "exclusive"
+                        },
+                        {
+                          divider: "or"
+                        },
+                        {
+                          value: "Prefer not to say",
+                          text: "Prefer not to say",
+                          behaviour: "exclusive"
+                        }
+                      ]
+                    }) }}
+
+                
+
+                  <span class="govuk-visually-hidden">
+                      <!--this is just here for the prototype and should not be included in production-->
+
+                  {{ govukCheckboxes({
+                    idPrefix: "education-check",
+                    name: "education-check",
+                    
+                    items: [
+                      {
+                        value: "confirm",
+                        text: "confirm",
+                        checked: "true"
+                      }
+                    ]
+                  }) }}
+
+            <!--this is just here for the prototype and should not be included in production-->
+                  </span>
+                
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../account-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "highest-qualification": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

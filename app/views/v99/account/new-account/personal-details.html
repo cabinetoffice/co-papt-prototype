@@ -1,0 +1,543 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="address" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-l">
+            Create your account - Step 1 of 6
+          </span>
+            Personal details 
+        </h1>
+       
+    
+
+        {{ govukSelect({
+          id: "title",
+          name: "title",
+          label: {
+            text: "Title (optional)"
+          },
+          hint: {
+            text: "This will be used with any correspondence"
+          },
+          items: [
+          {
+            value: "",
+            text: ""
+          },
+            {
+              value: "Mr",
+              text: "Mr"
+            },
+            {
+              value: "Mrs",
+              text: "Mrs"
+            },
+            {
+              value: "Ms",
+              text: "Ms"
+            },
+            {
+              value: "Miss",
+              text: "Miss"
+            },
+            {
+              value: "Mx",
+              text: "Mx"
+            },
+            {
+              value: "Dr",
+              text: "Dr"
+            },
+            {
+              value: "Professor",
+              text: "Professor"
+            },
+            {
+              value: "Admiral Sir",
+              text: "Admiral Sir"
+            },
+            {
+              value: "Air Vice-Marshal",
+              text: "Air Vice-Marshal"
+            },
+            {
+              value: "Archbishop",
+              text: "Archbishop"
+            },
+            {
+              value: "Bishop",
+              text: "Bishop"
+            },
+            {
+              value: "Brigadier",
+              text: "Brigadier"
+            },
+            {
+              value: "Canon",
+              text: "Canon"
+            },
+            {
+              value: "Captain",
+              text: "Captain"
+            },
+            {
+              value: "Chief Rabbi ",
+              text: "Chief Rabbi "
+            },
+            {
+              value: "Chief Superintendent",
+              text: "Chief Superintendent"
+            },
+            {
+              value: "Colonel",
+              text: "Colonel"
+            },
+            {
+              value: "Commissioner",
+              text: "Commissioner"
+            },
+            {
+              value: "Commodore",
+              text: "Commodore"
+            },
+            {
+              value: "Councillor",
+              text: "Councillor"
+            },
+            {
+              value: "Countess",
+              text: "Countess"
+            },
+            {
+              value: "Dame",
+              text: "Dame"
+            },
+            {
+              value: "Detective Superintendent",
+              text: "Detective Superintendent"
+            },
+            {
+              value: "Father",
+              text: "Father"
+            },
+            {
+              value: "General",
+              text: "General"
+            },
+            {
+              value: "H.E. Sheikh",
+              text: "H.E. Sheikh"
+            },
+            {
+              value: "Lady",
+              text: "Lady"
+            },
+            {
+              value: "Lieutenant",
+              text: "Lieutenant"
+            },
+            {
+              value: "Lieutenant Colonel ",
+              text: "Lieutenant Colonel "
+            },
+            {
+              value: "Lieutenant Colonel (Rtd)",
+              text: "Lieutenant Colonel (Rtd)"
+            },
+            {
+              value: "Lord",
+              text: "Lord"
+            },
+            {
+              value: "Lord Provost ",
+              text: "Lord Provost "
+            },
+            {
+              value: "Major",
+              text: "Major"
+            },
+            {
+              value: "Major (Rtd)",
+              text: "Major (Rtd)"
+            },
+            {
+              value: "Major General",
+              text: "Major General"
+            },
+            {
+              value: "Professor Dame",
+              text: "Professor Dame"
+            },
+            {
+              value: "Professor Dr",
+              text: "Professor Dr"
+            },
+            {
+              value: "Professor Sir",
+              text: "Professor Sir"
+            },
+            {
+              value: "Rabbi",
+              text: "Rabbi"
+            },
+            {
+              value: "Rear Admiral ",
+              text: "Rear Admiral "
+            },
+            {
+              value: "Rev. Canon",
+              text: "Rev. Canon"
+            },
+            {
+              value: "Reverend",
+              text: "Reverend"
+            },
+            {
+              value: "Sheriff",
+              text: "Sheriff"
+            },
+            {
+              value: "Sir",
+              text: "Sir"
+            },
+            {
+              value: "Sister",
+              text: "Sister"
+            },
+            {
+              value: "Squadron Leader ",
+              text: "Squadron Leader "
+            },
+            {
+              value: "The Baroness",
+              text: "The Baroness"
+            },
+            {
+              value: "The Dowager Countess of",
+              text: "The Dowager Countess of"
+            },
+            {
+              value: "The Duchess of ",
+              text: "The Duchess of "
+            },
+            {
+              value: "The Earl ",
+              text: "The Earl "
+            },
+            {
+              value: "The Hon. ",
+              text: "The Hon. "
+            },
+            {
+              value: "The Right Honourable Doctor ",
+              text: "The Right Honourable Doctor "
+            },
+            {
+              value: "The Right Reverend",
+              text: "The Right Reverend"
+            },
+            {
+              value: "The Rt. Hon. ",
+              text: "The Rt. Hon. "
+            },
+            {
+              value: "The Rt Hon The Baroness ",
+              text: "The Rt Hon The Baroness "
+            },
+            {
+              value: "The Rt Hon The Lord ",
+              text: "The Rt Hon The Lord "
+            },
+            {
+              value: "The Rt Revd ",
+              text: "The Rt Revd "
+            },
+            {
+              value: "The Venerable ",
+              text: "The Venerable "
+            },
+            {
+              value: "The Very Revd ",
+              text: "The Very Revd "
+            },
+            {
+              value: "The Very Revd Dr",
+              text: "The Very Revd Dr"
+            },
+            {
+              value: "The Viscount ",
+              text: "The Viscount "
+            },
+            {
+              value: "Mr Justice",
+              text: "Mr Justice"
+            },
+            {
+              value: "The Hon. Rev. Deacon",
+              text: "The Hon. Rev. Deacon"
+            },
+            {
+              value: "Reverend Dr ",
+              text: "Reverend Dr "
+            },
+            {
+              value: "Professor Emeritus ",
+              text: "Professor Emeritus "
+            },
+            {
+              value: "Staff Commander",
+              text: "Staff Commander"
+            },
+            {
+              value: "Commandant",
+              text: "Commandant"
+            },
+            {
+              value: "Reverend Prebendary ",
+              text: "Reverend Prebendary "
+            },
+            {
+              value: "Judge",
+              text: "Judge"
+            },
+            {
+              value: "Dr, Associate Professor ",
+              text: "Dr, Associate Professor "
+            },
+            {
+              value: "The Rt Hon Sir ",
+              text: "The Rt Hon Sir "
+            },
+            {
+              value: "Dr Canon ",
+              text: "Dr Canon "
+            },
+            {
+              value: "The Right Honourable ",
+              text: "The Right Honourable "
+            },
+            {
+              value: "His Honour ",
+              text: "His Honour "
+            },
+            {
+              value: "Alderman",
+              text: "Alderman"
+            },
+            {
+              value: "Professor The Lord",
+              text: "Professor The Lord"
+            },
+            {
+              value: "Colonel (Rtd) ",
+              text: "Colonel (Rtd) "
+            },
+            {
+              value: "Canon Professor ",
+              text: "Canon Professor "
+            },
+            {
+              value: "The Rt Hon The Earl",
+              text: "The Rt Hon The Earl"
+            },
+            {
+              value: "Private",
+              text: "Private"
+            },
+            {
+              value: "Mayor",
+              text: "Mayor"
+            }
+          ]
+        }) }}
+
+         
+          
+         
+          {{ govukInput({
+            id: "first-name",
+            name: "first-name",
+            label: {
+              text: "First name"
+            }
+          }) }}
+          {{ govukInput({
+            id: "middle-name",
+            name: "middle-name",
+            label: {
+              text: "Middle name(s)"
+            }
+          }) }}
+          {{ govukInput({
+            id: "last-name",
+            name: "last-name",
+            label: {
+              text: "Last name"
+            }
+          }) }}
+
+
+          {{ govukSelect({
+            id: "name-suffix",
+            name: "name-suffix",
+            label: {
+              text: "Suffix (optional)"
+            },
+           
+            items: [
+              {
+                value: "",
+                text: ""
+              },
+              {
+                value: "AO",
+                text: "AO"
+              },
+              {
+                value: "DL",
+                text: "DL"
+              },
+              {
+                value: "FBA",
+                text: "FBA"
+              },
+              {
+                value: "FREng",
+                text: "FREng"
+              },
+              {
+                value: "FRS",
+                text: "FRS"
+              },
+              {
+                value: "FRSE",
+                text: "FRSE"
+              },
+              {
+                value: "JP",
+                text: "JP"
+              },
+              {
+                value: "LVO",
+                text: "LVO"
+              },
+              {
+                value: "MLA",
+                text: "MLA"
+              },
+              {
+                value: "MP",
+                text: "MP"
+              },
+              {
+                value: "MS",
+                text: "MS"
+              },
+              {
+                value: "MSP",
+                text: "MSP"
+              },
+              {
+                value: "MVO",
+                text: "MVO"
+              },
+              {
+                value: "QC",
+                text: "QC"
+              },
+              {
+                value: "QFSM",
+                text: "QFSM"
+              },
+              {
+                value: "QPM",
+                text: "QPM"
+              },
+              {
+                value: "QVRM",
+                text: "QVRM"
+              },
+              {
+                value: "RD",
+                text: "RD"
+              },
+              {
+                value: "TD",
+                text: "TD"
+              },
+              {
+                value: "VR",
+                text: "VR"
+              }
+            ]
+          }) }}
+          
+          {{ govukDateInput({
+            id: "date-of-birth",
+            name: "date-of-birth",
+            fieldset: {
+              legend: {
+                text: "Date of birth",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m "
+              }
+            },
+            hint: {
+              text: "For example, 27 10 1977"
+            },
+            
+            items: [
+              {
+                name: "day",
+                classes: "govuk-input--width-2"
+              },
+              {
+                name: "month",
+                classes: "govuk-input--width-2"
+              },
+              {
+                name: "year",
+                classes: "govuk-input--width-4"
+              }
+            ]
+          }) }}
+         
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Cancel",
+            classes: "govuk-button--secondary",
+            href: "../login-to-account"
+          }) }}
+        </div>
+
+                                
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

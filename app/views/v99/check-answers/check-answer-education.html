@@ -1,0 +1,120 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<form action="../role/main-application-dashboard" method="post" novalidate data-validate='example-validation'>
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-l">Check your answers before saving this section of your application</h1>
+
+        <h2 class="govuk-heading-m">Education</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is the highest level of qualification you hold?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['highest-qualification'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/education#highest-qualification">
+                Change<span class="govuk-visually-hidden"> highest level of qualifciation</span>
+              </a>
+            </dd>
+          </div>
+
+          {% if data['highest-qualification'] === 'No qualifications' or data['highest-qualification'] === 'Prefer not to say' %}
+
+          <!--show nothing-->
+
+           {% else %}
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you hold a degree? (may change)
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['degree'] }} <br>
+              {{ data['uni-list'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/education#degree">
+                Change<span class="govuk-visually-hidden"> degree held</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What is/are the discipline(s) of your highest level of qualification?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['highest-disc-select'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="../role/more-about-you/education#highest-disc-select">
+                Change<span class="govuk-visually-hidden"> qualification discpline</span>
+              </a>
+            </dd>
+          </div>
+          {% endif %}
+
+          
+        </dl>
+
+
+       
+
+              
+          <!--for prototype validation only-->
+          <span class="govuk-visually-hidden">
+            {{ govukCheckboxes({
+              idPrefix: "education-check",
+              name: "education-check",
+              
+            
+            
+              items: [
+                {
+                  value: "confirm",
+                  text: "Confirm that you are happy with these details - this section requires content design.",
+                  checked: "true"
+                }
+              ]
+            }) }}
+            </span>
+            <input type="hidden" name="answers-checked" value="true">
+         <!--for prototype validation only-->
+
+
+         
+
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and save
+          </button>
+
+       
+
+      </div>
+    </div>
+  </main>
+</div>
+</form>
+<script type="application/json" id="example-validation">
+  { 		  	
+    "education-check": {
+      "presence": {
+        "message": "^validation to be confirmed."
+      }
+    }
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../check-answers/check-answer-sexual-orientation" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+       
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-l">
+            Diversity monitoring
+          </span>
+          Which of the following options best describes your sexual orientation?</h1>
+
+
+        {{ govukInsetText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
+        }) }}
+      
+
+
+
+       
+
+
+
+
+        {{ govukRadios({
+          idPrefix: "sexual-orientation",
+          name: "sexual-orientation",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+         
+          items: [
+          {
+            value: "Straight/Heterosexual",
+            text: "Straight/Heterosexual",
+            checked: "true"
+          },
+          {
+            value: "Gay or lesbian",
+            text: "Gay or lesbian"
+          },
+          {
+            value: "Bisexual",
+            text: "Bisexual"
+          },
+          {
+            value: "other",
+            text: "Other"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "Prefer not to say",
+            text: "Prefer not to say"
+          }
+          ]
+        }) }}
+
+
+
+
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+                <p class="govuk-body">
+                  Read more about <a href="../../account/your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
+                <p>
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+   
+    "sexual-orientation": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

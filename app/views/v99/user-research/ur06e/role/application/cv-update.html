@@ -1,0 +1,120 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="change-cv" method="post" novalidate data-validate='error-state-validation'>
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Curriculum vitae</h1>
+       
+          
+{{ govukTable({
+  firstCellIsHeader: false,
+  caption: "Latest CV uploded to your profile",
+  head: [
+    {
+      text: "filename"
+    },
+    {
+      text: "Date uploaded"
+    },
+    {
+      text: " "
+    }
+  ],
+  rows: [
+    [
+      {
+        html: 
+        "
+        <a href='#' class='govuk-link'>CV.pdf</a>
+        "
+      },
+      {
+        text: "21 October 2021"
+      },
+      {
+        html: 
+        "
+          <a href='#' class='govuk-link'>View</a>
+        "
+      }
+    ]
+  ]
+}) }}
+          
+
+          
+
+           {{ govukRadios({
+             idPrefix: "use-profile-cv",
+             name: "use-profile-cv",
+             fieldset: {
+              legend: {
+                text: "Do you wish to use this CV for this application?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+             items: [
+               {
+                 value: "yes",
+                 text: "Yes"
+               },
+               {
+                value: "no",
+                text: "No, I will upload a new CV"
+              }
+             ]
+           }) }}
+       
+
+           
+
+         
+
+            
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Save and continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                 
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ <script type="application/json" id="error-state-validation">
+  { 		  	
+    "use-profile-cv": {
+      "presence": {
+        "message": "^Select if you want to use this CV or upload a new cv"
+      }
+    }
+  }
+  </script>
+     
+
+{% endblock %}

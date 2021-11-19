@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="account-created-confirmation" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+       <h1 class="govuk-heading-xl">
+         Email verification
+       </h1>
+  
+        <p class="govuk-body">We have sent you a confirmation email to <b>[email-address]</b>.</p>
+  
+        <h2 class="govuk-heading-m">What happens next</h2>
+  
+        <p class="govuk-body">
+          you have 24 hours to confirm your account by clicking the link within the email sent.
+        </p>
+       
+       
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">Resend confirmation email</a> 
+        </p>
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">Change email address</a> 
+        </p>
+        <br><br><br><br><br><br><br>
+        <p class="govuk-body">
+          <a href="account-created-confirmation" class="govuk-link">prototype only - confirmation link 'clicked'</a> 
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

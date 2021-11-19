@@ -1,0 +1,101 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="check-account-answers" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">
+          <span class="govuk-caption-l">
+            Create your account - Step 6 of 6
+          </span>How did you hear about us?
+        </h1>
+        <p class="govuk-body">
+          We need your help to improve how we reach people to inform them about public appointments.
+        <p>
+
+
+          {% set otherHtml %}
+            {{ govukInput({
+              id: "contact-by-email",
+              name: "contact-by-email",
+              autocomplete: "email",
+              
+              label: {
+                text: "Explain how you heard about us"
+              }
+            }) }}
+            {% endset -%}
+
+
+       {{ govukRadios({
+         idPrefix: "how-did-you-hear-about-us",
+         name: "how-did-you-hear-about-us",
+         
+         items: [
+           {
+             value: "Internet search",
+             text: "Internet search"
+           },
+           {
+            value: "Public Appointments event",
+            text: "Public Appointments event"
+          },
+          {
+           value: "Public Appointments newsletter",
+           text: "Public Appointments newsletter"
+         },
+         {
+          value: "Social media",
+          text: "Social media"
+        },
+        {
+         value: "Word of mouth",
+         text: "Word of mouth"
+       },
+       {
+        value: "Other",
+        text: "Other",
+        conditional: {
+          html: otherHtml
+        }
+      }
+         ]
+       }) }}
+
+      
+         
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Cancel",
+            classes: "govuk-button--secondary",
+            href: "../login-to-account"
+          }) }}
+        </div>
+
+                 
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}

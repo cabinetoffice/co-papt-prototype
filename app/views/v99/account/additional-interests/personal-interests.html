@@ -1,0 +1,118 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Management of outside interests & reputational issues
+          </span>
+          Please state any personal interests you may have 
+        </h1>
+       {{ govukInsetText({
+         text: "Any close personal relationships that could be perceived as creating a conflict of interest or providing an unfair advantage should be disclosed here. This could include family members, a spouse, friend or someone else connected to you in some way."
+       }) }}
+      
+          
+      {{ govukDetails({
+        summaryText: "Please consider",
+        html: 
+        "
+        <ul class='govuk-list govuk-list--bullet'>
+          <li>
+            any other family members working in the same department or same sector / policy field as this role
+          </li>
+          <li>
+            whether you have a relationship with anyone in an organisation working with your department
+          </li>
+          <li>
+            whether you have a relationship with anyone in an organisation which supplies, or is looking to supply, good and services to the department
+          </li>
+          <li>
+            if any of your close family members have any relevant outside interests that should be declared? This could include any acquaintances or associates who you know to have contractual relationships with the department or who have a substantial interest in policy development connected with the department
+          </li>
+          <li>
+            any connections with foreign governments?
+          </li>
+        </ul>
+        <p class='govuk-body'>
+          This list is non-exhaustive and is designed to give you an idea of the type of things you may need to disclose in this section.
+        <p>
+        "
+      }) }} 
+
+
+
+
+              {{ govukCharacterCount({
+                name: "personal-interests",
+                id: "personal-interests",
+                maxlength: 2000
+              }) }}
+
+              {{ govukCheckboxes({
+                idPrefix: "personal-interets-declaration",
+                name: "personal-interets-declaration",
+                fieldset: {
+                  legend: {
+                    text: "Declaration",
+                    isPageHeading: false,
+                    classes: "govuk-fieldset__legend--m"
+                  }
+                },
+                items: [
+                  {
+                    value: "declaration",
+                    text: "I understand that in the event that a conflict of interest was not able to be satisfactorily resolved or was deemed to be unmanageable, an offer of appointment may be withdrawn."
+                  }
+                ]
+              }) }}
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../main-application-dashboard"
+                  }) }}
+                </div>
+
+                  
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "personal-interets-declaration": {
+      "presence": {
+        "message": "^You must complete the declaration to continue"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

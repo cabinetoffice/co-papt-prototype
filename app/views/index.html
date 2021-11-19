@@ -21,9 +21,358 @@ Public appointments
                     Prototypes used for user research sessions
                   </span>Research links</h2>
 
+
+
                   <h2 class="govuk-heading-l">
-                    UR03
+                    Copy of Beta Version 5
                     <span class="govuk-caption-l">
+                      Sprint 25
+                    </span>
+                  </h2>
+                
+                  <h2 class="govuk-heading-m">
+                    Links to service design
+                  </h2>
+                <ul class="govuk-list">
+                  <li>
+                    {{ govukButton({
+                      text: "Search and apply page",
+                      href: "/v99/transaction-site/dashboard"
+                    }) }}
+                  </li>
+                  <li>
+                    {{ govukButton({
+                      text: "Role announcements - Work in progress",
+                      href: "/v99/transaction-site/announcements"
+                    }) }}
+                  </li>
+                  <li>
+                    {{ govukButton({
+                      text: "Account creation",
+                      classes: "govuk-!-margin-bottom-3",
+                      href: "/v99/account/new-account/personal-details"
+                    }) }}
+
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Sub links for Account creation
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <a href="/v99/account/new-account/personal-details" class="govuk-link">Personal details</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/address" class="govuk-link">Address - default</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/address-manual-international" class="govuk-link">Address manual entry outside UK</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/address-manual" class="govuk-link">Address manual entry</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/contact-details" class="govuk-link">Telephone numbers</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/password" class="govuk-link">Password creation</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/talent-pool-question" class="govuk-link">Talent pool</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/how-did-you-hear-about-us" class="govuk-link">How did you hear about us</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/check-account-answers" class="govuk-link">Check answers</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/email-verification-sent" class="govuk-link">Email verification</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/new-account/account-created-confirmation" class="govuk-link">Confirmation</a>
+                          </li>
+                          <li>
+                            <a href="/v99/account/login-to-account" class="govuk-link">Log in</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+
+                  
+                  </li> 
+                  <li>
+                    {{ govukButton({
+                      text: "Role details",
+                   
+                      href: "/v99/role/role-details"
+                    }) }}
+                    
+                  </li> 
+                  <li>
+                    {{ govukButton({
+                      text: "Account dashboard (including linked functionality)",
+                      classes: "govuk-!-margin-bottom-3",
+                      href: "/v99/account/account-dashboard"
+                    }) }}
+
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Sub links for Account dashboard 
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <ul class="govuk-list">
+                          <li>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                            Activity
+                          </h3>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>
+                                <a href="v99/account/applications-in-progress/application-lin-progress" class="govuk-link">Applications in progress</a>
+                              </li>
+                              <li>
+                                <a href="v99/account/post-submission/application-listing" class="govuk-link">Submitted applications</a>
+                              </li>
+                            </ul>
+                          </li>
+                          </ul>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                              Personal details
+                            </h3>
+                            <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <a href="v99/account/personal-details/address-manual" class="govuk-link">Address update</a>
+                          </li>
+                          <li>
+                            <a href="v99/account/existing-account/telephone-number" class="govuk-link">Update telephone numbers</a>
+                          </li>
+                          <li>
+                            <a href="v99/account/change-email-address/change-email-address" class="govuk-link">Update email address</a>
+                          </li>
+                          </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                            Account
+                          </h3>
+                          <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a href="v99/account/role-alert/role-alert" class="govuk-link">Email role alerts - <b>work in progress</b></a>
+                        </li>
+                        <li>
+                          <a href="v99/account/more-about-you/talent-pool-question" class="govuk-link">Talent pool - Opt in/out</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/communication-preferences/communications-preferences-list" class="govuk-link">Communication preferences</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/change-password/change-password" class="govuk-link">Change password</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/delete-account/delete-account" class="govuk-link">Delete account</a>
+                        </li>
+                        </ul>
+                      </ul>
+                      </li>
+                      <li>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                              Diversity monitoring	
+                          </h3>
+                          <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a href="v99/account/diversity-monitoring/sex-and-gender" class="govuk-link">Sex and Gender</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/diversity-monitoring/disability" class="govuk-link">Disability</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/diversity-monitoring/ethnicity" class="govuk-link">Ethnicity</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/diversity-monitoring/religion" class="govuk-link">Religion</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/diversity-monitoring/sexual-orientation" class="govuk-link">Sexual orientation</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/diversity-monitoring/employment" class="govuk-link">Employment</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/diversity-monitoring/education" class="govuk-link">Education</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/diversity-monitoring/professional-qualificiations-detail" class="govuk-link">Professional qualifications</a>
+                        </li>
+                      </li>
+                      <li>
+                        <a href="v99/account/diversity-monitoring/other-public-appointments-held" class="govuk-link">Other public appointments</a>
+                      </li>
+                        </ul>
+                      </ul>
+                      </li>
+                      <li>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                              Management of outside interests & reputational issues		
+                          </h3>
+                          <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a href="v99/account/additional-interests/significant-political-activity" class="govuk-link">Political activity and interests</a>
+                        </li>
+                        <li>
+                          <a href="v99/account/additional-interests/social-media-accounts" class="govuk-link">Social media accounts</a>
+                        </li>
+                        
+                      </li>
+                        </ul>
+                      </ul>                                
+                    </div>
+                    </details>
+
+
+
+                    
+                   
+                  
+                  
+                  <li>
+                    {{ govukButton({
+                      text: "Role application dashboard",
+                      classes: "govuk-!-margin-bottom-3",
+                      href: "/v99/role/main-application-dashboard"
+                    }) }}
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Sub links for Application dashboard 
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <ul class="govuk-list">
+                          <li>
+                        
+                      </li>
+                      <li>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                              Diversity monitoring	
+                          </h3>
+                          <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a href="v99/role/diversity-monitoring/sex-and-gender" class="govuk-link">Sex and Gender</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/diversity-monitoring/disability" class="govuk-link">Disability</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/diversity-monitoring/ethnicity" class="govuk-link">Ethnicity</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/diversity-monitoring/religion" class="govuk-link">Religion</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/diversity-monitoring/sexual-orientation" class="govuk-link">Sexual orientation</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/more-about-you/employment" class="govuk-link">Employment</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/more-about-you/education" class="govuk-link">Education</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/more-about-you/professional-qualificiations-detail" class="govuk-link">Professional qualifications</a>
+                        </li>
+                      </li>
+                      <li>
+                        <a href="v99/role/more-about-you/other-public-appointments-held" class="govuk-link">Other public appointments</a>
+                      </li>
+                        </ul>
+                      </ul>
+                      </li>
+                      <li>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                              Management of outside interests & reputational issues		
+                          </h3>
+                          <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a href="v99/role/additional-interests/significant-political-activity" class="govuk-link">Political activity and interests</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/additional-interests/social-media-accounts" class="govuk-link">Social media accounts</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/additional-interests/financial-interests" class="govuk-link">Financial interets</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/additional-interests/outside-appointments" class="govuk-link">Outside interets</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/additional-interests/personal-interests" class="govuk-link">Personal interets</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/additional-interests/other-relevant-interests" class="govuk-link">Other relevant interets</a>
+                        </li>
+                      </li>
+                      </ul>
+                        </ul>
+                      </li> 
+                     
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>
+                            <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                              Application		
+                          </h3>
+                          <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <a href="v99/role/application/cv-update" class="govuk-link">Curriculum vitae</a>
+                        </li>
+                        <li>
+                          <a href="v99/role/application/supporting-statement" class="govuk-link">Supporting statement</a>
+                        </li>
+                       
+                       
+                      </li>
+                      
+                        </ul>
+                      </li>  
+                      </ul>                                
+                    </div>
+                    </details>
+                  </li>
+                 
+                 
+
+                  
+                  </ul>
+                  
+                  
+                  
+                  
+                  
+                  
+                  <hr>
+
+                  <h2 class="govuk-heading-m">
+                    UR03
+                    <span class="govuk-caption-m">
                       Sprint 24
                     </span>
                   </h2>
@@ -31,6 +380,8 @@ Public appointments
                     text: "Role details",
                     href: "/v4/user-research/ur03/role-details"
                   }) }}
+
+
 
                   <hr>
                   <h2 class="govuk-heading-m">
@@ -434,9 +785,7 @@ Public appointments
                                 <li>
                                   <a href="v5/role/application/supporting-statement" class="govuk-link">Supporting statement</a>
                                 </li>
-                                <li>
-                                  <a href="v5/role/application/conflicts-of-interest" class="govuk-link">Conflicts of interets</a>
-                                </li>
+                               
                                
                               </li>
                               

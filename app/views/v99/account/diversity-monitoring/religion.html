@@ -1,0 +1,167 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../account-dashboard" method="post" novalidate data-validate='example-validation'>
+ {{ govukBackLink({
+   text: "Back",
+   href: "#"
+ }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          <span class="govuk-caption-l">
+            Diversity monitoring
+          </span>
+          What is your religion
+        </h1>
+
+
+        {{ govukInsetText({
+          text: "The information you submit will not be seen by the panel considering your application. You can select 'prefer not to say' for any questions you do not want to answer."
+        }) }}
+      
+
+
+        {% set otherHtml %}
+        {{ govukInput({
+          id: "other-religion",
+          name: "other-religion",
+          label: {
+            text: "Please describe"
+          }
+        }) }}
+        {% endset -%}
+
+
+        
+
+
+
+        {{ govukRadios({
+          idPrefix: "Religion",
+          name: "Religion",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+        
+          items: [
+          {
+            value: "No religion",
+            text: "No religion"
+          },
+          {
+            value: "Christian",
+            text: "Christian",
+            hint: {
+              text: "Including Church of England, Catholic, Protestant and all other Christian denominations."
+            }
+          },
+          {
+            value: "Buddhist",
+            text: "Buddhist"
+          },
+          {
+            value: "Hindu",
+            text: "Hindu"
+          },
+          {
+            value: "Jewish",
+            text: "Jewish"
+          },
+          {
+            value: "Muslim",
+            text: "Muslim"
+          },
+          {
+            value: "Sikh",
+            text: "Sikh"
+          },
+          {
+            value: "Other",
+            text: "Other",
+            conditional: {
+              html: otherHtml
+            }
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "Prefer not to say",
+            text: "Prefer not to say"
+          }
+          ]
+        }) }}
+
+        <span class="govuk-visually-hidden">     
+
+              <!--this is just here for the prototype and should not be included in production-->
+
+              {{ govukCheckboxes({
+                idPrefix: "religion-check",
+                name: "religion-check",
+                
+                items: [
+                  {
+                    value: "confirm",
+                    text: "confirm",
+                    checked: "true"
+                  }
+                ]
+              }) }}
+
+              <!--this is just here for the prototype and should not be included in production-->
+
+
+</span>
+
+
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../account-dashboard"
+                  }) }}
+                </div>
+
+                  <p class="govuk-body">
+                    Read more about <a href="../your-data-and-diversity-data" class="govuk-link">your data and diversity data</a>.
+                  <p>
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+ <script type="application/json" id="example-validation">
+  { 		  	
+    
+    "Religion": {
+      "presence": {
+        "message": "^Select a religion or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

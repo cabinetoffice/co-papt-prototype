@@ -1,0 +1,146 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="../../role/main-application-dashboard"  method="post" novalidate data-validate='example-validation'>
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Application",
+        href: "../../role/main-application-dashboard"
+      },
+      {
+        text: "Supporting statement"
+      }
+    ]
+  }) }}
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Supporting statement</h1>
+        <p class="govuk-body">
+          Please submit a statement to demonstrate your suitability for this role. 
+        <p>
+          
+
+
+
+          <p class="govuk-body">
+            You should ensure that your statement is:
+          <p>                    
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  is kept to two pages
+                </li>
+                <li>
+                  uses a minimum 12 font size
+                </li>
+                <li>
+                  meets the requirements set out in the role specification
+                </li>
+                <li>
+                  is under 10 Mb in file size
+                </li>
+                <li>
+                  is a supported file type; DOC, DOCX, ODT, PDF, RTF, TXT, WPS
+                </li>
+              </ul>
+ 
+
+              <span class="govuk-visually-hidden">
+
+                <!--this is just here for the prototype and should not be included in production-->
+
+                {{ govukCheckboxes({
+                  idPrefix: "supporting-statement-check",
+                  name: "supporting-statement-check",
+                  
+                  items: [
+                    {
+                      value: "confirm",
+                      text: "confirm",
+                      checked: "true"
+                    }
+                  ]
+                }) }}
+
+                <!--this is just here for the prototype and should not be included in production-->
+
+              </span>
+
+        {{ govukFileUpload({
+          id: "file-upload-1",
+          name: "file-upload-1",
+          label: {
+            text: "Upload a file"
+          }
+        }) }}
+         
+          
+
+
+
+
+         
+
+            
+                <div class="govuk-button-group">
+                  {{ govukButton({
+                    text: "Save and continue"
+                  }) }}
+                
+                  {{ govukButton({
+                    text: "Cancel",
+                    classes: "govuk-button--secondary",
+                    href: "../../role/main-application-dashboard"
+                  }) }}
+                </div>
+
+                 
+
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <hr>
+                <h3 class="govuk-heading-m">
+                  Related content
+                </h3>
+                <ul class="govuk-list ">
+                  <li>
+                    <a href="#" class="govuk-link">Appointment details</a>
+                    
+                  </li>
+                  <li>
+                    <a href="#" class="govuk-link">Writing a supporting statement</a>
+                    
+                  </li>
+                  <li>
+                    <a href="#" class="govuk-link">Guidance for applications</a>
+                    
+                  </li>
+                </ul>
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+ 
+ <script type="application/json" id="example-validation">
+  { 		  	
+    "supporting-statement-check": {
+      "presence": {
+        "message": "^Select an option or 'Prefer not to say'"
+      }
+    }
+    
+  }
+</script>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="#" method="post" >
+ 
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukPanel({
+            titleText: "Verify your email address",
+            text: "A confirmation has been sent to [email address]. Until confirmed your old email will still be used."
+          }) }}
+    
+         
+          <h2 class="govuk-heading-m">
+            What happens next
+          </h2>
+         <p class="govuk-body">
+           You have 24 hours to confirm the change of email address.
+         <p>
+          <br><br><br>
+         <a href="change-email-address-confirmation" class="govuk-link">prototype link only - simulating when a user has clicked onto the link sent to them</a>
+           
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+     
+
+{% endblock %}
