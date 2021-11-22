@@ -13,40 +13,18 @@ Public appointments
     <div class="govuk-grid-row">
 
 
-      {% set html %}
-        <p class="govuk-body">We use some essential cookies to make this service work.</p>
-        <p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
-      {% endset %}
-      
-      {{ govukCookieBanner({
-        ariaLabel: "Cookies on [name of service]",
-        messages: [
-          {
-            headingText: "Cookies on [name of service]",
-            html: html,
-            actions: [
-              {
-                text: "Accept analytics cookies",
-                type: "button",
-                name: "cookies",
-                value: "accept"
-              },
-              {
-                text: "Reject analytics cookies",
-                type: "button",
-                name: "cookies",
-                value: "reject"
-              },
-              {
-                text: "View cookies",
-                href: "#"
-              }
-            ]
-          }
-        ]
-      }) }}
+     
         <div class="govuk-grid-column-two-thirds">
-          
+          {% set html %}
+          <p class="govuk-notification-banner__heading">
+            You’ve set your cookie preferences. <a class="govuk-notification-banner__link" href="#">Go back to the page you were looking at</a>.
+          </p>
+        {% endset %}
+        
+        {{ govukNotificationBanner({
+          type: "success",
+          html: html
+        }) }}
          <h1 class="govuk-heading-xl govuk-!-margin-top-8">
           Cookies on {site domain}
          </h1>

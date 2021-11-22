@@ -1,0 +1,96 @@
+
+{% extends "layout-with-official-footer.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="#" method="post" >
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          Details about cookies on {domain name}
+        </h1>
+      <p class="govuk-body">
+        [Domain name] puts small files (known as ‘cookies’) onto your computer to collect information about how you browse the site. Find out more about the cookies we use, what they’re for and when they expire.
+      <p>
+        <h2 class="govuk-heading-l">
+          Cookies that measure website use
+        </h2>
+        <p class="govuk-body">
+          We use Google Analytics software (Universal Analytics) and [anything bespoke listed here] to collect anonymised information about how you use [domain name].
+        <p>
+
+          <p class="govuk-body">
+            Google Analytics sets the following cookies:
+          <p>
+            {{ govukTable({
+              caption: "google-table",
+              firstCellIsHeader: false,
+              head: [
+                {
+                  text: "Name"
+                },
+                {
+                  text: "Purpose"
+                },
+                {
+                  text: "Expires"
+                }
+              ],
+              rows: [
+                [
+                  {
+                    text: "_ga"
+                  },
+                  {
+                    text: "These help us count how many people visit GOV.UK by tracking if you’ve visited before	"
+                  },
+                  {
+                    text: "2 years"
+                  }
+                ],
+                [
+                  {
+                    text: "_gid"
+                  },
+                  {
+                    text: "These help us count how many people visit GOV.UK by tracking if you’ve visited before	"
+                  },
+                  {
+                    text: "24 hours	"
+                  }
+                ]
+              ]
+            }) }}
+
+            <h2 class="govuk-heading-l">
+              Further info.... tbc
+            </h2>
+            <p class="govuk-body">
+              Further content for this page to be supplied by a content designer....
+            <p>
+
+
+              <h2 class="govuk-heading-l">
+                Change your settings
+              </h2>
+              <p class="govuk-body">
+                You can <a href="cookies" class="govuk-link">change which cookies you’re happy for us to use.</a> 
+                
+              <p>
+
+
+              
+      </div>  
+    </div>   
+  </main>
+</form>
+ </div>
+
+     
+
+{% endblock %}
