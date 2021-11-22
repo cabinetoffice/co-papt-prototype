@@ -219,9 +219,18 @@ $govuk-assets-path: '/govuk/assets/';
   background-color: #f3f2f1;
   padding:10px 0px 10px 10px;
 }
-.oneHundred img{width:auto;height: 85px;}
-
-
+.oneHundred img {
+  width: auto;
+  height: 55px;
+  left: -15px;
+  position: relative;
+}
+.oneHundredTwo img {
+  width: auto;
+  height: 55px;
+  left: -45px;
+  position: relative;
+}
 
 
 

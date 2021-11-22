@@ -8,6 +8,13 @@ Public appointments
 {% block content %}
 <a href="#" class="govuk-back-link">Back</a>
 
+
+
+
+
+
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       
@@ -15,11 +22,24 @@ Public appointments
         <span class="govuk-caption-l">
           Role details
         </span>
-        Distribution Centre Manager
+        Distribution Centre Manager 
       </h1>
-      <span class="govuk-caption-l govuk-!-margin-bottom-9">
+      <span class="govuk-caption-l govuk-!-margin-bottom-6">
         Application deadline 7 December 2021
       </span>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-quarter oneHundred">
+          <img src="/public/images/department-of-health-icon.png" alt="Department of health logo">
+        </div> 
+        <div class="govuk-grid-column-one-quarter oneHundredTwo govuk-!-margin-bottom-9">
+          <img src="/public/images/opa-icon.png" alt="Oil and Pipelines Agency Logo">
+        </div>
+      </div>
+      
+     
+      </div>
+     
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
          
@@ -38,11 +58,23 @@ Public appointments
               
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Organisation</th>
-                <td class="govuk-table__cell">Department of Energy & Climate Change</td>
-              </tr>
+                <td class="govuk-table__cell">
+                 
+                    
+                    
+                      Department of Energy & Climate Change
+                   
+                  
+                   </td>
+              </tr> 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Sponsor Department</th>
-                <td class="govuk-table__cell">Oil and Pipelines Agency</td>
+                <td class="govuk-table__cell">
+                  
+                  
+                    Oil and Pipelines Agency
+                  
+                 </td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Location</th>
@@ -195,6 +227,43 @@ Public appointments
           }) }}
  <!-- accordion ends here-->
 
+ <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+  Person specification
+</h3>
+
+
+{{ govukAccordion({
+  classes: "govuk-!-margin-bottom-9",
+  id: "person-specification",
+  items: [
+  {
+    heading: {
+      text: "Essential criteria"
+    },
+    content: {
+      html: 
+      "
+      <p class=govuk-body>
+        Board-level experience with sound background in, commercial and business development particularly at a strategic level with an ability to challenge organisational performance using clear, consistent and comparable key performance indicators, holding an organisation to account for its performance, continued improvement and risk management; <br><br>Experience within a major hazard industry or similarly regulated organisation; Demonstrable ability to assist development of strategic 5 Year and 10 year plans as well as current tactical business plans in support of the OPA’s growth agenda both within MOD and in the commercial world. An engaging and collaborative working style with the ability to adapt to a range of partners whilst demonstrating leadership and influencing skills; demonstrate the ability to provide a challenging and supportive role to the Chief Executive and the senior leadership team; Sound judgment, analysis and decision-making skills; An enthusiasm and a desire to support the successful delivery of OPA’s challenging agenda.
+        <p>
+      "
+    }
+  },
+  {
+    heading: {
+      text: "Desirable criteria"
+    },
+    content: {
+      html: 
+      "
+      <p class=govuk-body>
+        Experience of current corporate governance best practice; Knowledge of the workings of Statutory Public Corporations and /or Arm’s Length Bodies; Knowledge of Managing Public Money. Experience of financial risk
+      <p>
+      "
+    }
+  }
+  ]
+}) }}
   
   
 <!-- accordion starts here-->
@@ -207,7 +276,7 @@ Public appointments
           items: [
             {
               heading: {
-                text: "Body"
+                text: "Introduction"
               },
               content: {
                 html: 
@@ -245,21 +314,6 @@ Public appointments
                 "
               }
             },
-            {
-              heading: {
-                text: "Role description"
-              },
-              content: {
-                html: 
-                "
-               
-                "
-              }
-            },
-            
-            
-           
-            
             {
               heading: {
                 text: "Reasonable adjustments required due to a health condition"
@@ -344,43 +398,6 @@ Disability Confident scheme symbol, along with other like-minded employers, to s
 
  <!-- accordion ends here-->
 
- <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
-  Person specification
-</h3>
-
-
-{{ govukAccordion({
-  classes: "govuk-!-margin-bottom-9",
-  id: "person-specification",
-  items: [
-  {
-    heading: {
-      text: "Essential criteria"
-    },
-    content: {
-      html: 
-      "
-      <p class=govuk-body>
-        Board-level experience with sound background in, commercial and business development particularly at a strategic level with an ability to challenge organisational performance using clear, consistent and comparable key performance indicators, holding an organisation to account for its performance, continued improvement and risk management; <br><br>Experience within a major hazard industry or similarly regulated organisation; Demonstrable ability to assist development of strategic 5 Year and 10 year plans as well as current tactical business plans in support of the OPA’s growth agenda both within MOD and in the commercial world. An engaging and collaborative working style with the ability to adapt to a range of partners whilst demonstrating leadership and influencing skills; demonstrate the ability to provide a challenging and supportive role to the Chief Executive and the senior leadership team; Sound judgment, analysis and decision-making skills; An enthusiasm and a desire to support the successful delivery of OPA’s challenging agenda.
-        <p>
-      "
-    }
-  },
-  {
-    heading: {
-      text: "Desirable criteria"
-    },
-    content: {
-      html: 
-      "
-      <p class=govuk-body>
-        Experience of current corporate governance best practice; Knowledge of the workings of Statutory Public Corporations and /or Arm’s Length Bodies; Knowledge of Managing Public Money. Experience of financial risk
-      <p>
-      "
-    }
-  }
-  ]
-}) }}
 
 <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
   Application and Selection Process
