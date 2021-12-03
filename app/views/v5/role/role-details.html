@@ -1,80 +1,64 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Public appointments
+  Public appointments
 {% endblock %}
 
 {% block content %}
-<a href="#" class="govuk-back-link">Back</a>
-
-
-
-
-
-
-
+  <a href="#" class="govuk-back-link">Back</a>
 
   <div class="govuk-grid-row govuk-!-margin-top-6">
     <div class="govuk-grid-column-full">
-      
+
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
         <span class="govuk-caption-l">
           Role details
         </span>
-        Distribution Centre Manager 
+        Distribution Centre Manager
       </h1>
       <span class="govuk-caption-l govuk-!-margin-bottom-6">
         Application deadline 7 December 2021
       </span>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-column-one-quarter oneHundred">
+        <img src="/public/images/MOD_logo_960_x_640.jpg" alt="Department of health logo">
       </div>
-      <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-grid-column-one-quarter oneHundred">
-          <img src="/public/images/department-of-health-icon.png" alt="Department of health logo">
-        </div> 
-        <div class="govuk-grid-column-one-quarter oneHundredTwo govuk-!-margin-bottom-9">
-          <img src="/public/images/opa-icon.png" alt="Oil and Pipelines Agency Logo">
-        </div>
+      <div class="govuk-grid-column-one-quarter oneHundredTwo govuk-!-margin-bottom-9">
+        <img src="/public/images/opa-icon.png" alt="Oil and Pipelines Agency Logo">
       </div>
-      
-     
-      </div>
-     
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-         
-     
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-full">
 
           <!--Summary starts-->
 
           <table class="govuk-table">
             <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption>
-            <thead class="govuk-table__head">
-             
-            </thead>
+            <thead class="govuk-table__head"></thead>
             <tbody class="govuk-table__body">
-              
+
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Organisation</th>
                 <td class="govuk-table__cell">
-                 
-                    
-                    
-                      Department of Energy & Climate Change
-                   
-                  
-                   </td>
-              </tr> 
+
+                  Oil and Pipelines Agency
+
+                </td>
+              </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Sponsor Department</th>
                 <td class="govuk-table__cell">
-                  
-                  
-                    Oil and Pipelines Agency
-                  
-                 </td>
+
+                  Ministry of Defence
+
+                </td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Location</th>
@@ -109,15 +93,11 @@ Public appointments
 
           <!--summary ends-->
 
-
           {{ govukInsetText({
             html: "<a href='#' class='govuk-link'>Download an application pack</a> for complete information on this appointment."
           }) }}
 
-
           <!--accordion starts here-->
-
-         
 
           {{ govukAccordion({
             classes: "govuk-!-margin-bottom-9",
@@ -225,14 +205,13 @@ Public appointments
               }
             ]
           }) }}
- <!-- accordion ends here-->
+          <!-- accordion ends here-->
 
- <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
-  Person specification
-</h3>
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+            Person specification
+          </h3>
 
-
-{{ govukAccordion({
+          {{ govukAccordion({
   classes: "govuk-!-margin-bottom-9",
   id: "person-specification",
   items: [
@@ -264,13 +243,12 @@ Public appointments
   }
   ]
 }) }}
-  
-  
-<!-- accordion starts here-->
-<h3 class="govuk-heading-m govuk-!-margin-bottom-1">
-  Role Description
-</h3>
-        {{ govukAccordion({
+
+          <!-- accordion starts here-->
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+            Role Description
+          </h3>
+          {{ govukAccordion({
           classes: "govuk-!-margin-bottom-9 ",
           id: "further-role-details",
           items: [
@@ -313,97 +291,17 @@ Public appointments
                 </p>
                 "
               }
-            },
-            {
-              heading: {
-                text: "Reasonable adjustments required due to a health condition"
-              },
-              content: {
-                html: 
-                " 
-                <p class=govuk-body>
-                  Government departments are committed to making <a href=https://www.gov.uk/reasonable-adjustments-for-disabled-workers class=govuk-link>reasonable adjustments</a> to make sure applicants with disabilities, physical or mental health conditions, or other needs are not substantially disadvantaged when applying for public appointments. This can include changing the recruitment process to enable people who wish to apply to do so:
-                <p>
-                  <p class=govuk-body>
-                    Some examples of common changes are:
-                  <p>
-                 <ul class='govuk-list govuk-list--bullet'>
-                   <li>
-                    ensuring that application forms are available in different or accessible formats
-                   </li>
-                   <li>
-                     making adaptations to interview locations 
-                   </li>
-                   <li>
-                    allowing candidates to present their skills and experience in a different way
-                   </li>
-                   <li>
-                    giving detailed information on the selection / interview process in advance to allow candidates time to prepare themselves
-                   </li>
-                   <li>
-                    allowing support workers, for example sign language interpreters etc
-                   </li>
-                   <li>
-                    making provision for support animals to attend
-                   </li>
-                 </ul>
-                "
-              }
-            },
-            {
-              heading: {
-                text: " Disability confident"
-              },
-              content: {
-                html: 
-                "
-                <p class=govuk-body>
-                  We are a member of the Government’s Disability Confident scheme. We use the
-Disability Confident scheme symbol, along with other like-minded employers, to show our commitment to good practice in employing people with a disability. The scheme helps recruit and retain disabled people. 
-                <p>
-                  <p class=govuk-body>
-                    As part of implementing the scheme, we guarantee an interview for anyone with a disability whose application meets the minimum criteria for the role and who has asked that their application is considered under the scheme. Indicating that you wish your application to be considered under the scheme will in no way prejudice your application. By ‘minimum criteria,’ we mean that you must provide evidence which demonstrates that you meet the level of competence required under each of the essential criteria, as set out in the job-advert.
-                  <p>
-                "
-              }
-            },
-            {
-              heading: {
-                text: "Additional information"
-              },
-              content: {
-                html: 
-                " 
-                <p class=govuk-body>
-                  The Government expects all holders of public office to work to the highest personal and professional standards. In support of this, all non-executive board members of UK public bodies must abide by the principles set out in the Code of Conduct for Board Members of Public Bodies.<br><br>The Code sets out, clearly and openly, the standards expected from those who serve on the boards of UK public bodies and will form part of your terms and conditions of appointment.
-                <p>
-                "
-              }
-            },
-            {
-              heading: {
-                text: " Process"
-              },
-              content: {
-                html: 
-                "
-                  <p class=govuk-body>
-                      All appointments are made on the basis of fair and open competition.
-                  <p> 
-                "
-              }
             }
           ]
         }) }}
 
- <!-- accordion ends here-->
+          <!-- accordion ends here-->
 
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+            Application and Selection Process
+          </h3>
 
-<h3 class="govuk-heading-m govuk-!-margin-bottom-1">
-  Application and Selection Process
-</h3>
-
-{{ govukAccordion({
+          {{ govukAccordion({
   classes: "govuk-!-margin-bottom-9",
   id: "application-selection-process",
   items: [
@@ -484,11 +382,11 @@ Disability Confident scheme symbol, along with other like-minded employers, to s
   }
   ]
 }) }}
- 
-<h3 class="govuk-heading-m govuk-!-margin-bottom-1">
-  Additional Information for candidates
-</h3>
-  {{ govukAccordion({
+
+          <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+            Additional Information for candidates
+          </h3>
+          {{ govukAccordion({
     classes: "govuk-!-margin-bottom-9",
     id: "",
     items: [
@@ -863,11 +761,7 @@ Disability Confident scheme symbol, along with other like-minded employers, to s
     ]
   }) }}
 
-      
-
-     
-
-      {{ govukButton({
+          {{ govukButton({
         text: "Apply for this role",
         classes: "govuk-!-margin-top-6",
         href: "start-application"
@@ -875,25 +769,11 @@ Disability Confident scheme symbol, along with other like-minded employers, to s
 
           <!-- role as end-->
 
-          <!--logos 
-          <div class="govuk-grid-row govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-           
-            <div class="govuk-grid-column-one-third oneHundred">
-              <img src="/public/images/department-of-health-icon.png" alt="Department of health logo">
-            </div>
-            <div class="govuk-grid-column-one-third oneHundred">
-              <img src="/public/images/opa-icon.png" alt="Oil and Pipelines Agency Logo">
-            </div>
-            <div class="govuk-grid-column-one-third oneHundred">
-              <a href="https://publicappointmentscommissioner.independent.gov.uk/" target="_blank" class="govuk-link"><img src="/public/images/regulated-icon.png" alt="Regulated by the Commissioner for Public Appointments logo"></a>  
-            </div>
-          </div>-->
+          <!--logos <div class="govuk-grid-row govuk-!-margin-top-6 govuk-!-margin-bottom-6"> <div class="govuk-grid-column-one-third oneHundred"> <img src="/public/images/department-of-health-icon.png" alt="Department of health logo"> </div> <div class="govuk-grid-column-one-third oneHundred"> <img src="/public/images/opa-icon.png" alt="Oil and Pipelines Agency Logo"> </div> <div class="govuk-grid-column-one-third oneHundred"> <a href="https://publicappointmentscommissioner.independent.gov.uk/" target="_blank" class="govuk-link"><img src="/public/images/regulated-icon.png" alt="Regulated by the Commissioner for Public Appointments logo"></a> </div> </div>-->
+        </div>
       </div>
     </div>
-  </div>
-  
- </div>
 
-     
+  </div>
 
 {% endblock %}
