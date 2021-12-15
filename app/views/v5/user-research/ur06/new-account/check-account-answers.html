@@ -23,7 +23,7 @@ Public appointments
         <h2 class="govuk-heading-l">
           Check your profile details
         </h2>
-       
+
 
 
         <h2 class="govuk-heading-m">Personal details</h2>
@@ -99,7 +99,7 @@ Public appointments
               Email address
             </dt>
             <dd class="govuk-summary-list__value">
-            
+
               <p class="govuk-body">{{ data['email-address'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
@@ -110,7 +110,7 @@ Public appointments
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Telephone number 
+              Telephone number
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">{{ data['telephone-number'] }}</p>
@@ -160,17 +160,16 @@ Public appointments
           items: [
             {
               value: "yes",
-              text: "Tick this box if you would like to be added to our talent pool."
+              text: "Tick this box if you would like to be added to our future opportunities list."
             }
           ]
         }) }}
 
-     
         <div class="govuk-button-group">
           {{ govukButton({
             text: "Create account"
           }) }}
-        
+
           {{ govukButton({
             text: "Cancel",
             classes: "govuk-button--secondary",
@@ -178,7 +177,7 @@ Public appointments
           }) }}
         </div>
 
-                 
+
               </div>
     </div>
   </main>
@@ -187,6 +186,6 @@ Public appointments
 </form>
  </div>
 
-     
+
 
 {% endblock %}

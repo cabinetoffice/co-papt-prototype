@@ -7,7 +7,7 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="talent-pool-opt-in" method="post">
+<form action="future-opportunities-opt-in" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
@@ -28,7 +28,7 @@ Public appointments
         <p class="govuk-body">
           Please submit your CV including education, employment history and professional qualifications.
         <p>
-          
+
           <p class="govuk-body">
             You should ensure your CV:
           <p>
@@ -61,19 +61,19 @@ Public appointments
                 text: "Relevant error message displayed"
               }
             }) }}
-       
-
-            
 
 
-         
 
-            
+
+
+
+
+
                 <div class="govuk-button-group">
                   {{ govukButton({
                     text: "Save"
                   }) }}
-                
+
                   {{ govukButton({
                     text: "Cancel",
                     classes: "govuk-button--secondary",
@@ -81,7 +81,7 @@ Public appointments
                   }) }}
                 </div>
 
-                 
+
 
               </div>
     </div>
@@ -91,6 +91,6 @@ Public appointments
 </form>
  </div>
 
-     
+
 
 {% endblock %}

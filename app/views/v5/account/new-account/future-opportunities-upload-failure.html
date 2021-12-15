@@ -7,14 +7,14 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="talent-pool-opt-in" method="post">
+<form action="future-opportunities-opt-in" method="post">
   {{ govukBackLink({
     text: "Back",
     href: "#"
   }) }}
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
-      
+
       <div class="govuk-grid-column-two-thirds">
         {{ govukErrorSummary({
           titleText: "There is a problem",
@@ -28,7 +28,7 @@ Public appointments
         <h1 class="govuk-heading-xl">
           <span class="govuk-caption-l">
             Create your account - Step 5 of 6
-          </span>Do you wish to opt into the talent pool?
+          </span>Do you wish to opt-in to future opportunities alerts?
         </h1>
         {% set yesHtml %}
        <p class='govuk-body'>
@@ -67,8 +67,8 @@ Public appointments
 
 
         {{ govukRadios({
-          idPrefix: "talent-pool",
-          name: "talent-pool",
+          idPrefix: "future-opportunities",
+          name: "future-opportunities",
           items: [
             {
               value: "Yes",
@@ -85,12 +85,12 @@ Public appointments
           ]
         }) }}
 
-        
+
         <div class="govuk-button-group">
           {{ govukButton({
             text: "Continue"
           }) }}
-        
+
           {{ govukButton({
             text: "Cancel",
             classes: "govuk-button--secondary",
@@ -98,7 +98,7 @@ Public appointments
           }) }}
         </div>
 
-                 
+
               </div>
     </div>
   </main>
@@ -107,6 +107,6 @@ Public appointments
 </form>
  </div>
 
-     
+
 
 {% endblock %}

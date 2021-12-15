@@ -18,7 +18,7 @@ Public appointments
         <h1 class="govuk-heading-xl">
           Check your answers before creating your account
         </h1>
-       
+
 
 
         <h2 class="govuk-heading-m">Personal details</h2>
@@ -130,27 +130,27 @@ Public appointments
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Do you wish to opt into the talent pool?
+              Do you wish to opt-in to future opportunities alerts?
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">{{ data['talent-pool'] }}</p>
+              <p class="govuk-body">{{ data['future-opportunities'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> talent pool</span>
+                Change<span class="govuk-visually-hidden"> future opportunities alerts</span>
               </a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              How did you hear about us??
+              How did you hear about us?
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">{{ data['how-did-you-hear-about-us'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> talent pool</span>
+                Change<span class="govuk-visually-hidden"> how you heard about us</span>
               </a>
             </dd>
           </div>
@@ -190,11 +190,11 @@ Public appointments
           {{ govukButton({
             text: "Save and create account"
           }) }}
-        
-          
+
+
         </div>
 
-                 
+
               </div>
     </div>
   </main>
@@ -203,6 +203,6 @@ Public appointments
 </form>
  </div>
 
-     
+
 
 {% endblock %}

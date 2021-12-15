@@ -270,9 +270,9 @@ router.post(
 //TALENT POOL start
 
 router.post(
-  `/v${verNum}/account/more-about-you/talent-pool`,
+  `/v${verNum}/account/more-about-you/future-opportunities`,
   function (req, res) {
-    const talentPool = req.session.data["talent-pool"]
+    const talentPool = req.session.data["future-opportunities"]
 
     if (talentPool === "Yes") {
       res.redirect(`/v${verNum}/account/more-about-you/cv-update`)
@@ -389,22 +389,22 @@ router.post(
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree-institution`)
     } else if (highestQualificationTwo === "Apprenticeship") {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-degree`)
-    } 
-    else if 
+    }
+    else if
     (
     highestQualification === "GCSEs or equivalent" ||
     highestQualification === "AS, A level or equivalent" ||
     highestQualification === "NVQ or equivalent"
-    ) 
+    )
     {
       res.redirect(`/v${verNum}/account/account-dashboard`)
-    } 
-    
-    else if 
+    }
+
+    else if
     (
     highestQualificationTwo === "Apprenticeship" &&
     highestQualificationThree === "Degree or above"
-    ) 
+    )
     {
       res.redirect(`/v${verNum}/account/diversity-monitoring/education-institution`)
     }  else {
@@ -435,28 +435,28 @@ router.post(
       res.redirect(`/v${verNum}/role/more-about-you/education-degree-institution`)
     } else if (highestQualificationTwo === "Apprenticeship") {
       res.redirect(`/v${verNum}/role/more-about-you/education-degree`)
-    } 
-    else if 
+    }
+    else if
     (
     highestQualification === "GCSEs or equivalent" ||
     highestQualification === "AS, A level or equivalent" ||
     highestQualification === "NVQ or equivalent"
-    ) 
+    )
     {
       res.redirect(`/v${verNum}/check-answers/check-answer-education`)
-    } 
-    else if 
+    }
+    else if
     (
-      highestQualificationThree === "Degree level or above" 
-    ) 
+      highestQualificationThree === "Degree level or above"
+    )
     {
       res.redirect(`/v${verNum}/role/more-about-you/education-institution`)
-    } 
-    else if 
+    }
+    else if
     (
     highestQualificationTwo === "Apprenticeship" &&
     highestQualificationThree === "Degree or above"
-    ) 
+    )
     {
       res.redirect(`/v${verNum}/role/more-about-you/education-institution`)
     }  else {
@@ -478,12 +478,12 @@ router.post(
 //TALENT POOL - ACCOUNT CREATION start
 
 router.post(
-  `/v${verNum}/account/new-account/talent-pool-opt-in`,
+  `/v${verNum}/account/new-account/future-opportunities-opt-in`,
   function (req, res) {
-    const talentPoolOptIn = req.session.data["talent-pool"]
+    const talentPoolOptIn = req.session.data["future-opportunities"]
 
     if (talentPoolOptIn === "Yes") {
-      res.redirect(`/v${verNum}/account/new-account/talent-pool-upload-one`)
+      res.redirect(`/v${verNum}/account/new-account/future-opportunities-upload-one`)
     } else {
       res.redirect(`/v${verNum}/account/new-account/how-did-you-hear-about-us`)
     }

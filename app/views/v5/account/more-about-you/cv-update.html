@@ -17,8 +17,8 @@ Public appointments
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Curriculum vitae</h1>
-       
-          
+
+
 {{ govukTable({
   firstCellIsHeader: false,
   caption: "Latest CV uploded to your profile",
@@ -36,7 +36,7 @@ Public appointments
   rows: [
     [
       {
-        html: 
+        html:
         "
         <a href='#' class='govuk-link'>CV.pdf</a>
         "
@@ -45,7 +45,7 @@ Public appointments
         text: "21 October 2021"
       },
       {
-        html: 
+        html:
         "
           <a href='#' class='govuk-link'>View</a>
         "
@@ -53,16 +53,16 @@ Public appointments
     ]
   ]
 }) }}
-          
 
-          
+
+
 
            {{ govukRadios({
              idPrefix: "use-profile-cv",
              name: "use-profile-cv",
              fieldset: {
               legend: {
-                text: "Do you wish to use this CV as part of the Talentpool selection?",
+                text: "Do you wish to use this CV as part of potential future opportunities selection?",
                 isPageHeading: false,
                 classes: "govuk-fieldset__legend--m"
               }
@@ -78,18 +78,18 @@ Public appointments
               }
              ]
            }) }}
-       
 
-           
 
-         
 
-            
+
+
+
+
                 <div class="govuk-button-group">
                   {{ govukButton({
                     text: "Save and continue"
                   }) }}
-                
+
                   {{ govukButton({
                     text: "Cancel",
                     classes: "govuk-button--secondary",
@@ -97,7 +97,7 @@ Public appointments
                   }) }}
                 </div>
 
-                 
+
 
               </div>
     </div>
@@ -107,7 +107,7 @@ Public appointments
 </form>
  </div>
  <script type="application/json" id="error-state-validation">
-  { 		  	
+  {
     "use-profile-cv": {
       "presence": {
         "message": "^Select if you want to use this CV or upload a new cv"
@@ -115,6 +115,6 @@ Public appointments
     }
   }
   </script>
-     
+
 
 {% endblock %}

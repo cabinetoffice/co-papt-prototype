@@ -1,0 +1,76 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Public appointments
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<form action="future-opportunities" method="post">
+  {{ govukBackLink({
+    text: "Back",
+    href: "#"
+  }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          Do you wish to opt-in to being contacted about future public appointments opportunities that may match your skills and experience?
+        </h1>
+
+
+
+
+        {{ govukRadios({
+          idPrefix: "future-opportunities",
+          name: "future-opportunities",
+          items: [
+            {
+              value: "Yes",
+              text: "Yes",
+              checked: "true"
+            },
+            {
+              value: "No",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {% set helpText %}
+          <h3 class="govuk-heading-s">Help with possible alerts for future opportunities</h3>
+          <p>You had an option to select when you registered an account if you wished to receive alerts when appointments that match your preferences are advertised. However, it may be that your skills and experience match an exciting role in an area you haven’t considered before. If you would like to be contacted about such opportunities, if they arise, you can opt-in to that here.</p>
+          <p>Our Privacy Notice [link] sets out in more detail how we will use your personal data, and your rights. It is made under Articles 13 and/or 14 of the UK General Data Protection Regulation (GDPR).</p>
+          <p>If you are not content to share your personal data for these purposes then you do not need to opt-in to being contacted and this does not stop you from applying for public appointment roles. If you opt in but change your mind, you can opt out at any time and your details will be removed from the alert service.</p>
+        {% endset -%}
+
+        {{ govukDetails({
+          summaryText: "Help with future opportunities",
+          html: helpText
+        }) }}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+          {{ govukButton({
+            text: "Cancel",
+            classes: "govuk-button--secondary",
+            href: "../login-to-account"
+          }) }}
+        </div>
+
+
+              </div>
+    </div>
+  </main>
+</div>
+  </div>
+</form>
+ </div>
+
+
+
+{% endblock %}

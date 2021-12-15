@@ -7,31 +7,30 @@ Public appointments
 
 {% block content %}
 <div class="govuk-width-container">
-<form action="talent-pool-upload-two" method="post">
-  
+<form action="future-opportunities-upload-two" method="post">
+
   <main class="govuk-main-wrapper " id="main-content" role="main">
      <div class="govuk-grid-row">
-          
+
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-two-thirds">
                 <div class="govuk-panel govuk-panel--confirmation">
                   <h1 class="govuk-panel__title">
-                    File uploaded successfully 
+                    File uploaded successfully
                   </h1>
                   <div class="govuk-panel__body">
-                    Your CV has been uploaded and included within the talent pool
-                    
+                    Your CV has been uploaded and added to our future opportunities list
                 </div>
                 </div>
                 <h2 class="govuk-heading-m">What happens next</h2>
 
                 <p class="govuk-body">
-                  You may now go back to your account.
+                  You may now check and confirm your account settings.
                 </p>
 
                 {{ govukButton({
                   text: "Continue",
-                  href: "../account-dashboard"
+                  href: "check-account-answers"
                 }) }}
 
               </div>
@@ -41,6 +40,6 @@ Public appointments
 </form>
 </div>
 
-     
+
 
 {% endblock %}
