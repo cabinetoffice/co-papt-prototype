@@ -1,8 +1,7 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Public appointments
+  Public appointments
 {% endblock %}
 
 {% block content %}
@@ -15,36 +14,34 @@ Public appointments
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           {{ govukInsetText({
-            html: "You can be one of the many people who help make a difference to public services.<br><br>
-    
-            Public appointees play a vital role in public life. They help guide the strategy for some of the most important institutions in the United Kingdom."
+            html: "Public appointees play a vital role in public life. They help guide the strategy for some of the most important institutions in the United Kingdom. <br><br>
+             We encourage applications from talented individuals from all backgrounds and across the whole of the United Kingdom.  <br><br>
+             You can be one of the many people who help make a difference to public services."
           }) }}
-           
-      
-      <h2 class="govuk-heading-l">
-        Search
-      </h2>
-      <p class="govuk-body">
-        Search and apply for a role on the board of a public body or advisory committee. You can also browse:
-      <p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          roles closed for application
-        </li>
-        <li>
-          announcements for roles that have been filled
-        </li>
-      </ul>
-    </div>
-    </div>
-      <!--main body of role dashboard starts-->
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third side-sort">
-         
 
-          <!-- Side accordion STARTS here-->
+          <h2 class="govuk-heading-l">
+            Search
+          </h2>
+          <p class="govuk-body">
+            Search and apply for a role on the board of a public body or advisory committee. You can also browse:
+            <p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  closed roles
+                </li>
+                <li>
+                  announcements for roles that have been filled
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--main body of role dashboard starts-->
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third side-sort">
 
-          {{ govukAccordion({
+              <!-- Side accordion STARTS here-->
+
+              {{ govukAccordion({
             id: "accordion-default",
             items: [
               {
@@ -181,13 +178,6 @@ Public appointments
                         </div>
                          <!--checkbox item-->
                          <div class='govuk-checkboxes__item'>
-                          <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='East Midlands'>
-                          <label class='govuk-label govuk-checkboxes__label' for='skills'>
-                            East Midlands
-                          </label>
-                        </div>
-                         <!--checkbox item-->
-                         <div class='govuk-checkboxes__item'>
                           <input class='govuk-checkboxes__input' id='skills' name='skills' type='checkbox' value='Business'>
                           <label class='govuk-label govuk-checkboxes__label' for='skills'>
                             Business
@@ -317,7 +307,7 @@ Public appointments
               },
                 {
                 heading: {
-                  text: "Sponsor department"
+                  text: "Sponsor Department"
                 },
                 content: {
                   html: 
@@ -675,11 +665,11 @@ Public appointments
                   <details class='govuk-details' data-module='govuk-details'>
                     <summary class='govuk-details__summary'>
                       <span class='govuk-details__summary-text'>
-                        Help with Regulated appointments
+                        Help with regulated appointments
                       </span>
                     </summary>
                     <div class='govuk-details__text'>
-                      Appointments made by United Kingdom Government Ministers to bodies and offices listed in the Public Appointments Order in Council are regulated by the Commissioner for Public Appointments and are referred to as regulated public appointments.
+                      Appointments made by United Kingdom Government Ministers to bodies and offices listed in the Public Appointments Order in Council are regulated by the Commissioner for Public Appointments and are referred to as regulated public appointments.Unregulated appointments are those which are made under ministerial direction but are not included on the Order in Council.
                     </div>
                   </details>
                   
@@ -961,153 +951,146 @@ Public appointments
             ]
           }) }}
 
+              <!-- Side accordion ENDS here-->
 
-
-
-
-          <!-- Side accordion ENDS here-->
-
-        </div>
-        <div class="govuk-grid-column-two-thirds">
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-third">
-              <p class="govuk-body-l">
-                <b>2</b> roles
-              <p>    
             </div>
             <div class="govuk-grid-column-two-thirds">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-third">
-                  <label class="govuk-label right" for="sort">
-                    Sort by
-                  </label>
-                </div>
-                <div class="govuk-grid-column-two-thirds">
-                  <div class="govuk-form-group">
-                  
-                    <select class="govuk-select" id="sort" name="sort">
-                      <option value="comments">Application deadline [earliest]</option>
-                      <option value="published">Application deadline [latest]</option>
-                      <option value="updated" selected>Location [A-Z]</option>
-                      <option value="views">Location [Z-A]</option>
-                      
-                    </select>
+                  <p class="govuk-body-l">
+                    <b>2</b>
+                    roles
+                    <p></div>
+                    <div class="govuk-grid-column-two-thirds">
+                      <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third">
+                          <label class="govuk-label right" for="sort">
+                            Sort by
+                          </label>
+                        </div>
+                        <div class="govuk-grid-column-two-thirds">
+                          <div class="govuk-form-group">
+
+                            <select class="govuk-select" id="sort" name="sort">
+                              <option value="comments">Application deadline [earliest]</option>
+                              <option value="published">Application deadline [latest]</option>
+                              <option value="updated" selected="selected">Location [A-Z]</option>
+                              <option value="views">Location [Z-A]</option>
+
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                      <div class="greyBack">
+                        <h3 class="govuk-heading-s">
+                          Status
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="govuk-!-margin-bottom-6">
+
+                  <!--main jobs listing starts-->
+
+                  <ul class="govuk-list">
+                    <li>
+                      <a href="../role/role-details" class="govuk-link large">Distribution Centre Manager</a>
+                      <span class="govuk-caption-m">
+                        Oil and Pipelines Agency
+                      </span>
+                      <table class="govuk-table">
+
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Sponsor Department</th>
+                            <td class="govuk-table__cell">Department of Health</td>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Location</th>
+                            <td class="govuk-table__cell">East of England</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Sector</th>
+                            <td class="govuk-table__cell">Communities</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Skills</th>
+                            <td class="govuk-table__cell">Audit and Risk</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Time commitment</th>
+                            <td class="govuk-table__cell">45 hours per week</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Remuneration</th>
+                            <td class="govuk-table__cell">From £30,000 to £35,000 per annum</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Application deadline</th>
+                            <td class="govuk-table__cell">17 July 2028</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+
+                    <li>
+                      <a href="#" class="govuk-link large">Customer Service Advisor</a>
+                      <span class="govuk-caption-m">
+                        National Nuclear Laboratory
+                      </span>
+                      <table class="govuk-table">
+
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Sponsor Department</th>
+                            <td class="govuk-table__cell">Attorney General's Office</td>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Location</th>
+                            <td class="govuk-table__cell">East Midlands</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Sector</th>
+                            <td class="govuk-table__cell">Business, Finance & Skills</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Skills</th>
+                            <td class="govuk-table__cell">Accountancy</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Time commitment</th>
+                            <td class="govuk-table__cell">37.5 hours per week</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Remuneration</th>
+                            <td class="govuk-table__cell">From £50,000 to £80,000 per annum</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Application deadline</th>
+                            <td class="govuk-table__cell">17 December 2030</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                  </ul>
+
+                  <!--main jobs listing ends-->
+
                 </div>
               </div>
-                
-            </div>
-          </div>
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-              <div class="greyBack">
-              <h3 class="govuk-heading-s">
-                Status
-              </h3>
-              </div>
+
+              <!--main body of role dashboard ends-->
             </div>
           </div>
 
-          <hr class="govuk-!-margin-bottom-6">
-
-          <!--main jobs listing starts-->
-
-          <ul class="govuk-list">
-            <li>
-              <a href="../role/role-details" class="govuk-link large">Distribution Centre Manager</a>
-              <span class="govuk-caption-m">
-                Oil and Pipelines Agency
-              </span>
-              <table class="govuk-table">
-               
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Sponsor Department</th>
-                    <td class="govuk-table__cell">Department of Health</td>
-                  </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Location</th>
-                    <td class="govuk-table__cell">East of England</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Sector</th>
-                    <td class="govuk-table__cell">Communities</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Skills</th>
-                    <td class="govuk-table__cell">Audit and Risk</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Time commitment</th>
-                    <td class="govuk-table__cell">45 hours per week</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Remuneration</th>
-                    <td class="govuk-table__cell">From £30,000 to £35,000 per annum</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Application deadline</th>
-                    <td class="govuk-table__cell">17 July 2028</td>
-                  </tr>
-                </tbody>
-              </table>
-            </li>
-
-
-
-            <li>
-              <a href="#" class="govuk-link large">Customer Service Advisor</a>
-              <span class="govuk-caption-m">
-                National Nuclear Laboratory
-              </span>
-              <table class="govuk-table">
-               
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Sponsor Department</th>
-                    <td class="govuk-table__cell">Attorney General's Office</td>
-                  </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Location</th>
-                    <td class="govuk-table__cell">East Midlands</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Sector</th>
-                    <td class="govuk-table__cell">Business, Finance & Skills</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Skills</th>
-                    <td class="govuk-table__cell">Accountancy</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Time commitment</th>
-                    <td class="govuk-table__cell">37.5 hours per week</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Remuneration</th>
-                    <td class="govuk-table__cell">From £50,000 to £80,000 per annum</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Application deadline</th>
-                    <td class="govuk-table__cell">17 December 2030</td>
-                  </tr>
-                </tbody>
-              </table>
-            </li>
-          </ul>
-
-
-          <!--main jobs listing ends-->
-
-        </div>
-      </div>
-
-      <!--main body of role dashboard ends-->
-    </div>
-  </div>
-
-{% endblock %}
+        {% endblock %}
