@@ -97,6 +97,11 @@
             html: "<a href='#' class='govuk-link'>Download an application pack</a> for complete information on this appointment."
           }) }}
 
+          {{ govukButton({
+                text: "Apply for this role",
+                classes: "govuk-!-margin-top-6",
+                href: "start-application"
+              }) }}
           <!--accordion starts here-->
 
           {{ govukAccordion({
@@ -450,7 +455,62 @@
                   <p>   
                   "
                 }
-              }
+              },
+              {
+                heading: {
+                  text: "Eligibility criteria"
+                },
+                content: {
+                  html: 
+                  "
+                    <p class='govuk-body'>
+                      In general, you should have the right to work in the UK to be eligible to apply for a public appointment. 
+                    <p>
+                      <p class='govuk-body'>
+                        You cannot be considered for a public appointment if:
+                      <p>
+                        <ul class='govuk-list govuk-list--bullet'>
+                          <li>
+                            you become bankrupt or make an arrangement with a creditor
+                          </li>
+                          <li>
+                            your estate has been sequestrated in Scotland or you enter into a debt arrangement programme under Part 1 of the Debt Arrangement and Attachment (Scotland) Act 2002 (asp 17) as the debtor or have, under Scots law, granted a trust deed for creditors;
+                          </li>
+                          <li>
+                            you are disqualified from acting as a company director under the Company Directors Disqualification Act 1986;
+                          </li>
+                          <li>
+                            you have been convicted of a criminal offence, the conviction not being spent for the purposes of the Rehabilitation of Offenders Act 1974 (c. 53);
+                          </li>
+                          <li>
+                            you become subject to a debt relief order or a bankruptcy restrictions order;
+                          </li>
+                          <li>
+                            you fail to declare any conflict of interest (see section/information above)
+                          </li>
+                          <li>
+                            In particular, to be eligible for this role, you must:
+                          </li>
+                          <li>
+                            If you need further advice, please click here [service will send request to department]
+                          </li>
+                        </ul>
+                  "
+                }
+              },
+              {
+                heading: {
+                  text: "Security clearance"
+                },
+                content: {
+                  html: 
+                  "
+                <p class='govuk-body'>
+                  The successful candidate will be required to undertake Baseline Personnel Security Standard checks in line with the Civil Service guidelines. Additional Security Clearance may also be required for certain roles. However, where this applies, candidates will be notified during the appointment process. Further information on National Security Vetting can be found on the <a href='#' class='govuk-link'>Gov.uk website</a> .
+                <p>
+                  "
+                }
+              },
               ]
             }) }}
 
@@ -541,48 +601,7 @@
                   "
                 }
               },
-              {
-                heading: {
-                  text: "Eligibility criteria"
-                },
-                content: {
-                  html: 
-                  "
-                    <p class='govuk-body'>
-                      In general, you should have the right to work in the UK to be eligible to apply for a public appointment. 
-                    <p>
-                      <p class='govuk-body'>
-                        You cannot be considered for a public appointment if:
-                      <p>
-                        <ul class='govuk-list govuk-list--bullet'>
-                          <li>
-                            you become bankrupt or make an arrangement with a creditor
-                          </li>
-                          <li>
-                            your estate has been sequestrated in Scotland or you enter into a debt arrangement programme under Part 1 of the Debt Arrangement and Attachment (Scotland) Act 2002 (asp 17) as the debtor or have, under Scots law, granted a trust deed for creditors;
-                          </li>
-                          <li>
-                            you are disqualified from acting as a company director under the Company Directors Disqualification Act 1986;
-                          </li>
-                          <li>
-                            you have been convicted of a criminal offence, the conviction not being spent for the purposes of the Rehabilitation of Offenders Act 1974 (c. 53);
-                          </li>
-                          <li>
-                            you become subject to a debt relief order or a bankruptcy restrictions order;
-                          </li>
-                          <li>
-                            you fail to declare any conflict of interest (see section/information above)
-                          </li>
-                          <li>
-                            In particular, to be eligible for this role, you must:
-                          </li>
-                          <li>
-                            If you need further advice, please click here [service will send request to department]
-                          </li>
-                        </ul>
-                  "
-                }
-              },
+              
               {
                 heading: {
                   text: "Principles of Public Life"
@@ -665,19 +684,7 @@
                   "
                 }
               },
-              {
-                heading: {
-                  text: "Security clearance"
-                },
-                content: {
-                  html: 
-                  "
-                <p class='govuk-body'>
-                  The successful candidate will be required to undertake Baseline Personnel Security Standard checks in line with the Civil Service guidelines. Additional Security Clearance may also be required for certain roles. However, where this applies, candidates will be notified during the appointment process. Further information on National Security Vetting can be found on the <a href='#' class='govuk-link'>Gov.uk website</a> .
-                <p>
-                  "
-                }
-              },
+              
               {
                 heading: {
                   text: "Feedback"
@@ -763,12 +770,6 @@
               }
             ]
           }) }}
-
-          {{ govukButton({
-        text: "Apply for this role",
-        classes: "govuk-!-margin-top-6",
-        href: "start-application"
-      }) }}
 
           <!-- role as end-->
 
